@@ -1,0 +1,149 @@
+.main_sms_sol {
+    margin-top: 75px;
+    /* border: 1px solid red; */
+    padding: 45px 108px;
+}
+
+.sub_sms_sol {
+    display: flex;
+    gap: 45px;
+    background-color: #ffd17a;
+    height: auto;
+}
+
+.sub_sms_sol img {
+    margin-top: 45px;
+    padding-left: 52px;
+    width: 35%;
+}
+
+.para_sol {
+    margin-top: 95px;
+    /* border: 1px solid red; */
+}
+
+.para_sol h1 {
+    text-align: left;
+    font-size: 50px;
+}
+
+.para_sol p {
+    font-size: 18px;
+}
+
+.para_sol button {
+    margin-top: 20px;
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 15px 55px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sub_sms_sol1 {
+    margin-top: 60px;
+    display: flex;
+    background-color: #E7F3BC;
+    height: auto;
+}
+
+.para_sol1 {
+    margin-top: 55px;
+    padding: 1px 55px;
+    /* border: 1px solid red; */
+}
+
+.para_sol1 h1 {
+    text-align: left;
+    font-size: 50px;
+}
+
+.para_sol1 p {
+    font-size: 18px;
+}
+
+.para_sol1 button {
+    margin-top: 20px;
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 15px 55px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sub_image_sol_1 {
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sub_image_sol_1 img:first-child {
+    position: absolute;
+    bottom: -300px;
+    /* border: 1px solid red; */
+    width: 80%;
+    animation: mobile 1.5s infinite alternate;
+}
+
+@keyframes mobile {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(-90%);
+
+    }
+}
+
+.sub_image_sol_1 img:nth-child(2) {
+    margin-left: 156px;
+    width: 65%;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .sub_sms_sol {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sub_sms_sol img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .para_sol {
+        text-align: center;
+    }
+
+    .para_sol h1 {
+        text-align: center;
+    }
+
+    .sub_sms_sol1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .para_sol1 {
+        text-align: center;
+    }
+    .para_sol1 h1 {
+        text-align: center;
+    }
+}

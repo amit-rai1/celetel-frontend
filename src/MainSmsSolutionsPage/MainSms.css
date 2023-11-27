@@ -1,0 +1,243 @@
+.main_sol_page {
+    padding-top: 90px;
+    padding-left: 90px;
+    /* border: 1px solid red; */
+}
+
+.main_sol_page h1 {
+    font-size: 50px;
+    padding-right: 506px;
+}
+
+.main_sol_page p {
+    padding-top: 20px;
+    padding-right: 600px;
+}
+
+.btn2 {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn2 button:first-child {
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn2 button:last-child {
+    border: 1px solid var(--button-bg);
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px 45px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main_sms {
+    margin-top: 80px;
+    padding: 0px 75px;
+    /* border: 1px solid red; */
+}
+
+.sub_sms {
+    background-color: #FFF5D4;
+    border-radius: 30px;
+}
+
+.sub_sms img {
+    /* border: 1px solid red; */
+    padding-left: 100px;
+    width: 70%;
+}
+
+.why_to_all {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.why_to_all h2 {
+    font-size: 28px;
+}
+
+.why_to_all p {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0px 350px;
+}
+
+.speciality_sms {
+    /* border: 1px solid red; */
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 50px;
+    width: 65%;
+}
+
+.cards {
+    flex-basis: 27%;
+    display: flex;
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    /* border: 1px solid black; */
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.cards img {
+    width: 80px;
+}
+
+.cards h5 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.cards p {
+    color: #8E8E8E;
+    padding-top: 20px;
+}
+
+
+.cards:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .3s ease-in-out;
+}
+
+.cards1 {
+    flex-basis: 27%;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 85px;
+    padding: 15px 15px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.cards1 img {
+    width: 80px;
+}
+
+.cards1 h5 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.cards1 p {
+    color: #8E8E8E;
+    padding-top: 20px;
+}
+
+.cards1:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .3s ease-in-out;
+}
+
+
+.security_sms {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    /* border: 1px solid red; */
+}
+
+.para_seq {
+    padding-right: 300px;
+}
+
+.sms_inte {
+    margin-top: 50px;
+    display: flex;
+    background-color: #FFF5D4;
+    align-items: center;
+    padding: 15px 55px;
+}
+
+.inte_sms_inner {
+    padding: 0px 100px;
+}
+
+.inte_sms_inner button {
+    margin-top: 22px;
+    padding: 0px 100px;
+    margin-top: 20px;
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 15px 55px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.faq_s {
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 80px;
+    width: 55%;
+    text-align: center;
+}
+
+.faq_s_ques {
+    text-align: justify;
+    margin-top: 30px;
+    height: 80vh;
+    /* border: 1px solid violet; */
+}
+
+.faq_q_0 {
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq_q_0 h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.faq_q_0 p {
+    font-size: 16px;
+    color: #7F56D9;
+}
+
+.faq_p {
+    color: #8C94A4;
+    padding-left: 15px;
+    padding-right: 55px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #EBEDF1;
+}
+
+.faq_q_1 {
+    border-bottom: 1px solid #EBEDF1;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq_q_1 h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.faq_q_1 p {
+    font-size: 20px;
+    color: #7F56D9;
+}
