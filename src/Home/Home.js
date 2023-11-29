@@ -1,3 +1,6 @@
+//main home
+
+
 import React from 'react'
 import { HeroSec } from '../HeroSec/HeroSec'
 import { SmsSol } from '../SMSSolutions/SmsSol'
