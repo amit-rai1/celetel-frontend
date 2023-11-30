@@ -18,8 +18,11 @@ export function Navbar() {
                 </div>
 
                 <div className="btn1">
-                    <button>Log in</button>
-                    <button>Sign up</button>
+                    {/* <button>Log in</button> */}
+                    <Link to={'/login'}><button>Log in</button></Link>
+
+                    {/* <button>Sign up</button> */}
+                    <Link to={'/signup'}><button>Sign up</button></Link>
                 </div>
                 
             </div>

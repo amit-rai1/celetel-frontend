@@ -7,6 +7,9 @@ import { MainWhatsapp } from './MainWhatsappPage/MainWhatsapp';
 import { MainRCS } from './MainCommRCS/MainRCS';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Footer } from './Footer/Footer';
+import Signup from './features/Signup';
+import AccountSetup from './features/AccountSetup';
+import Login from './features/Login';
 
 
 function App() {
@@ -20,6 +23,12 @@ function App() {
           <Route path='/voicesolutions' element={<MainVoice />} />
           <Route path='/connectwhatsapp' element={<MainWhatsapp />} />
           <Route path='/connectrcs' element={<MainRCS />} />
+          <Route path='/signup' element={<Signup />} />
+
+          <Route path='/accountsetup' element={<AccountSetup />} />
+          <Route path='/login' element={<Login />} />
+
+
         </Routes>
         <Footer />
       </BrowserRouter>
