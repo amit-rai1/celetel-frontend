@@ -47,11 +47,11 @@ else if (process.env.REACT_APP_ENV === "staging") module.exports = staging;
 
 
 
-// else module.exports = staging;
+else module.exports = staging;
 
 // else module.exports = dev;
 
-else module.exports = local
+// else module.exports = local
 
 
 
