@@ -4,7 +4,7 @@ const local = {
   apiUrl: "http://localhost:",
   encryptionkey: "",
   PORT: '8600/api',
-  API_BASEURL: "https://localhost:8600",
+  API_BASEURL: "http://localhost:8600",
   SOCKET_URL: "ws://localhost:7600"
 };
 
@@ -14,7 +14,7 @@ const staging = {
   apiUrl: "",
   encryptionkey: "",
   PORT: '8600/api',
-  API_BASEURL: "https://43.205.128.152:8600",
+  API_BASEURL: "http://43.205.128.152:8600",
   SOCKET_URL: ""
 };
 
