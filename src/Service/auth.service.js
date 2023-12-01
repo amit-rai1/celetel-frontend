@@ -323,3 +323,51 @@ export const  sendVerificationEmail = async (email) => {
         throw new Error(error.response.data.msg || 'Failed to register client');
     }
 };
+
+export const getClientById = async (clientId) => {
+  try {
+      const response = await axios.get(`${API_BASEURL}/api/client/getClientById/${clientId}`); // Replace with your API endpoint
+      return response.data;
+  } catch (error) {
+      throw Error(error.message);
+  }
+};
+
+export const accountSetup = async (clientId, email) => {
+  try {
+      const response = await axios.put(`${API_BASEURL}/api/client/accountsetup/${clientId}`, { email }); // Replace with your API endpoint
+      return response.data;
+  } catch (error) {
+      throw Error(error.message);
+  }
+};
+
+
+export const login = async (email, password) => {
+  try {
+      // Make a POST request to your backend login API
+      const response = await axios.post(`${API_BASEURL}/api/client/login`, { email, password });
+
+      // Check if the login was successful
+      if (response.data.success) {
+          // If successful, return the user data and token
+          return {
+              success: true,
+              user: response.data.user,
+              token: response.data.token
+          };
+      } else {
+          // If unsuccessful, return an error message
+          return {
+              success: false,
+              error: 'Invalid email or password'
+          };
+      }
+  } catch (error) {
+      // If an error occurs during the API call, return the error message
+      return {
+          success: false,
+          error: 'An unexpected error occurred. Please try again.'
+      };
+  }
+};

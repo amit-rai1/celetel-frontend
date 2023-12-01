@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { login } from '../Service/auth.service';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = async () => {
-        // try {
-        //     // Call your login service here passing email and password
-        //     const result = await login(email, password);
+        try {
+            // Call the login service passing email and password
+            const result = await login(email, password);
 
-        //     if (result.success) {
-        //         // Handle successful login (redirect, show a success message, etc.)
-        //         alert('Login successful');
-        //     } else {
-        //         // Handle unsuccessful login (show an error message, etc.)
-        //         alert('Invalid email or password');
-        //     }
-        // } catch (error) {
-        //     console.error('Error during login:', error);
-        //     alert('An unexpected error occurred. Please try again.');
-        // }
+            if (result.success) {
+                // Handle successful login (redirect, show a success message, etc.)
+                alert('Login successful');
+                // Redirect to a new page after successful login
+                // Use history.push or your preferred method to redirect
+            } else {
+                // Handle unsuccessful login (show an error message, etc.)
+                alert(result.error);
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('An unexpected error occurred. Please try again.');
+        }
     };
 
     return (

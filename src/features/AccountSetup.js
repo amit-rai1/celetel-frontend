@@ -1,30 +1,48 @@
-import React, { useState } from 'react';
+// AccountSetup.js
+
+import React, { useState, useEffect } from 'react';
 import { Card, Form, Button, Container, Row, Col } from 'react-bootstrap';
+import {getClientById, accountSetup } from '../Service/auth.service';
 
 const AccountSetup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+
+    const getClientData = async (clientId) => {
+        try {
+            const response = await getClientById(clientId);
+            const { result } = response;
+
+            if (result) {
+                setEmail(result.email);
+            }
+        } catch (error) {
+            console.error('Error fetching client data:', error.message);
+        }
+    };
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === 'email') {
-            setEmail(value);
-        } else if (name === 'password') {
+        if (name === 'password') {
             setPassword(value);
         } else if (name === 'confirmPassword') {
             setConfirmPassword(value);
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e,clientId) => {
         e.preventDefault();
-        // Perform submission or validation here
-        console.log('Form submitted!');
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log('Confirm Password:', confirmPassword);
+
+        // Update client password
+        try {
+            const response = await accountSetup(clientId, password);
+            console.log('Password updated successfully:', response);
+        } catch (error) {
+            console.error('Error updating password:', error.message);
+        }
     };
 
     return (
@@ -32,7 +50,7 @@ const AccountSetup = () => {
             <Container className="mt-5">
                 <Row className="justify-content-end" style={{ marginLeft: '230px' }}>
                     <Col md={8} className="ml-auto">
-                        <Card style={{ width: '600px', height: 'auto', padding: '20px', marginTop: "40px" }}>
+                        <Card style={{ width: '600px', height: 'auto', padding: '20px', marginTop: '40px' }}>
                             <Card.Body>
                                 <h2 className="text-center mb-4">Account Setup</h2>
                                 <Form onSubmit={handleSubmit}>
@@ -42,8 +60,7 @@ const AccountSetup = () => {
                                             type="email"
                                             placeholder="Enter your email"
                                             value={email}
-                                            onChange={handleInputChange}
-                                            name="email"
+                                            readOnly // Set the email field as read-only
                                         />
                                     </Form.Group>
 
