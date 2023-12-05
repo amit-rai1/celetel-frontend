@@ -9,7 +9,6 @@ import { MdAddCircleOutline } from "react-icons/md";
 
 export function MainRCS() {
     return (
-        //add comments //
         <Fragment>
             <div className="main_sol_page">
                 <h1>The Future of Enhanced Communication</h1>
