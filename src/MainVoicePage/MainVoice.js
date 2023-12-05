@@ -15,7 +15,7 @@ import image4 from '../Assets/New6.jpg'
 export function MainVoice() {
     return (
         <Fragment>
-            <div className="main_sol_page">
+            <div className="main_sol_page10">
                 <h1>A complete voice solution from a single provider</h1>
                 <p>Implementing IVR solutions is indispensable for enterprises
                     aspiring to augment their customer service capabilities.
@@ -33,10 +33,21 @@ export function MainVoice() {
                 </div>
             </div>
 
+
+            <div className="main_sol_page12">
+                <h1>The Future of Enhanced Communication</h1>
+                <p>Welcome to Celetel's RCS (Rich Communication  Services) page, where we explore the exciting world of modern communication. RCS is a game-changer in the realm of mobile messaging.</p>
+                <img src={image1} alt="" />
+                <div className="btn2">
+                    <button>Request a demo</button>
+                    <button>Explore</button>
+                </div>
+            </div>
+
             <div className="our_goal">
                 <div className="goal_para">
                     <h1>We Are Focus On Your Ultimate Goal</h1>
-                    <p style={{ paddingRight: '200px', marginTop: '15px' }}>An enim nullam tempor sapien gravida donec enim ipsum
+                    <p>An enim nullam tempor sapien gravida donec enim ipsum
                         porta justo congue magna at pretium</p>
                     <div className="new_1_goal_fea">
                         <div className="goal_new_fea">

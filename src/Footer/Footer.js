@@ -48,6 +48,12 @@ export function Footer() {
                             <a href="#12">Settings</a>
                             <a href="#12">Contact</a>
                         </div>
+                        <div className='sub_2_foot1'>
+                            <span>GET IN TOUCH</span>
+                            <p><FaTwitter /></p>
+                            <p><FaLinkedin /></p>
+                            <p><FaFacebook /></p>
+                        </div>
                     </div>
                 </div>
                 <div className="last_foot">

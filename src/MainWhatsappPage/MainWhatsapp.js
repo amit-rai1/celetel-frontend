@@ -16,6 +16,7 @@ import { PiUsersThreeBold } from "react-icons/pi";
 import { CiGlobe } from "react-icons/ci";
 import { AiOutlineMessage } from "react-icons/ai";
 import { BsGraphUp } from "react-icons/bs";
+import image3 from '../Assets/New10 (1).jpg'
 
 export function MainWhatsapp() {
     return (
@@ -33,6 +34,17 @@ export function MainWhatsapp() {
             <div className="main_head_whats">
                 <div className="new_img_gif">
                     <img src={logo1} alt="" />
+                </div>
+            </div>
+
+            <div className="main_sol_page10">
+                <h1>Harness the world's most popular messaging app</h1>
+                <p>Bring conversations into your entire customer journey by scaling with WhatsApp Business -
+                    get ready to start a conversation with your customers around the world!</p>
+                <img src={image3} alt="" />
+                <div className="btn2">
+                    <button>Request a demo</button>
+                    <button>Explore</button>
                 </div>
             </div>
 
@@ -172,6 +184,10 @@ export function MainWhatsapp() {
                 </div>
                 <div className="text_img_2_d12">
                     <h2>Boost Your E-Commerce Success with WhatsApp Marketing Reach, Engage, and Convert Your Customers Seamlessly</h2>
+
+                    <h2>Boost Your E-Commerce Success with WhatsApp Marketing
+                        <br /> <br />
+                        Reach, Engage, and Convert Your Customers Seamlessly</h2>
                 </div>
             </div>
         </Fragment>

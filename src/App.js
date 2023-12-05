@@ -5,8 +5,10 @@ import { MainSms } from './MainSmsSolutionsPage/MainSms';
 import { MainVoice } from './MainVoicePage/MainVoice';
 import { MainWhatsapp } from './MainWhatsappPage/MainWhatsapp';
 import { MainRCS } from './MainCommRCS/MainRCS';
+import { Contact } from './Contact/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Footer } from './Footer/Footer';
+import { Mainverify } from './MainVerificationPage/MainVerify';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path='/voicesolutions' element={<MainVoice />} />
           <Route path='/connectwhatsapp' element={<MainWhatsapp />} />
           <Route path='/connectrcs' element={<MainRCS />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/verifications' element={<Mainverify />} />
         </Routes>
         <Footer />
       </BrowserRouter>

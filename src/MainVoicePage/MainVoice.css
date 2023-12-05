@@ -1,3 +1,18 @@
+.main_sol_page10 {
+    padding-top: 90px;
+    padding-left: 90px;
+}
+
+.main_sol_page10 h1 {
+    font-size: 50px;
+    padding-right: 506px;
+}
+
+.main_sol_page10 p {
+    padding-top: 20px;
+    padding-right: 600px;
+}
+
 .main_sms1 {
     margin-top: 80px;
     padding: 0px 75px;
@@ -22,6 +37,16 @@
     justify-content: space-between;
     margin-top: 150px;
     width: 90%;
+}
+
+.goal_para {
+    /* border: 1px solid black; */
+    padding: 25px 25px;
+}
+
+.goal_para p {
+    padding-right: 200px;
+    margin-top: 15px;
 }
 
 .goal_para {
@@ -103,4 +128,102 @@
 .text_para h2 {
     padding-left: 445px;
     font-size: 35px;
+}
+
+@media screen and (max-width : 1080px) {
+
+    .main_sol_page10 {
+        display: none;
+    }
+
+    .main_sms1 {
+        display: none;
+    }
+
+    .main_sol_page12 {
+        margin-top: 80px;
+        display: block;
+        padding: 10px 10px;
+    }
+
+    .main_sol_page12 h1 {
+        font-size: 30px;
+    }
+
+    .main_sol_page12 p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .main_sol_page12 img {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 30px;
+    }
+
+    .main_sol_page12 p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .our_goal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goal_para {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .goal_para h1 {
+        font-size: 23px;
+    }
+
+    .goal_para p {
+        width: 100%;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .sub_goal {
+        width: 100%;
+    }
+
+    .sub_goal img {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .head_transform_img h1 {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .image_p img {
+        width: 100%;
+    }
+
+    .text_area_s {
+        width: 100%;
+        padding: 10px;
+        gap: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .max_bus {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        flex-direction: column-reverse;
+    }
+
+    .text_para h2 {
+        text-align: left;
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+    }
+
 }

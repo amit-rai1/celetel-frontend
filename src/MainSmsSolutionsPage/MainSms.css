@@ -14,6 +14,10 @@
     padding-right: 600px;
 }
 
+.main_sol_page1 {
+    display: none;
+}
+
 .btn2 {
     display: flex;
     gap: 15px;
@@ -169,6 +173,10 @@
     padding: 15px 55px;
 }
 
+.sms_inte img {
+    width: 38%;
+}
+
 .inte_sms_inner {
     padding: 0px 100px;
 }
@@ -197,8 +205,6 @@
 .faq_s_ques {
     text-align: justify;
     margin-top: 30px;
-    height: 80vh;
-    /* border: 1px solid violet; */
 }
 
 .faq_q_0 {
@@ -240,4 +246,175 @@
 .faq_q_1 p {
     font-size: 20px;
     color: #7F56D9;
+}
+
+@media screen and (max-width:1080px) {
+    .main_sol_page {
+        display: none;
+    }
+
+    .main_sms {
+        display: none;
+    }
+
+    .main_sol_page1 {
+        display: block;
+        padding: 10px 11px;
+    }
+
+    .main_sol_page1 h1 {
+        margin-top: 25px;
+        font-size: 23px;
+    }
+
+    .main_sol_page1 p {
+        margin-top: 25px;
+        font-size: 14px;
+    }
+
+    .main_sol_page1 img {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .btn2 {
+        display: flex;
+        padding: 5px 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why_to_all {
+        margin-top: 100px;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .why_to_all h2 {
+        font-size: 23px;
+        text-align: left;
+    }
+
+    .why_to_all p:nth-child(2) {
+        display: none;
+    }
+
+    .why_to_all p:last-child {
+        display: block;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .speciality_sms {
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards1 h5 {
+        font-size: 18px;
+    }
+
+    .cards h5 {
+        font-size: 18px;
+    }
+
+    .cards p {
+        font-size: 19px;
+    }
+
+    .cards1 p {
+        font-size: 18px;
+    }
+
+    .security_sms {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #E5E5FF;
+    }
+
+    .para_seq {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .para_seq h1 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .para_seq p {
+        width: 100%;
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    .sms_inte {
+        display: flex;
+        width: 100%;
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+
+    .sms_inte img {
+        width: 100%;
+    }
+
+    .inte_sms_inner {
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .inte_sms_inner h1 {
+        font-size: 23px;
+    }
+
+    .inte_sms_inner button {
+        display: none;
+    }
+
+    .faq_s {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .faq_s h1 {
+        font-size: 23px;
+        width: 100%;
+    }
+
+    .faq_s p {
+        font-size: 18px;
+        width: 100%;
+        color: #667085;
+    }
+
+    .faq_p p {
+        display: none;
+    }
+
+    .faq_s_ques {
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .faq_q_0 {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .faq_q_1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+        width: 100%;
+    }
+
 }

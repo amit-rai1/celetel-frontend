@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import './WhatsApp.css'
+import mobile1 from '../Assets/mobile-1.png'
 import { Link } from 'react-router-dom'
 import logo12 from '../Assets/New2.gif'
 import logo13 from '../Assets/New3.gif'
@@ -36,6 +37,7 @@ export function WhatsApp() {
                 <div className="sub_whatsapp1">
                     <h1>The Future of Enhanced Communications : RCS</h1>
                     <img src={logo13} alt="" />
+                    <img src={mobile1} alt="" />
                 </div>
             </div>
 
@@ -164,10 +166,19 @@ export function WhatsApp() {
                 </div>
             </div>
 
+            <div className="care_and_share2">
+                <div className="new_care2">
+                    <h1>We don't share because we care</h1>
+                    <img src={logo16} alt="" />
+                    <p style={{ marginTop: '20px' }}>We know that data privacy and security is the prime concern . Data is the seed for growth , and that's why we don't share our cloud</p>
+                </div>
+            </div>
+
+
             <div className="testimony_review">
-                <h1 style={{ padding: '15px 422px' }}> Trusted by Thousands of Happy
+                <h1> Trusted by Thousands of Happy
                     Customer</h1>
-                <p style={{ padding: '15px 422px' }}>These are the stories of our customers who have joined us with great
+                <p>These are the stories of our customers who have joined us with great
                     pleasure when using this crazy feature.</p>
 
                 <div className="cards_row_tes">
@@ -202,8 +213,8 @@ export function WhatsApp() {
             </div>
 
             <div className="used_by">
-                <h1 style={{ fontSize: '42px' }}>Proud to Be Used By</h1>
-                <p style={{ padding: '15px 380px' }}>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
+                <h1>Proud to Be Used By</h1>
+                <p>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
                 <img src={logo18} alt="" />
             </div>
         </Fragment>

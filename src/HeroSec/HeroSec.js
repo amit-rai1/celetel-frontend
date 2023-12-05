@@ -16,6 +16,16 @@ export function HeroSec() {
                     <img src={homepage} alt="" />
                 </div>
             </div>
+
+            <div className="main_hero1">
+                <div className="sub_hero1">
+                    <h1>Reach billions in a single click . connect millions in a moment</h1>
+                    <div className="border1"></div>
+                    <img src={homepage} alt="" />
+                    <p>The world's most innovative companies build communication solutions using Celetel applications and APIs. Get started today and talk to your customers over any channel.</p>
+                    <button>Get started today</button>
+                </div>
+            </div>
         </Fragment>
     )
 }

@@ -55,47 +55,59 @@
     width: 80%;
 }
 
+.main_hero1 {
+    display: none;
+}
+
 @media screen and (max-width : 1080px) {
     .main_herosec {
+        display: none;
+    }
+
+    .main_hero1 {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 10px 10px;
     }
 
-    .sub_hero h1 {
-        font-size: 35px;
-        text-align: center;
+    .sub_hero1 {
+        margin-top: 50px;
+        padding: 5px 5px;
+    }
+
+    .sub_hero1 h1 {
+        font-size: 20px;
         padding: 0;
+        width: 100%;
+        text-align: left
     }
 
-    .sub_hero p {
-        text-align: center;
-        margin: auto;
-        padding: 0;
+    .sub_hero1 p {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 13px;
     }
 
-    .border {
-        visibility: hidden;
+    .sub_hero1 button {
+        margin-top: 15px;
+        padding: 13px 25px;
+        font-size: 13px;
+        background-color: #FFCE22;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
     }
 
-    .sub_hero button {
-        background-color: var(--button-bg);
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-        margin: auto;
-        justify-content: center;
+    .sub_hero1 img {
+        width: 100%;
+        margin-top: 15px;
     }
 
-    .sub_image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .border1 {
+        margin-top: 10px;
+        border: 5px solid #5AC9FA;
+        width: 27%;
+        border-radius: 50px;
     }
 
-    .sub_image img {
-        padding: 0;
-    }
 }

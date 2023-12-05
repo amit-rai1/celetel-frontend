@@ -19,8 +19,22 @@ export function MainRCS() {
                 </div>
             </div>
 
-            <div className="sub_rcs">
+            <div className="new_image1_h">
                 <img src={image1} alt="" />
+            </div>
+
+
+
+            <div className="main_sol_page11">
+                <h1>The Future of Enhanced Communication</h1>
+                <p>Welcome to Celetel's RCS (Rich Communication Services) page, where we explore the exciting world of modern communication. RCS is a game-changer in the realm of mobile messaging.</p>
+                <div className="img_1_new">
+                    <img src={image1} alt="" />
+                </div>
+                <div className="btn2">
+                    <button>Request a demo</button>
+                    <button>Explore</button>
+                </div>
             </div>
 
             <div className="our_goal">

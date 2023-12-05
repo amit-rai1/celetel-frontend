@@ -1,3 +1,23 @@
+.main_sol_page11 {
+    display: none;
+}
+
+.new_image1_h {
+    margin: auto;
+    width: 90%;
+    margin-top: 45px;
+    background-color: #E7F3BC;
+    border-radius: 15px;
+}
+
+.new_image1_h img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
 .sub_rcs {
     margin: auto;
     margin-top: 80px;
@@ -91,4 +111,112 @@
 
 .faq_s {
     margin-top: 155px;
+}
+
+@media screen and (max-width :1080px) {
+
+    .new_image1_h {
+        display: none;
+    }
+
+    .main_sol_page11 {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main_sol_page11 h1 {
+        margin-top: 50px;
+        font-size: 23px;
+    }
+
+    .main_sol_page11 p {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .img_1_new {
+        width: 100%;
+        margin-top: 50px;
+        border-radius: 15px;
+        background-color: #E7F3BC;
+    }
+
+    .img_1_new img {
+        width: 100%;
+    }
+
+    .sub_goal img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why_celetel {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .why_celetel img {
+        width: 70%;
+        margin-top: 90px;
+    }
+
+    .text_area_1 p {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .unlock_features {
+        width: 100%;
+    }
+
+    .unlock_features h1 {
+        font-size: 20px;
+    }
+
+    .unlock_features p {
+        font-size: 15px;
+    }
+
+    .btn4 {
+        padding: 0;
+    }
+
+    .btn4 button:nth-child(1) {
+        border-radius: 3px;
+        background-color: #FAC213;
+    }
+
+    .btn4 button:nth-child(2) {
+        border-radius: 3px;
+        background-color: #ffff;
+        color: black;
+        border: 2px solid #FAC213;
+    }
+
+    .btn4 {
+        padding: 0;
+    }
+
+    .security_sms {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .para_seq {
+        padding: 10px;
+    }
+
+    .para_seq h1 {
+        font-size: 23px;
+    }
+
+    .btn2 {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
 }

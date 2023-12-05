@@ -108,8 +108,49 @@
     width: 65%;
 }
 
+.sub_image_sol_1 img:nth-child(3) {
+    display: none;
+}
+
 
 @media screen and (max-width: 1080px) {
+
+    .main_sms_sol {
+        padding: 0;
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+
+    .para_sol {
+        padding: 10px 10px;
+        /* border: 1px solid red; */
+    }
+
+    .para_sol h1 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 23px;
+    }
+
+    .para_sol p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .para_sol button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15px;
+        padding: 10px 35px;
+    }
+
     .sub_sms_sol {
         display: flex;
         flex-direction: column-reverse;
@@ -122,28 +163,68 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .para_sol {
-        text-align: center;
-    }
-
-    .para_sol h1 {
-        text-align: center;
+        width: 100%;
+        margin-top: 0px;
+        padding: 0;
     }
 
     .sub_sms_sol1 {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
+        /* padding: 5px 5px; */
         width: 100%;
         justify-content: center;
     }
 
     .para_sol1 {
-        text-align: center;
+        padding: 10px 10px;
     }
+
     .para_sol1 h1 {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 23px;
     }
+
+    .para_sol1 p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .para_sol1 button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15px;
+        padding: 10px 35px;
+    }
+
+    .sub_image_sol_1 {
+        display: flex;
+        padding: 5px 5px;
+        /* flex-direction: row; */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sub_image_sol_1 img:first-child {
+        display: none;
+    }
+
+    .sub_image_sol_1 img:nth-child(2) {
+        display: none;
+    }
+
+    .sub_image_sol_1 img:nth-child(3) {
+        display: flex;
+        width: 100%;
+    }
+
 }

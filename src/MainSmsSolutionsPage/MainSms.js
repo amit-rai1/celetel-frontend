@@ -35,11 +35,23 @@ export function MainSms() {
                 </div>
             </div>
 
+            <div className="main_sol_page1">
+                <h1>SMS Solutions : Where Connectivity Begins</h1>
+                <p>Welcome to Celetel's SMS Solutions, where we transform simple
+                    text messages into powerful communication tools that connect
+                    businesses with their audience like never before.</p>
+                <img src={image1} alt="" />
+                <div className="btn2">
+                    <button>Request a demo</button>
+                    <button>Explore</button>
+                </div>
+            </div>
+
             <div className="why_to_all">
                 <h2>Why Celetel SMS : Empower Your Reach</h2>
-                <p>Celetel SMS is not just about sending messages; it's about unlocking the full potential of your
-                    communication strategy. With Celetel as your SMS partner, you empower your reach in ways that go
-                    beyond boundaries.</p>
+                <p>Celetel SMS is not just about sending messages; it's about unlocking the full potential of your communication strategy. With Celetel as your SMS partner, you empower your reach in ways that go beyond boundaries.</p>
+
+                <p>Celetel SMS is not just about sending messages; it's about unlocking the full potential of your communication strategy.</p>
             </div>
 
             <div className="speciality_sms">
@@ -90,7 +102,7 @@ export function MainSms() {
             </div>
 
             <div className="sms_inte">
-                <img style={{ width: '38%' }} src={sms} alt="" />
+                <img src={sms} alt="" />
                 <div className="inte_sms_inner">
                     <h1>Seamless SMS Integration in a Snap</h1>
                     <p style={{
@@ -106,7 +118,7 @@ export function MainSms() {
             </div>
 
             <div className="faq_s">
-                <h1>Frequently asked questions</h1>
+                <h1>Frequently Asked Questions</h1>
                 <p style={{ marginTop: '20px' }}>Everything you need to know about the product and billing </p>
                 <div className="faq_s_ques">
                     <div className="faq_q_0">
