@@ -14,7 +14,7 @@ export function SignUpExplore() {
                 <div className="sub_explore_media">
                     <div className="new1_media">
                         <div className="text_al_media">
-                            <img src={img1} alt="" />
+                            <img src={img1} alt="" className='img1' />
                             <div className="t1">
                                 <h5>Whatsapp</h5>
                                 <p>Rates starting from Rs.2,999 </p>
@@ -24,7 +24,7 @@ export function SignUpExplore() {
                     </div>
                     <div className="new1_media">
                         <div className="text_al_media">
-                            <img src={img3} alt="" />
+                            <img src={img3} alt="" className='img2' />
                             <div className="t1">
                                 <h5>RCS</h5>
                                 <p>Rates starting from Rs.3,889</p>
@@ -37,7 +37,7 @@ export function SignUpExplore() {
                 <div className="sub_explore_media">
                     <div className="new1_media">
                         <div className="text_al_media">
-                            <img src={img4} alt="" />
+                            <img src={img4} alt="" className='img3' />
                             <div className="t1">
                                 <h5>Voice</h5>
                                 <p>Rates starting from Rs.1,499 </p>
@@ -47,7 +47,7 @@ export function SignUpExplore() {
                     </div>
                     <div className="new1_media">
                         <div className="text_al_media">
-                            <img src={img2} alt="" />
+                            <img src={img2} alt="" className='img4' />
                             <div className="t1">
                                 <h5>SMS</h5>
                                 <p>Rates starting from Rs.999 </p>
@@ -56,6 +56,16 @@ export function SignUpExplore() {
                         <button>Explore</button>
                     </div>
                 </div>
+            </div>
+            <div className="main_pricing_a">
+                <h1>Our Pricing</h1>
+
+                <p>Billed Monthly</p>
+                <label htmlFor=""></label>
+                <label className="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                </label>
             </div>
         </Fragment>
     )

@@ -1,9 +1,28 @@
 import React, { Fragment } from 'react'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import './SignUp.css'
 import image1 from '../Assets/Group 1000001796.png'
 import { useNavigate } from 'react-router-dom';
 
 export function SignUp() {
+
+
+    const [countries, setCountries] = useState([]);
+
+    useEffect(() => {
+        const fetchCountries = async () => {
+            try {
+                const response = await axios.get('https://restcountries.com/v3.1/all');
+                setCountries(response.data);
+            } catch (error) {
+                console.error('Error fetching country data:', error);
+            }
+        };
+
+        fetchCountries();
+    }, []);
     const navigateToNextStep = useNavigate();
 
     function handleClickNextStep() {
@@ -42,9 +61,19 @@ export function SignUp() {
                 <div className="sub_signup_form">
                     <div className="input_fields">
                         <p>Select country</p>
-                        <select name="Enter here" id="Enter here" >
+                        {/* <select name="Enter here" id="Enter here" >
                             <option value="" disabled selected hidden>Enter here</option>
                             <option value="option1">Option 1</option>
+                        </select> */}
+                        <select name="country" id="country">
+                            <option value="" disabled selected hidden>
+                                Select a country
+                            </option>
+                            {countries.map((country) => (
+                                <option key={country.cca2} value={country.name.common}>
+                                    {country.name.common}
+                                </option>
+                            ))}
                         </select>
                         <div className="btn15">
                             <button onClick={handleClickNextStep}>Next</button>
