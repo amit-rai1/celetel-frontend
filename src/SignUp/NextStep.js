@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import './NextStep.css'
 import image2 from '../Assets/Group 1000001796.png'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function NextStep() {
 
