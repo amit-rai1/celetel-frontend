@@ -9,7 +9,9 @@ import { Contact } from './Contact/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Footer } from './Footer/Footer';
 import { Mainverify } from './MainVerificationPage/MainVerify';
-
+import { SignUp } from './SignUp/SignUp';
+import { NextStep } from './SignUp/NextStep';
+import { SignUpExplore } from './SignUp/SignUpExplore';
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
           <Route path='/connectrcs' element={<MainRCS />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/verifications' element={<Mainverify />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/nextstep' element={<NextStep />} />
+          <Route path='/nextstepexplore' element={<SignUpExplore />} />
         </Routes>
         <Footer />
       </BrowserRouter>

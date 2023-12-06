@@ -42,7 +42,7 @@ export function Navbar() {
 
                 <div className="btn1">
                     <button>Log in</button>
-                    <button>Sign up</button>
+                    <Link to={'/signup'}><button>Sign up</button></Link>
                 </div>
 
                 <div className="responsive_m">
