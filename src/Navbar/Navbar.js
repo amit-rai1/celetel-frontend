@@ -17,6 +17,12 @@ export function Navbar() {
         navigateHome('/')
     }
 
+    const navigateLogin = useNavigate();
+
+    function handleClickLogin() {
+        navigateLogin('/login');
+    }
+
     const [isSidebar, setSidebar] = useState(false);
     function handleToggleSidebar() {
         setSidebar(!isSidebar);
@@ -41,7 +47,7 @@ export function Navbar() {
                 </div>
 
                 <div className="btn1">
-                    <button>Log in</button>
+                    <button onClick={handleClickLogin}>Log in</button>
                     <Link to={'/signup'}><button>Sign up</button></Link>
                 </div>
 
@@ -76,6 +82,12 @@ export function Navbar() {
                         </ListItem>
                         <ListItem>
                             <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>
+                        </ListItem>
+                        <ListItem>
+                            <Link to={'/login'}><p style={{ color: 'black', fontWeight: '500' }}>Login</p></Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link to={'/signup'}><p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
                         </ListItem>
                     </List>
                 </Drawer>

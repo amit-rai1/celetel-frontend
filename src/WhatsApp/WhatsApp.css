@@ -296,6 +296,11 @@
         font-size: 20px;
     }
 
+    .sub_whatsapp img {
+        position: relative;
+        top: 8px;
+    }
+
     .para_sol2 {
         margin-top: 40px;
         padding: 10px 10px;
@@ -474,6 +479,9 @@
     .new_img_conf img {
         padding: 0;
         width: 100%;
+        position: relative;
+        top: 18px;
+        right: 10px;
     }
 
 
@@ -502,7 +510,7 @@
         width: 95%;
         margin: auto;
         padding: 10px 10px;
-        margin-top: 400px;
+        margin-top: 120px;
         display: flex;
         align-items: center;
         background-color: #F9FFE4;
