@@ -144,3 +144,51 @@
     font-size: 14px;
     margin-top: 15px;
 }
+
+@media screen and (max-width : 1480px) {
+    .sub_signup_form12 {
+        width: 100%;
+        margin-top: 15px;
+        padding: 20px;
+    }
+
+    .main_inputs_f {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputs_new button {
+        display: none;
+    }
+
+    .input2 input {
+        width: 100%;
+    }
+
+    .new_terms_c p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .new_terms_c1 p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+
+    .btn_sign button {
+        width: 100%;
+        display: flex;
+        background-color: #4285F4;
+        align-items: center;
+        padding: 12px 22px 12px 22px;
+        border-radius: 6px;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        justify-content: center;
+    }
+}

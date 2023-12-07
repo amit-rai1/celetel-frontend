@@ -75,7 +75,7 @@ export function SignUp() {
                                 </option>
                             ))}
                         </select>
-                        <div className="btn15">
+                        <div className="btn15_steps">
                             <button onClick={handleClickNextStep}>Next</button>
                         </div>
                         <p className='para_23'>Already have an account ? <a href="#12">Login</a></p>

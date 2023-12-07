@@ -11,7 +11,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import image254 from '../Assets/image 61.png'
 import image255 from '../Assets/image 59.png'
-
+import { Link } from 'react-router-dom';
 
 
 export function SignUpExplore() {
@@ -19,6 +19,12 @@ export function SignUpExplore() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const handleSetUpClick = () => {
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+    };
+
 
     return (
         <Fragment>
@@ -172,15 +178,18 @@ export function SignUpExplore() {
                                         boxShadow: 24,
                                         p: 4,
                                     }}>
-                                        <p>Signup successful</p>
-                                        <img src={image254} alt="" />
-                                        <p>Ready for account setup</p>
-                                        <div className="new_images">
-                                            <img src={image255} alt="" />
-                                            <p>Your purchase is completed set up your celetel account id and password in the next step</p>
-                                        </div>
-                                        <div className="btn1_setup">
-                                            <button>Set up</button>
+                                        <div className="main_modal">
+                                            <p>Signup successful</p>
+                                            <img src={image254} alt="" />
+                                            <p>Ready for account setup</p>
+                                            <div className="new_images">
+                                                <img src={image255} alt="" />
+                                                <p>Your purchase is completed set up your celetel account id and password in the next step</p>
+                                            </div>
+                                            <div className="btn1_setup">
+                                                <Link to={'/accountsetup'}><button onClick={handleSetUpClick}>SET UP</button></Link>
+                                            </div>
+
                                         </div>
                                     </Box>
                                 </Fade>

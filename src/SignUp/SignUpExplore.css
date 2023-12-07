@@ -35,8 +35,6 @@
     background-color: white;
 }
 
-
-
 .img1 {
     padding: 4px 4px;
     width: 50px;
@@ -263,9 +261,17 @@ input:checked+.slider:before {
     padding: 16px 8px 16px 8px;
 }
 
+.main_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .new_images {
     background-color: #FFF8D2;
     display: flex;
+    border-radius: 6px;
     padding: 5px 5px;
     gap: 10px;
     align-items: center;
@@ -279,6 +285,89 @@ input:checked+.slider:before {
 
 .btn1_setup {
     display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
+}
+
+.btn1_setup button {
+    padding: 7.72px 77.24px 7.72px 77.24px;
+    border-radius: 5.15px;
+    background-color: #2E2E2E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 1070px) {
+    .main_explore_signup h1 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .sub_explore_media {
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .new1_media {
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    .t1 h5 {
+        font-size: 17px;
+    }
+
+    .new1_media button {
+        padding: 1px 10px;
+        background-color: black;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        text-align: center;
+    }
+
+
+    .new_pricing_pro {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .new_price1 {
+        width: 100%;
+    }
+
+    .main_pricing_a h1 {
+        width: 100%;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .sub_pricing_head {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 100%;
+        gap: 0px;
+        justify-content: space-evenly;
+    }
+
+    .sub_pricing_head p:first-child {
+        font-size: 12px;
+    }
+
+    .sub_pricing_head p:last-child {
+        font-size: 12px;
+    }
+
+
 }

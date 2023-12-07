@@ -12,6 +12,8 @@ import { Mainverify } from './MainVerificationPage/MainVerify';
 import { SignUp } from './SignUp/SignUp';
 import { NextStep } from './SignUp/NextStep';
 import { SignUpExplore } from './SignUp/SignUpExplore';
+import { AccountSetUp } from './SignUp/AccountSetUp';
+import { Login } from './LogIn/Login';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/nextstep' element={<NextStep />} />
           <Route path='/nextstepexplore' element={<SignUpExplore />} />
+          <Route path='/accountsetup' element={<AccountSetUp />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

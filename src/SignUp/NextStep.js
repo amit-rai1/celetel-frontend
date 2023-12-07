@@ -29,7 +29,7 @@ export function NextStep() {
                                 <input type="text" name="" id="" placeholder='Enter here' />
                             </div>
                             <div className="input1">
-                                <label htmlFor="">Mobile number</label>
+                                <label htmlFor="">Mobile number(optional)</label>
                                 <input type="text" name="" id="" placeholder='Enter here' />
                             </div>
                         </div>
