@@ -29,14 +29,7 @@ const staging = {
 
 //For staging server port KEY can not be remove its using in application
 
-const dev = {
-  // apiUrl: "http://190.92.159.196:",
-  // encryptionkey: "",
-  // PORT: '9121/api/v1',
-  // API_BASEURL: "http://190.92.159.196:9121",
-  // SOCKET_URL: "ws://190.92.159.196:9121"
 
-};
 
 console.log("process.env.REACT_APP_ENV :", process.env.REACT_APP_ENV);
 
