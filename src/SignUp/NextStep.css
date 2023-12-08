@@ -56,18 +56,20 @@
     font-size: 12px;
 }
 
-
-.input2 input {
-    padding: 10px 10px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    width: 470px;
-    border-radius: 6px;
-    margin-top: 5px;
-}
-
 .inputs_new {
     display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.inputs_new input {
+    display: flex;
+    border: none;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 5px;
     gap: 10px;
     width: 100%;
 }
@@ -78,6 +80,68 @@
     border: none;
     background-color: #4285F4;
     color: white;
+    cursor: pointer;
+}
+
+.verify_now_otp {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.verify_now_otp h1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.para_verify {
+    margin-top: 20px;
+    width: 70%;
+    font-size: 14px;
+}
+
+.verify_butn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.verify_butn input {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.verify_butn button {
+    background-color: #59C277;
+    padding: 12px 22px 12px 22px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    border: transparent;
+}
+
+.verify_butn12 {
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.verify_butn12 p {
+    color: #656565;
+}
+
+
+.verify_butn12 button {
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    color: blue;
     cursor: pointer;
 }
 
@@ -145,7 +209,7 @@
     margin-top: 15px;
 }
 
-@media screen and (max-width : 1480px) {
+@media screen and (max-width : 1080px) {
     .sub_signup_form12 {
         width: 100%;
         margin-top: 15px;
@@ -153,6 +217,11 @@
     }
 
     .main_inputs_f {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputs_new {
         display: flex;
         flex-direction: column;
     }
@@ -190,5 +259,9 @@
         cursor: pointer;
         border: none;
         justify-content: center;
+    }
+
+    .new_verify {
+        display: none;
     }
 }

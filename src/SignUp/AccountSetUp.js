@@ -1,6 +1,7 @@
 import React from 'react'
 import { Fragment, useState } from 'react'
 import './AccountSetUp.css'
+import { Link } from 'react-router-dom';
 
 export function AccountSetUp() {
 
@@ -30,6 +31,7 @@ export function AccountSetUp() {
                         <h1>Account set up</h1>
                         <label htmlFor="email">Email</label>
                         <input
+                            disabled
                             type="email"
                             id="email"
                             name="email"
@@ -60,7 +62,7 @@ export function AccountSetUp() {
                         />
                         <div className="submit_form">
                             <button type="submit">Create</button>
-                            <p>Already have an account? <a href="12">Log in</a></p>
+                            <p>Already have an account? <Link to={'/login'}><a href="12">Log in</a></Link></p>
                         </div>
                     </form>
                 </div>

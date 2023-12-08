@@ -1,7 +1,8 @@
 .main_footer {
     /* margin-top: 200px; */
     background-color: #FBFBFB;
-    padding: 65px 75px;
+    /* border: 1px solid red; */
+    padding: 5px 55px;
 }
 
 .sub_footer {

@@ -37,7 +37,7 @@ export function MainWhatsapp() {
                 </div>
             </div>
 
-            <div className="main_sol_page10">
+            <div className="main_sol_page20">
                 <h1>Harness the world's most popular messaging app</h1>
                 <p>Bring conversations into your entire customer journey by scaling with WhatsApp Business -
                     get ready to start a conversation with your customers around the world!</p>
