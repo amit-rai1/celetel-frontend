@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import './Navbar.css';
-import logo1 from '../Assets/logo1.png'
 import { FaAngleDown } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
@@ -8,6 +7,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import { MdArrowDropDown } from "react-icons/md";
 import ListItem from "@mui/material/ListItem";
+import imagelogo from '../Assets/image 1.png'
 
 export function Navbar() {
 
@@ -38,7 +38,7 @@ export function Navbar() {
         <Fragment>
             <div className="main_nav">
                 <div className="sub_nav">
-                    <img onClick={handleClick} src={logo1} alt="" />
+                    <img onClick={handleClick} src={imagelogo} alt="" />
                     <ul>
                         <Link to={'/'}><li>Home</li></Link>
                         <li>Products <FaAngleDown /></li>

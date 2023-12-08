@@ -3,6 +3,7 @@ import './Login.css'
 import image1 from '../Assets/search 1.png'
 import image2 from '../Assets/image 69.png'
 import image3 from '../Assets/image 70.png'
+import { Link } from 'react-router-dom'
 
 
 export function Login() {
@@ -29,7 +30,7 @@ export function Login() {
                 <div className="app_container12">
                     <form onSubmit={handleSubmitLogin} className="form_container12">
                         <h1>Log in</h1>
-                        <label htmlFor="email">User id/Email</label>
+                        <label htmlFor="email">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -62,7 +63,7 @@ export function Login() {
 
                         <div className="submit_form12">
                             <button type="submit">Login</button>
-                            <p>Don’t have an account?<a href="12">Sign up</a></p>
+                            <p>Don’t have an account?<Link to={'/signup'}>Sign up</Link></p>
                         </div>
                     </form>
                 </div>

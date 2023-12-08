@@ -146,10 +146,8 @@ export function WhatsApp() {
                     <img src={logo15} alt="" />
                 </div>
                 <div className="new_para_conf">
-                    <h1>One step solution with
-                        Celetel app</h1>
-                    <p style={{ marginTop: '20px' }}>Welcome to Celetel's SMS Solutions, where we transform simple
-                        text messages into powerful communication tools that connect
+                    <h1>One step solution with Celetel app</h1>
+                    <p style={{ marginTop: '20px' }}>Welcome to Celetel's SMS Solutions, where we transform simple text messages into powerful communication tools that connect
                         businesses with their audience like never before. With our suite of
                         SMS services, we provide the foundation for engaging, effective,
                         and efficient messaging strategies.</p>
@@ -176,8 +174,7 @@ export function WhatsApp() {
 
 
             <div className="testimony_review">
-                <h1> Trusted by Thousands of Happy
-                    Customer</h1>
+                <h1> Trusted by Thousands of Happy Customer</h1>
                 <p>These are the stories of our customers who have joined us with great
                     pleasure when using this crazy feature.</p>
 

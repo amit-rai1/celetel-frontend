@@ -5,6 +5,11 @@
 }
 
 .sub_sms_sol {
+    display: -webkit-box;
+    /* Safari, iOS, and Chrome */
+    display: -moz-box;
+    /* Firefox */
+    display: flex;
     display: flex;
     gap: 45px;
     background-color: #ffd17a;
@@ -15,6 +20,11 @@
     margin-top: 45px;
     padding-left: 52px;
     width: 35%;
+    -webkit-margin-top: 45px;
+    -moz-margin-top: 45px;
+    -webkit-padding-start: 52px;
+    -moz-padding-start: 52px;
+    max-width: 45%;
 }
 
 .para_sol {
@@ -110,6 +120,17 @@
 
 .sub_image_sol_1 img:nth-child(3) {
     display: none;
+}
+
+@-moz-document url-prefix() {
+    .sub_image_sol_1 img:nth-child(2) {
+        margin-left: 156px;
+        width: 100%;
+    }
+
+    .sub_image_sol_1 img:nth-child(3) {
+        display: none;
+    }
 }
 
 

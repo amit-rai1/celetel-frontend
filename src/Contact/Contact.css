@@ -4,7 +4,8 @@
     margin: auto;
     /* position: relative; */
     width: 100%;
-    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     align-items: center;
     justify-content: center;
 }
@@ -16,6 +17,7 @@
     background-color: #fff;
     position: relative;
     top: 40%;
+    -webkit-transform: translateY(-25%);
     transform: translateY(-25%);
     border-radius: 5px;
     margin: auto;
@@ -25,6 +27,8 @@
 
 .para_new_c {
     /* border: 1px solid red; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     align-items: center;
@@ -50,12 +54,18 @@
 }
 
 .form_con {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10px 50px;
     flex-direction: column;
 }
 
 .form_con form {
+    display: -webkit-box;
+    /* Safari */
+    display: -ms-flexbox;
+    /* IE 10 */
     display: flex;
     padding: 5px;
     flex-direction: column;
@@ -110,6 +120,10 @@
     margin: auto;
     margin-top: 80px;
     width: 80%;
+    display: -webkit-box;
+    /* Safari */
+    display: -ms-flexbox;
+    /* IE 10 */
     display: flex;
     gap: 15px;
     align-items: flex-start;
@@ -118,8 +132,11 @@
 
 .next_step_steps10 p {
     padding: 10px 15px;
-    display: inline;
     display: flex;
+    display: -webkit-box;
+    /* Safari */
+    display: -ms-flexbox;
+    /* IE 10 */
     align-items: center;
     border-radius: 50%;
     background-color: #FFCE22;
@@ -144,6 +161,7 @@
         background-color: #fff;
         position: relative;
         top: 40%;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         border-radius: 5px;
         margin: auto;
@@ -163,6 +181,8 @@
     .next_step_steps {
         width: 80%;
         display: flex;
+        display: -webkit-box; /* Safari */
+        display: -ms-flexbox; /* IE 10 */
         flex-direction: column;
     }
 
