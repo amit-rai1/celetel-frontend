@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './SignUp.css'
 import image1 from '../Assets/Group 1000001796.png'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function SignUp() {
 
@@ -14,7 +14,7 @@ export function SignUp() {
     useEffect(() => {
         const fetchCountries = async () => {
             try {
-                const response = await axios.get('https://restcountries.com/v3.1/all');
+                const response = await axios.get('https://api.countrystatecity.in/v1/countries');
                 setCountries(response.data);
             } catch (error) {
                 console.error('Error fetching country data:', error);
@@ -29,26 +29,6 @@ export function SignUp() {
         navigateToNextStep('/nextstep');
     }
 
-    // async function handleClick() {
-    //     const url = 'https://geography4.p.rapidapi.com/apis/geography/v1/country/name/america?sortBy=name&sortOrder=asc&limit=10';
-    //     const options = {
-    //         method: 'GET',
-    //         headers: {
-    //             'X-RapidAPI-Key': 'd7c820d940mshc8b4dcb0357c3dcp1fa59cjsn24f2aed3c50f',
-    //             'X-RapidAPI-Host': 'geography4.p.rapidapi.com'
-    //         }
-    //     };
-
-    //     try {
-    //         const response = await fetch(url, options);
-    //         const result = await response.json();
-    //         console.log(result);
-    //     }
-    //     catch (error) {
-    //         console.error(error);
-    //     }
-    // }
-
     return (
         <Fragment>
             <div className="main_signup">
@@ -61,10 +41,6 @@ export function SignUp() {
                 <div className="sub_signup_form">
                     <div className="input_fields">
                         <p>Select country</p>
-                        {/* <select name="Enter here" id="Enter here" >
-                            <option value="" disabled selected hidden>Enter here</option>
-                            <option value="option1">Option 1</option>
-                        </select> */}
                         <select name="country" id="country">
                             <option value="" disabled selected hidden>
                                 Select a country
@@ -78,7 +54,7 @@ export function SignUp() {
                         <div className="btn15_steps">
                             <button onClick={handleClickNextStep}>Next</button>
                         </div>
-                        <p className='para_23'>Already have an account ? <a href="#12">Login</a></p>
+                        <p className='para_23'>Already have an account ? <Link to={'/login'}>Login</Link></p>
                     </div>
                 </div>
             </div>

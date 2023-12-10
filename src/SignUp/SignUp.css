@@ -44,16 +44,16 @@
 
 .sub_signup_form {
     width: 50%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* border: 1px solid red; */
     padding: 15px 65px;
 }
 
 .input_fields {
-    height: 80vh;
+    height: 90%;
     border-radius: 20px;
     background-color: #F9FAFF;
-    padding: 15px 70px;
+    padding: 15px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +63,9 @@
 .input_fields select {
     width: 90%;
     margin-top: 15px;
-    padding: 8px 10px;
+    padding: 11px 20px;
+    border-radius: 5px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
     border: none;
 }
 
@@ -100,6 +102,7 @@
 @media screen and (max-width : 1080px) {
     .main_signup {
         height: auto;
+        border: 1px solid red;
     }
 
     .sub_side_signup {
@@ -108,7 +111,15 @@
 
     .sub_signup_form {
         width: 100%;
-        padding: 15px;
+        height: auto;
+        /* border: 1px solid red; */
+        padding: 10px;
+    }
+
+    .input_fields{
+         border: 1px solid red;
+         height: auto;
+         padding: 30px 10px;
     }
 
     .btn15_steps {

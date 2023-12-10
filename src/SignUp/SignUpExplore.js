@@ -181,7 +181,7 @@ export function SignUpExplore() {
                                         <div className="main_modal">
                                             <p>Signup successful</p>
                                             <img src={image254} alt="" />
-                                            <p>Ready for account setup</p>
+                                            {/* <p>Ready for account setup</p> */}
                                             <div className="new_images">
                                                 <img src={image255} alt="" />
                                                 <p>Your purchase is completed set up your celetel account id and password in the next step</p>
