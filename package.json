@@ -28,6 +28,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+"devDependencies": {
+  "@babel/plugin-proposal-private-property-in-object": "version_number"
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
