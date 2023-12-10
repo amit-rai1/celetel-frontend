@@ -17,6 +17,9 @@
 
 .sub_whatsapp img {
     width: 90%;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 7px;
 }
 
 .new_img {
@@ -69,6 +72,8 @@
 
 .sub_whatsapp1 img:nth-child(2) {
     width: 100%;
+    position: relative;
+    top: 10px;
 }
 
 .sub_whatsapp1 img:nth-child(3) {

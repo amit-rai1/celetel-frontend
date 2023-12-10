@@ -25,9 +25,22 @@ export function Footer() {
                             <a href="#12">Messaging</a>
                             <a href="#12">Voice</a>
                         </div>
+                        <div className='sub_20_foot'>
+                            <a href="#12">Product</a>
+                            <a href="#12">Message</a>
+                            <a href="#12">RCS</a>
+                            <a href="#12">Whatsapp</a>
+                            <a href="#12">SMS</a>
+                        </div>
                         <div className='sub_2_foot'>
                             <a href="#12">Company</a>
                             <a href="#12">About us</a>
+                            <a href="#12">Product</a>
+                            <a href="#12">Pricing</a>
+                            <a href="#12">Contact us</a>
+                        </div>
+                        <div className='sub_20_foot'>
+                            <a href="#12">Company</a>
                             <a href="#12">Product</a>
                             <a href="#12">Pricing</a>
                             <a href="#12">Contact us</a>
@@ -38,8 +51,9 @@ export function Footer() {
                             <a href="#12">LinkedIn</a>
                             <a href="#12">Facebook</a>
                         </div>
-
-                        <div className='sub_2_foot'>
+                    </div>
+                    <div className="new_foot">
+                        <div className='sub_3_foot'>
                             <a href="#12">Legal</a>
                             <a href="#12">Terms</a>
                             <a href="#12">Privacy </a>
@@ -48,6 +62,13 @@ export function Footer() {
                             <a href="#12">Settings</a>
                             <a href="#12">Contact</a>
                         </div>
+
+                        <div className='sub_20_foot'>
+                            <a href="#12">Legal</a>
+                            <a href="#12">Terms&Conditions</a>
+                            <a href="#12">Privacy </a>
+                            <a href="#12">Cookies</a>
+                        </div>
                         <div className='sub_2_foot1'>
                             <span>GET IN TOUCH</span>
                             <p><FaTwitter /></p>
@@ -55,6 +76,8 @@ export function Footer() {
                             <p><FaFacebook /></p>
                         </div>
                     </div>
+
+
                 </div>
                 <div className="last_foot">
                     &copy;2023 Celetel, All right reserved.
