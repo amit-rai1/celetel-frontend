@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 export function SignUp() {
 
+    const [selectedCountry, setSelectedCountry] = useState('');
 
     const [countries, setCountries] = useState([]);
 
@@ -25,8 +26,15 @@ export function SignUp() {
     }, []);
     const navigateToNextStep = useNavigate();
 
+    function handleCountrySelection(event) {
+        const selectedCountry = event.target.value;
+        console.log('Selected Country:', selectedCountry); // Log the selected country
+        setSelectedCountry(selectedCountry);
+    }
+    
     function handleClickNextStep() {
-        navigateToNextStep('/nextstep');
+        console.log('Selected Country on Next Click:', selectedCountry); // Log the selected country
+        navigateToNextStep('/nextstep', { state: { selectedCountry } });
     }
 
     // async function handleClick() {
@@ -65,7 +73,7 @@ export function SignUp() {
                             <option value="" disabled selected hidden>Enter here</option>
                             <option value="option1">Option 1</option>
                         </select> */}
-                        <select name="country" id="country">
+                        <select name="country" id="country" onChange={handleCountrySelection}>
                             <option value="" disabled selected hidden>
                                 Select a country
                             </option>

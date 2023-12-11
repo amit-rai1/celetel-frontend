@@ -1,20 +1,24 @@
-import React, { Fragment,useState } from 'react'
+import React, { Fragment, useState,useEffect } from 'react'
 import './NextStep.css'
 import image2 from '../Assets/Group 1000001796.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import { signUpClient } from '../Service/auth.service'
 
 export function NextStep() {
 
 
-
+    const location = useLocation();
+    console.log(location,"location")
+    const { selectedCountry } = location .state|| {};
+    console.log(selectedCountry,"selectedCountry")
     const navigateToExploreSignup = useNavigate()
 
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
-        phone: ''
+        phone: '',
+        country:""
     });
 
     const handleChange = (e) => {
@@ -27,16 +31,17 @@ export function NextStep() {
 
     const handleClickNextStepExplore = async () => {
         try {
-            const response = await signUpClient(formData);
+            console.log('Form Data:', formData);
+            console.log('Selected Country:', selectedCountry);
+
+            const response = await signUpClient({ ...formData, country: selectedCountry });
             console.log(response);
             alert("signup successfully");
             navigateToExploreSignup('/nextstepexplore');
         } catch (error) {
             console.error('Error during sign up:', error.message);
-
         }
     };
-
 
 
 
