@@ -3,7 +3,7 @@
 const local = {
   apiUrl: "http://localhost:",
   encryptionkey: "",
-  PORT: '7600/api',
+  PORT: '8600/api',
   API_BASEURL: "http://localhost:8600",
   SOCKET_URL: "ws://localhost:8600"
 };
