@@ -2,22 +2,108 @@ import React, { Fragment, useState, useEffect } from 'react'
 import './NextStep.css'
 import image2 from '../Assets/Group 1000001796.png'
 import image3 from '../Assets/image 67.png'
-import { useNavigate } from 'react-router-dom'
-// import axios from 'axios'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service'
+import { Link } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast';
 
 export function NextStep() {
 
     const navigateToExploreSignup = useNavigate();
+    const location = useLocation();
+    // console.log(location, "location")
+    const { selectedCountry } = location.state || {};
+    // console.log(selectedCountry, "selectedCountry")
 
-    // const [signupData, setSignupData] = useState({
-    //     fullName: "",
-    //     email: "",
-    //     country: "",
-    //     phone: 7991238765,
-    //     role: "client"
-    // });
 
+
+    const [signupData, setSignupData] = useState({
+        fullName: "",
+        email: "",
+        country: "",
+        phone: "",
+        role: "client",
+    });
+
+    const [signupError, setSignUpErrors] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+
+    })
+    const [email, setEmail] = useState('');
+    const [enteredOTP, setEnteredOTP] = useState('');
+    const [showVerifySection, setShowVerifySection] = useState(false);
     const [timer, setTimer] = useState(300);
+
+
+
+
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setSignupData((prevData) => ({
+    //         ...prevData,
+    //         [name]: value
+    //     }));
+
+    //     setSignUpErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         [name]: ''
+    //     }));
+    // };
+
+    const handleClickNextStepExplore = async () => {
+
+        const requiredFieldsFromInput = ['fullName', 'email', 'phone'];
+
+        const newErrors = {};
+        requiredFieldsFromInput.forEach((field) => {
+            if (!signupData[field]) {
+                newErrors[field] = `Please enter ${field === 'fullName' ? 'your full name' : field}`;
+            }
+        });
+        setSignUpErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) {
+            return;
+        }
+
+        try {
+
+            console.log('Sign Data:', signupData);
+            console.log('Selected Country:', selectedCountry);
+            const response = await signUpClient({ ...signupData, country: selectedCountry });
+            console.log(response);
+            alert("signup successfully");
+            navigateToExploreSignup('/nextstepexplore');
+        }
+        catch (error) {
+            console.error('Error during sign up:', error.message);
+        }
+    };
+
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+
+        if (name === 'email') {
+            setEmail(value);
+            setSignupData({ ...signupData, email: value });
+        } else if (name === 'fullName') {
+            setSignupData({ ...signupData, fullName: value });
+        } else {
+            setSignupData({ ...signupData, [name]: value });
+        }
+        setSignUpErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: ''
+        }));
+    };
+
+
+
+    // verify steps
+
 
     useEffect(() => {
         const countdown = setInterval(() => {
@@ -47,27 +133,34 @@ export function NextStep() {
         setTimer(300);
     };
 
-    const [showVerifySection, setShowVerifySection] = useState(false);
-
-    const handleVerify = () => {
-        setShowVerifySection(true);
-
-        // Show the verify section when the "Verify" button is clicked
+    const handleVerifyClick = async () => {
+        try {
+            const result = await sendVerificationEmail(email);
+            alert(result.message)
+            console.log(result, "result")
+            setShowVerifySection(true)
+        } catch (error) {
+            console.error('Error handling verification email:', error);
+            alert('An unexpected error occurred. Please try again.');
+        }
     };
 
-    // const handleSignup = async () => {
-    //     try {
-    //         const response = await axios.post('http://localhost:8600/api/client/signup', signupData);
-    //         console.log('Signup successful:', response.data);
-    //     } catch (error) {
-    //         console.error('Error during signup:', error);
-    //     }
-    //     
-    // };
+    const handleVerifyOtp = async () => {
+        try {
+            const result = await verifyOtp(enteredOTP);
 
-    const handleClickExplorePage = () => {
-        navigateToExploreSignup('/nextstepexplore');
-    }
+            if (result && result.success) {
+                alert(result.message);
+            } else {
+                toast.error('Something went wrong');
+            }
+        } catch (error) {
+            console.error('Error handling OTP verification:', error);
+            alert('An unexpected error occurred. Please try again.');
+        }
+    };
+
+
 
     return (
         <Fragment>
@@ -84,19 +177,31 @@ export function NextStep() {
                         <div className="main_inputs_f">
                             <div className="input1">
                                 <label htmlFor="">Full name</label>
-                                <input type="text" name="" id="" placeholder='Enter here' required />
+                                <input type="text" name="fullName" id="fullName" placeholder='Enter here'
+                                    value={signupData.fullName}
+                                    onChange={handleInputChange}
+                                    required />
+                                <div className="signup_error_message">{signupError.fullName}</div>
                             </div>
                             <div className="input1">
                                 <label htmlFor="">Mobile number(optional)</label>
-                                <input type="text" name="" id="" placeholder='Enter here' required />
+                                <input type="text" name="phone" id="phone" placeholder='Enter here'
+                                    value={signupData.phone}
+                                    onChange={handleInputChange}
+                                />
                             </div>
                         </div>
                         <div className="input2">
                             <label htmlFor="">Email address</label>
                             <div className="inputs_new">
-                                <input type="email" name="" id="" placeholder='Enter here' required />
-                                <button onClick={handleVerify}>Verify</button>
+                                <input type="email" name="email" id="email" placeholder='Enter here'
+                                    value={signupData.email}
+                                    onChange={handleInputChange}
+                                    required />
+
+                                <button onClick={handleVerifyClick}>Verify</button>
                             </div>
+                            <div className="signup_error_message">{signupError.email}</div>
                             {
                                 showVerifySection && (
                                     <div className="new_verify">
@@ -109,8 +214,16 @@ export function NextStep() {
                                         </div>
 
                                         <div className="verify_butn">
-                                            <input type="text" placeholder='0000' />
-                                            <button>Submit</button>
+                                            <input type="text" placeholder='0000'
+                                                onChange={(e) => {
+                                                    const enteredValue = e.target.value;
+
+                                                    // Check if the entered value is a 4-digit OTP
+                                                    if (/^\d{4}$/.test(enteredValue)) {
+                                                        setEnteredOTP(enteredValue);
+                                                    }
+                                                }} />
+                                            <button onClick={handleVerifyOtp}>Submit</button>
                                         </div>
                                         <div className="verify_butn12">
                                             <p>{formatTime(timer)}</p>
@@ -123,16 +236,17 @@ export function NextStep() {
 
                         </div>
                         <div className="new_terms_c">
-                            <input type="checkbox" name="" id="" />
+                            <input type="checkbox" name="" id="" required />
                             <p>By creating an account , i agree to our  <a href="12">Terms of use</a> and <a href="12">Privacy policy</a></p>
                         </div>
                         <div className="new_terms_c1">
-                            <input type="checkbox" name="" id="" />
+                            <input type="checkbox" name="" id="" required />
                             <p>By creating an account,i am also consenting to receive SMS messages and emails,including product new feature updates,events, and marketing promotions.</p>
                         </div>
                         <div className="btn_sign">
-                            <button onClick={handleClickExplorePage}>Sign up</button>
-                            <p>Already have an account?  <a href='12'>Log in</a></p>
+                            <button onClick={handleClickNextStepExplore}>Sign up</button>
+                            {/* <Toaster /> */}
+                            <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
                         </div>
                     </div>
                 </div>

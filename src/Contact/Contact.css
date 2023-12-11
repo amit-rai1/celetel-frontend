@@ -181,9 +181,14 @@
     .next_step_steps {
         width: 80%;
         display: flex;
-        display: -webkit-box; /* Safari */
-        display: -ms-flexbox; /* IE 10 */
+        display: -webkit-box;
+        display: -ms-flexbox;
         flex-direction: column;
+    }
+
+    .next_step_1 {
+        width: 80%;
+        margin-top: 0px;
     }
 
     .text_ment20 h4 {

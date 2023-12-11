@@ -102,7 +102,7 @@
 @media screen and (max-width : 1080px) {
     .main_signup {
         height: auto;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .sub_side_signup {
@@ -117,8 +117,8 @@
     }
 
     .input_fields{
-         border: 1px solid red;
-         height: auto;
+         /* border: 1px solid red; */
+         height: 100vh;
          padding: 30px 10px;
     }
 
