@@ -18,14 +18,7 @@ const staging = {
   SOCKET_URL: ""
 };
 
-// 54.201.160.69:9162
-// const staging = {
-//   // apiUrl: "http://54.190.192.105:",
-//   // encryptionkey: "",
-//   // PORT: '9121/api/v1',
-//   // API_BASEURL: "http://54.190.192.105:9121",
-//   // SOCKET_URL: "ws://54.190.192.105:9121"
-// };
+
 
 //For staging server port KEY can not be remove its using in application
 

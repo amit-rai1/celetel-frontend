@@ -16,6 +16,7 @@ import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -36,9 +37,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
     </div>
   );
 }
-
-export default App;
+export default (App);

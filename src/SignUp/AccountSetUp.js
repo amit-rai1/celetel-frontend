@@ -1,26 +1,81 @@
 import React from 'react'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import './AccountSetUp.css'
+import { Link, useNavigate } from 'react-router-dom';
+import { accountSetup, getClientById } from '../Service/auth.service';
 
 export function AccountSetUp() {
+    const navigateToLogin = useNavigate();
 
+    const [email, setEmail] = useState('');
     const [formData, setFormData] = useState({
-        email: '',
         password: '',
         confirmPassword: '',
     });
 
-    const handleChange = (e) => {
+    const clientId = localStorage.getItem('clientId');
+
+    console.log(clientId, "clientId")
+
+    useEffect(() => {
+        const getClientData = async () => {
+            console.log(clientId, "clientId");
+            try {
+                const response = await getClientById(clientId); 
+                const { result } = response;
+
+                if (result) {
+                    setEmail(result.email);
+                }
+            } catch (error) {
+                console.error('Error fetching client data:', error.message);
+            }
+        };
+
+        getClientData();
+
+    }, [clientId]);
+
+
+
+
+    const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
+        setFormData((prevFormData) => ({
+            ...prevFormData,
             [name]: value,
         }));
     };
 
+
+    const handleUpdate = async (e) => {
+        e.preventDefault();
+
+        // Retrieve clientId from local storage
+        const clientId = localStorage.getItem('clientId');
+
+        try {
+            if (formData.password !== formData.confirmPassword) {
+                // Password and ConfirmPassword do not match
+                console.error('Passwords do not match');
+                return;
+            }
+
+            const response = await accountSetup(clientId, {
+                password: formData.password,
+            });
+
+            console.log('Password updated successfully:', response);
+            navigateToLogin('/login');
+        } 
+        catch (error) {
+            console.error('Error updating password:', error.message);
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        // console.log('Form submitted:', formData);
     };
     return (
         <Fragment>
@@ -30,11 +85,12 @@ export function AccountSetUp() {
                         <h1>Account set up</h1>
                         <label htmlFor="email">Email</label>
                         <input
+                            disabled
                             type="email"
                             id="email"
                             name="email"
-                            value={formData.email}
-                            onChange={handleChange}
+                            value={email}
+                            onChange={handleInputChange}
                             required placeholder='Enter here'
                         />
 
@@ -44,7 +100,7 @@ export function AccountSetUp() {
                             id="password"
                             name="password"
                             value={formData.password}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             required placeholder='Enter here'
                         />
 
@@ -54,13 +110,13 @@ export function AccountSetUp() {
                             id="confirmPassword"
                             name="confirmPassword"
                             value={formData.confirmPassword}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             required
                             placeholder='Enter here'
                         />
                         <div className="submit_form">
-                            <button type="submit">Create</button>
-                            <p>Already have an account? <a href="12">Log in</a></p>
+                            <button type="submit" onClick={handleUpdate}>Create</button>
+                            <p>Already have an account? <Link to={'/login'}>Log in</Link></p>
                         </div>
                     </form>
                 </div>

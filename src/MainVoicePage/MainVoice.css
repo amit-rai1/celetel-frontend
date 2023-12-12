@@ -13,6 +13,10 @@
     padding-right: 600px;
 }
 
+.main_sol_page12 {
+    display: none;
+}
+
 .main_sms1 {
     margin-top: 80px;
     padding: 0px 75px;
@@ -132,7 +136,16 @@
 
 @media screen and (max-width : 1080px) {
 
-    .main_sol_page10 {
+    .main_sol_page10,
+    .btn2 {
+        display: none;
+    }
+
+    .main_sol_page10 h1 {
+        display: none;
+    }
+
+    .main_sol_page10 p {
         display: none;
     }
 
@@ -141,7 +154,7 @@
     }
 
     .main_sol_page12 {
-        margin-top: 80px;
+        margin-top: 40px;
         display: block;
         padding: 10px 10px;
     }

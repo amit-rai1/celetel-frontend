@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.main_sol_page20 {
+    display: none;
+}
+
 .new_img_gif {
     display: flex;
     align-items: center;
@@ -382,24 +386,24 @@
 
 @media screen and (max-width : 1080px) {
 
-    .main_sol_page10 {
+    .main_sol_page20 {
         display: block;
         width: 100%;
         padding: 10px;
     }
 
-    .main_sol_page10 h1 {
+    .main_sol_page20 h1 {
         font-size: 23px;
         padding: 0;
     }
 
-    .main_sol_page10 p {
+    .main_sol_page20 p {
         margin-top: 25px;
         font-size: 15px;
         padding: 0;
     }
 
-    .main_sol_page10 img {
+    .main_sol_page20 img {
         margin-top: 25px;
         width: 100%;
         border-radius: 15px;

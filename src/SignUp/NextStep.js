@@ -90,18 +90,64 @@ export function NextStep() {
                                 />
                                 <button>Verify</button>
                             </div>
+                            <div className="signup_error_message">{signupError.email}</div>
+                            {
+                                showVerifySection && (
+                                    <div className="new_verify">
+                                        <div className="verify_now_otp">
+                                            <h1>Check your mail</h1>
+                                            <img src={image3} alt="" />
+                                        </div>
+                                        <div className="para_verify">
+                                            <p>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
+                                        </div>
+
+                                        <div className="verify_butn">
+                                            <input type="Number" placeholder='0000'
+                                                onChange={(e) => {
+                                                    const enteredValue = e.target.value;
+
+                                                    // Check if the entered value is a 4-digit OTP
+                                                    if (/^\d{4}$/.test(enteredValue)) {
+                                                        setEnteredOTP(enteredValue);
+                                                    }
+                                                }} />
+                                            <button onClick={handleVerifyOtp}>Submit</button>
+                                        </div>
+                                        <div className="verify_butn12">
+                                            <p>{formatTime(timer)}</p>
+                                            <button onClick={handleResendOTP}>Resend OTP</button>
+                                        </div>
+                                    </div>
+                                )
+                            }
+
+
                         </div>
                         <div className="new_terms_c">
-                            <input type="checkbox" name="" id="" />
+                            <input
+                                type="checkbox"
+                                name=""
+                                required
+                                checked={termsCheckedOne}
+                                onChange={handleCheckboxChange}
+                            />
                             <p>By creating an account , i agree to our  <a href="12">Terms of use</a> and <a href="12">Privacy policy</a></p>
                         </div>
                         <div className="new_terms_c1">
-                            <input type="checkbox" name="" id="" />
+                            <input
+                                type="checkbox"
+                                name="" required
+                                checked={termsCheckedTwo}
+                                onChange={handleCheckboxChange}
+
+                            />
                             <p>By creating an account,i am also consenting to receive SMS messages and emails,including product new feature updates,events, and marketing promotions.</p>
                         </div>
                         <div className="btn_sign">
                             <button onClick={handleClickNextStepExplore}>Sign up</button>
-                            <p>Already have an account?  <a href='12'>Log in</a></p>
+                            <Toaster />
+                            <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
                         </div>
                     </div>
                 </div>
