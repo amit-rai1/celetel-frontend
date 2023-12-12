@@ -1,53 +1,189 @@
-import React, { Fragment, useState,useEffect } from 'react'
-import './NextStep.css'
-import image2 from '../Assets/Group 1000001796.png'
-import { useNavigate, useLocation } from 'react-router-dom'
-
-import { signUpClient } from '../Service/auth.service'
+import React, { Fragment, useState, useEffect } from 'react';
+import './NextStep.css';
+import image2 from '../Assets/Group 1000001796.png';
+import image3 from '../Assets/image 67.png';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service';
+import { Link } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
 
 export function NextStep() {
 
-
+    const navigateToExploreSignup = useNavigate();
     const location = useLocation();
-    console.log(location,"location")
-    const { selectedCountry } = location .state|| {};
-    console.log(selectedCountry,"selectedCountry")
-    const navigateToExploreSignup = useNavigate()
+    // console.log(location, "location")
+    const { selectedCountry } = location.state || {};
+    // console.log(selectedCountry, "selectedCountry")
 
-    const [formData, setFormData] = useState({
+
+    const [signupData, setSignupData] = useState({
+        fullName: "",
+        email: "",
+        country: "",
+        phone: "",
+        role: "client",
+    });
+
+    const [signupError, setSignUpErrors] = useState({
         fullName: '',
         email: '',
         phone: '',
-        country:""
-    });
+    })
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
+
+    const [email, setEmail] = useState('');
+    const [enteredOTP, setEnteredOTP] = useState('');
+    const [showVerifySection, setShowVerifySection] = useState(false);
+    const [timer, setTimer] = useState(300);
+    const [termsCheckedOne, setTermsCheckedOne] = useState(false);
+    const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
+
+
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setSignupData((prevData) => ({
+    //         ...prevData,
+    //         [name]: value
+    //     }));
+
+    //     setSignUpErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         [name]: ''
+    //     }));
+    // };
+
+
+    const handleCheckboxChange = (e) => {
+        setTermsCheckedOne(e.target.checked);
+        setTermsCheckedTwo(e.target.checked);
     };
 
     const handleClickNextStepExplore = async () => {
-        try {
-            console.log('Form Data:', formData);
-            console.log('Selected Country:', selectedCountry);
 
-            const response = await signUpClient({ ...formData, country: selectedCountry });
-            console.log(response);
-            alert("signup successfully");
+        const requiredFieldsFromInput = ['fullName', 'email', 'phone'];
+
+        const newErrors = {};
+        requiredFieldsFromInput.forEach((field) => {
+            if (!signupData[field]) {
+                newErrors[field] = `Please enter ${field === 'fullName' ? 'your full name' : field}`;
+            }
+        });
+        setSignUpErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) {
+            return;
+        }
+
+        if (!termsCheckedOne && !termsCheckedTwo) {
+            toast.error('Please agree to the terms and conditions.');
+            return;
+        }
+
+        try {
+
+            // console.log('Sign Data:', signupData);
+            // console.log('Selected Country:', selectedCountry);
+            const userData = await signUpClient({ ...signupData, country: selectedCountry });
+
+            localStorage.setItem('clientId', userData.result._id);
+
+            // console.log(response);
+            toast.success('Signup successful')
             navigateToExploreSignup('/nextstepexplore');
-        } catch (error) {
+        }
+        catch (error) {
             console.error('Error during sign up:', error.message);
         }
     };
 
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
 
-    // const handleClickNextStepExplore = () => {
-    //     navigateToExploreSignup('/nextstepexplore')
-    // }
+        if (name === 'email') {
+            setEmail(value);
+            setSignupData({ ...signupData, email: value });
+        } else if (name === 'fullName') {
+            setSignupData({ ...signupData, fullName: value });
+        } else {
+            setSignupData({ ...signupData, [name]: value });
+        }
+        setSignUpErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: ''
+        }));
+    };
+
+    // verify otp steps
+
+    useEffect(() => {
+        const countdown = setInterval(() => {
+            setTimer(prevTimer => {
+                if (prevTimer > 0) {
+                    return prevTimer - 1;
+                } else {
+                    clearInterval(countdown);
+                    return 0;
+                }
+            });
+        }, 1000);
+
+        return () => {
+            clearInterval(countdown);
+        };
+    }, []);
+
+
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+
+    const handleResendOTP = () => {
+        setTimer(300);
+    };
+
+    const handleVerifyClick = async () => {
+        try {
+            const result = await sendVerificationEmail(email);
+            if (result.success) {
+                toast.success(result.message);
+                setShowVerifySection(true);
+            } else {
+                toast.error(result.message);
+            }
+            console.log(result, "result");
+        } catch (error) {
+            console.error('Error handling verification email:', error);
+            toast.error('An unexpected error occurred. Please try again.');
+        }
+    };
+
+    const handleVerifyOtp = async () => {
+        console.log("enetr11")
+        try {
+
+            if (!enteredOTP) {
+                toast.error('Please enter a 4-digit OTP');
+                return;
+            }
+
+            const result = await verifyOtp(enteredOTP);
+
+            if (result && result.success) {
+                toast.success(result.message);
+            } else {
+                toast.error(result.message);
+            }
+        } catch (error) {
+            console.error('Error handling OTP verification:', error);
+            toast.error('An unexpected error occurred. Please try again');
+        }
+    };
+
+
+
 
     return (
         <Fragment>
@@ -65,18 +201,16 @@ export function NextStep() {
                             <div className="input1">
                                 <label htmlFor="">Full name</label>
                                 <input type="text" name="fullName" id="fullName" placeholder='Enter here'
-                                    value={formData.fullName}
-                                    onChange={handleChange}
-
-                                />
+                                    value={signupData.fullName}
+                                    onChange={handleInputChange}
+                                    required />
+                                <div className="signup_error_message">{signupError.fullName}</div>
                             </div>
                             <div className="input1">
                                 <label htmlFor="">Mobile number(optional)</label>
                                 <input type="text" name="phone" id="phone" placeholder='Enter here'
-
-                                    value={formData.phone}
-                                    onChange={handleChange}
-
+                                    value={signupData.phone}
+                                    onChange={handleInputChange}
                                 />
                             </div>
                         </div>
@@ -84,11 +218,11 @@ export function NextStep() {
                             <label htmlFor="">Email address</label>
                             <div className="inputs_new">
                                 <input type="email" name="email" id="email" placeholder='Enter here'
+                                    value={signupData.email}
+                                    onChange={handleInputChange}
+                                    required />
 
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                />
-                                <button>Verify</button>
+                                <button onClick={handleVerifyClick}>Verify</button>
                             </div>
                             <div className="signup_error_message">{signupError.email}</div>
                             {
