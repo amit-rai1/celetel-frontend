@@ -84,7 +84,7 @@ export function SignUpExplore() {
                     <label htmlFor=""></label>
                     <label className="switch">
                         <input type="checkbox" />
-                        <span class="slider"></span>
+                        <span className="slider"></span>
                     </label>
                     <p>Billed Yearly (save 15%)</p>
                 </div>

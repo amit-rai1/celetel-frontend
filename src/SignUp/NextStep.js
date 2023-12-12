@@ -1,11 +1,11 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import './NextStep.css'
-import image2 from '../Assets/Group 1000001796.png'
-import image3 from '../Assets/image 67.png'
-import { useNavigate, useLocation } from 'react-router-dom'
-import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service'
-import { Link } from 'react-router-dom'
-import toast, { Toaster } from 'react-hot-toast';
+import React, { Fragment, useState, useEffect } from 'react';
+import './NextStep.css';
+import image2 from '../Assets/Group 1000001796.png';
+import image3 from '../Assets/image 67.png';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service';
+import { Link } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
 
 export function NextStep() {
 
@@ -14,7 +14,6 @@ export function NextStep() {
     // console.log(location, "location")
     const { selectedCountry } = location.state || {};
     // console.log(selectedCountry, "selectedCountry")
-
 
 
     const [signupData, setSignupData] = useState({
@@ -29,14 +28,15 @@ export function NextStep() {
         fullName: '',
         email: '',
         phone: '',
-
     })
+
+
     const [email, setEmail] = useState('');
     const [enteredOTP, setEnteredOTP] = useState('');
     const [showVerifySection, setShowVerifySection] = useState(false);
     const [timer, setTimer] = useState(300);
-
-
+    const [termsCheckedOne, setTermsCheckedOne] = useState(false);
+    const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
 
 
     // const handleChange = (e) => {
@@ -51,6 +51,12 @@ export function NextStep() {
     //         [name]: ''
     //     }));
     // };
+
+
+    const handleCheckboxChange = (e) => {
+        setTermsCheckedOne(e.target.checked);
+        setTermsCheckedTwo(e.target.checked);
+    };
 
     const handleClickNextStepExplore = async () => {
 
@@ -68,13 +74,21 @@ export function NextStep() {
             return;
         }
 
+        if (!termsCheckedOne && !termsCheckedTwo) {
+            toast.error('Please agree to the terms and conditions.');
+            return;
+        }
+
         try {
 
-            console.log('Sign Data:', signupData);
-            console.log('Selected Country:', selectedCountry);
-            const response = await signUpClient({ ...signupData, country: selectedCountry });
-            console.log(response);
-            alert("signup successfully");
+            // console.log('Sign Data:', signupData);
+            // console.log('Selected Country:', selectedCountry);
+            const userData = await signUpClient({ ...signupData, country: selectedCountry });
+
+            localStorage.setItem('clientId', userData.result._id);
+
+            // console.log(response);
+            toast.success('Signup successful')
             navigateToExploreSignup('/nextstepexplore');
         }
         catch (error) {
@@ -100,10 +114,7 @@ export function NextStep() {
         }));
     };
 
-
-
-    // verify steps
-
+    // verify otp steps
 
     useEffect(() => {
         const countdown = setInterval(() => {
@@ -136,29 +147,41 @@ export function NextStep() {
     const handleVerifyClick = async () => {
         try {
             const result = await sendVerificationEmail(email);
-            alert(result.message)
-            console.log(result, "result")
-            setShowVerifySection(true)
+            if (result.success) {
+                toast.success(result.message);
+                setShowVerifySection(true);
+            } else {
+                toast.error(result.message);
+            }
+            console.log(result, "result");
         } catch (error) {
             console.error('Error handling verification email:', error);
-            alert('An unexpected error occurred. Please try again.');
+            toast.error('An unexpected error occurred. Please try again.');
         }
     };
 
     const handleVerifyOtp = async () => {
+        console.log("enetr11")
         try {
+
+            if (!enteredOTP) {
+                toast.error('Please enter a 4-digit OTP');
+                return;
+            }
+
             const result = await verifyOtp(enteredOTP);
 
             if (result && result.success) {
-                alert(result.message);
+                toast.success(result.message);
             } else {
-                toast.error('Something went wrong');
+                toast.error(result.message);
             }
         } catch (error) {
             console.error('Error handling OTP verification:', error);
-            alert('An unexpected error occurred. Please try again.');
+            toast.error('An unexpected error occurred. Please try again');
         }
     };
+
 
 
 
@@ -210,11 +233,11 @@ export function NextStep() {
                                             <img src={image3} alt="" />
                                         </div>
                                         <div className="para_verify">
-                                            <p>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 30 minutes</p>
+                                            <p>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
                                         </div>
 
                                         <div className="verify_butn">
-                                            <input type="text" placeholder='0000'
+                                            <input type="Number" placeholder='0000'
                                                 onChange={(e) => {
                                                     const enteredValue = e.target.value;
 
@@ -236,16 +259,28 @@ export function NextStep() {
 
                         </div>
                         <div className="new_terms_c">
-                            <input type="checkbox" name="" id="" required />
+                            <input
+                                type="checkbox"
+                                name=""
+                                required
+                                checked={termsCheckedOne}
+                                onChange={handleCheckboxChange}
+                            />
                             <p>By creating an account , i agree to our  <a href="12">Terms of use</a> and <a href="12">Privacy policy</a></p>
                         </div>
                         <div className="new_terms_c1">
-                            <input type="checkbox" name="" id="" required />
+                            <input
+                                type="checkbox"
+                                name="" required
+                                checked={termsCheckedTwo}
+                                onChange={handleCheckboxChange}
+
+                            />
                             <p>By creating an account,i am also consenting to receive SMS messages and emails,including product new feature updates,events, and marketing promotions.</p>
                         </div>
                         <div className="btn_sign">
                             <button onClick={handleClickNextStepExplore}>Sign up</button>
-                            {/* <Toaster /> */}
+                            <Toaster />
                             <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
                         </div>
                     </div>

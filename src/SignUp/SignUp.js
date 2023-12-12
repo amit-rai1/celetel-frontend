@@ -27,7 +27,7 @@ export function SignUp() {
 
     const handleCountrySelection = (e) => {
         const selectedCountry = e.target.value;
-        console.log('Selected Country:', selectedCountry);
+        // console.log('Selected Country:', selectedCountry);
         setSelectedCountry(selectedCountry);
     }
 
