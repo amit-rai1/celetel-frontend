@@ -85,10 +85,13 @@ export const getClientById = async (clientId) => {
 
 export const accountSetup = async (clientId, formData) => {
 
+    console.log(formData,"forsdfghjkauth")
+
     console.log(clientId, "clientIdupdate")
 
     try {
-        const response = await axios.put(`${API_BASEURL}/api/client/setupAccount`, { clientId, formData }); // Replace with your API endpoint
+        const response = await axios.put(`${API_BASEURL}/api/client/setupAccount`, { clientId: clientId, ...formData });
+        // Replace with your API endpoint
         return response.data;
     } catch (error) {
         throw Error(error.message);
