@@ -63,6 +63,7 @@ export function AccountSetUp() {
 
             const response = await accountSetup(clientId, {
                 password: formData.password,
+                confirmPassword:formData.confirmPassword
             });
 
             console.log('Password updated successfully:', response);
