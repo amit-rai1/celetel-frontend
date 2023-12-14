@@ -14,12 +14,15 @@ import { NextStep } from './SignUp/NextStep';
 import { SignUpExplore } from './SignUp/SignUpExplore';
 import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
+import ScrollToTop from './ScrollToTop';
+
 
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

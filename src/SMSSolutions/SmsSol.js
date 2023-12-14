@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react'
 import './SmsSol.css'
 import logo from '../Assets/New1.gif'
-import woman from '../Assets/unsplash_L9U5UUScnHY.png'
-import mobile from '../Assets/Frame 427319187 1.png'
 import { Link } from 'react-router-dom'
 import image1 from '../Assets/New10.jpg'
+import womanMobile from '../Assets/New13.gif';
 
 export function SmsSol() {
     return (
@@ -35,8 +34,7 @@ export function SmsSol() {
                         <Link to={'/voicesolutions'}><button>Explore</button></Link>
                     </div>
                     <div className="sub_image_sol_1">
-                        <img src={mobile} alt="" />
-                        <img src={woman} alt="" />
+                        <img src={womanMobile} alt="" />
                         <img src={image1} alt="" />
                     </div>
                 </div>

@@ -266,7 +266,7 @@
 }
 
 .used_by {
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -280,6 +280,23 @@
 
 .care_and_share2 {
     display: none;
+}
+
+@media screen and (max-width:1240px) {
+    .testimony_review h1 {
+        padding: 0;
+    }
+
+    .testimony_review p {
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    .cards_row_tes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:1080px) {

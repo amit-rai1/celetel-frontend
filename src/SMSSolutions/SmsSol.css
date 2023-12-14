@@ -6,9 +6,7 @@
 
 .sub_sms_sol {
     display: -webkit-box;
-    /* Safari, iOS, and Chrome */
     display: -moz-box;
-    /* Firefox */
     display: flex;
     display: flex;
     gap: 45px;
@@ -87,39 +85,13 @@
 
 .sub_image_sol_1 {
     /* border: 1px solid red; */
-    position: relative;
     display: flex;
     overflow: hidden;
     width: 100%;
 }
 
-.sub_image_sol_1 img:first-child {
-    position: absolute;
-    bottom: -300px;
-    /* border: 1px solid red; */
-    width: 80%;
-    animation: mobile 1.5s infinite alternate;
-}
-
-@keyframes mobile {
-    0% {
-        transform: translateY(0);
-
-    }
-
-    100% {
-        transform: translateY(-58%);
-
-    }
-}
-
-.sub_image_sol_1 img:nth-child(2) {
-    margin-left: 156px;
-    width: 65%;
-}
-
-.sub_image_sol_1 img:nth-child(3) {
-    display: none;
+.sub_image_sol_1 img {
+    width: 100%;
 }
 
 @-moz-document url-prefix() {
@@ -133,18 +105,43 @@
     }
 }
 
+@media only screen and (max-width: 1240px) {
+    .para_sol {
+        padding: 25px 1px;
+    }
 
-@media screen and (max-width: 1080px) {
+    .para_sol h1 {
+        font-size: 40px;
+    }
 
+    .para_sol p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .para_sol1 {
+        padding: 25px 20px;
+    }
+
+    .para_sol1 h1 {
+        font-size: 40px;
+    }
+
+    .para_sol1 p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
     .main_sms_sol {
         padding: 0;
-        /* border: 1px solid red; */
         width: 100%;
     }
 
     .para_sol {
         padding: 10px 10px;
-        /* border: 1px solid red; */
     }
 
     .para_sol h1 {
@@ -239,16 +236,11 @@
         display: none;
     }
 
-    .sub_image_sol_1 img:nth-child(2) {
-        display: none;
-    }
-
-    .sub_image_sol_1 img:nth-child(3) {
-        display: flex;
-        padding: 0;
+    .sub_image_sol_1 img:last-child {
+        width: 70%;
+        margin: auto;
         position: relative;
-        top: 8px;
-        width: 100%;
+        top: 15px;
     }
 
 }
