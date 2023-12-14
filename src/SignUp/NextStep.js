@@ -7,6 +7,7 @@ import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { TbDiscountCheckFilled } from "react-icons/tb";
 
 
 export function NextStep() {
@@ -39,26 +40,19 @@ export function NextStep() {
     const [timer, setTimer] = useState(300);
     const [termsCheckedOne, setTermsCheckedOne] = useState(false);
     const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
-
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setSignupData((prevData) => ({
-    //         ...prevData,
-    //         [name]: value
-    //     }));
-
-    //     setSignUpErrors((prevErrors) => ({
-    //         ...prevErrors,
-    //         [name]: ''
-    //     }));
-    // };
+    const [otpVerified, setOtpVerified] = useState(false);
 
 
     const handleCheckboxChange = (e) => {
-        setTermsCheckedOne(e.target.checked);
-        setTermsCheckedTwo(e.target.checked);
+        const checkboxName = e.target.name;
+
+        if (checkboxName === "termsCheckedOne") {
+            setTermsCheckedOne(e.target.checked);
+        } else if (checkboxName === "termsCheckedTwo") {
+            setTermsCheckedTwo(e.target.checked);
+        }
     };
+
 
     const handleClickNextStepExplore = async () => {
 
@@ -233,6 +227,10 @@ export function NextStep() {
                     progress: undefined,
                     theme: "colored",
                 });
+                setOtpVerified(true);
+                setTimeout(() => {
+                    setOtpVerified(true);
+                }, 3000);
             }
             else {
                 toast.error(result.message, {
@@ -261,10 +259,7 @@ export function NextStep() {
                 theme: "colored",
             });
         }
-    };
-
-
-
+    }
 
     return (
         <Fragment>
@@ -277,7 +272,7 @@ export function NextStep() {
 
                 <div className="sub_signup_form12">
                     <div className="input_fields12">
-                        <h4>Sign up now</h4>
+                        <h4>Sign up now</h4> 
                         <div className="main_inputs_f">
                             <div className="input1">
                                 <label htmlFor="">Full name</label>
@@ -327,7 +322,12 @@ export function NextStep() {
                                                         setEnteredOTP(enteredValue);
                                                     }
                                                 }} />
-                                            <button onClick={handleVerifyOtp}>Submit</button>
+                                            {otpVerified ? (
+                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
+                                            ) : (
+                                                <button onClick={handleVerifyOtp}>Submit</button>
+                                            )}
+
                                         </div>
                                         <div className="verify_butn12">
                                             <p>{formatTime(timer)}</p>
@@ -342,7 +342,7 @@ export function NextStep() {
                         <div className="new_terms_c">
                             <input
                                 type="checkbox"
-                                name=""
+                                name="termsCheckedOne"
                                 required
                                 checked={termsCheckedOne}
                                 onChange={handleCheckboxChange}
@@ -352,7 +352,8 @@ export function NextStep() {
                         <div className="new_terms_c1">
                             <input
                                 type="checkbox"
-                                name="" required
+                                name="termsCheckedTwo"
+                                required
                                 checked={termsCheckedTwo}
                                 onChange={handleCheckboxChange}
 
@@ -366,7 +367,6 @@ export function NextStep() {
                     </div>
                 </div>
             </div>
-
         </Fragment>
     )
 }
