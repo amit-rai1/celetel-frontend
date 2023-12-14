@@ -5,7 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { accountSetup, getClientById } from '../Service/auth.service';
 import { RxEyeClosed } from "react-icons/rx";
 import { TfiEye } from "react-icons/tfi";
-import toast, { Toaster } from 'react-hot-toast';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
@@ -88,7 +89,17 @@ export function AccountSetUp() {
 
             if (!formData.password || !formData.confirmPassword) {
                 console.error('Password or confirmPassword is empty');
-                toast.error('Password or confirm password is empty', { duration: 2000 });
+                toast.error('Password or confirm password is empty', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    // closeOnClick: false,
+                    closeButton: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
                 return;
             }
 
@@ -96,19 +107,34 @@ export function AccountSetUp() {
             if (formData.password !== formData.confirmPassword) {
                 // Password and ConfirmPassword do not match
                 console.error('Passwords do not match');
-                toast.error('Passwords do not match', { duration: 2000 });
+                toast.error('Passwords do not match', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    // closeOnClick: false,
+                    closeButton: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
                 return;
             }
             else {
                 setLoading(true);
-                toast.success('Password matches', { duration: 2000 });
-                // alert('Success')
-
+                toast.success('Account setup successful', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
 
             const response = await accountSetup(clientId, {
                 password: formData.password,
-                confirmPassword:formData.confirmPassword
+                confirmPassword: formData.confirmPassword
             });
 
             console.log('Password updated successfully:', response);
@@ -140,8 +166,7 @@ export function AccountSetUp() {
                                     name="email"
                                     value={email}
                                     onChange={handleInputChange}
-                                    required placeholder='Enter here'
-                                />
+                                    required placeholder='Enter here'/>
 
                                 <label htmlFor="password">Password</label>
 
@@ -183,24 +208,19 @@ export function AccountSetUp() {
                                     <button
                                         type="button"
                                         className="con_password_toggle_btn"
-                                        onClick={toggleConfirmPasswordVisibility}
-                                    >
+                                        onClick={toggleConfirmPasswordVisibility}>
                                         {showConfirmPassword ? <TfiEye /> : <RxEyeClosed />}
                                     </button>
 
                                 </div>
                                 <div className="submit_form">
                                     <button type="submit" onClick={handleUpdate}>Create</button>
-                                    <Toaster />
                                     <p>Already have an account? <Link to={'/login'}>Log in</Link></p>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-
                 )}
-
         </Fragment>
     )
 }
