@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import './MainSms.css'
-// import iphone from '../Assets/iPhone 12 Pro (Wooden Hands).png'
 import image1 from '../Assets/New5.gif'
 import sms from '../Assets/sms-notification 1.png'
 import { GrSubtractCircle } from "react-icons/gr";
@@ -12,6 +11,7 @@ import icon3 from '../Assets/Icon-1.png'
 import icon4 from '../Assets/align-vertically.png'
 import icon5 from '../Assets/Icon-4.png'
 import icon6 from '../Assets/Icon-3.png'
+import { IoIosArrowDown } from "react-icons/io";
 
 export function MainSms() {
     return (
@@ -153,11 +153,38 @@ export function MainSms() {
                     <div className="faq_q_1">
                         <h5>How do I change my account email?</h5>
                         <p><MdAddCircleOutline /></p>
-
                     </div>
                 </div>
             </div>
 
+
+
+            <div className="faq_mob_head">
+                <h1>Frequently Asked Questions</h1>
+                <p>Everything you need to know about the product and billing </p>
+            </div>
+
+
+            <div className="faq_mob_resp">
+                <div className="faq_queries">
+                    <div className="faq_quer_s">
+                        <p>Is there a free trial available?</p>
+                        <p><IoIosArrowDown /></p>
+                    </div>
+                    <div className="faq_quer_s">
+                        <p>In tempor pretium lectus consectetur</p>
+                        <p><IoIosArrowDown /></p>
+                    </div>
+                    <div className="faq_quer_s">
+                        <p>How does billing work?</p>
+                        <p><IoIosArrowDown /></p>
+                    </div>
+                    <div className="faq_quer_s">
+                        <p>How do I change my account email?</p>
+                        <p><IoIosArrowDown /></p>
+                    </div>
+                </div>
+            </div>
         </Fragment>
     )
 }

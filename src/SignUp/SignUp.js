@@ -4,7 +4,8 @@ import axios from 'axios';
 import './SignUp.css'
 import image1 from '../Assets/Group 1000001796.png'
 import { Link, useNavigate } from 'react-router-dom';
-import toast, { Toaster } from 'react-hot-toast';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function SignUp() {
 
@@ -36,7 +37,17 @@ export function SignUp() {
             navigateToNextStep('/nextstep', { state: { selectedCountry } });
         }
         else {
-            toast.error("Please select the country");
+            toast.error('Please select the country', {
+                position: "top-center",
+                // autoClose: 5000,
+                hideProgressBar: true,
+                closeButton: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
         }
     }
 
@@ -64,10 +75,9 @@ export function SignUp() {
                                 </option>
                             ))}
                         </select>
-                        <div className="btn15_steps">
-                            <button onClick={handleClickNextStep}>Next</button>
-                            <Toaster />
-                        </div>
+
+                        <button className='btn15_new_steps' onClick={handleClickNextStep}>Next</button>
+
                         <p className='para_23'>Already have an account ? <Link to={'/login'}>Login</Link></p>
                     </div>
                 </div>

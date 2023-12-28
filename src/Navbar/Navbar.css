@@ -17,6 +17,10 @@
     gap: 29px;
 }
 
+.sub_nav img {
+    cursor: pointer;
+}
+
 .sub_nav ul {
     display: flex;
     align-items: center;

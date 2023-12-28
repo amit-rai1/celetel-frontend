@@ -3,15 +3,17 @@ import './Login.css';
 import image1 from '../Assets/search 1.png';
 import image2 from '../Assets/image 69.png';
 import image3 from '../Assets/image 70.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { loginClient } from '../Service/auth.service';
-import { Toaster, toast } from 'react-hot-toast';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // const [errorMessage, setErrorMessage] = useState('');
+    const navigateToHome = useNavigate()
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -20,19 +22,47 @@ export function Login() {
             const result = await loginClient(email, password);
 
 
-            console.log(result,"resulr124570")
+            // console.log(result, "resulr124570")
 
             if (result.success) {
                 // Handle successful login
-                toast.success(result.msg);
+                toast.success('Login successful', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    progress: undefined,
+                    theme: "colored",
+                })
+                navigateToHome('/');
                 // Redirect or perform necessary actions after successful login
             } else {
                 // Handle unsuccessful login
-                toast.error(result.msg);
+                toast.error(result.msg, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    // closeOnClick: false,
+                    closeButton: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
-            console.error('Error during login:', error);
-            toast.error('An unexpected error occurred. Please try again.');
+            // console.error('Error during login:', error);
+            toast.error('An unexpected error occurred. Please try again.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                // closeOnClick: false,
+                closeButton: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
 
         }
     };
@@ -76,10 +106,7 @@ export function Login() {
 
                         <div className="submit_form12">
                             <button type="submit">Login</button>
-                            <Toaster />
-
-                            <p>
-                                Don’t have an account?
+                            <p> Don’t have an account?
                                 <Link to={'/signup'}>Sign up</Link>
                             </p>
                         </div>

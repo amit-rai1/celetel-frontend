@@ -12,18 +12,21 @@ import imagelogo from '../Assets/image 1.png'
 export function Navbar() {
 
     const navigateHome = useNavigate();
+    const [isSidebar, setSidebar] = useState(false);
 
     function handleClick() {
         navigateHome('/')
+        setSidebar(false);
     }
 
     const navigateLogin = useNavigate();
 
     function handleClickLogin() {
         navigateLogin('/login');
+        setSidebar(false);
     }
 
-    const [isSidebar, setSidebar] = useState(false);
+
     function handleToggleSidebar() {
         setSidebar(!isSidebar);
     }
@@ -32,6 +35,10 @@ export function Navbar() {
 
     function toggleProductDropdown() {
         setProductDropdownOpen(!isProductDropdownOpen);
+    }
+
+    function closeDrawer() {
+        setSidebar(false);
     }
 
     return (
@@ -60,18 +67,19 @@ export function Navbar() {
                     PaperProps={{ style: { width: '60%', maxWidth: 800 } }}>
                     <List>
                         <ListItem>
-                            <Link to={'/'}><p style={{ color: 'black', fontWeight: '500' }}>Home</p></Link>
+                            <Link to={'/'} onClick={closeDrawer}>
+                                <p style={{ color: 'black', fontWeight: '500' }}>Home</p></Link>
                         </ListItem>
                         <ListItem>
                             <p style={{ color: 'black', fontWeight: '500' }}>
                                 Product <MdArrowDropDown onClick={toggleProductDropdown} />
                                 {isProductDropdownOpen && (
                                     <ul className="dropdown">
-                                        <Link to={'/smssolutions'}><li>SMS</li></Link>
-                                        <Link to={'/connectwhatsapp'}><li>WhatsApp</li></Link>
-                                        <Link to={'/connectrcs'}><li>RCS</li></Link>
-                                        <Link to={'/voicesolutions'}><li>Voice</li></Link>
-                                        <Link to={'/verifications'}><li>Verification</li></Link>
+                                        <Link to={'/smssolutions'} onClick={closeDrawer}><li>SMS</li></Link>
+                                        <Link to={'/connectwhatsapp'} onClick={closeDrawer}><li>WhatsApp</li></Link>
+                                        <Link to={'/connectrcs'} onClick={closeDrawer}><li>RCS</li></Link>
+                                        <Link to={'/voicesolutions'} onClick={closeDrawer}><li>Voice</li></Link>
+                                        <Link to={'/verifications'} onClick={closeDrawer}><li>Verification</li></Link>
                                     </ul>
                                 )}
                             </p>
@@ -84,10 +92,12 @@ export function Navbar() {
                             <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>
                         </ListItem>
                         <ListItem>
-                            <Link to={'/login'}><p style={{ color: 'black', fontWeight: '500' }}>Login</p></Link>
+                            <Link to={'/login'} onClick={closeDrawer}>
+                                <p style={{ color: 'black', fontWeight: '500' }}>Login</p></Link>
                         </ListItem>
                         <ListItem>
-                            <Link to={'/signup'}><p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
+                            <Link to={'/signup'} onClick={closeDrawer}>
+                                <p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
                         </ListItem>
                     </List>
                 </Drawer>

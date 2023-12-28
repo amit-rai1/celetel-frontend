@@ -216,6 +216,11 @@
     font-weight: 400;
 }
 
+.new_checked {
+    color: #59C277;
+    font-size: 40px;
+}
+
 @media screen and (max-width : 1080px) {
     .sub_signup_form12 {
         width: 100%;

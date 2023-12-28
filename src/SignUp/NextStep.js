@@ -5,7 +5,10 @@ import image3 from '../Assets/image 67.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service';
 import { Link } from 'react-router-dom';
-import { Toaster, toast } from 'react-hot-toast';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { TbDiscountCheckFilled } from "react-icons/tb";
+
 
 export function NextStep() {
 
@@ -37,26 +40,19 @@ export function NextStep() {
     const [timer, setTimer] = useState(300);
     const [termsCheckedOne, setTermsCheckedOne] = useState(false);
     const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
-
-
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setSignupData((prevData) => ({
-    //         ...prevData,
-    //         [name]: value
-    //     }));
-
-    //     setSignUpErrors((prevErrors) => ({
-    //         ...prevErrors,
-    //         [name]: ''
-    //     }));
-    // };
+    const [otpVerified, setOtpVerified] = useState(false);
 
 
     const handleCheckboxChange = (e) => {
-        setTermsCheckedOne(e.target.checked);
-        setTermsCheckedTwo(e.target.checked);
+        const checkboxName = e.target.name;
+
+        if (checkboxName === "termsCheckedOne") {
+            setTermsCheckedOne(e.target.checked);
+        } else if (checkboxName === "termsCheckedTwo") {
+            setTermsCheckedTwo(e.target.checked);
+        }
     };
+
 
     const handleClickNextStepExplore = async () => {
 
@@ -75,7 +71,17 @@ export function NextStep() {
         }
 
         if (!termsCheckedOne && !termsCheckedTwo) {
-            toast.error('Please agree to the terms and conditions.');
+            toast.error('Please agree to the terms and conditions.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                // closeOnClick: false,
+                closeButton: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
             return;
         }
 
@@ -88,11 +94,29 @@ export function NextStep() {
             localStorage.setItem('clientId', userData.result._id);
 
             // console.log(response);
-            toast.success('Signup successful')
+            toast.success('Signup successful', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeButton: false,
+                progress: undefined,
+                theme: "colored",
+            });
             navigateToExploreSignup('/nextstepexplore');
         }
         catch (error) {
-            console.error('Error during sign up:', error.message);
+            // console.error('Error during sign up:', error.message);
+            toast.error('An unexpected error occurred. Please try again.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                // closeOnClick: false,
+                closeButton: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
         }
     };
 
@@ -148,15 +172,35 @@ export function NextStep() {
         try {
             const result = await sendVerificationEmail(email);
             if (result.success) {
-                toast.success(result.message);
+                toast.success(result.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
                 setShowVerifySection(true);
             } else {
                 toast.error(result.message);
             }
-            console.log(result, "result");
+            // console.log(result, "result");
         } catch (error) {
-            console.error('Error handling verification email:', error);
-            toast.error('An unexpected error occurred. Please try again.');
+            // console.error('Error handling verification email:', error);
+            toast.error('An unexpected error occurred. Please try again.', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeButton: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
         }
     };
 
@@ -172,18 +216,50 @@ export function NextStep() {
             const result = await verifyOtp(enteredOTP);
 
             if (result && result.success) {
-                toast.success(result.message);
-            } else {
-                toast.error(result.message);
+                toast.success(result.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                setOtpVerified(true);
+                setTimeout(() => {
+                    setOtpVerified(true);
+                }, 3000);
+            }
+            else {
+                toast.error(result.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
-            console.error('Error handling OTP verification:', error);
-            toast.error('An unexpected error occurred. Please try again');
+            // console.error('Error handling OTP verification:', error);
+            toast.error('An unexpected error occurred. Please try again.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                // closeOnClick: false,
+                closeButton: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
         }
-    };
-
-
-
+    }
 
     return (
         <Fragment>
@@ -196,7 +272,7 @@ export function NextStep() {
 
                 <div className="sub_signup_form12">
                     <div className="input_fields12">
-                        <h4>Sign up now</h4>
+                        <h4>Sign up now</h4> 
                         <div className="main_inputs_f">
                             <div className="input1">
                                 <label htmlFor="">Full name</label>
@@ -246,7 +322,12 @@ export function NextStep() {
                                                         setEnteredOTP(enteredValue);
                                                     }
                                                 }} />
-                                            <button onClick={handleVerifyOtp}>Submit</button>
+                                            {otpVerified ? (
+                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
+                                            ) : (
+                                                <button onClick={handleVerifyOtp}>Submit</button>
+                                            )}
+
                                         </div>
                                         <div className="verify_butn12">
                                             <p>{formatTime(timer)}</p>
@@ -261,7 +342,7 @@ export function NextStep() {
                         <div className="new_terms_c">
                             <input
                                 type="checkbox"
-                                name=""
+                                name="termsCheckedOne"
                                 required
                                 checked={termsCheckedOne}
                                 onChange={handleCheckboxChange}
@@ -271,7 +352,8 @@ export function NextStep() {
                         <div className="new_terms_c1">
                             <input
                                 type="checkbox"
-                                name="" required
+                                name="termsCheckedTwo"
+                                required
                                 checked={termsCheckedTwo}
                                 onChange={handleCheckboxChange}
 
@@ -280,7 +362,6 @@ export function NextStep() {
                         </div>
                         <div className="btn_sign">
                             <button onClick={handleClickNextStepExplore}>Sign up</button>
-                            <Toaster />
                             <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
                         </div>
                     </div>
