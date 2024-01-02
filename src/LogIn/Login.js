@@ -67,6 +67,13 @@ export function Login() {
         }
     };
 
+
+    // login with google
+
+    const loginWithGoogle = () => {
+        window.open("http://localhost:8600/auth/google/callback", "_self")
+    }
+
     return (
         <Fragment>
             <div className="main_acc_set_up12">
@@ -98,9 +105,9 @@ export function Login() {
                         <div className="social_media_logs">
                             <p>Or</p>
                             <div className="image_link_social">
-                                <img src={image1} alt="" />
-                                <img src={image2} alt="" />
-                                <img src={image3} alt="" />
+                                <button onClick={loginWithGoogle}><img src={image1} alt="" /></button>
+                                <button><img src={image2} alt="" /></button>
+                                <button><img src={image3} alt="" /></button>
                             </div>
                         </div>
 
