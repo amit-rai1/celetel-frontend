@@ -112,3 +112,19 @@ export const loginClient = async (email, password) => {
         throw error.response ? error.response.data : error.message;
     }
 };
+
+
+
+export const googleLogin = async () => {
+    try {
+      const response = await axios.get('http://localhost:8600/auth/google/callback', {
+        withCredentials: true, // Ensure credentials are included for authentication
+      });
+  
+      // You may handle the response here, but in this case, the redirect should happen from the backend.
+      // Redirecting to the Google authentication page should be handled by the backend.
+      return response;
+    } catch (error) {
+      throw new Error('Google login failed.');
+    }
+  };
