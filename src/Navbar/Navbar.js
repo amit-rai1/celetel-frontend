@@ -55,7 +55,7 @@ export function Navbar() {
 
                 <div className="btn1">
                     <button onClick={handleClickLogin}>Log in</button>
-                    <Link to={'/signup'}><button>Sign up</button></Link>
+                    <Link to={'/nextstep'}><button>Sign up</button></Link>
                 </div>
 
                 <div className="responsive_m">
@@ -96,7 +96,7 @@ export function Navbar() {
                                 <p style={{ color: 'black', fontWeight: '500' }}>Login</p></Link>
                         </ListItem>
                         <ListItem>
-                            <Link to={'/signup'} onClick={closeDrawer}>
+                            <Link to={'/nextstep'} onClick={closeDrawer}>
                                 <p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
                         </ListItem>
                     </List>
