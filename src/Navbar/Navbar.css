@@ -11,6 +11,27 @@
     box-shadow: rgba(0, 0, 0, 0.151) 0px 3px 8px;
 }
 
+/* Add this to your styles or CSS file */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-link {
+    cursor: pointer;
+}
+
 .sub_nav {
     display: flex;
     align-items: center;

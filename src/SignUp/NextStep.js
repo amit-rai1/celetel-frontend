@@ -8,22 +8,28 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { TbDiscountCheckFilled } from "react-icons/tb";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 
 
 export function NextStep() {
 
     const navigateToExploreSignup = useNavigate();
-    const location = useLocation();
+    // const location = useLocation();
     // console.log(location, "location")
-    const { selectedCountry } = location.state || {};
+    // const { selectedCountry } = location.state || {};
     // console.log(selectedCountry, "selectedCountry")
 
 
     const [signupData, setSignupData] = useState({
         fullName: "",
         email: "",
-        country: "",
+        // country: "",
         phone: "",
+        value: '',
+        country: '',
         role: "client",
     });
 
@@ -41,6 +47,8 @@ export function NextStep() {
     const [termsCheckedOne, setTermsCheckedOne] = useState(false);
     const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
     const [otpVerified, setOtpVerified] = useState(false);
+    const [open, setOpen] = useState(false);
+
 
 
     const handleCheckboxChange = (e) => {
@@ -55,6 +63,7 @@ export function NextStep() {
 
 
     const handleClickNextStepExplore = async () => {
+        console.log('Clicked Sign Up button');
 
         const requiredFieldsFromInput = ['fullName', 'email', 'phone'];
 
@@ -82,15 +91,19 @@ export function NextStep() {
                 progress: undefined,
                 theme: "colored",
             });
+            console.log('Clicked Sign Up dfg');
             return;
         }
 
         try {
-
-            // console.log('Sign Data:', signupData);
+            console.log('Before API call:', signupData);
+            console.log('Sign Data:', signupData);
             // console.log('Selected Country:', selectedCountry);
-            const userData = await signUpClient({ ...signupData, country: selectedCountry });
-
+            const userData = await signUpClient({
+                ...signupData,
+                // country: selectedCountry 
+            });
+            console.log(userData);
             localStorage.setItem('clientId', userData.result._id);
 
             // console.log(response);
@@ -102,7 +115,7 @@ export function NextStep() {
                 progress: undefined,
                 theme: "colored",
             });
-            navigateToExploreSignup('/nextstepexplore');
+            // navigateToExploreSignup('/nextstepexplore');
         }
         catch (error) {
             // console.error('Error during sign up:', error.message);
@@ -122,9 +135,13 @@ export function NextStep() {
 
 
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
-
-        if (name === 'email') {
+        // console.log('Event:', e);
+        const { name, value } = e.target || {};
+        if (name === "phone") {
+            const [newValue, newCountry] = value.split('-');
+            setSignupData({ value: newValue, country: newCountry });
+        }
+        else if (name === 'email') {
             setEmail(value);
             setSignupData({ ...signupData, email: value });
         } else if (name === 'fullName') {
@@ -205,7 +222,7 @@ export function NextStep() {
     };
 
     const handleVerifyOtp = async () => {
-        console.log("enetr11")
+        console.log("Entered handleVerifyOtp");
         try {
 
             if (!enteredOTP) {
@@ -214,6 +231,7 @@ export function NextStep() {
             }
 
             const result = await verifyOtp(enteredOTP);
+            console.log('API Response:', result);
 
             if (result && result.success) {
                 toast.success(result.message, {
@@ -231,6 +249,7 @@ export function NextStep() {
                 setTimeout(() => {
                     setOtpVerified(true);
                 }, 3000);
+                navigateToExploreSignup('/nextstepexplore');
             }
             else {
                 toast.error(result.message, {
@@ -261,6 +280,10 @@ export function NextStep() {
         }
     }
 
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+
     return (
         <Fragment>
             <div className="main_signup">
@@ -272,7 +295,7 @@ export function NextStep() {
 
                 <div className="sub_signup_form12">
                     <div className="input_fields12">
-                        <h4>Sign up now</h4> 
+                        <h4>Sign up now</h4>
                         <div className="main_inputs_f">
                             <div className="input1">
                                 <label htmlFor="">Full name</label>
@@ -282,11 +305,24 @@ export function NextStep() {
                                     required />
                                 <div className="signup_error_message">{signupError.fullName}</div>
                             </div>
-                            <div className="input1">
-                                <label htmlFor="">Mobile number(optional)</label>
-                                <input type="text" name="phone" id="phone" placeholder='Enter here'
+                            <div className="input13">
+                                <label htmlFor="">Mobile number</label>
+                                {/* <input type="text" name="phone" id="phone" placeholder='Enter here'
                                     value={signupData.phone}
                                     onChange={handleInputChange}
+                                /> */}
+
+                                <PhoneInput
+                                    country={'in'}
+                                    name="phone"
+                                    id="phone"
+                                    value={signupData.phone}
+                                    onChange={handleInputChange}
+                                    inputProps={{
+                                        placeholder: 'Search for a country',
+                                        autoFocus: true,
+                                    }}
+                                    enableSearch
                                 />
                             </div>
                         </div>
@@ -298,10 +334,57 @@ export function NextStep() {
                                     onChange={handleInputChange}
                                     required />
 
-                                <button onClick={handleVerifyClick}>Verify</button>
+                                <button
+                                    onClick={handleVerifyClick}
+                                    onClickCapture={handleOpen}
+                                >Send Otp</button>
+                                <Modal
+                                    open={open}
+                                    onClose={handleClose}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                >
+                                    <Box sx={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        width: 400,
+                                        bgcolor: '#F9FAFF',
+                                        border: 'none',
+                                        boxShadow: 24,
+                                        p: 4,
+                                    }}>
+                                        <h2> Verify otp</h2>
+                                        <p style={{ fontSize: "12px" }}>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
+                                        <div className="pop_up_modal">
+                                            <input type="text" placeholder='Enter mobile otp' required />
+                                            <input type="text"
+                                                onChange={(e) => {
+                                                    const enteredValue = e.target.value;
+
+                                                    // Check if the entered value is a 4-digit OTP
+                                                    if (/^\d{4}$/.test(enteredValue)) {
+                                                        setEnteredOTP(enteredValue);
+                                                    }
+                                                }}
+
+                                                placeholder='Enter email otp' required />
+                                            {/* {otpVerified ? (
+                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
+                                            ) : ( */}
+                                            <button onClick={handleVerifyOtp}>Submit</button>
+                                            {/* )} */}
+                                        </div>
+                                        <div className="verify_butn12">
+                                            <p>{formatTime(timer)}</p>
+                                            <button onClick={handleResendOTP}>Resend OTP</button>
+                                        </div>
+                                    </Box>
+                                </Modal>
                             </div>
                             <div className="signup_error_message">{signupError.email}</div>
-                            {
+                            {/* {
                                 showVerifySection && (
                                     <div className="new_verify">
                                         <div className="verify_now_otp">
@@ -335,7 +418,7 @@ export function NextStep() {
                                         </div>
                                     </div>
                                 )
-                            }
+                            } */}
 
 
                         </div>

@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import './Navbar.css';
-import { FaAngleDown } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
 import Drawer from "@mui/material/Drawer";
@@ -8,6 +7,7 @@ import List from "@mui/material/List";
 import { MdArrowDropDown } from "react-icons/md";
 import ListItem from "@mui/material/ListItem";
 import imagelogo from '../Assets/image 1.png'
+
 
 export function Navbar() {
 
@@ -41,6 +41,14 @@ export function Navbar() {
         setSidebar(false);
     }
 
+    // ...............................
+
+    const [open, setOpen] = useState(false);
+
+    const handleDropDown = () => {
+        setOpen(!open);
+    };
+
     return (
         <Fragment>
             <div className="main_nav">
@@ -48,8 +56,24 @@ export function Navbar() {
                     <img onClick={handleClick} src={imagelogo} alt="" />
                     <ul>
                         <Link to={'/'}><li>Home</li></Link>
-                        <li>Products <FaAngleDown /></li>
-                        <li>Pricing</li>
+                        <li>
+                            <div className="dropdown open" onMouseEnter={handleDropDown} onMouseLeave={handleDropDown}>
+                                <button className="btn btn-link dropdown-toggle" type="button" style={{ textDecoration: "none", color: "black", display: "flex", alignItems: "center", fontSize: "16px", fontWeight: "600", border: "none", backgroundColor: "transparent" }}>Products <MdArrowDropDown /></button>
+                                {open
+                                    ?
+                                    <ul className="dropdown-menu" style={{ flexDirection: 'column' }}>
+                                        <Link to={'/smssolutions'} onClick={closeDrawer}><li>SMS</li></Link>
+                                        <Link to={'/connectwhatsapp'} onClick={closeDrawer}><li>WhatsApp</li></Link>
+                                        <Link to={'/connectrcs'} onClick={closeDrawer}><li>RCS</li></Link>
+                                        <Link to={'/voicesolutions'} onClick={closeDrawer}><li>Voice</li></Link>
+                                        <Link to={'/verifications'} onClick={closeDrawer}><li>Verification</li></Link>
+                                    </ul>
+                                    : null
+                                }
+                            </div>
+                        </li>
+
+                        <Link to={'/prices'}><li>Pricing</li></Link>
                     </ul>
                 </div>
 
@@ -86,7 +110,9 @@ export function Navbar() {
                         </ListItem>
 
                         <ListItem>
-                            <p style={{ color: 'black', fontWeight: '500' }}>Pricing</p>
+                            <Link to={'/prices'} onClick={closeDrawer}>
+                                <p style={{ color: 'black', fontWeight: '500' }}>Pricing</p>
+                            </Link>
                         </ListItem>
                         <ListItem>
                             <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>

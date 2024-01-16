@@ -189,12 +189,10 @@ export function SignUpExplore() {
                                             <div className="btn1_setup">
                                                 <Link to={'/accountsetup'}><button onClick={handleSetUpClick}>SET UP</button></Link>
                                             </div>
-
                                         </div>
                                     </Box>
                                 </Fade>
                             </Modal>
-
                         </div>
                     </div>
                     <div className="new_price1">
@@ -233,7 +231,6 @@ export function SignUpExplore() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </Fragment>
     )

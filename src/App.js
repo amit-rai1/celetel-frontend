@@ -15,6 +15,7 @@ import { SignUpExplore } from './SignUp/SignUpExplore';
 import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
+import { Pricing } from './Pricing/Pricing';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/nextstepexplore' element={<SignUpExplore />} />
           <Route path='/accountsetup' element={<AccountSetUp />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/prices' element={<Pricing />} />
         </Routes>
         <Footer />
       </BrowserRouter>

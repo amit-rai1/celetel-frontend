@@ -274,7 +274,8 @@
     }
 
     .inputs_new button {
-        display: none;
+        display: block;
+        width: 100%;
     }
 
     .input2 input {
