@@ -8,7 +8,7 @@ const local = {
   SOCKET_URL: "ws://localhost:8600"
 };
 
-// For Staging server - 
+// For Staging server --
 
 const staging = {
   apiUrl: "",
