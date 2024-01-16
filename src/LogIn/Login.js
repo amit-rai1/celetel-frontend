@@ -75,7 +75,17 @@ export function Login() {
 
        console.log("res",res)
     }
-
+    const loginWithOutlook = () => {
+        const res = window.open("http://localhost:8600/auth/signin", "_self")
+ 
+        console.log("res",res)
+     }
+     const loginWithLinkedIn = () => {
+        const res = window.open("http://localhost:8600/auth/linkedin/callback", "_self")
+ 
+        console.log("res",res)
+     }
+ 
     return (
         <Fragment>
             <div className="main_acc_set_up12">
@@ -108,8 +118,8 @@ export function Login() {
                             <p>Or</p>
                             <div className="image_link_social">
                                 <button onClick={loginWithGoogle}><img src={image1} alt="" /></button>
-                                <button><img src={image2} alt="" /></button>
-                                <button><img src={image3} alt="" /></button>
+                                <button onClick={loginWithLinkedIn}><img src={image2} alt="" /></button>
+                                <button onClick={loginWithOutlook}><img src={image3} alt="" /></button>
                             </div>
                         </div>
 
