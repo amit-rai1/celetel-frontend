@@ -67,6 +67,25 @@ export function Login() {
         }
     };
 
+
+    // login with google
+
+    const loginWithGoogle = () => {
+       const res = window.open("http://localhost:8600/auth/google/callback", "_self")
+
+       console.log("res",res)
+    }
+    const loginWithOutlook = () => {
+        const res = window.open("http://localhost:8600/auth/signin", "_self")
+ 
+        console.log("res",res)
+     }
+     const loginWithLinkedIn = () => {
+        const res = window.open("http://localhost:8600/auth/linkedin/callback", "_self")
+ 
+        console.log("res",res)
+     }
+ 
     return (
         <Fragment>
             <div className="main_acc_set_up12">
@@ -98,9 +117,9 @@ export function Login() {
                         <div className="social_media_logs">
                             <p>Or</p>
                             <div className="image_link_social">
-                                <img src={image1} alt="" />
-                                <img src={image2} alt="" />
-                                <img src={image3} alt="" />
+                                <button onClick={loginWithGoogle}><img src={image1} alt="" /></button>
+                                <button onClick={loginWithLinkedIn}><img src={image2} alt="" /></button>
+                                <button onClick={loginWithOutlook}><img src={image3} alt="" /></button>
                             </div>
                         </div>
 

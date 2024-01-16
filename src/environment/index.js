@@ -17,6 +17,9 @@ const staging = {
   // API_BASEURL: "https://celetel-testing.onrender.com",
   API_BASEURL: "http://3.111.149.149:8600",
 
+  // API_BASEURL: "https://celetel-testing.onrender.com",
+  API_BASEURL: "http://3.111.149.149:8600",
+
   SOCKET_URL: ""
 };
 
