@@ -80,22 +80,18 @@ export function Pricing() {
                             <p>Delivered to DND Numbers
                             </p>
                             <p>Check International OTP Pricing</p>
-                            <button>BUY OTP PACK</button>
+                            <Link to={'/paymentsetupdetails'}><button>BUY OTP PACK</button></Link>
                         </div>
                     </div>
                     <div className="new_prices_sms">
-                        <h5>VOICE OTP SERVICE
-                        </h5>
+                        <h5>VOICE OTP SERVICE</h5>
                         <p>Useful For Sending One Time Password Over SMS, For Phone Verification</p>
                         <h3>₹ 0.34 <span>0.55/</span></h3>
-                        <h6>Pay delivered OTP
-                        </h6>
-                        <p className='id'>Price: ₹ 0.34 PAN India
-                        </p>
-                        <button>BUY OTP PACK</button>
+                        <h6>Pay delivered OTP</h6>
+                        <p className='id'>Price: ₹ 0.34 PAN India</p>
+                        <Link to={'/paymentsetupdetails'}><button>BUY OTP PACK</button></Link>
                         <div className="features_sms">
                             <h4>FEATURES</h4>
-
                             <p>PAN India Coverage</p>
                             <p>Delivered To Landline Too</p>
                             <p>Greater Reach Than SMS</p>
@@ -105,7 +101,7 @@ export function Pricing() {
                             <p>Pay Per Delivered OTP</p>
                             <p>FREE Fallback SMS</p>
                             <p>Delivered to DND Numbers</p>
-                            <button>BUY OTP PACK</button>
+                            <Link to={'/paymentsetupdetails'}><button>BUY OTP PACK</button></Link>
                         </div>
                     </div>
                     <div className="new_prices_sms">
@@ -114,10 +110,9 @@ export function Pricing() {
                         <h3>₹ 0.16 <span> 0.25 /</span></h3>
                         <h6>per SMS & onwards</h6>
                         <p className='id'>Price: ₹ 0.16 - 0.25 volume based</p>
-                        <button>BUY SMS PACK</button>
+                        <Link to={'/paymentsetupdetails'}><button>BUY SMS PACK</button></Link>
                         <div className="features_sms">
                             <h4>FEATURES</h4>
-
                             <p>PAN India Coverage</p>
                             <p>2-15 Seconds Delivery</p>
                             <p>Life Time Validity</p>
@@ -126,7 +121,7 @@ export function Pricing() {
                             <p>Unlimited Sender Id</p>
                             <p>Real Time Delivery Report</p>
                             <p>Delivered To DND Numbers</p>
-                            <button>BUY SMS PACK</button>
+                            <Link to={'/paymentsetupdetails'}><button>BUY SMS PACK</button></Link>
                         </div>
                     </div>
                     <div className="new_prices_sms">
@@ -135,17 +130,16 @@ export function Pricing() {
                         <h3>₹ 0.13 <span>0.25 /</span></h3>
                         <h6>per SMS & onwards</h6>
                         <p className='id'> Price: ₹ 0.13 - 0.25 volume base</p>
-                        <button>BUY SMS PACK</button>
+                        <Link to={'/paymentsetupdetails'}> <button>BUY SMS PACK</button></Link>
                         <div className="features_sms">
                             <h4>FEATURES</h4>
-
                             <p>Global Coverage</p>
                             <p>Fastest Delivery</p>
                             <p>Life Time Validity</p>
                             <p>Simple HTTP API</p>
                             <p>Open Template SMS</p>
                             <p>Real Time Delivery Report</p>
-                            <button>BUY SMS PACK</button>
+                            <Link to={'/paymentsetupdetails'}> <button>BUY SMS PACK</button></Link>
                         </div>
                     </div>
                 </div>
