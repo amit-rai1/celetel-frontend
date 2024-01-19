@@ -8,13 +8,18 @@ const local = {
   SOCKET_URL: "ws://localhost:8600"
 };
 
-// For Staging server --
+// For Staging server --  
 
 const staging = {
   apiUrl: "",
   encryptionkey: "",
   PORT: '8600/api',
-  API_BASEURL: "https://celetel-testing.onrender.com",
+  // API_BASEURL: "https://celetel-testing.onrender.com",
+  API_BASEURL: "http://3.111.149.149:8600",
+
+  // API_BASEURL: "https://celetel-testing.onrender.com",
+  API_BASEURL: "http://3.111.149.149:8600",
+
   SOCKET_URL: ""
 };
 
