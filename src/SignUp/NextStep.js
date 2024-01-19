@@ -333,55 +333,11 @@ export function NextStep() {
                                     value={signupData.email}
                                     onChange={handleInputChange}
                                     required />
-
-                                <button
+                                {/* <button
                                     onClick={handleVerifyClick}
                                     onClickCapture={handleOpen}
-                                >Send Otp</button>
-                                <Modal
-                                    open={open}
-                                    onClose={handleClose}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                >
-                                    <Box sx={{
-                                        position: 'absolute',
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: 400,
-                                        bgcolor: '#F9FAFF',
-                                        border: 'none',
-                                        boxShadow: 24,
-                                        p: 4,
-                                    }}>
-                                        <h2> Verify otp</h2>
-                                        <p style={{ fontSize: "12px" }}>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
-                                        <div className="pop_up_modal">
-                                            <input type="text" placeholder='Enter mobile otp' required />
-                                            <input type="text"
-                                                onChange={(e) => {
-                                                    const enteredValue = e.target.value;
+                                >Send Otp</button> */}
 
-                                                    // Check if the entered value is a 4-digit OTP
-                                                    if (/^\d{4}$/.test(enteredValue)) {
-                                                        setEnteredOTP(enteredValue);
-                                                    }
-                                                }}
-
-                                                placeholder='Enter email otp' required />
-                                            {/* {otpVerified ? (
-                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
-                                            ) : ( */}
-                                            <button onClick={handleVerifyOtp}>Submit</button>
-                                            {/* )} */}
-                                        </div>
-                                        <div className="verify_butn12">
-                                            <p>{formatTime(timer)}</p>
-                                            <button onClick={handleResendOTP}>Resend OTP</button>
-                                        </div>
-                                    </Box>
-                                </Modal>
                             </div>
                             <div className="signup_error_message">{signupError.email}</div>
                             {/* {
@@ -444,7 +400,51 @@ export function NextStep() {
                             <p>By creating an account,i am also consenting to receive SMS messages and emails,including product new feature updates,events, and marketing promotions.</p>
                         </div>
                         <div className="btn_sign">
-                            <button onClick={handleClickNextStepExplore}>Sign up</button>
+                            <button onClick={handleClickNextStepExplore} onClickCapture={handleOpen}>Sign up</button>
+                            <Modal
+                                open={open}
+                                onClose={handleClose}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={{
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: 400,
+                                    bgcolor: '#F9FAFF',
+                                    border: 'none',
+                                    boxShadow: 24,
+                                    p: 4,
+                                }}>
+                                    <h2> Verify otp</h2>
+                                    <p style={{ fontSize: "12px" }}>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
+                                    <div className="pop_up_modal">
+                                        <input type="text" placeholder='Enter mobile otp' required />
+                                        <input type="text"
+                                            onChange={(e) => {
+                                                const enteredValue = e.target.value;
+
+                                                // Check if the entered value is a 4-digit OTP
+                                                if (/^\d{4}$/.test(enteredValue)) {
+                                                    setEnteredOTP(enteredValue);
+                                                }
+                                            }}
+
+                                            placeholder='Enter email otp' required />
+                                        {/* {otpVerified ? (
+                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
+                                            ) : ( */}
+                                        <button onClick={handleVerifyOtp}>Submit</button>
+                                        {/* )} */}
+                                    </div>
+                                    <div className="verify_butn12">
+                                        <p>{formatTime(timer)}</p>
+                                        <button onClick={handleResendOTP}>Resend OTP</button>
+                                    </div>
+                                </Box>
+                            </Modal>
                             <p>Already have an account?<Link to={'/login'}>Log in</Link></p>
                         </div>
                     </div>

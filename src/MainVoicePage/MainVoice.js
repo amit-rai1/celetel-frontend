@@ -10,6 +10,7 @@ import { PiDropboxLogo } from "react-icons/pi";
 import { IoIosSettings } from "react-icons/io";
 import image3 from '../Assets/OBJECT (1).png'
 import image4 from '../Assets/New6.jpg'
+import { Footer } from '../Footer/Footer'
 
 
 export function MainVoice() {
@@ -137,6 +138,7 @@ export function MainVoice() {
                     <h2>Maximize Your Business Reach Customer Interaction with IVR Calling Enhance , Connect, and Convert Your Audience Effortlessly</h2>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

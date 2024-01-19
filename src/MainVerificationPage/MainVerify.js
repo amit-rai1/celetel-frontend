@@ -13,6 +13,8 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { IoPieChartOutline } from "react-icons/io5";
 import { GrSubtractCircle } from "react-icons/gr";
 import { MdAddCircleOutline } from "react-icons/md";
+import { Footer } from '../Footer/Footer'
+
 
 
 export function Mainverify() {
@@ -177,6 +179,7 @@ export function Mainverify() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

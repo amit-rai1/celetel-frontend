@@ -12,6 +12,8 @@ import icon4 from '../Assets/align-vertically.png'
 import icon5 from '../Assets/Icon-4.png'
 import icon6 from '../Assets/Icon-3.png'
 import { IoIosArrowDown } from "react-icons/io";
+import { Footer } from '../Footer/Footer'
+
 
 export function MainSms() {
     return (
@@ -185,6 +187,7 @@ export function MainSms() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

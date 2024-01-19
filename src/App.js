@@ -7,7 +7,6 @@ import { MainWhatsapp } from './MainWhatsappPage/MainWhatsapp';
 import { MainRCS } from './MainCommRCS/MainRCS';
 import { Contact } from './Contact/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Footer } from './Footer/Footer';
 import { Mainverify } from './MainVerificationPage/MainVerify';
 import { SignUp } from './SignUp/SignUp';
 import { NextStep } from './SignUp/NextStep';
@@ -16,6 +15,7 @@ import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
 import { Pricing } from './Pricing/Pricing';
+import { PaymentSetup } from './Pricing/PaymentSetup';
 
 
 function App() {
@@ -39,8 +39,8 @@ function App() {
           <Route path='/accountsetup' element={<AccountSetUp />} />
           <Route path='/login' element={<Login />} />
           <Route path='/prices' element={<Pricing />} />
+          <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
