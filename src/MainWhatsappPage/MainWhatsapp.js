@@ -17,6 +17,7 @@ import { CiGlobe } from "react-icons/ci";
 import { AiOutlineMessage } from "react-icons/ai";
 import { BsGraphUp } from "react-icons/bs";
 import image3 from '../Assets/New10 (1).jpg'
+import { Footer } from '../Footer/Footer'
 
 export function MainWhatsapp() {
     return (
@@ -190,6 +191,7 @@ export function MainWhatsapp() {
                         Reach, Engage, and Convert Your Customers Seamlessly</h2>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

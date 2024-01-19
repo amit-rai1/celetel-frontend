@@ -6,6 +6,8 @@ import image3 from '../Assets/Group 1000001745.png'
 import image4 from '../Assets/Group 1000001746.png'
 import { GrSubtractCircle } from "react-icons/gr";
 import { MdAddCircleOutline } from "react-icons/md";
+import { Footer } from '../Footer/Footer'
+
 
 export function MainRCS() {
     return (
@@ -136,6 +138,7 @@ export function MainRCS() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

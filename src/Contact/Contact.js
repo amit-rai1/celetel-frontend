@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 import './Contact.css'
 import React from 'react'
 import { BiMessageDetail } from "react-icons/bi";
+import { Footer } from '../Footer/Footer'
+
 
 export function Contact() {
     return (
@@ -67,7 +69,7 @@ export function Contact() {
                     <span>Lorem ipsum dolor sit amet consectetur. Curabitur nec in tristique dignissim. Consectetur morbi tristique etiam molestie lobortis sagittis massa.</span>
                 </div>
             </div>
-
+            <Footer />
         </Fragment>
     )
 }
