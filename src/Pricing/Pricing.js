@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 
 export function Pricing() {
 
+    const handleBuyButtonClick = () => {
+        const dataToEncrypt = Math.random();
+        const encryptedData = btoa(dataToEncrypt);
+        const encryptedRoute = `/paymentsetupdetails?data=${encryptedData}`;
+        window.location.href = encryptedRoute;
+    };
+
     return (
         <Fragment>
             <div className="main_sol_page_price">
@@ -68,7 +75,7 @@ export function Pricing() {
                         </h6>
                         <p className='id'>Price: ₹ 0.165 - 0.25 volume based
                         </p>
-                        <Link to={'/paymentsetupdetails'}> <button>BUY OTP PACK</button></Link>
+                        <button onClick={handleBuyButtonClick}>BUY OTP PACK</button>
                         <div className="features_sms">
                             <h4>FEATURES</h4>
                             <p>Global Coverage</p>
