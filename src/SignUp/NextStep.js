@@ -1,13 +1,11 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './NextStep.css';
 import image2 from '../Assets/Group 1000001796.png';
-import image3 from '../Assets/image 67.png';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { sendVerificationEmail, signUpClient, verifyOtp } from '../Service/auth.service';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { TbDiscountCheckFilled } from "react-icons/tb";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Box from '@mui/material/Box';
@@ -155,7 +153,7 @@ export function NextStep() {
         }));
     };
 
-    // verify otp steps
+    // verify otp steps ............................... 
 
     useEffect(() => {
         const countdown = setInterval(() => {
@@ -204,9 +202,7 @@ export function NextStep() {
             } else {
                 toast.error(result.message);
             }
-            // console.log(result, "result");
         } catch (error) {
-            // console.error('Error handling verification email:', error);
             toast.error('An unexpected error occurred. Please try again.', {
                 position: "top-center",
                 autoClose: 1000,
@@ -279,7 +275,7 @@ export function NextStep() {
             });
         }
     }
-
+ 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
