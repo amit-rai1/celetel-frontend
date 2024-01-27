@@ -1,6 +1,6 @@
 .main_whatsapp {
     /* border: 1px solid red; */
-    padding: 45px 108px;
+    padding: 45px 88px;
     gap: 45px;
     display: flex;
     justify-content: space-between;
@@ -8,6 +8,8 @@
 
 .sub_whatsapp {
     background-color: #DDFCF3;
+    width: 50%;
+
 }
 
 .sub_whatsapp h1 {
@@ -15,12 +17,84 @@
     font-size: 25px;
 }
 
-.sub_whatsapp img {
-    width: 90%;
+.sub_whatsapp {
+    position: relative;
+    top: 22px;
+}
+
+.main_image_sms_sec {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.sms_image_sec img {
     /* border: 1px solid red; */
+    display: flex;
     position: relative;
     top: 7px;
 }
+
+.message_whatsapp_pops {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.message_whatsapp_pops img:nth-child(1) {
+    width: 70%;
+    position: relative;
+    bottom: 38px;
+    left: 20px;
+    animation: popAnimation 5s ease-out infinite;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.message_whatsapp_pops img:nth-child(2),
+.message_whatsapp_pops img:nth-child(3) {
+    width: 70%;
+    position: relative;
+    bottom: 38px;
+    left: 20px;
+    animation: slideFromLeft 5s ease-out infinite;
+}
+
+
+@keyframes popAnimation {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.06);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 .new_img {
     border: 1px solid red;
@@ -139,8 +213,11 @@
 }
 
 .api_sdk_para {
-    /* border: 1px solid red; */
     width: 50%;
+}
+
+.api_sdk_para p {
+    margin-top: 20px;
 }
 
 .btn3 {
@@ -276,6 +353,10 @@
 
 .used_by p {
     padding: 15px 380px;
+}
+
+.used_by img {
+    width: 100%;
 }
 
 .care_and_share2 {
@@ -429,7 +510,7 @@
     }
 
     .api_sdk {
-        /* border: 1px solid red; */
+        border: 1px solid red;
         display: flex;
         padding: 5px 5px;
         width: 96%;
@@ -442,6 +523,8 @@
     .api_sdk_para {
         width: 100%;
         padding: 10px 10px;
+        border: 1px solid red;
+
     }
 
     .api_sdk_para h1 {
@@ -449,7 +532,7 @@
     }
 
     .api_sdk_para p {
-        padding-top: 20px;
+        /* border: 1px solid red; */
         font-size: 15px;
     }
 
@@ -457,6 +540,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        border: 1px solid red;
+
+
     }
 
     .btn3 button:nth-child(1) {

@@ -32,24 +32,6 @@ export const sendVerificationEmail = async (email) => {
     }
 }
 
-// export const verifyOtp = async (enteredOTP) => {
-//     console.log(enteredOTP, "enterOTP")
-//     try {
-//         console.log('Request Data:', { enteredOTP });
-
-//         const response = await axios.post(`${API_BASEURL}/api/client/verifyOtp`, { enteredOTP });
-//         console.log(response, "resauth")
-
-//         if (response.data.success) {
-//             return { success: true, message: response.data.msg };
-//         } else {
-//             return { success: false, message: response.data.msg };
-//         }
-//     } catch (error) {
-//         console.error('Error verifying OTP:', error);
-//         return { success: false, message: 'Failed to verify OTP. Please try again.' };
-//     }
-// };
 
 export const verifyOtp = async (enteredOTP) => {
     console.log(enteredOTP, "enterOTP");

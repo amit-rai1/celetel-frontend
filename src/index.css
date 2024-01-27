@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --main-font: 'Poppins', sans-serif;
-  --color-road: rgb(96, 96, 96);
+  --color-road: #667085;
   --button-bg: #FAC213;
 }
 

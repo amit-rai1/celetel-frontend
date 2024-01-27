@@ -2,13 +2,16 @@ import React, { Fragment } from 'react'
 import './WhatsApp.css'
 import mobile1 from '../Assets/mobile-1.png'
 import { Link } from 'react-router-dom'
-import logo12 from '../Assets/New2.gif'
+import logo12 from '../Assets/image 32.svg'
+import logo19 from '../Assets/MessageContainer.svg'
+import logo20 from '../Assets/ButtonContainer.svg'
+import logo21 from '../Assets/ButtonContainer (1).svg'
 import logo13 from '../Assets/New3.gif'
-import logo14 from '../Assets/A1.jpg'
+import logo14 from '../Assets/Group 1000001764.svg'
 import logo15 from '../Assets/New4.gif'
 import logo16 from '../Assets/Privacy.png'
 import logo17 from '../Assets/smiling-confident-businesswoman-posing-with-arms-folded.jpg'
-import logo18 from '../Assets/v-all.png'
+import logo18 from '../Assets/Content.svg'
 
 export function WhatsApp() {
     return (
@@ -16,7 +19,16 @@ export function WhatsApp() {
             <div className="main_whatsapp">
                 <div className="sub_whatsapp">
                     <h1>Easily create and manage customer conversations on WhatsApp</h1>
-                    <img src={logo12} alt="" />
+                    <div className="main_image_sms_sec">
+                        <div className="sms_image_sec">
+                            <img src={logo12} alt="" />
+                        </div>
+                        <div className="message_whatsapp_pops">
+                            <img src={logo19} alt="" />
+                            <img src={logo20} alt="" />
+                            <img src={logo21} alt="" />
+                        </div>
+                    </div>
                 </div>
                 <div className="para_sol2">
                     <h1>Reach, Engage, and  Convert with Seamless WhatsApp Messaging Strategies"</h1>

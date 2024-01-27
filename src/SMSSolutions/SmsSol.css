@@ -4,15 +4,19 @@
     padding: 45px 108px;
 }
 
+
 .sub_sms_sol {
-    display: -webkit-box;
-    display: -moz-box;
     display: flex;
-    display: flex;
+    background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'), lightgray 50%;
+    background-position: left top;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
     gap: 45px;
     background-color: #ffd17a;
     height: auto;
 }
+
 
 .sub_sms_sol img {
     margin-top: 45px;
@@ -25,8 +29,44 @@
     max-width: 45%;
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-190%, -10%);
+    width: 300px;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333;
+    animation: fadeInOut 8s infinite;
+}
+
 .para_sol {
     margin-top: 95px;
+    /* background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'); */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
     /* border: 1px solid red; */
 }
 

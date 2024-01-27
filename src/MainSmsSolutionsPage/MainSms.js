@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import './MainSms.css'
-import image1 from '../Assets/New5.gif'
+import image1 from '../Assets/1240x552_funNY_kid.gif'
 import sms from '../Assets/sms-notification 1.png'
 import { GrSubtractCircle } from "react-icons/gr";
 import { MdAddCircleOutline } from "react-icons/md";

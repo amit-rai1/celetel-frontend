@@ -4,10 +4,57 @@ import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import { MdArrowDropDown } from "react-icons/md";
+import { FaChevronDown } from "react-icons/fa";
 import ListItem from "@mui/material/ListItem";
-import imagelogo from '../Assets/image 1.png'
+import imagelogo from '../Assets/main_logo.svg'
+import { styled, alpha } from '@mui/material/styles';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+
+const StyledMenu = styled((props) => (
+    <Menu
+        elevation={0}
+        anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+        }}
+        transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+        }}
+        {...props}
+    />
+))(({ theme }) => ({
+    '& .MuiPaper-root': {
+        borderRadius: 6,
+        marginTop: theme.spacing(3),
+        minWidth: 300,
+        height: 200,
+        color:
+            theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+        boxShadow:
+            'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+        '& .MuiMenu-list': {
+            padding: '4px 0',
+        },
+        '& .MuiMenuItem-root': {
+            '& .MuiSvgIcon-root': {
+                fontSize: 18,
+                color: theme.palette.text.secondary,
+                marginRight: theme.spacing(1.5),
+            },
+            '&:active': {
+                backgroundColor: alpha(
+                    theme.palette.primary.main,
+                    theme.palette.action.selectedOpacity,
+                ),
+            },
+        },
+    },
+}));
 
 export function Navbar() {
 
@@ -43,10 +90,13 @@ export function Navbar() {
 
     // ...............................
 
-    const [open, setOpen] = useState(false);
-
-    const handleDropDown = () => {
-        setOpen(!open);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClickDrop = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
     };
 
     return (
@@ -57,20 +107,40 @@ export function Navbar() {
                     <ul>
                         <Link to={'/'}><li>Home</li></Link>
                         <li>
-                            <div className="dropdown open" onMouseEnter={handleDropDown} onMouseLeave={handleDropDown}>
-                                <button className="btn btn-link dropdown-toggle" type="button" style={{ textDecoration: "none", color: "black", display: "flex", alignItems: "center", fontSize: "16px", fontWeight: "600", border: "none", backgroundColor: "transparent" }}>Products <MdArrowDropDown /></button>
-                                {open
-                                    ?
-                                    <ul className="dropdown-menu" style={{ flexDirection: 'column' }}>
-                                        <Link to={'/smssolutions'} onClick={closeDrawer}><li>SMS</li></Link>
-                                        <Link to={'/connectwhatsapp'} onClick={closeDrawer}><li>WhatsApp</li></Link>
-                                        <Link to={'/connectrcs'} onClick={closeDrawer}><li>RCS</li></Link>
-                                        <Link to={'/voicesolutions'} onClick={closeDrawer}><li>Voice</li></Link>
-                                        <Link to={'/verifications'} onClick={closeDrawer}><li>Verification</li></Link>
-                                    </ul>
-                                    : null
-                                }
+                            <div className="dropdown_products"
+                                id="demo-customized-button"
+                                aria-controls={open ? 'demo-customized-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                disableElevation
+                                onMouseEnter={handleClickDrop}
+                                endIcon={<KeyboardArrowDownIcon />}>Products <FaChevronDown />
                             </div>
+                            <StyledMenu
+                                id="demo-customized-menu"
+                                MenuListProps={{
+                                    'aria-labelledby': 'demo-customized-button',
+                                }}
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}>
+                                <Link to={'/smssolutions'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
+                                    <li>SMS</li>
+                                </MenuItem></Link>
+                                <Link to={'/connectwhatsapp'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
+                                    <li>WhatsApp</li>
+                                </MenuItem></Link>
+                                <Divider sx={{ my: 0.5 }} />
+                                <Link to={'/connectrcs'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
+                                    <li>RCS</li>
+                                </MenuItem></Link>
+                                <Link to={'/voicesolutions'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
+                                    <li>Voice</li>
+                                </MenuItem></Link>
+                                <Link to={'/verifications'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
+                                    <li>Verification</li>
+                                </MenuItem></Link>
+                            </StyledMenu>
                         </li>
 
                         <Link to={'/prices'}><li>Pricing</li></Link>
@@ -95,8 +165,8 @@ export function Navbar() {
                                 <p style={{ color: 'black', fontWeight: '500' }}>Home</p></Link>
                         </ListItem>
                         <ListItem>
-                            <p style={{ color: 'black', fontWeight: '500' }}>
-                                Product <MdArrowDropDown onClick={toggleProductDropdown} />
+                            <p style={{ color: 'black', fontWeight: '500' }} onClick={toggleProductDropdown}>
+                                Product <FaChevronDown />
                                 {isProductDropdownOpen && (
                                     <ul className="dropdown">
                                         <Link to={'/smssolutions'} onClick={closeDrawer}><li>SMS</li></Link>

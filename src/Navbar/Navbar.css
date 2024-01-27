@@ -8,25 +8,11 @@
     padding: 21px 65px;
     width: 100%;
     background-color: white;
+    overflow-x: hidden;
     box-shadow: rgba(0, 0, 0, 0.151) 0px 3px 8px;
 }
 
-/* Add this to your styles or CSS file */
-.dropdown {
-    position: relative;
-}
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    z-index: 1000;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 5px 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .btn-link {
     cursor: pointer;
@@ -53,9 +39,35 @@
     align-items: center;
     gap: 9px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-road);
 }
+
+.dropdown_products {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.dropdown_menu {
+    position: absolute;
+    width: 200px;
+    background-color: var(--color-road);
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease .5s;
+}
+
+.dropdown_products:hover {
+    opacity: 1;
+    z-index: 99;
+    margin-top: 0;
+}
+
+
 
 .btn1 {
     display: flex;
@@ -90,7 +102,7 @@
     display: none;
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:1280px) {
 
     .main_nav {
         padding: 20px 25px;

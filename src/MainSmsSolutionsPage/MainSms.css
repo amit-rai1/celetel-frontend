@@ -45,20 +45,26 @@
 }
 
 .main_sms {
+    margin: auto;
     margin-top: 80px;
     padding: 0px 75px;
-    /* border: 1px solid red; */
 }
 
 .sub_sms {
-    background-color: #FFF5D4;
+    background-color: #FEEFBD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 30px;
+    margin: auto;
+    width: 100%;
 }
 
 .sub_sms img {
     /* border: 1px solid red; */
-    padding-left: 100px;
+    /* padding-left: 100px; */
     width: 70%;
+    margin: auto;
 }
 
 .why_to_all {

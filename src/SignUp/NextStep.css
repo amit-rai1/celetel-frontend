@@ -1,6 +1,7 @@
 .sub_signup_form12 {
     width: 50%;
     padding: 15px 65px;
+
 }
 
 .input_fields12 {
@@ -9,6 +10,7 @@
     background-color: #F9FAFF;
     padding: 15px 35px;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -256,9 +258,12 @@
     font-size: 40px;
 }
 
-@media screen and (max-width : 1080px) {
+@media screen and (max-width : 1180px) {
     .sub_signup_form12 {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
         margin-top: 15px;
         padding: 20px;
     }
@@ -311,5 +316,13 @@
 
     .new_verify {
         display: none;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+    .phone_inputs_country_wise {
+        width: 50%;
     }
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import './HeroSec.css'
-import homepage from '../Assets/Group 1000001747.png'
+import homepage from '../Assets/Group 1000001747.svg'
+import homepage1 from '../Assets/Frame.png'
 
 export function HeroSec() {
     return (
@@ -11,12 +12,15 @@ export function HeroSec() {
                     <div className="border"></div>
                     <p>The world's most innovative companies build communication solutions using Celetel applications and APIs. Get started today and talk to your customers over any channel.</p>
                     <div className="hero_butn">
-                        <input type="number" placeholder='Enter mobile number'/>
+                        <input type="number" placeholder='Enter mobile number' />
                         <button>Get started today</button>
                     </div>
                 </div>
                 <div className="sub_image">
                     <img src={homepage} alt="" />
+                </div>
+                <div className="image_frames">
+                    <img src={homepage1} alt="" />
                 </div>
             </div>
 
