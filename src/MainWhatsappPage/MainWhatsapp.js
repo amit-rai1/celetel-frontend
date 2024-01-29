@@ -1,6 +1,12 @@
 import React, { Fragment } from 'react'
 import './MainWhatsapp.css'
-import logo1 from '../Assets/New7.gif'
+import image21 from '../Assets/full mobile.svg'
+import image22 from '../Assets/Mes1.svg'
+import image23 from '../Assets/Mes2.svg'
+import image24 from '../Assets/Mes3.svg'
+import image25 from '../Assets/Mes4.svg'
+import image26 from '../Assets/Mes5.svg'
+import image27 from '../Assets/Mes6.svg'
 import { MdGamepad } from "react-icons/md";
 import { FaInfo } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
@@ -38,9 +44,13 @@ export function MainWhatsapp() {
             </div>
 
             <div className="main_head_whats">
-                <div className="new_img_gif">
-                    <img src={logo1} alt="" />
-                </div>
+                <img src={image21} alt="" />
+                <img src={image22} alt="" />
+                <img src={image23} alt="" />
+                <img src={image24} alt="" />
+                <img src={image25} alt="" />
+                <img src={image26} alt="" />
+                <img src={image27} alt="" />
             </div>
 
             <div className="main_sol_page20">
