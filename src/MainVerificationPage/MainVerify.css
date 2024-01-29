@@ -34,28 +34,31 @@
 
 .build_trus_t {
     width: 90%;
+    display: flex;
     margin: auto;
     margin-top: 80px;
     text-align: center;
 }
 
-.build_trus_t h1 {
+.build_in_text {
     margin-top: 80px;
-    text-align: center;
-}
-
-.build_trus_t p {
-    width: 50%;
-    margin: auto;
-    margin-top: 20px;
+    /* width: 50%; */
+    padding-right: 100px;
     text-align: left;
 }
 
+.build_in_text h1 {
+    margin-top: 80px;
+}
+
+.build_in_text p {
+    margin-top: 20px;
+}
+
 .build_trus_t button {
-    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 20px;
     text-decoration: underline;
     font-size: 18px;
@@ -87,9 +90,9 @@
 
 .security_sms13 {
     display: flex;
-    width: 90%;
-    margin: auto;
+    background: rgba(166, 206, 206, 0.38);
     margin-top: 150px;
+    padding: 45px;
     justify-content: space-around;
 }
 
@@ -111,6 +114,10 @@
     gap: 60px;
     width: 90%;
     margin: auto;
+}
+
+.para_seq12 {
+    width: 90%;
 }
 
 .sub_ver p {

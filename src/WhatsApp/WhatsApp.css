@@ -9,7 +9,6 @@
 .sub_whatsapp {
     background-color: #DDFCF3;
     width: 50%;
-
 }
 
 .sub_whatsapp h1 {
@@ -378,6 +377,12 @@
         align-items: center;
         justify-content: center;
     }
+
+    .sub_whatsapp {
+        background-color: #DDFCF3;
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width:1080px) {
@@ -389,6 +394,10 @@
 
     .sub_whatsapp {
         padding: 0;
+        background-color: #DDFCF3;
+        width: 100%;
+        margin-top: 0;
+
     }
 
     .sub_whatsapp h1 {

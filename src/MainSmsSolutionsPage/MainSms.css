@@ -6,12 +6,126 @@
 
 .main_sol_page h1 {
     font-size: 50px;
-    padding-right: 506px;
+    padding-right: 400px;
 }
 
 .main_sol_page p {
-    padding-top: 20px;
-    padding-right: 600px;
+    padding-right: 500px;
+    font-size: 20px;
+    position: relative;
+    bottom: 65px;
+}
+
+.new_h1_and_svg {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_sms {
+    width: 89%;
+    height: auto;
+    display: flex;
+    border-radius: 30px;
+    background: #FEEFBD;
+}
+
+.sub_sms_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.small_imgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small_imgs img {
+    width: 65px;
+    height: 65px;
+    margin-top: 20px;
+    animation: vibrate 1s infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(0);
+        transform: scale(1);
+    }
+
+    25% {
+        transform: translateX(-2px);
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: translateX(2px);
+        transform: scale(1);
+    }
+
+    75% {
+        transform: translateX(-2px);
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: translateX(0);
+        transform: scale(1);
+    }
+}
+
+.sub_sms_message {
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.cards_interaction {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 15px;
+    width: 75%;
+}
+
+.cards_interaction:nth-child(2) {
+    background-color: white;
+    position: relative;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 15px;
+    width: 75%;
+}
+
+.cards_interaction:nth-child(3) {
+    background-color: white;
+    display: flex;
+    position: relative;
+    left: 120px;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 15px;
+    width: 75%;
+}
+
+.cards_interaction p {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .main_sol_page1 {
@@ -21,7 +135,6 @@
 .btn2 {
     display: flex;
     gap: 15px;
-    margin-top: 35px;
 }
 
 .btn2 button:first-child {
@@ -121,38 +234,6 @@
 
 
 .cards:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: .3s ease-in-out;
-}
-
-.cards1 {
-    flex-basis: 27%;
-    /* border: 1px solid black; */
-    display: flex;
-    margin-top: 85px;
-    padding: 15px 15px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-
-.cards1 img {
-    width: 80px;
-}
-
-.cards1 h5 {
-    font-size: 20px;
-    padding-top: 20px;
-}
-
-.cards1 p {
-    color: #8E8E8E;
-    padding-top: 20px;
-}
-
-.cards1:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: .3s ease-in-out;
 }
