@@ -1,3 +1,20 @@
+.main_sol_page_rcs {
+    padding-top: 10px;
+    padding-left: 90px;
+}
+
+.main_sol_page_rcs h1 {
+    font-size: 50px;
+    padding-right: 50px;
+}
+
+.main_sol_page_rcs p {
+    padding-right: 470px;
+    font-size: 20px;
+    position: relative;
+    bottom: 65px;
+}
+
 .main_sol_page11 {
     display: none;
 }
@@ -5,6 +22,7 @@
 .new_svg_impo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .new_image1_h {
