@@ -15,16 +15,9 @@ import Modal from '@mui/material/Modal';
 export function NextStep() {
 
     const navigateToExploreSignup = useNavigate();
-    // const location = useLocation();
-    // console.log(location, "location")
-    // const { selectedCountry } = location.state || {};
-    // console.log(selectedCountry, "selectedCountry")
-
-
     const [signupData, setSignupData] = useState({
         fullName: "",
         email: "",
-        // country: "",
         phone: "",
         value: '',
         country: '',
@@ -40,7 +33,6 @@ export function NextStep() {
 
     const [email, setEmail] = useState('');
     const [enteredOTP, setEnteredOTP] = useState('');
-    const [showVerifySection, setShowVerifySection] = useState(false);
     const [timer, setTimer] = useState(300);
     const [termsCheckedOne, setTermsCheckedOne] = useState(false);
     const [termsCheckedTwo, setTermsCheckedTwo] = useState(false);
@@ -82,7 +74,6 @@ export function NextStep() {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
-                // closeOnClick: false,
                 closeButton: false,
                 pauseOnHover: false,
                 draggable: false,
@@ -96,10 +87,8 @@ export function NextStep() {
         try {
             console.log('Before API call:', signupData);
             console.log('Sign Data:', signupData);
-            // console.log('Selected Country:', selectedCountry);
             const userData = await signUpClient({
                 ...signupData,
-                // country: selectedCountry 
             });
             console.log(userData);
             localStorage.setItem('clientId', userData.result._id);
@@ -113,8 +102,8 @@ export function NextStep() {
                 progress: undefined,
                 theme: "colored",
             });
-            // navigateToExploreSignup('/nextstepexplore');
         }
+
         catch (error) {
             // console.error('Error during sign up:', error.message);
             toast.error('An unexpected error occurred. Please try again.', {
@@ -133,25 +122,26 @@ export function NextStep() {
 
 
     const handleInputChange = (e) => {
-        // console.log('Event:', e);
         const { name, value } = e.target || {};
+
         if (name === "phone") {
             const [newValue, newCountry] = value.split('-');
-            setSignupData({ value: newValue, country: newCountry });
-        }
-        else if (name === 'email') {
+            setSignupData(prevData => ({ ...prevData, value: newValue, country: newCountry }));
+        } else if (name === 'email') {
             setEmail(value);
-            setSignupData({ ...signupData, email: value });
+            setSignupData(prevData => ({ ...prevData, email: value }));
         } else if (name === 'fullName') {
-            setSignupData({ ...signupData, fullName: value });
+            setSignupData(prevData => ({ ...prevData, fullName: value }));
         } else {
-            setSignupData({ ...signupData, [name]: value });
+            setSignupData(prevData => ({ ...prevData, [name]: value }));
         }
+
         setSignUpErrors((prevErrors) => ({
             ...prevErrors,
             [name]: ''
         }));
     };
+
 
     // verify otp steps ............................... 
 
@@ -198,7 +188,8 @@ export function NextStep() {
                     progress: undefined,
                     theme: "colored",
                 });
-                setShowVerifySection(true);
+
+                await handleVerifyOtp();
             } else {
                 toast.error(result.message);
             }
@@ -220,7 +211,6 @@ export function NextStep() {
     const handleVerifyOtp = async () => {
         console.log("Entered handleVerifyOtp");
         try {
-
             if (!enteredOTP) {
                 toast.error('Please enter a 4-digit OTP');
                 return;
@@ -246,8 +236,7 @@ export function NextStep() {
                     setOtpVerified(true);
                 }, 3000);
                 navigateToExploreSignup('/nextstepexplore');
-            }
-            else {
+            } else {
                 toast.error(result.message, {
                     position: "top-center",
                     autoClose: 2000,
@@ -261,12 +250,10 @@ export function NextStep() {
                 });
             }
         } catch (error) {
-            // console.error('Error handling OTP verification:', error);
             toast.error('An unexpected error occurred. Please try again.', {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: true,
-                // closeOnClick: false,
                 closeButton: false,
                 pauseOnHover: false,
                 draggable: false,
@@ -274,9 +261,31 @@ export function NextStep() {
                 theme: "colored",
             });
         }
-    }
- 
-    const handleOpen = () => setOpen(true);
+    };
+
+
+    const handleOpen = () => {
+        const requiredFields = ['fullName', 'email', 'phone'];
+
+        const isAllFieldsFilled = requiredFields.every(field => signupData[field]);
+
+        if (isAllFieldsFilled && termsCheckedOne && termsCheckedTwo) {
+            setOpen(true);
+        } else {
+            toast.error('Please fill in all the required fields before proceeding.', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeButton: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
+        }
+    };
+
+
     const handleClose = () => setOpen(false);
 
 
@@ -303,23 +312,22 @@ export function NextStep() {
                             </div>
                             <div className="input13">
                                 <label htmlFor="">Mobile number</label>
-                                {/* <input type="text" name="phone" id="phone" placeholder='Enter here'
-                                    value={signupData.phone}
-                                    onChange={handleInputChange}
-                                /> */}
+                                <div className="phone_inputs_country_wise">
+                                    <PhoneInput
+                                        country={'in'}
+                                        name="phone"
+                                        id="phone"
+                                        value={signupData.phone}
+                                        onChange={handleInputChange}
+                                        inputProps={{
+                                            placeholder: 'Search for a country',
+                                            autoFocus: true,
+                                        }}
+                                        enableSearch
+                                    />
+                                </div>
+                                <div className="signup_error_message">{signupError.phone}</div>
 
-                                <PhoneInput
-                                    country={'in'}
-                                    name="phone"
-                                    id="phone"
-                                    value={signupData.phone}
-                                    onChange={handleInputChange}
-                                    inputProps={{
-                                        placeholder: 'Search for a country',
-                                        autoFocus: true,
-                                    }}
-                                    enableSearch
-                                />
                             </div>
                         </div>
                         <div className="input2">
@@ -329,50 +337,8 @@ export function NextStep() {
                                     value={signupData.email}
                                     onChange={handleInputChange}
                                     required />
-                                {/* <button
-                                    onClick={handleVerifyClick}
-                                    onClickCapture={handleOpen}
-                                >Send Otp</button> */}
-
                             </div>
                             <div className="signup_error_message">{signupError.email}</div>
-                            {/* {
-                                showVerifySection && (
-                                    <div className="new_verify">
-                                        <div className="verify_now_otp">
-                                            <h1>Check your mail</h1>
-                                            <img src={image3} alt="" />
-                                        </div>
-                                        <div className="para_verify">
-                                            <p>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
-                                        </div>
-
-                                        <div className="verify_butn">
-                                            <input type="Number" placeholder='0000'
-                                                onChange={(e) => {
-                                                    const enteredValue = e.target.value;
-
-                                                    // Check if the entered value is a 4-digit OTP
-                                                    if (/^\d{4}$/.test(enteredValue)) {
-                                                        setEnteredOTP(enteredValue);
-                                                    }
-                                                }} />
-                                            {otpVerified ? (
-                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
-                                            ) : (
-                                                <button onClick={handleVerifyOtp}>Submit</button>
-                                            )}
-
-                                        </div>
-                                        <div className="verify_butn12">
-                                            <p>{formatTime(timer)}</p>
-                                            <button onClick={handleResendOTP}>Resend OTP</button>
-                                        </div>
-                                    </div>
-                                )
-                            } */}
-
-
                         </div>
                         <div className="new_terms_c">
                             <input
@@ -417,7 +383,6 @@ export function NextStep() {
                                     <h2> Verify otp</h2>
                                     <p style={{ fontSize: "12px" }}>Please enter the 4 digit verification that we sent to your mail.the code will be valid for next 5 minutes</p>
                                     <div className="pop_up_modal">
-                                        <input type="text" placeholder='Enter mobile otp' required />
                                         <input type="text"
                                             onChange={(e) => {
                                                 const enteredValue = e.target.value;
@@ -427,13 +392,8 @@ export function NextStep() {
                                                     setEnteredOTP(enteredValue);
                                                 }
                                             }}
-
                                             placeholder='Enter email otp' required />
-                                        {/* {otpVerified ? (
-                                                <span className='new_checked'><TbDiscountCheckFilled /></span>
-                                            ) : ( */}
-                                        <button onClick={handleVerifyOtp}>Submit</button>
-                                        {/* )} */}
+                                        <button onClick={handleVerifyClick}>Submit</button>
                                     </div>
                                     <div className="verify_butn12">
                                         <p>{formatTime(timer)}</p>

@@ -1,6 +1,6 @@
 import './Footer.css'
 import React, { Fragment } from 'react'
-import logo1 from '../Assets/logo1.png';
+import logo1 from '../Assets/main_logo.svg';
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -48,7 +48,7 @@ export function Footer() {
                         <div className='sub_2_foot'>
                             <a href="#12">Social</a>
                             <a href="#12">Twitter</a>
-                            <a href="#12">LinkedIn</a>
+                            <a href="https://www.linkedin.com/company/celetelasia/" target='blank'>LinkedIn</a>
                             <a href="#12">Facebook</a>
                         </div>
                     </div>

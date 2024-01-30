@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import './SmsSol.css'
-import logo from '../Assets/New1.gif'
+import logo from '../Assets/Mobile sms prototype.svg'
 import { Link } from 'react-router-dom'
 import image1 from '../Assets/New10.jpg'
-import womanMobile from '../Assets/New13.gif';
+import womanMobile from '../Assets/New1113.gif';
 
 export function SmsSol() {
     return (
@@ -11,6 +11,9 @@ export function SmsSol() {
             <div className="main_sms_sol">
                 <div className="sub_sms_sol">
                     <img src={logo} alt="" />
+                    <div className="message-box">
+                        <p>Celetel.app has got you covered. Say goodbye to scattered communication tools and hello to simplicity, efficiency, and unparalleled customer engagement. Try Celetel.app today and unlock the true potential of your business communications.</p>
+                    </div>
                     <div className="para_sol">
                         <h1>SMS Solutions : Where Connectivity Begins</h1>
                         <p>Welcome to Celetel's SMS Solutions, where we transform simple

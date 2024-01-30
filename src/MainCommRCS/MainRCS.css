@@ -1,5 +1,28 @@
+.main_sol_page_rcs {
+    padding-top: 10px;
+    padding-left: 90px;
+}
+
+.main_sol_page_rcs h1 {
+    font-size: 50px;
+    padding-right: 50px;
+}
+
+.main_sol_page_rcs p {
+    padding-right: 470px;
+    font-size: 20px;
+    position: relative;
+    bottom: 65px;
+}
+
 .main_sol_page11 {
     display: none;
+}
+
+.new_svg_impo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .new_image1_h {
@@ -33,16 +56,44 @@
     width: 45%;
 }
 
+.sub_goal img {
+    display: flex;
+    background-image: url('../Assets/Blob 1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
 .why_celetel {
     width: 90%;
     display: flex;
     align-items: center;
+    gap: 45px;
+    /* border: 1px solid red; */
     margin: auto;
     margin-top: 290px;
 }
 
 .why_celetel img {
-    width: 48%;
+    background-image: url('../Assets/Blob.svg');
+    background-repeat: no-repeat;
+}
+
+.text_area_1 {
+    padding-left: 120px;
+    padding-right: 10px;
+}
+
+.text_area_1 h2 {
+    font-size: 36px;
+}
+
+.text_area_1 p {
+    margin-top: 20px;
+    color: #797979;
+    font-size: 18px;
 }
 
 .unlock_features {
@@ -149,6 +200,7 @@
 
     .sub_goal img {
         display: flex;
+        background-image: url('../Assets/Blob 1.svg');
         align-items: center;
         justify-content: center;
     }
@@ -159,7 +211,6 @@
     }
 
     .why_celetel img {
-        width: 70%;
         margin-top: 90px;
     }
 

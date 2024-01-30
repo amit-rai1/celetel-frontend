@@ -16,12 +16,13 @@ import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
 import { Pricing } from './Pricing/Pricing';
 import { PaymentSetup } from './Pricing/PaymentSetup';
+import { motion } from 'framer-motion';
 
 
 function App() {
 
   return (
-    <div className="App">
+    <motion.div className="App">
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
@@ -42,7 +43,7 @@ function App() {
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </motion.div>
   );
 }
 export default (App);

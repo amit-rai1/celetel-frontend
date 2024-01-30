@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import './MainRCS.css'
-import image1 from '../Assets/iPhone 14.png'
-import image2 from '../Assets/iPhone 17.png'
-import image3 from '../Assets/Group 1000001745.png'
-import image4 from '../Assets/Group 1000001746.png'
+import image1 from '../Assets/iPhone 14.svg'
+import image2 from '../Assets/iPhone 17.svg'
+import image3 from '../Assets/Smartphone with messenger chat screen.svg'
+import image4 from '../Assets/Messages.svg'
 import { GrSubtractCircle } from "react-icons/gr";
 import { MdAddCircleOutline } from "react-icons/md";
 import { Footer } from '../Footer/Footer'
@@ -12,8 +12,13 @@ import { Footer } from '../Footer/Footer'
 export function MainRCS() {
     return (
         <Fragment>
-            <div className="main_sol_page">
-                <h1>The Future of Enhanced Communication</h1>
+            <div className="main_sol_page_rcs">
+                <div className="new_svg_impo">
+                    <h1>The Future of Enhanced Communication</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="149" height="250" viewBox="0 0 149 250" fill="none">
+                        <path d="M161.102 1.30099C182.417 35.0728 193.905 76.4117 158.712 127.497C139.921 154.774 100.177 181.043 73.5403 166.58C55.3989 156.73 40.3229 130.542 66.9465 106.287C96.3464 79.5028 87.6042 140.768 84.8867 147.801C72.1678 180.719 50.02 208.914 19.7692 240.693C8.43741 252.597 18.3017 248.275 28.4118 241.699C37.1839 235.994 47.0473 229.391 54.3601 222.762C56.5905 220.741 39.9239 232.459 37.3685 234.365C26.4103 242.542 13.4829 251.793 7.37309 243.322C6.39161 241.961 -0.643535 228.101 2.77271 225.694C4.55024 224.441 17.9258 228.25 20.1543 228.374C34.6281 229.178 44.8447 226.426 59.9218 217.211" stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
                 <p>Welcome to Celetel's RCS (Rich Communication Services) page, where we explore the exciting world of modern communication. RCS is a game-changer in the realm of mobile messaging.</p>
                 <div className="btn2">
                     <button>Request a demo</button>

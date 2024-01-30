@@ -4,15 +4,19 @@
     padding: 45px 108px;
 }
 
+
 .sub_sms_sol {
-    display: -webkit-box;
-    display: -moz-box;
     display: flex;
-    display: flex;
+    background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'), lightgray 50%;
+    background-position: left top;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
     gap: 45px;
     background-color: #ffd17a;
     height: auto;
 }
+
 
 .sub_sms_sol img {
     margin-top: 45px;
@@ -25,8 +29,44 @@
     max-width: 45%;
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-190%, -10%);
+    width: 300px;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333;
+    animation: fadeInOut 8s infinite;
+}
+
 .para_sol {
     margin-top: 95px;
+    /* background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'); */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
     /* border: 1px solid red; */
 }
 
@@ -41,6 +81,7 @@
 
 .para_sol button {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--button-bg);
     border: none;
     font-weight: 500;
@@ -74,6 +115,7 @@
 
 .para_sol1 button {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--button-bg);
     border: none;
     font-weight: 500;
@@ -94,14 +136,172 @@
     width: 100%;
 }
 
-@-moz-document url-prefix() {
-    .sub_image_sol_1 img:nth-child(2) {
-        margin-left: 156px;
-        width: 100%;
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
     }
 
-    .sub_image_sol_1 img:nth-child(3) {
-        display: none;
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .message-box {
+        background-color: transparent;
+    }
+
+    .message-box p {
+        position: relative;
+        background-color: transparent;
+        top: 50%;
+        left: 50%;
+        transform: translate(-13%, -10%);
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-190%, -10%);
+        width: 300px;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #333;
+        animation: fadeInOut 8s infinite;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-185%, -10%);
+        width: 300px;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #333;
+        animation: fadeInOut 8s infinite;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-185%, -10%);
+        width: 300px;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #333;
+        animation: fadeInOut 8s infinite;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-185%, -10%);
+        width: 300px;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #333;
+        animation: fadeInOut 8s infinite;
     }
 }
 

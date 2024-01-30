@@ -1,5 +1,5 @@
 .main_signup {
-    /* border: 1px solid red; */
+    /* border: 5px solid red; */
     width: 100%;
     height: auto;
     display: flex;
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 62px;
+    margin-top: 40px;
     /* height: 414px; */
 }
 
@@ -92,7 +92,7 @@
     text-align: center;
 }
 
-@media screen and (max-width : 1100px) {
+@media screen and (max-width : 1180px) {
     .main_signup {
         height: auto;
         /* border: 1px solid red; */
