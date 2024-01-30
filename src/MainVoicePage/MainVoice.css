@@ -9,8 +9,15 @@
 }
 
 .main_sol_page10 p {
-    padding-top: 20px;
-    padding-right: 600px;
+    padding-right: 470px;
+    font-size: 20px;
+    position: relative;
+    bottom: 65px;
+}
+
+.new_svg_imp_voice {
+    display: flex;
+    justify-content: space-between;
 }
 
 .main_sol_page12 {
@@ -28,10 +35,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.sub_sms1 img {
-    width: 65%;
 }
 
 .our_goal {
