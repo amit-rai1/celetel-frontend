@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import './WhatsApp.css'
-import mobile1 from '../Assets/mobile-1.png'
 import { Link } from 'react-router-dom'
 import logo12 from '../Assets/image 32.svg'
 import logo19 from '../Assets/MessageContainer.svg'
 import logo20 from '../Assets/ButtonContainer.svg'
 import logo21 from '../Assets/ButtonContainer (1).svg'
-import logo13 from '../Assets/New3.gif'
+import logo13 from '../Assets/bell.gif'
+import logo23 from '../Assets/mobilercs.svg'
 import logo14 from '../Assets/Group 1000001764.svg'
 import logo15 from '../Assets/New4.gif'
 import logo16 from '../Assets/Privacy.png'
@@ -14,6 +14,17 @@ import logo17 from '../Assets/smiling-confident-businesswoman-posing-with-arms-f
 import logo18 from '../Assets/Content.svg'
 
 export function WhatsApp() {
+    const [showSecondImage, setShowSecondImage] = useState(true);
+
+    useEffect(() => {
+        // Toggle the state every 2 seconds (adjust as needed)
+        const interval = setInterval(() => {
+            setShowSecondImage((prev) => !prev);
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <Fragment>
             <div className="main_whatsapp">
@@ -47,9 +58,11 @@ export function WhatsApp() {
                     <Link to={'/connectrcs'}><button>Explore</button></Link>
                 </div>
                 <div className="sub_whatsapp1">
-                    <h1>The Future of Enhanced Communications : RCS</h1>
-                    <img src={logo13} alt="" />
-                    <img src={mobile1} alt="" />
+                    <h1>The Future of Enhanced Communications: RCS</h1>
+                    <div className="image_container">
+                        <img className={`logo ${showSecondImage ? 'show' : ''}`} src={logo13} alt="" />
+                        <img className={`logo ${showSecondImage ? 'show' : ''}`} src={logo23} alt="" />
+                    </div>
                 </div>
             </div>
 

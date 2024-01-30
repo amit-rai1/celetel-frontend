@@ -370,13 +370,37 @@
     .main_sol_page1 img {
         margin-top: 25px;
         width: 100%;
+        background: #FEEFBD;
+        border-radius: 8px;
     }
 
-    .btn2 {
+    .btn2_1 {
         display: flex;
-        padding: 5px 5px;
+        /* border: 1px solid red; */
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .btn2_1 button:first-child {
+        background-color: var(--button-bg);
+        border: none;
+        font-weight: 500;
+        border-radius: 3px;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .btn2_1 button:last-child {
+        border: 1px solid var(--button-bg);
+        font-weight: 500;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 10px 50px;
+        font-size: 15px;
+        cursor: pointer;
     }
 
     .why_to_all {

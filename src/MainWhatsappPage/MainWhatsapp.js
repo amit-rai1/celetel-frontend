@@ -58,7 +58,7 @@ export function MainWhatsapp() {
                 <p>Bring conversations into your entire customer journey by scaling with WhatsApp Business -
                     get ready to start a conversation with your customers around the world!</p>
                 <img src={image3} alt="" />
-                <div className="btn2">
+                <div className="btn2_1">
                     <button>Request a demo</button>
                     <button>Explore</button>
                 </div>
