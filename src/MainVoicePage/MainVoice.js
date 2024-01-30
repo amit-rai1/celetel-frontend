@@ -2,6 +2,7 @@ import './MainVoice.css'
 import React, { Fragment } from 'react'
 import image1 from '../Assets/GirlVoice.svg'
 import image5 from '../Assets/OOHKAY.svg'
+import image6 from '../Assets/Island.svg'
 import image2 from '../Assets/communication _ voice, message, memo, record, microphone, conversation 1.svg'
 import { BiMessageDetail } from "react-icons/bi";
 import { SlGraph } from "react-icons/sl";
@@ -37,6 +38,7 @@ export function MainVoice() {
             <div className="main_sms1">
                 <div className="sub_sms1">
                     <img src={image5} alt="" />
+                    <img src={image6} alt="" />
                     <img src={image1} alt="" />
                 </div>
             </div>
