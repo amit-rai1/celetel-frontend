@@ -379,9 +379,11 @@
 
 .used_by p {
     padding: 15px 380px;
+    color: #5F6D7E;
 }
 
 .used_by img {
+    margin-top: 62px;
     width: 100%;
 }
 

@@ -23,13 +23,13 @@ export function Mainverify() {
             <div className="main_sol_page8">
                 <h1>The Future of Enhanced Communication</h1>
                 <p>Welcome to Celetel's RCS (Rich Communication Services) page, where we explore the exciting world of modern communication. RCS is a game-changer in the realm of mobile messaging.</p>
-                <div className="btn2">
+                <div className="btn2_5">
                     <button>Request a demo</button>
                     <button>Explore</button>
                 </div>
             </div>
 
-            <div className="main_sms">
+            <div className="main_sms2">
                 <div className="sub_sms2">
                     <img src={img1} alt="" />
                 </div>

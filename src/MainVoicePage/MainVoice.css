@@ -118,22 +118,28 @@
 }
 
 .max_bus {
-    margin-top: 255px;
+    margin-top: 200px;
     background-color: #ECF9FF;
     display: flex;
-    align-items: center;
+    gap: 150px;
+    padding: 15px 5px 4px 88px;
+    justify-content: space-around;
 }
 
 .img_bus_max {
     width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
-.img_bus_max img {
-    width: 100%;
+.text_para {
+    display: flex;
+    align-items: center;
 }
 
 .text_para h2 {
-    padding-left: 445px;
+    /* padding-left: 445px; */
     font-size: 35px;
 }
 
