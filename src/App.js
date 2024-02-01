@@ -18,6 +18,7 @@ import ScrollToTop from './ScrollToTop';
 import { PaymentSetup } from './Pricing/PaymentSetup';
 import { motion } from 'framer-motion';
 import { NewPricing } from './NewPricing/NewPricing';
+import { AllPricing } from './NewPricing/AllPricing';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/prices' element={<NewPricing />} />
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
+          <Route path='/newprices' element={<AllPricing />} />
         </Routes>
       </BrowserRouter>
     </motion.div>

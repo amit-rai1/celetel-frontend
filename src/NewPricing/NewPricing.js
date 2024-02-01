@@ -8,7 +8,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function NewPricing() {
     const [age, setAge] = React.useState('');
@@ -16,6 +16,13 @@ export function NewPricing() {
     const handleChange = (event) => {
         setAge(event.target.value);
     };
+
+    const naviagteToAllPricing = useNavigate();
+
+
+    const handleClickAllPricing = () => {
+        naviagteToAllPricing('/newprices')
+    }
     return (
         <Fragment>
             <div className="main_new_prices_now_flow">
@@ -42,14 +49,14 @@ export function NewPricing() {
                                 <MenuItem value="">
                                     <em>None</em>
                                 </MenuItem>
-                                <MenuItem value={10}><Link style={{ color: "black" }}>All</Link></MenuItem>
+                                <MenuItem value={0}><Link style={{ color: "black" }}>All</Link></MenuItem>
                                 <MenuItem value={10}><Link style={{ color: "black" }}>RCS</Link></MenuItem>
                                 <MenuItem value={20}><Link style={{ color: "black" }}>SMS</Link></MenuItem>
                                 <MenuItem value={30}><Link style={{ color: "black" }}>Voice</Link></MenuItem>
                                 <MenuItem value={40}><Link style={{ color: "black" }}>Whatsapp</Link></MenuItem>
                             </Select>
                         </FormControl>
-                        <Button
+                        <Button onClick={handleClickAllPricing}
                             sx={{
                                 textTransform: "unset",
                                 marginTop: "15px",
