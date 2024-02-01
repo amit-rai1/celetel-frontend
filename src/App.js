@@ -16,7 +16,6 @@ import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
 // import { Pricing } from './Pricing/Pricing';
 import { PaymentSetup } from './Pricing/PaymentSetup';
-import { motion } from 'framer-motion';
 import { NewPricing } from './NewPricing/NewPricing';
 import { AllPricing } from './NewPricing/AllPricing';
 
@@ -24,7 +23,7 @@ import { AllPricing } from './NewPricing/AllPricing';
 function App() {
 
   return (
-    <motion.div className="App">
+    <div className="App">
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
@@ -46,7 +45,7 @@ function App() {
           <Route path='/newprices' element={<AllPricing />} />
         </Routes>
       </BrowserRouter>
-    </motion.div>
+    </div>
   );
 }
 export default (App);
