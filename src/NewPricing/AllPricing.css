@@ -82,7 +82,6 @@ input:checked+.slider:before {
 }
 
 .new_pricing_list {
-    border: 1px solid red;
     width: 98%;
     margin: auto;
     margin-top: 85px
@@ -91,13 +90,12 @@ input:checked+.slider:before {
 .new_pricing_cards_all {
     border-radius: 25px;
     border: 1px solid #E2DCDC;
-    padding: 45px 25px;
+    padding: 45px 55px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(174, 172, 172, 0.21);
 }
 
 .name_of_price {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,4 +105,20 @@ input:checked+.slider:before {
     color: #959595;
     font-size: 25px;
     font-weight: 400;
+}
+
+.prices_new h4 {
+    color: #272727;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+
+.cards_new_pricing_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 82px;
+    margin-top: 20px;
+    border-radius: 18px;
+    background: #F4FBDB;
 }
