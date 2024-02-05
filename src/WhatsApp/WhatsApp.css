@@ -135,23 +135,50 @@
 
 .sub_whatsapp1 {
     background-color: #EFEDFF;
-    width: 43%;
-
-}
-
-.sub_whatsapp1 h1 {
-    padding: 25px 25px;
-}
-
-.sub_whatsapp1 img:nth-child(2) {
-    width: 100%;
     position: relative;
-    top: 10px;
+    width: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
 }
 
-.sub_whatsapp1 img:nth-child(3) {
-    display: none;
+.image_container {
+    border: 1px solid red;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.logo {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: fadeInOut 4s infinite;
+    /* Adjust the duration as needed */
+}
+
+.logo.show {
+    opacity: 1;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 
 .potential_tech {
     width: 90%;
@@ -352,9 +379,11 @@
 
 .used_by p {
     padding: 15px 380px;
+    color: #5F6D7E;
 }
 
 .used_by img {
+    margin-top: 62px;
     width: 100%;
 }
 

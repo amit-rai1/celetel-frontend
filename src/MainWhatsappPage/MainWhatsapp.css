@@ -33,12 +33,12 @@
     display: flex;
     position: relative;
     align-items: center;
-    width: 85%;
-    margin: auto;
     overflow: hidden;
-    margin-top: 100px;
     justify-content: center;
     animation: changeBackground 10s infinite;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
 }
 
 @keyframes changeBackground {

@@ -14,15 +14,16 @@ import { SignUpExplore } from './SignUp/SignUpExplore';
 import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
-import { Pricing } from './Pricing/Pricing';
+// import { Pricing } from './Pricing/Pricing';
 import { PaymentSetup } from './Pricing/PaymentSetup';
-import { motion } from 'framer-motion';
+import { NewPricing } from './NewPricing/NewPricing';
+import { AllPricing } from './NewPricing/AllPricing';
 
 
 function App() {
 
   return (
-    <motion.div className="App">
+    <div className="App">
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
@@ -39,11 +40,12 @@ function App() {
           <Route path='/nextstepexplore' element={<SignUpExplore />} />
           <Route path='/accountsetup' element={<AccountSetUp />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/prices' element={<Pricing />} />
+          <Route path='/prices' element={<NewPricing />} />
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
+          <Route path='/newprices' element={<AllPricing />} />
         </Routes>
       </BrowserRouter>
-    </motion.div>
+    </div>
   );
 }
 export default (App);

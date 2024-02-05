@@ -73,7 +73,7 @@ export function MainSms() {
                     text messages into powerful communication tools that connect
                     businesses with their audience like never before.</p>
                 <img src={image1} alt="" />
-                <div className="btn2">
+                <div className="btn2_1">
                     <button>Request a demo</button>
                     <button>Explore</button>
                 </div>

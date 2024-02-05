@@ -13,6 +13,38 @@
     padding-right: 600px;
 }
 
+.btn2_5 {
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.btn2_5 button:first-child {
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn2_5 button:last-child {
+    border: 1px solid var(--button-bg);
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px 45px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main_sms2 {
+    width: 90%;
+    margin: auto;
+    margin-top: 45px;
+}
+
 .sub_sms2 {
     background-color: #A6CECE;
     width: 100%;

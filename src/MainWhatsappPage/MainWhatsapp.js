@@ -7,6 +7,7 @@ import image24 from '../Assets/Mes3.svg'
 import image25 from '../Assets/Mes4.svg'
 import image26 from '../Assets/Mes5.svg'
 import image27 from '../Assets/Mes6.svg'
+// import image28 from '../Assets/Flow 9@1x-25fps.gif'
 import { MdGamepad } from "react-icons/md";
 import { FaInfo } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
@@ -51,6 +52,7 @@ export function MainWhatsapp() {
                 <img src={image25} alt="" />
                 <img src={image26} alt="" />
                 <img src={image27} alt="" />
+                {/* <img src={image28} alt="" /> */}
             </div>
 
             <div className="main_sol_page20">
@@ -58,7 +60,7 @@ export function MainWhatsapp() {
                 <p>Bring conversations into your entire customer journey by scaling with WhatsApp Business -
                     get ready to start a conversation with your customers around the world!</p>
                 <img src={image3} alt="" />
-                <div className="btn2">
+                <div className="btn2_1">
                     <button>Request a demo</button>
                     <button>Explore</button>
                 </div>

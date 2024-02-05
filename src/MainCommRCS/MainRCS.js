@@ -38,7 +38,7 @@ export function MainRCS() {
                 <div className="img_1_new">
                     <img src={image1} alt="" />
                 </div>
-                <div className="btn2">
+                <div className="btn2_1">
                     <button>Request a demo</button>
                     <button>Explore</button>
                 </div>
@@ -93,7 +93,7 @@ export function MainRCS() {
                     <h1>Unlock the RCS Advantage:</h1>
                     <p style={{ marginTop: '20px', color: '#8A8A8A', fontWeight: '500' }}>
                         Ready to explore the endless possibilities of RCS? Connect with us to discuss how Celetel can tailor an RCS strategy that aligns with your objectives. Together, we'll elevate your conversations, one message at a time.</p>
-                    <div className="btn2">
+                    <div className="btn2_3">
                         <button>Get started</button>
                         <button>Explore</button>
                     </div>
