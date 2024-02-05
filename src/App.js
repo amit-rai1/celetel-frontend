@@ -14,8 +14,10 @@ import { SignUpExplore } from './SignUp/SignUpExplore';
 import { AccountSetUp } from './SignUp/AccountSetUp';
 import { Login } from './LogIn/Login';
 import ScrollToTop from './ScrollToTop';
-import { Pricing } from './Pricing/Pricing';
+// import { Pricing } from './Pricing/Pricing';
 import { PaymentSetup } from './Pricing/PaymentSetup';
+import { NewPricing } from './NewPricing/NewPricing';
+import { AllPricing } from './NewPricing/AllPricing';
 
 
 function App() {
@@ -38,8 +40,9 @@ function App() {
           <Route path='/nextstepexplore' element={<SignUpExplore />} />
           <Route path='/accountsetup' element={<AccountSetUp />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/prices' element={<Pricing />} />
+          <Route path='/prices' element={<AllPricing />} />
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
+          <Route path='/newprices' element={<NewPricing />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,5 +1,28 @@
+.main_sol_page_rcs {
+    padding-top: 10px;
+    padding-left: 90px;
+}
+
+.main_sol_page_rcs h1 {
+    font-size: 50px;
+    padding-right: 50px;
+}
+
+.main_sol_page_rcs p {
+    padding-right: 470px;
+    font-size: 20px;
+    position: relative;
+    bottom: 65px;
+}
+
 .main_sol_page11 {
     display: none;
+}
+
+.new_svg_impo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .new_image1_h {
@@ -18,8 +41,10 @@
     margin: auto;
 }
 
-.sub_rcs {
+
+/* .sub_rcs {
     margin: auto;
+    style={{ paddingRight: '200px', marginTop: '15px' }}
     margin-top: 80px;
     background-color: #E7F3BC;
     border-radius: 30px;
@@ -31,18 +56,46 @@
 
 .sub_rcs img {
     width: 45%;
+} */
+
+.sub_goal img {
+    display: flex;
+    background-image: url('../Assets/Blob 1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
 }
 
 .why_celetel {
     width: 90%;
     display: flex;
     align-items: center;
+    gap: 45px;
+    /* border: 1px solid red; */
     margin: auto;
     margin-top: 290px;
 }
 
 .why_celetel img {
-    width: 48%;
+    background-image: url('../Assets/Blob.svg');
+    background-repeat: no-repeat;
+}
+
+.text_area_1 {
+    padding-left: 120px;
+    padding-right: 10px;
+}
+
+.text_area_1 h2 {
+    font-size: 36px;
+}
+
+.text_area_1 p {
+    margin-top: 20px;
+    color: #797979;
+    font-size: 18px;
 }
 
 .unlock_features {
@@ -60,6 +113,7 @@
 
 .unlock_features p {
     padding-top: 10px;
+    color: #667085;
 }
 
 .btn4 {
@@ -105,15 +159,48 @@
     width: 100%;
 }
 
-.security_sms {
+.security_rcs_rcs {
+    margin: auto;
     margin-top: 155px;
+    display: flex;
+    align-items: center;
+    width: 85%;
 }
 
 .faq_s {
     margin-top: 155px;
 }
 
+.btn2_3 {
+    display: flex;
+    gap: 15px;
+    margin-top: 16px;
+}
+
+.btn2_3 button:first-child {
+    background-color: var(--button-bg);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn2_3 button:last-child {
+    border: 1px solid var(--button-bg);
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px 45px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 @media screen and (max-width :1080px) {
+    .main_sol_page_rcs {
+        display: none;
+    }
 
     .new_image1_h {
         display: none;
@@ -149,6 +236,7 @@
 
     .sub_goal img {
         display: flex;
+        background-image: url('../Assets/Blob 1.svg');
         align-items: center;
         justify-content: center;
     }
@@ -159,17 +247,30 @@
     }
 
     .why_celetel img {
-        width: 70%;
+        width: 100%;
         margin-top: 90px;
     }
 
-    .text_area_1 p {
+    .text_area_1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .text_area_1 h2 {
         margin-top: 20px;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .text_area_1 p {
+        margin-top: 13px;
+        padding: 8px;
         font-size: 15px;
     }
 
     .unlock_features {
         width: 100%;
+        padding: 8px;
     }
 
     .unlock_features h1 {
@@ -177,21 +278,25 @@
     }
 
     .unlock_features p {
-        font-size: 15px;
+        font-size: 13px;
+        color: #667085;
     }
 
     .btn4 {
         padding: 0;
+        width: 100%;
     }
 
     .btn4 button:nth-child(1) {
         border-radius: 3px;
+        padding: 7px 25px;
         background-color: #FAC213;
     }
 
     .btn4 button:nth-child(2) {
         border-radius: 3px;
         background-color: #ffff;
+        padding: 7px 25px;
         color: black;
         border: 2px solid #FAC213;
     }
@@ -200,7 +305,7 @@
         padding: 0;
     }
 
-    .security_sms {
+    .security_rcs_rcs {
         display: flex;
         flex-direction: column;
         background-color: transparent;
@@ -214,9 +319,10 @@
         font-size: 23px;
     }
 
-    .btn2 {
+    .btn2_3 {
         width: 100%;
         padding: 10px;
         margin-top: 20px;
+        margin: auto;
     }
 }

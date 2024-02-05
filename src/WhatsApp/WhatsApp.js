@@ -1,22 +1,24 @@
 import React, { Fragment } from 'react'
 import './WhatsApp.css'
-import mobile1 from '../Assets/mobile-1.png'
 import { Link } from 'react-router-dom'
-import logo12 from '../Assets/New2.gif'
-import logo13 from '../Assets/New3.gif'
-import logo14 from '../Assets/A1.jpg'
-import logo15 from '../Assets/New4.gif'
-import logo16 from '../Assets/Privacy.png'
+import logo14 from '../Assets/Group 1000001764.svg'
+import celetelapp from '../Assets/celetelapp.svg'
+import logo16 from '../Assets/mainpglast.svg'
 import logo17 from '../Assets/smiling-confident-businesswoman-posing-with-arms-folded.jpg'
-import logo18 from '../Assets/v-all.png'
+import logo18 from '../Assets/Content.svg'
 
 export function WhatsApp() {
+
+
+    const whatsappOne = ' https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+12%403x-50fps.gif';
+    const whatsappTwo = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+13%403x-50fps.gif"
+
+
     return (
         <Fragment>
             <div className="main_whatsapp">
                 <div className="sub_whatsapp">
-                    <h1>Easily create and manage customer conversations on WhatsApp</h1>
-                    <img src={logo12} alt="" />
+                    <img src={whatsappOne} alt="" />
                 </div>
                 <div className="para_sol2">
                     <h1>Reach, Engage, and  Convert with Seamless WhatsApp Messaging Strategies"</h1>
@@ -28,16 +30,14 @@ export function WhatsApp() {
 
 
             <div className="main_whatsapp1">
-                <div className="para_sol2">
+                <div className="para_sol3">
                     <h1>Elevate Engagement with
                         RCS Messaging: The Future  of Interactive  Communication</h1>
                     <p>Redefine how you engage with your audience using RCS  messaging, the next-generation of interactive  communication</p>
                     <Link to={'/connectrcs'}><button>Explore</button></Link>
                 </div>
                 <div className="sub_whatsapp1">
-                    <h1>The Future of Enhanced Communications : RCS</h1>
-                    <img src={logo13} alt="" />
-                    <img src={mobile1} alt="" />
+                    <img src={whatsappTwo} alt="" />
                 </div>
             </div>
 
@@ -143,7 +143,7 @@ export function WhatsApp() {
 
             <div className="new_status_conf">
                 <div className="new_img_conf">
-                    <img src={logo15} alt="" />
+                    <img src={celetelapp} alt="" />
                 </div>
                 <div className="new_para_conf">
                     <h1>One step solution with Celetel app</h1>

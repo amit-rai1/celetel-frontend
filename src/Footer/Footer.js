@@ -1,6 +1,6 @@
 import './Footer.css'
 import React, { Fragment } from 'react'
-import logo1 from '../Assets/logo1.png';
+import logo1 from '../Assets/main_logo.svg';
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -24,6 +24,7 @@ export function Footer() {
                             <a href="#12">Product</a>
                             <a href="#12">Messaging</a>
                             <a href="#12">Voice</a>
+                            <a href="https://docs.celetel.com/">API Docs</a>
                         </div>
                         <div className='sub_20_foot'>
                             <a href="#12">Product</a>
@@ -36,31 +37,29 @@ export function Footer() {
                             <a href="#12">Company</a>
                             <a href="#12">About us</a>
                             <a href="#12">Product</a>
-                            <a href="#12">Pricing</a>
-                            <a href="#12">Contact us</a>
+                            <a href="/prices">Pricing</a>
+                            <a href="/contact">Contact us</a>
                         </div>
                         <div className='sub_20_foot'>
                             <a href="#12">Company</a>
                             <a href="#12">Product</a>
-                            <a href="#12">Pricing</a>
+                            <a href="/prices">Pricing</a>
                             <a href="#12">Contact us</a>
                         </div>
                         <div className='sub_2_foot'>
                             <a href="#12">Social</a>
                             <a href="#12">Twitter</a>
-                            <a href="#12">LinkedIn</a>
+                            <a href="https://www.linkedin.com/company/celetelasia/" target='blank'>LinkedIn</a>
                             <a href="#12">Facebook</a>
                         </div>
                     </div>
                     <div className="new_foot">
                         <div className='sub_3_foot'>
                             <a href="#12">Legal</a>
-                            <a href="#12">Terms</a>
+                            <a href="https://www.termsandconditionsgenerator.com/live.php?token=vH9ZUTYbGZ12HUCBkAlz14mJNIHxztKE">Terms</a>
                             <a href="#12">Privacy </a>
                             <a href="#12">Cookies</a>
                             <a href="#12">Licenses</a>
-                            <a href="#12">Settings</a>
-                            <a href="#12">Contact</a>
                         </div>
 
                         <div className='sub_20_foot'>

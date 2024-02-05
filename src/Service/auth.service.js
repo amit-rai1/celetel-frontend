@@ -32,24 +32,6 @@ export const sendVerificationEmail = async (email) => {
     }
 }
 
-// export const verifyOtp = async (enteredOTP) => {
-//     console.log(enteredOTP, "enterOTP")
-//     try {
-//         console.log('Request Data:', { enteredOTP });
-
-//         const response = await axios.post(`${API_BASEURL}/api/client/verifyOtp`, { enteredOTP });
-//         console.log(response, "resauth")
-
-//         if (response.data.success) {
-//             return { success: true, message: response.data.msg };
-//         } else {
-//             return { success: false, message: response.data.msg };
-//         }
-//     } catch (error) {
-//         console.error('Error verifying OTP:', error);
-//         return { success: false, message: 'Failed to verify OTP. Please try again.' };
-//     }
-// };
 
 export const verifyOtp = async (enteredOTP) => {
     console.log(enteredOTP, "enterOTP");
@@ -85,7 +67,7 @@ export const getClientById = async (clientId) => {
 
 export const accountSetup = async (clientId, formData) => {
 
-    console.log(formData,"forsdfghjkauth")
+    console.log(formData, "forsdfghjkauth")
 
     console.log(clientId, "clientIdupdate")
 
@@ -117,14 +99,50 @@ export const loginClient = async (email, password) => {
 
 export const googleLogin = async () => {
     try {
-      const response = await axios.get('http://localhost:8600/auth/google/callback', {
-        withCredentials: true, // Ensure credentials are included for authentication
-      });
-  
-      // You may handle the response here, but in this case, the redirect should happen from the backend.
-      // Redirecting to the Google authentication page should be handled by the backend.
-      return response;
+        const response = await axios.get('http://localhost:8600/auth/google/callback', {
+            withCredentials: true, // Ensure credentials are included for authentication
+        });
+
+        // You may handle the response here, but in this case, the redirect should happen from the backend.
+        // Redirecting to the Google authentication page should be handled by the backend.
+        return response;
     } catch (error) {
-      throw new Error('Google login failed.');
+        throw new Error('Google login failed.');
     }
-  };
+};
+
+
+export const paymentInitiate = async (name, email, phoneNumber, amount) => {
+    const clientId = localStorage.getItem("clientId");
+
+    try {
+        const response = await axios.post(`${API_BASEURL}/api/client/payment`, {
+            name,
+            email,
+            phoneNumber,
+            amount,
+            merchentUserId: clientId,
+        });
+        console.log('API Response:', response.data);
+        return response.data; // Make sure to return the response data
+    } catch (error) {
+        console.error('API Error:', error.message);
+        throw error;
+    }
+};
+
+
+export const contactUs = async (formData) => {
+    try {
+        const responseContact = await axios.post(`${API_BASEURL}/api/contactUs`,
+            formData
+        );
+        console.log(responseContact.data, "reponseContact");
+        return responseContact.data;
+    }
+    catch (error) {
+        console.log("Contact error", error.msg)
+        throw error;
+    }
+
+}
