@@ -2,59 +2,23 @@ import React, { Fragment, useState } from 'react'
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import { FaChevronDown } from "react-icons/fa";
 import ListItem from "@mui/material/ListItem";
 import imagelogo from '../Assets/main_logo.svg'
-import { styled, alpha } from '@mui/material/styles';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Divider from '@mui/material/Divider';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import imagelogo1 from '../Assets/mailnav.svg'
+import imagelogo2 from '../Assets/voicenav.svg'
+import imagelogo3 from '../Assets/rcsnav.svg'
+import imagelogo4 from '../Assets/verifynav.svg'
+import imagelogo5 from '../Assets/whatsappnav.svg'
+import navsms from '../Assets/mainsms.svg'
+import navrcs from '../Assets/mainrcs.svg'
+import navwhatsapp from '../Assets/mainwhatsapp.svg'
+import navvoice from '../Assets/mainvoice.svg'
+import navverify from '../Assets/mainverify.svg'
 
-
-const StyledMenu = styled((props) => (
-    <Menu
-        elevation={0}
-        anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-        }}
-        transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
-        }}
-        {...props}
-    />
-))(({ theme }) => ({
-    '& .MuiPaper-root': {
-        borderRadius: 6,
-        marginTop: theme.spacing(3),
-        minWidth: 300,
-        height: 200,
-        color:
-            theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-        boxShadow:
-            'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-        '& .MuiMenu-list': {
-            padding: '4px 0',
-        },
-        '& .MuiMenuItem-root': {
-            '& .MuiSvgIcon-root': {
-                fontSize: 18,
-                color: theme.palette.text.secondary,
-                marginRight: theme.spacing(1.5),
-            },
-            '&:active': {
-                backgroundColor: alpha(
-                    theme.palette.primary.main,
-                    theme.palette.action.selectedOpacity,
-                ),
-            },
-        },
-    },
-}));
 
 export function Navbar() {
 
@@ -90,14 +54,50 @@ export function Navbar() {
 
     // ...............................
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClickDrop = (event) => {
-        setAnchorEl(event.currentTarget);
+    const [openPricing, setOpenPricing] = useState(false);
+    const [hoveredProduct, setHoveredProduct] = useState(null);
+
+
+    const handleButtonClick = () => {
+        setOpenPricing(!openPricing);
     };
-    const handleClose = () => {
-        setAnchorEl(null);
+
+    const handleProductHover = (product) => {
+        setHoveredProduct(product);
     };
+
+    function handleClickLinkInsideAnimatePresence() {
+        // Close the product box when a link inside AnimatePresence is clicked
+        setOpenPricing(false);
+        // Add any other logic you need for this link
+    }
+    const [openPricingIcon, setOpenPricingIcon] = useState(false);
+
+    const togglePricing = () => {
+        setOpenPricingIcon(!openPricingIcon);
+    };
+    const defaultContent = (
+        <>
+            <ul>
+                <li>
+                    <span>Telecommunication Expertise:</span>Providing innovative
+                    telecommunication solutions.
+                </li>
+                <li>
+                    <span>Diverse Services:</span> SMS, RCS, WhatsApp, Verification, and
+                    Voice.
+                </li>
+                <li>
+                    <span> Global Reach:</span> Extensive network coverage for seamless
+                    communication worldwide.
+                </li>
+                <li>
+                    <span>Customer-Centric Approach:</span> Tailored solutions for maximum
+                    efficiency and satisfaction.
+                </li>
+            </ul>
+        </>
+    );
 
     return (
         <Fragment>
@@ -106,43 +106,21 @@ export function Navbar() {
                     <img onClick={handleClick} src={imagelogo} alt="" />
                     <ul>
                         <Link to={'/'}><li>Home</li></Link>
-                        <li>
-                            <div className="dropdown_products"
-                                id="demo-customized-button"
-                                aria-controls={open ? 'demo-customized-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open ? 'true' : undefined}
-                                disableElevation
-                                onMouseEnter={handleClickDrop}
-                                endIcon={<KeyboardArrowDownIcon />}>Products <FaChevronDown />
+                        <div className="pricing_main">
+                            <div className="pricing_trigger"
+                                onClick={handleButtonClick}>
+                                <li className="text_price" onClick={togglePricing}>
+                                    Products
+                                    <FaChevronDown
+                                        style={{
+                                            transition: 'transform 0.3s ease-in-out',
+                                            transform: openPricingIcon ? 'rotate(180deg)' : 'rotate(0)',
+                                        }}
+                                    />
+                                    <span style={{ transform: openPricing ? "scaleX(1)" : "scaleX(0)" }} />
+                                </li>
                             </div>
-                            <StyledMenu
-                                id="demo-customized-menu"
-                                MenuListProps={{
-                                    'aria-labelledby': 'demo-customized-button',
-                                }}
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}>
-                                <Link to={'/smssolutions'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
-                                    <li>SMS</li>
-                                </MenuItem></Link>
-                                <Link to={'/connectwhatsapp'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
-                                    <li>WhatsApp</li>
-                                </MenuItem></Link>
-                                <Divider sx={{ my: 0.5 }} />
-                                <Link to={'/connectrcs'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
-                                    <li>RCS</li>
-                                </MenuItem></Link>
-                                <Link to={'/voicesolutions'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
-                                    <li>Voice</li>
-                                </MenuItem></Link>
-                                <Link to={'/verifications'} style={{ color: "black" }}><MenuItem onClick={handleClose} disableRipple>
-                                    <li>Verification</li>
-                                </MenuItem></Link>
-                            </StyledMenu>
-                        </li>
-
+                        </div>
                         <Link to={'/prices'}><li>Pricing</li></Link>
                     </ul>
                 </div>
@@ -198,6 +176,195 @@ export function Navbar() {
                     </List>
                 </Drawer>
             </div>
+
+            <AnimatePresence>
+                {openPricing && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        style={{ translateX: "-50%" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="absolute_centered">
+                        <div className="custom_container">
+                            <div className="inside_container">
+                                <h1>OUR PRODUCTS</h1>
+                                <div className="products_container">
+                                    <div className="main_new_comm_products">
+                                        <div className="new_comm1_products"
+                                            onMouseEnter={() => handleProductHover('SMS')}>
+                                            <img src={imagelogo1} alt="" />
+                                            <div>
+                                                <Link to={'/smssolutions'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>SMS</li></Link>
+                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                            </div>
+                                        </div>
+                                        <div className="new_comm2_products"
+                                            onMouseEnter={() => handleProductHover('RCS')}>
+                                            <img src={imagelogo3} alt="" />
+                                            <div>
+                                                <Link to={'/connectrcs'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>RCS</li></Link>
+                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                            </div>
+                                        </div>
+                                        <div className="new_comm3_products"
+                                            onMouseEnter={() => handleProductHover('WhatsApp')}>
+                                            <img src={imagelogo5} alt="" />
+                                            <div>
+                                                <Link to={'/connectwhatsapp'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>WhatsApp</li></Link>
+                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="main_new_comm_products">
+                                        <div className="new_comm1_products"
+                                            onMouseEnter={() => handleProductHover('Voice')}
+                                        >
+                                            <img src={imagelogo2} alt="" />
+                                            <div>
+                                                <Link to={'/voicesolutions'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>Voice</li></Link>
+                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                            </div>
+                                        </div>
+                                        <div className="new_comm2_products"
+                                            onMouseEnter={() => handleProductHover('Verifications')}
+                                        >
+                                            <img src={imagelogo4} alt="" />
+                                            <div>
+                                                <Link to={'/verifications'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>Verifications</li></Link>
+                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="celetel_content">
+                                <h1>CELETEL</h1>
+                                {hoveredProduct ? (
+                                    <ul>
+                                        <li>
+                                            {hoveredProduct === 'SMS' && (
+                                                <Fragment>
+                                                    <div className="hover_products">
+                                                        <img src={navsms} alt="" />
+                                                        <div className="products_desc">
+                                                            <ul>
+                                                                <li>
+                                                                    <span>Instant Communication:</span>Reach your audience instantly, ensuring prompt delivery.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Global Reach:</span> Connect worldwide for seamless communication across borders.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Customised Solutions:</span> Tailor campaigns with personalised content for maximum.
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </Fragment>
+                                            )}
+                                        </li>
+
+                                        <li>
+                                            {hoveredProduct === 'RCS' && (
+                                                <Fragment>
+                                                    <div className="hover_products">
+                                                        <img src={navrcs} alt="" />
+                                                        <div className="products_desc">
+                                                            <ul>
+                                                                <li>
+                                                                    <span>Enhanced Messaging: </span>Elevate communication with interactive features.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Brand Engagement:</span> Foster loyalty with rich media and interactive buttons.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Analytics:</span> Gain insights into campaign performance.
+                                                                </li>
+                                                            </ul>                                                    </div>
+
+                                                    </div>
+                                                </Fragment>
+                                            )}
+                                        </li>
+                                        <li>
+                                            {hoveredProduct === 'WhatsApp' && (
+                                                <Fragment>
+                                                    <div className="hover_products">
+                                                        <img src={navwhatsapp} alt="" />
+                                                        <div className="products_desc">
+                                                            <ul>
+                                                                <li>
+                                                                    <span>Customer Engagement:</span>Interact directly on WhatsApp for convenience.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Security:</span> Ensure privacy with end-to-end encryption.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Automation:</span>Streamline workflows with WhatsApp integration.
+                                                                </li>
+                                                            </ul>                                                         </div>
+
+                                                    </div>
+                                                </Fragment>
+                                            )}
+                                        </li>
+                                        <li>
+                                            {hoveredProduct === 'Voice' && (
+                                                <Fragment>
+                                                    <div className="hover_products">
+                                                        <img src={navvoice} alt="" />
+                                                        <div className="products_desc">
+                                                            <ul>
+                                                                <li>
+                                                                    <span>Clear Communication</span>Ensure superior voice quality for domestic and international calls.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Scalability:</span> Easily scale your infrastructure to meet demand with flexible deployment.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Advanced Features:</span>Access IVR, call recording, and analytics to optimise voice.
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </Fragment>
+                                            )}
+                                        </li>
+                                        <li>
+                                            {hoveredProduct === 'Verifications' && (
+                                                <Fragment>
+                                                    <div className="hover_products">
+                                                        <img src={navverify} alt="" />
+                                                        <div className="products_desc">
+                                                            <ul>
+                                                                <li>
+                                                                    <span>Identity Verification:</span>Securely verify user identities, reducing fraud.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Two-Factor Authentication:</span> Enhance account security with an extra layer of protection.
+                                                                </li>
+                                                                <li>
+                                                                    <span>Flexible Integration:</span> Seamlessly integrate verification services into your platforms for a smoother user experience.
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </Fragment>
+                                            )}
+                                        </li>
+                                    </ul>
+                                ) : (
+                                    defaultContent
+                                )}
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </Fragment>
     )
 }

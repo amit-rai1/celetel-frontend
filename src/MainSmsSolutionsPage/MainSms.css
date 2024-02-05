@@ -46,34 +46,6 @@
     width: 65px;
     height: 65px;
     margin-top: 20px;
-    animation: vibrate 1s infinite;
-}
-
-@keyframes vibrate {
-    0% {
-        transform: translateX(0);
-        transform: scale(1);
-    }
-
-    25% {
-        transform: translateX(-2px);
-        transform: scale(1.2);
-    }
-
-    50% {
-        transform: translateX(2px);
-        transform: scale(1);
-    }
-
-    75% {
-        transform: translateX(-2px);
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: translateX(0);
-        transform: scale(1);
-    }
 }
 
 .sub_sms_message {
@@ -205,7 +177,7 @@
     width: 65%;
 }
 
-.cards {
+.cards_sms {
     flex-basis: 27%;
     display: flex;
     padding: 15px 15px;
@@ -218,28 +190,24 @@
     transition: .3s ease-in-out;
 }
 
-.cards img {
-    width: 80px;
-}
-
-.cards h5 {
+.cards_sms h5 {
     font-size: 20px;
     padding-top: 20px;
 }
 
-.cards p {
+.cards_sms p {
     color: #8E8E8E;
     padding-top: 20px;
 }
 
 
-.cards:hover {
+.cards_sms:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: .3s ease-in-out;
 }
 
 
-.security_sms {
+.security_sms_sms {
     margin: auto;
     margin-top: 50px;
     display: flex;
@@ -282,14 +250,20 @@
 }
 
 .faq_s {
-    /* border: 1px solid red; */
     margin: auto;
     margin-top: 80px;
     width: 55%;
     text-align: center;
 }
 
-.faq_s_ques {
+
+.according_sms {
+    width: 60%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+/*.faq_s_ques {
     text-align: justify;
     margin-top: 30px;
 }
@@ -341,7 +315,177 @@
 
 .faq_mob_resp {
     display: none;
+} */
+
+
+
+
+.main_freq_que {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    height: auto;
 }
+
+.main_freq_que h1 {
+    color: white;
+    font-size: 49px;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.new_many_more {
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+.new_many_more li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.new_many_more li label {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    background-color: #2c2c2c;
+    cursor: pointer;
+    margin-bottom: 2px;
+    position: relative;
+    transition: .2s ease-in-out;
+}
+
+.new_many_more li label:hover {
+    transition: .2s ease-in-out;
+    background-color: rgb(77, 76, 76);
+}
+
+.new_many_more label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform .5s;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.drop_down_ans {
+    background-color: #2c2c2c;
+    text-align: justify;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding .5s;
+}
+
+.drop_down_ans p {
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+    word-spacing: 1px;
+}
+
+.new_many_more input[type="radio"]:checked+label+.drop_down_ans {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.new_many_more input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.textField label {
+    color: white;
+}
+
+.email_sec {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-bottom: 10px solid #2c2c2c;
+}
+
+.email_sec p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.text_f_b {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+@media screen and (max-width : 1100px) {
+    .main_freq_que h1 {
+        color: white;
+        font-size: 35px;
+        width: 100%;
+        padding: 30px 0px;
+    }
+
+    .new_many_more {
+        width: 100%;
+    }
+
+    .new_many_more li {
+        width: 100%;
+    }
+
+    .new_many_more li label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        word-break: break-all;
+        font-size: 16px;
+    }
+
+    .new_many_more p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .text_f_b {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .email_sec p {
+        width: 100%;
+        font-size: 18px;
+        padding: 5px 45px;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1080px) {
     .main_sol_page {
@@ -426,29 +570,23 @@
 
     .speciality_sms {
         /* border: 1px solid red; */
-        width: 80%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
     }
 
-    .cards1 h5 {
-        font-size: 18px;
+    .cards_sms h5 {
+        font-size: 22px;
     }
 
-    .cards h5 {
-        font-size: 18px;
-    }
-
-    .cards p {
+    .cards_sms p {
         font-size: 19px;
+        padding: 5px;
+        width: 100%;
     }
 
-    .cards1 p {
-        font-size: 18px;
-    }
-
-    .security_sms {
+    .security_sms_sms {
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
@@ -496,51 +634,26 @@
     }
 
     .faq_s {
-        display: none;
+        display: block;
         padding: 10px;
-        border: 1px solid red;
         width: 100%;
     }
 
-    .faq_mob_head {
-        margin-top: 50px;
-        display: block;
-        text-align: center;
-    }
-
-    .faq_mob_head h1 {
+    .faq_s h1 {
         font-size: 22px;
     }
 
-    .faq_mob_head p {
+    .faq_s p {
         font-size: 16px;
         padding: 1px 18px;
         margin-top: 20px;
         color: #667085;
     }
 
-    .faq_mob_resp {
-        display: block;
-    }
-
-    .faq_queries {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 45px;
-        margin-bottom: 25px;
-    }
-
-    .faq_quer_s {
-        display: flex;
+    .according_sms {
         width: 90%;
         margin: auto;
-        align-items: center;
-        gap: 15px;
-        justify-content: space-between;
-        padding: 10px 13px;
-        border: 1px solid #DAE0E6;
-        border-radius: 6px;
-        margin-top: 20px;
+        margin-top: 45px;
     }
+
 }

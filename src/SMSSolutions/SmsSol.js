@@ -1,20 +1,16 @@
 import React, { Fragment } from 'react'
 import './SmsSol.css'
-import logo from '../Assets/Mobile sms prototype.svg'
-import logo1 from '../Assets/Mobilenew.svg'
 import { Link } from 'react-router-dom'
-import image1 from '../Assets/New10.jpg'
-import womanMobile from '../Assets/New1113.gif';
 
 export function SmsSol() {
+
+    const smsphone = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow113x-50fps-ezgif.com-crop.gif"
+    const womangif = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+8%403x-50fps.gif"
     return (
         <Fragment>
             <div className="main_sms_sol">
                 <div className="sub_sms_sol">
-                    <img src={logo} alt="" />
-                    <div className="message-box">
-                        <p>Celetel.app has got you covered. Say goodbye to scattered communication tools and hello to simplicity, efficiency, and unparalleled customer engagement. Try Celetel.app today and unlock the true potential of your business communications.</p>
-                    </div>
+                    <img src={smsphone} alt="" />
                     <div className="para_sol">
                         <h1>SMS Solutions : Where Connectivity Begins</h1>
                         <p>Welcome to Celetel's SMS Solutions, where we transform simple
@@ -27,7 +23,7 @@ export function SmsSol() {
                 </div>
 
                 <div className="sub_sms_sol_mobile">
-                    <img src={logo1} alt="" />
+                    <img src={smsphone} alt="" />
                     <div className="para_sol_mobile">
                         <h1>SMS Solutions : Where Connectivity Begins</h1>
                         <p>Welcome to Celetel's SMS Solutions, where we transform simple
@@ -51,8 +47,7 @@ export function SmsSol() {
                         <Link to={'/voicesolutions'}><button>Explore</button></Link>
                     </div>
                     <div className="sub_image_sol_1">
-                        <img src={womanMobile} alt="" />
-                        <img src={image1} alt="" />
+                        <img src={womangif} alt="" />
                     </div>
                 </div>
             </div>

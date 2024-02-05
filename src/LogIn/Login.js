@@ -20,10 +20,6 @@ export function Login() {
 
         try {
             const result = await loginClient(email, password);
-
-
-            // console.log(result, "resulr124570")
-
             if (result.success) {
                 // Handle successful login
                 toast.success('Login successful', {

@@ -37,6 +37,10 @@
     align-items: center;
 }
 
+.sub_sms1 img {
+    width: 70%;
+}
+
 .our_goal {
     /* border: 1px solid red; */
     margin: auto;
@@ -90,12 +94,37 @@
     text-align: center;
 }
 
-.cards {
-    padding: 15px 1px;
+.speciality_voice {
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 50px;
+    width: 85%;
 }
 
-.cards p {
-    font-size: 14px;
+.cards_voice {
+    padding: 15px 1px;
+    flex-basis: 27%;
+    display: flex;
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    /* border: 1px solid black; */
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.cards_voice h5 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.cards_voice p {
+    color: #8E8E8E;
+    padding-top: 20px;
 }
 
 .image_p {
@@ -133,6 +162,10 @@
     margin: auto;
 }
 
+.img_bus_max img {
+    width: 100%;
+}
+
 .text_para {
     display: flex;
     align-items: center;
@@ -168,6 +201,16 @@
         padding: 10px 10px;
     }
 
+    .main_img_voice {
+        background-color: #D2F1FFB8;
+        margin-top: 50px;
+        border-radius: 8px;
+    }
+
+    .main_img_voice img {
+        width: 100%;
+    }
+
     .main_sol_page12 h1 {
         font-size: 30px;
     }
@@ -186,6 +229,34 @@
     .main_sol_page12 p {
         font-size: 16px;
         margin-top: 20px;
+    }
+
+    .btn_voice {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .btn_voice button:first-child {
+        background-color: var(--button-bg);
+        border: none;
+        font-weight: 500;
+        border-radius: 3px;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .btn_voice button:last-child {
+        border: 1px solid var(--button-bg);
+        font-weight: 500;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 10px 50px;
+        font-size: 15px;
+        cursor: pointer;
     }
 
     .our_goal {
@@ -220,6 +291,17 @@
     .head_transform_img h1 {
         text-align: center;
         font-size: 21px;
+    }
+
+    .speciality_voice {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards_voice {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .image_p img {

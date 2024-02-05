@@ -5,8 +5,16 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import { Footer } from '../Footer/Footer'
 import CheckIcon from '@mui/icons-material/Check';
+import { useNavigate } from 'react-router-dom';
 
 export function AllPricing() {
+
+    const navigateToSignUpPrices = useNavigate();
+
+    const handleNavigatetoPrices = () => {
+        navigateToSignUpPrices('/newprices');
+    }
+
     return (
         <Fragment>
             <div className="main_new_all_pricing">
@@ -59,7 +67,7 @@ export function AllPricing() {
 
                                     <p style={{ display: "flex", alignItems: "center", marginTop: "45px" }}><CheckIcon />PNG Templates</p>
 
-                                    <Button sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
+                                    <Button onClick={handleNavigatetoPrices} sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
                                 </CardContent>
                             </Card>
                             <Card sx={{ width: "300px", borderRadius: "8px", borderTop: "15px solid #F8D254" }}>
@@ -81,7 +89,7 @@ export function AllPricing() {
                                     <p style={{ display: "flex", marginTop: "15px" }}><CheckIcon />Figma responsive components</p>
 
 
-                                    <Button variant="contained" sx={{
+                                    <Button onClick={handleNavigatetoPrices} variant="contained" sx={{
                                         textTransform: "unset",
                                         color: "black",
                                         backgroundColor: "#FFD26F",
@@ -114,7 +122,7 @@ export function AllPricing() {
 
                                     <p style={{ display: "flex", alignItems: "center", marginTop: "45px" }}><CheckIcon />PNG Templates</p>
 
-                                    <Button sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
+                                    <Button onClick={handleNavigatetoPrices} sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
                                 </CardContent>
                             </Card>
                         </div>

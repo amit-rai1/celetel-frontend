@@ -130,3 +130,19 @@ export const paymentInitiate = async (name, email, phoneNumber, amount) => {
         throw error;
     }
 };
+
+
+export const contactUs = async (formData) => {
+    try {
+        const responseContact = await axios.post(`${API_BASEURL}/api/contactUs`,
+            formData
+        );
+        console.log(responseContact.data, "reponseContact");
+        return responseContact.data;
+    }
+    catch (error) {
+        console.log("Contact error", error.msg)
+        throw error;
+    }
+
+}

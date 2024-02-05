@@ -1,11 +1,52 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import './Contact.css'
 import React from 'react'
 import { BiMessageDetail } from "react-icons/bi";
 import { Footer } from '../Footer/Footer'
+import { contactUs } from '../Service/auth.service';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 export function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        service: "",
+        budget: "",
+        message: ""
+    })
+
+
+    const handleContactUs = async (e) => {
+        e.preventDefault()
+        try {
+            const response = await contactUs(formData)
+            if (response.success === true) {
+                toast.success(response.msg)
+                console.log(response.data);
+            }
+            else {
+                toast.error("Please try again")
+            }
+        }
+        catch (error) {
+            console.log(error.message)
+        }
+    }
+
+
+    const handleContactChange = (e) => {
+        e.preventDefault()
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+
     return (
         <Fragment>
             <div className="main_con"></div>
@@ -16,25 +57,43 @@ export function Contact() {
                 </div>
 
                 <div className="form_con">
-                    <form action="">
+                    <form onSubmit={handleContactUs}>
                         <label htmlFor="">Name</label>
-                        <input type="text" name="" id="" />
+                        <input type="text" name="name"
+                            value={formData.name}
+                            onChange={handleContactChange} />
 
                         <label htmlFor="">Email</label>
-                        <input type="email" name="" id="" />
+                        <input type="email" name="email"
+                            value={formData.email}
+                            onChange={handleContactChange} />
 
                         <label htmlFor="">What service are you interested in</label>
-                        <select name="" id="">
+                        <select name="service" value={formData.service} onChange={handleContactChange}>
                             <option value="">Select project type</option>
+                            <option value="Sms">Sms</option>
+                            <option value="Rcs">Rcs</option>
+                            <option value="voice">voice</option>
+                            <option value="Whatsapp">Whatsapp</option>
+                            <option value="verification">verification</option>
                         </select>
 
                         <label htmlFor="">Budget</label>
-                        <select name="" id="">
+                        <select name="budget" value={formData.budget} onChange={handleContactChange}>
                             <option value="">Select project budget</option>
+                            <option value="Testing 5k">Testing 5k</option>
+                            <option value="Testing 8k">Testing 8k</option>
+                            <option value="Testing 6k">Testing 6k</option>
+                            <option value="Testing 4k">Testing 4k</option>
+                            <option value="Testing 7k">Testing 7k</option>
+                            <option value="Testing 10k">Testing 10k</option>
                         </select>
 
                         <label htmlFor="">Message</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="" cols="30" rows="10"
+                            value={formData.message}
+                            onChange={handleContactChange}
+                        ></textarea>
 
                         <button>Submit</button>
                     </form>

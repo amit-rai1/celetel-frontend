@@ -102,6 +102,192 @@
     display: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pricing_main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.pricing_trigger {
+    position: relative;
+    display: inline-block;
+}
+
+.text_price {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+.absolute_centered {
+    display: flex;
+    width: 90%;
+    margin-top: 10px;
+    height: auto;
+    justify-content: center;
+    background-color: #dadada;
+    color: #000000;
+    position: fixed;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-100%);
+}
+
+.custom_container {
+    width: 100vw;
+    display: flex;
+    height: auto;
+    border-radius: 3px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    background-color: #fff;
+}
+
+.custom_container a,
+h3 {
+    display: block;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.custom_container a:hover {
+    text-decoration: underline;
+}
+
+.inside_container {
+    /* border: 1px solid green; */
+    width: 70%;
+    padding: 15px 22px;
+}
+
+.inside_container h1 {
+    color: #97A3B7;
+    font-size: 18px;
+    /* border: 1px solid red; */
+    padding-left: 45px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.products_container {
+    /* border: 1px solid red; */
+    margin-top: 12px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.main_new_comm_products {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid yellow; */
+}
+
+.new_comm1_products,
+.new_comm2_products,
+.new_comm3_products {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+
+.new_comm1_products>div li {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+.new_comm2_products>div li {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+.new_comm3_products>div li {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+.new_comm1_products>div span {
+    color: #5F6D7E;
+    font-size: 15px;
+}
+
+.new_comm2_products>div span {
+    color: #5F6D7E;
+    font-size: 15px;
+}
+
+.new_comm3_products>div span {
+    color: #5F6D7E;
+    font-size: 15px;
+}
+
+.celetel_content {
+    border-left: 1px solid #E9E9E9;
+    display: flex;
+    background-color: #FCFCFC;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px 5px;
+}
+
+
+.products_desc ul {
+    /* margin-top: 35px; */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 5px;
+}
+
+.products_desc span {
+    color: #000000;
+}
+
+.products_desc span {
+    font-weight: 800;
+}
+
+.celetel_content h1 {
+    color: #97A3B7;
+    font-size: 18px;
+    padding-left: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.hover_product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover_products img {
+    width: 100%;
+}
+
 @media screen and (max-width:1080px) {
 
     .main_nav {
@@ -150,5 +336,10 @@
         color: black;
         font-weight: 500;
     }
+
+    .absolute_centered {
+        display: none;
+    }
+
 
 }

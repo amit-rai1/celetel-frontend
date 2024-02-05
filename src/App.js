@@ -40,9 +40,9 @@ function App() {
           <Route path='/nextstepexplore' element={<SignUpExplore />} />
           <Route path='/accountsetup' element={<AccountSetUp />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/prices' element={<NewPricing />} />
+          <Route path='/prices' element={<AllPricing />} />
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
-          <Route path='/newprices' element={<AllPricing />} />
+          <Route path='/newprices' element={<NewPricing />} />
         </Routes>
       </BrowserRouter>
     </div>

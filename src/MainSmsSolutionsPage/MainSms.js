@@ -1,27 +1,26 @@
 import React, { Fragment } from 'react'
 import './MainSms.css'
-import image1 from '../Assets/Frame 427319252.svg'
-import image2 from '../Assets/HELLU.svg'
-import image3 from '../Assets/Bell.svg'
-import image4 from '../Assets/mess.svg'
 import image5 from '../Assets/Time Circle.svg'
 import image6 from '../Assets/Chat Bubble.svg'
 import image7 from '../Assets/Chart.svg'
 import sms from '../Assets/sms-notification 1.svg'
-import { GrSubtractCircle } from "react-icons/gr";
-import { MdAddCircleOutline } from "react-icons/md";
-import work from '../Assets/worky-receiving-a-message-on-a-smartphone.png'
-import icon1 from '../Assets/Icon-2.png'
-import icon2 from '../Assets/Icon.png'
-import icon3 from '../Assets/Icon-1.png'
-import icon4 from '../Assets/align-vertically.svg'
-import icon5 from '../Assets/Icon-4.png'
-import icon6 from '../Assets/Icon-3.png'
-import { IoIosArrowDown } from "react-icons/io";
+import work from '../Assets/a message on a smartphone.svg'
+import icon1 from '../Assets/Icon1sms.svg'
+import icon2 from '../Assets/Icon2sms.svg'
+import icon3 from '../Assets/Icon3sms.svg'
+import icon5 from '../Assets/Icon5sms.svg'
+import icon6 from '../Assets/Icon4sms.svg'
+import icon4 from '../Assets/Icon6sms.svg'
 import { Footer } from '../Footer/Footer'
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AddIcon from '@mui/icons-material/Add';
 
 
 export function MainSms() {
+
+    const smssolutions = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+16%403x-25fps.gif"
     return (
         <Fragment>
             <div className="main_sol_page">
@@ -44,12 +43,7 @@ export function MainSms() {
 
             <div className="main_sms">
                 <div className="sub_sms_img">
-                    <div className="small_imgs">
-                        <img src={image2} alt="" />
-                        <img src={image3} alt="" />
-                        <img src={image4} alt="" />
-                    </div>
-                    <img src={image1} alt="" />
+                    <img src={smssolutions} alt="" />
                 </div>
                 <div className="sub_sms_message">
                     <div className="cards_interaction">
@@ -72,7 +66,7 @@ export function MainSms() {
                 <p>Welcome to Celetel's SMS Solutions, where we transform simple
                     text messages into powerful communication tools that connect
                     businesses with their audience like never before.</p>
-                <img src={image1} alt="" />
+                <img src={smssolutions} alt="" />
                 <div className="btn2_1">
                     <button>Request a demo</button>
                     <button>Explore</button>
@@ -87,41 +81,41 @@ export function MainSms() {
             </div>
 
             <div className="speciality_sms">
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon1} alt="" />
                     <h5>Reliability</h5>
                     <p>Count on Celetel for reliable message delivery, every time.</p>
                 </div>
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon2} alt="" />
                     <h5>Global Network</h5>
                     <p>Reach audiences worldwide with our expansive network.</p>
                 </div>
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon3} alt="" />
                     <h5>Innovation</h5>
                     <p>Stay ahead with cutting-edge SMS solutions.</p>
                 </div>
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon4} alt="" />
                     <h5>Tailored Solutions</h5>
                     <p> We tailor our services to meet
                         your unique needs.</p>
                 </div>
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon5} alt="" />
                     <h5>Security</h5>
                     <p>Trust in our secure messaging
                         environment.</p>
                 </div>
-                <div className="cards">
+                <div className="cards_sms">
                     <img src={icon6} alt="" />
                     <h5>Quality Assurance</h5>
                     <p>Expect nothing less than quality and excellence.</p>
                 </div>
             </div>
 
-            <div className="security_sms">
+            <div className="security_sms_sms">
                 <div className="para_seq">
                     <h1>Elevate Security with Verification</h1>
                     <p style={{ marginTop: '20px', color: '#8A8A8A', fontWeight: '500' }}>Celetel's Verification service ensures seamless and secure
@@ -149,49 +143,91 @@ export function MainSms() {
                 </div>
             </div>
 
+
             <div className="faq_s">
                 <h1>Frequently Asked Questions</h1>
-                <p style={{ marginTop: '20px' }}>Everything you need to know about the product and billing </p>
-                <div className="faq_s_ques">
-                    <div className="faq_q_0">
-                        <h5>Is there a free trial available</h5>
-                        <p><GrSubtractCircle /></p>
-                    </div>
-                    <div className="faq_p">
-                        <p>Yes , you can try us for free for 30 days. If you want we will provide you with a free
-                            personalized 30 minute onboarding call to get you up and running as soon as possible
-                        </p>
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>Can I change my plan later?</h5>
-                        <p><MdAddCircleOutline /></p>
+                <p>Everything you need to know about the product and billing </p>
+            </div>
 
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>What is your cancellation policy?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>Can other info be added to an invoice?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>How does billing work?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>How do I change my account email?</h5>
-                        <p><MdAddCircleOutline /></p>
-                    </div>
-                </div>
+            <div className='according_sms'>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                    >
+                        Is there a free trial available?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                    >
+                        Can I change my plan later?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel3-content"
+                        id="panel3-header">
+                        What is your cancellation policy?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel4-content"
+                        id="panel4-header">
+                        Can other info be added to an invoice?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel5-content"
+                        id="panel5-header">
+                        How does billing work?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel6-content"
+                        id="panel6-header">
+                        How do I change my account email?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
             </div>
 
 
 
-            <div className="faq_mob_head">
+            {/* <div className="faq_mob_head">
                 <h1>Frequently Asked Questions</h1>
                 <p>Everything you need to know about the product and billing </p>
             </div>
@@ -216,7 +252,7 @@ export function MainSms() {
                         <p><IoIosArrowDown /></p>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </Fragment>
     )
