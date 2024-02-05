@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 export function SmsSol() {
 
+
     const smsphone = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow113x-50fps-ezgif.com-crop.gif"
     const womangif = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+8%403x-50fps.gif"
     return (
