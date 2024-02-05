@@ -1,22 +1,13 @@
 import React, { Fragment } from 'react'
 import './MainWhatsapp.css'
-import image21 from '../Assets/full mobile.svg'
-import image22 from '../Assets/Mes1.svg'
-import image23 from '../Assets/Mes2.svg'
-import image24 from '../Assets/Mes3.svg'
-import image25 from '../Assets/Mes4.svg'
-import image26 from '../Assets/Mes5.svg'
-import image27 from '../Assets/Mes6.svg'
-// import image28 from '../Assets/Flow 9@1x-25fps.gif'
 import { MdGamepad } from "react-icons/md";
 import { FaInfo } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
-import logo12 from '../Assets/New9.gif'
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import { BsCursorFill } from "react-icons/bs";
 import { BiBrain } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
-import logo45 from '../Assets/Group 1000001671.png'
+import whatsappgraph from '../Assets/whatsappgraph.svg'
 import { FaRegCheckCircle } from "react-icons/fa";
 import logo4552 from '../Assets/Group 1000001785.svg'
 import { PiUsersThreeBold } from "react-icons/pi";
@@ -27,6 +18,11 @@ import image3 from '../Assets/Frame 1686551832.svg'
 import { Footer } from '../Footer/Footer'
 
 export function MainWhatsapp() {
+
+    const whatsApp1st = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/new+whatsapp.gif"
+    const whatsapp2nd = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/phone+whatsapps.gif"
+
+
     return (
         <Fragment>
             <div className="main_sol_page_whatsapp">
@@ -45,14 +41,7 @@ export function MainWhatsapp() {
             </div>
 
             <div className="main_head_whats">
-                <img src={image21} alt="" />
-                <img src={image22} alt="" />
-                <img src={image23} alt="" />
-                <img src={image24} alt="" />
-                <img src={image25} alt="" />
-                <img src={image26} alt="" />
-                <img src={image27} alt="" />
-                {/* <img src={image28} alt="" /> */}
+                <img src={whatsApp1st} alt="" />
             </div>
 
             <div className="main_sol_page20">
@@ -132,13 +121,13 @@ export function MainWhatsapp() {
                 </div>
 
                 <div className="text_img">
-                    <img src={logo12} alt="" />
+                    <img src={whatsapp2nd} alt="" />
                 </div>
             </div>
 
             <div className="main_img">
                 <div className="new_img_1">
-                    <img src={logo45} alt="" />
+                    <img src={whatsappgraph} alt="" />
                 </div>
                 <div className="text_img_2_d">
                     <h2>Analyse your data with our team to get satisfy your customer</h2>
@@ -173,7 +162,7 @@ export function MainWhatsapp() {
                             </span>
                         </div>
                     </div>
-                </div>
+                </div>-
 
 
                 <div className="solutions_ment12">

@@ -4,66 +4,30 @@
 
 .main_sms_sol {
     margin-top: 75px;
-    /* border: 1px solid red; */
     padding: 45px 108px;
 }
 
 
 .sub_sms_sol {
     display: flex;
-    background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'), lightgray 50%;
+    /* background: url('../Assets/smssol1.gif'), lightgray 50%; */
     background-position: left top;
     position: relative;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 120px;
+    padding-left: 75px;
+    padding-top: 35px;
     gap: 45px;
-    background-color: #ffd17a;
     height: auto;
+    background-color: #ffd17a;
 }
 
 
 .sub_sms_sol img {
-    margin-top: 45px;
-    padding-left: 52px;
     width: 35%;
-    -webkit-margin-top: 45px;
-    -moz-margin-top: 45px;
-    -webkit-padding-start: 52px;
-    -moz-padding-start: 52px;
-    max-width: 45%;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
 
-    25% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.message-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-190%, -10%);
-    width: 300px;
-    padding: 10px;
-    background-color: #efefef;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #333;
-    animation: fadeInOut 8s infinite;
-}
 
 .para_sol {
     margin-top: 95px;
@@ -81,10 +45,12 @@
 
 .para_sol p {
     font-size: 18px;
+    padding-top: 18px;
+    color: #666666;
 }
 
 .para_sol button {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     background-color: var(--button-bg);
     border: none;
@@ -115,6 +81,7 @@
 
 .para_sol1 p {
     font-size: 18px;
+    color: #454444;
 }
 
 .para_sol1 button {
@@ -132,157 +99,13 @@
 .sub_image_sol_1 {
     /* border: 1px solid red; */
     display: flex;
-    overflow: hidden;
+    justify-content: flex-end;
     width: 100%;
 }
 
 .sub_image_sol_1 img {
     width: 100%;
 }
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@media screen and (max-width:1300px) {
-    .message-box {
-        background-color: transparent;
-    }
-
-    .message-box p {
-        position: relative;
-        background-color: transparent;
-        top: 50%;
-        left: 50%;
-        transform: translate(-13%, -10%);
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width:1280px) {
-    @keyframes fadeInOut {
-        0% {
-            opacity: 0;
-        }
-
-        25% {
-            opacity: 1;
-        }
-
-        75% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-    .message-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-190%, -10%);
-        width: 300px;
-        padding: 10px;
-        background-color: #efefef;
-        border-radius: 8px;
-        font-size: 13px;
-        color: #333;
-        animation: fadeInOut 8s infinite;
-    }
-
-
-    .sub_sms_sol {
-        display: none;
-    }
-
-    .sub_sms_sol_mobile {
-        display: flex;
-        background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'), lightgray 50%;
-        background-position: left top;
-        position: relative;
-        background-repeat: no-repeat;
-        background-size: contain;
-        gap: 45px;
-        background-color: #ffd17a;
-        height: auto;
-    }
-
-    .para_sol_mobile {
-        margin-top: 95px;
-        /* background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'); */
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-        /* border: 1px solid red; */
-    }
-
-    .para_sol_mobile h1 {
-        text-align: left;
-        font-size: 50px;
-    }
-
-    .para_sol_mobile p {
-        font-size: 18px;
-    }
-
-    .para_sol_mobile button {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background-color: var(--button-bg);
-        border: none;
-        font-weight: 500;
-        border-radius: 5px;
-        padding: 15px 55px;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
-}
-
-@media only screen and (max-width: 1240px) {
-    .para_sol {
-        padding: 25px 1px;
-    }
-
-    .para_sol h1 {
-        font-size: 40px;
-    }
-
-    .para_sol p {
-        margin-top: 15px;
-        font-size: 16px;
-    }
-
-    .para_sol1 {
-        padding: 25px 20px;
-    }
-
-    .para_sol1 h1 {
-        font-size: 40px;
-    }
-
-    .para_sol1 p {
-        margin-top: 15px;
-        font-size: 16px;
-    }
-}
-
 
 @media only screen and (max-width: 1080px) {
     .main_sms_sol {
@@ -336,6 +159,11 @@
         height: auto;
     }
 
+    .sub_sms_sol_mobile img {
+        width: 35%;
+        margin: auto
+    }
+
 
     .para_sol_mobile {
         padding: 10px 10px;
@@ -352,6 +180,8 @@
     .para_sol_mobile p {
         display: flex;
         align-items: center;
+        color: #454444;
+        font-weight: 500;
         justify-content: flex-start;
         text-align: left;
         font-size: 13px;
@@ -359,11 +189,15 @@
     }
 
     .para_sol_mobile button {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: var(--button-bg);
+        border: none;
+        font-weight: 500;
+        border-radius: 5px;
         padding: 10px 35px;
+        font-size: 15px;
+        cursor: pointer;
     }
 
     .sub_sms_sol1 {
@@ -390,10 +224,12 @@
     .para_sol1 p {
         display: flex;
         align-items: center;
+        color: #454444;
+        font-weight: 500;
         justify-content: flex-start;
         text-align: left;
         font-size: 13px;
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     .para_sol1 button {
@@ -403,24 +239,11 @@
         margin-top: 15px;
         padding: 10px 35px;
     }
+}
 
-    .sub_image_sol_1 {
-        display: flex;
-        padding: 5px 5px;
-        /* flex-direction: row; */
-        align-items: center;
-        justify-content: space-between;
+@media screen and (max-width:850px) {
+    .sub_sms_sol_mobile img {
+        width: 80%;
+        margin: auto
     }
-
-    .sub_image_sol_1 img:first-child {
-        display: none;
-    }
-
-    .sub_image_sol_1 img:last-child {
-        width: 70%;
-        margin: auto;
-        position: relative;
-        top: 15px;
-    }
-
 }

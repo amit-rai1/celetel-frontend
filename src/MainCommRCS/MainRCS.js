@@ -4,9 +4,11 @@ import image1 from '../Assets/iPhone 14.svg'
 import image2 from '../Assets/iPhone 17.svg'
 import image3 from '../Assets/Smartphone with messenger chat screen.svg'
 import image4 from '../Assets/Messages.svg'
-import { GrSubtractCircle } from "react-icons/gr";
-import { MdAddCircleOutline } from "react-icons/md";
 import { Footer } from '../Footer/Footer'
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AddIcon from '@mui/icons-material/Add';
 
 
 export function MainRCS() {
@@ -47,7 +49,7 @@ export function MainRCS() {
             <div className="our_goal">
                 <div className="goal_para">
                     <h1>Why RCS Matters?</h1>
-                    <p style={{ paddingRight: '200px', marginTop: '15px' }}>An enim nullam tempor sapien gravida donec enim ipsum
+                    <p>An enim nullam tempor sapien gravida donec enim ipsum
                         porta justo congue magna at pretium</p>
                     <div className="new_1_goal_fea">
                         <div className="goal_new_fea">
@@ -88,7 +90,7 @@ export function MainRCS() {
                 </div>
             </div>
 
-            <div className="security_sms">
+            <div className="security_rcs_rcs">
                 <div className="para_seq">
                     <h1>Unlock the RCS Advantage:</h1>
                     <p style={{ marginTop: '20px', color: '#8A8A8A', fontWeight: '500' }}>
@@ -103,45 +105,80 @@ export function MainRCS() {
                 </div>
             </div>
 
-            <div className="faq_s">
-                <h1>Frequently asked questions</h1>
-                <p style={{ marginTop: '20px' }}>Everything you need to know about the product and billing </p>
-                <div className="faq_s_ques">
-                    <div className="faq_q_0">
-                        <h5>Is there a free trial available</h5>
-                        <p><GrSubtractCircle /></p>
-                    </div>
-                    <div className="faq_p">
-                        <p>Yes , you can try us for free for 30 days. If you want we will provide you with a free
-                            personalized 30 minute onboarding call to get you up and running as soon as possible
-                        </p>
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>Can I change my plan later?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>What is your cancellation policy?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>Can other info be added to an invoice?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>How does billing work?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                    <div className="faq_q_1">
-                        <h5>How do I change my account email?</h5>
-                        <p><MdAddCircleOutline /></p>
-
-                    </div>
-                </div>
+            <div className='according_sms'>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                    >
+                        Is there a free trial available?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                    >
+                        Can I change my plan later?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel3-content"
+                        id="panel3-header">
+                        What is your cancellation policy?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel4-content"
+                        id="panel4-header">
+                        Can other info be added to an invoice?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel5-content"
+                        id="panel5-header">
+                        How does billing work?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{ marginBottom: '15px' }}>
+                    <AccordionSummary
+                        expandIcon={<AddIcon />}
+                        aria-controls="panel6-content"
+                        id="panel6-header">
+                        How do I change my account email?
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </AccordionDetails>
+                </Accordion>
             </div>
             <Footer />
         </Fragment>

@@ -41,8 +41,10 @@
     margin: auto;
 }
 
-.sub_rcs {
+
+/* .sub_rcs {
     margin: auto;
+    style={{ paddingRight: '200px', marginTop: '15px' }}
     margin-top: 80px;
     background-color: #E7F3BC;
     border-radius: 30px;
@@ -54,7 +56,7 @@
 
 .sub_rcs img {
     width: 45%;
-}
+} */
 
 .sub_goal img {
     display: flex;
@@ -111,6 +113,7 @@
 
 .unlock_features p {
     padding-top: 10px;
+    color: #667085;
 }
 
 .btn4 {
@@ -156,8 +159,12 @@
     width: 100%;
 }
 
-.security_sms {
+.security_rcs_rcs {
+    margin: auto;
     margin-top: 155px;
+    display: flex;
+    align-items: center;
+    width: 85%;
 }
 
 .faq_s {
@@ -240,16 +247,30 @@
     }
 
     .why_celetel img {
+        width: 100%;
         margin-top: 90px;
     }
 
-    .text_area_1 p {
+    .text_area_1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .text_area_1 h2 {
         margin-top: 20px;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .text_area_1 p {
+        margin-top: 13px;
+        padding: 8px;
         font-size: 15px;
     }
 
     .unlock_features {
         width: 100%;
+        padding: 8px;
     }
 
     .unlock_features h1 {
@@ -257,21 +278,25 @@
     }
 
     .unlock_features p {
-        font-size: 15px;
+        font-size: 13px;
+        color: #667085;
     }
 
     .btn4 {
         padding: 0;
+        width: 100%;
     }
 
     .btn4 button:nth-child(1) {
         border-radius: 3px;
+        padding: 7px 25px;
         background-color: #FAC213;
     }
 
     .btn4 button:nth-child(2) {
         border-radius: 3px;
         background-color: #ffff;
+        padding: 7px 25px;
         color: black;
         border: 2px solid #FAC213;
     }
@@ -280,7 +305,7 @@
         padding: 0;
     }
 
-    .security_sms {
+    .security_rcs_rcs {
         display: flex;
         flex-direction: column;
         background-color: transparent;
@@ -298,5 +323,6 @@
         width: 100%;
         padding: 10px;
         margin-top: 20px;
+        margin: auto;
     }
 }
