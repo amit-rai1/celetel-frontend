@@ -41,7 +41,8 @@ export function HeroSec() {
                                 type="number"
                                 placeholder="Enter mobile number"
                                 value={mobileNumber}
-                                onChange={(value) => setMobileNumber(value)}                                className="custom-phone-input"
+                                onChange={(value) => setMobileNumber(value)}                               
+                                 className="custom-phone-input"
                                 inputProps={{
                                     placeholder: 'Search for a country',
                                     autoFocus: true,
