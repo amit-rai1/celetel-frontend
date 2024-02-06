@@ -19,8 +19,6 @@ import { PaymentSetup } from './Pricing/PaymentSetup';
 import { NewPricing } from './NewPricing/NewPricing';
 import { AllPricing } from './NewPricing/AllPricing';
 
-//  new one
-
 
 function App() {
 
