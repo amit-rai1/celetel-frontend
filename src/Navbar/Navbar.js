@@ -30,12 +30,12 @@ export function Navbar() {
         setSidebar(false);
     }
 
-    const navigateLogin = useNavigate();
+    // const navigateLogin = useNavigate();
 
-    function handleClickLogin() {
-        navigateLogin('/login');
-        setSidebar(false);
-    }
+    // function handleClickLogin() {
+    //     navigateLogin('/login');
+    //     setSidebar(false);
+    // }
 
 
     function handleToggleSidebar() {
@@ -126,8 +126,11 @@ export function Navbar() {
                 </div>
 
                 <div className="btn1">
-                    <button onClick={handleClickLogin}>Log in</button>
-                    <Link to={'/nextstep'}><button>Sign up</button></Link>
+                    {/* <button onClick={handleClickLogin}>Log in</button>
+                    <Link to={'/nextstep'}><button>Sign up</button></Link> */}
+                    <button> <a href="https://calendly.com/celetel/exploring-possibilities-with-celetel">Request a demo</a></button>
+
+
                 </div>
 
                 <div className="responsive_m">

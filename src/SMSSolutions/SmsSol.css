@@ -95,9 +95,7 @@
 }
 
 .sub_image_sol_1 {
-    /* border: 1px solid red; */
     display: flex;
-    justify-content: flex-end;
     width: 100%;
 }
 

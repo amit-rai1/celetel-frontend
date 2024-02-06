@@ -210,7 +210,7 @@ export function MainSms() {
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}  elevation={0}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel6-content"
