@@ -6,7 +6,6 @@ import iconverify from "../Assets/Iconverify.svg";
 import verifycircle from "../Assets/verifycircle.svg";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import image43 from "../Assets/Group 1000001721.svg";
-import work1 from "../Assets/Traditional Indian Diwali Folded Card in Cream Blue and Green Elegant Style-2 1.svg";
 import work2 from "../Assets/Traditional Indian Diwali Folded Card in Cream Blue and Green Elegant Style (1) 1.svg";
 import gif from "../Assets/Phone Indian.gif";
 import mobile2ndVerify from "../Assets/mobileverify2nd.svg";
@@ -50,7 +49,7 @@ export function Mainverify() {
                     unified API!.
                 </p>
                 <div className="btn2">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -70,7 +69,7 @@ export function Mainverify() {
                 </p>
                 <img src={mobileverifyimage} alt="" />
                 <div className="btn_verify">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -166,7 +165,7 @@ export function Mainverify() {
                         using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber,
                         and more – our Conversation API covers it all.
                     </p>
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                 </div>
             </div>
 

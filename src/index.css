@@ -10,6 +10,7 @@ body {
   --main-font: 'Poppins', sans-serif;
   --color-road: #667085;
   --button-bg: #FAC213;
+  --previous-bg: #000000;
 }
 
 code {

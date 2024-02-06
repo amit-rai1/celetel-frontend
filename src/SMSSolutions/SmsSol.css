@@ -46,15 +46,24 @@
 }
 
 .para_sol button {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    background-color: var(--button-bg);
+    background-color: var(--previous-bg);
+    border: none;
+    color: rgb(255, 255, 255);
     border: none;
     font-weight: 500;
     border-radius: 5px;
     padding: 15px 55px;
     font-size: 15px;
+    transition: .4s ease-in-out;
     cursor: pointer;
+}
+
+.para_sol button:hover {
+    background-color: var(--button-bg);
+    transition: .4s ease-in-out;
+    color: black;
 }
 
 .sub_sms_sol1 {
@@ -85,13 +94,22 @@
 .para_sol1 button {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: var(--button-bg);
+    background-color: var(--previous-bg);
+    border: none;
+    color: rgb(255, 255, 255);
     border: none;
     font-weight: 500;
     border-radius: 5px;
     padding: 15px 55px;
     font-size: 15px;
+    transition: .4s ease-in-out;
     cursor: pointer;
+}
+
+.para_sol1 button:hover {
+    background-color: var(--button-bg);
+    transition: .4s ease-in-out;
+    color: black;
 }
 
 .sub_image_sol_1 {

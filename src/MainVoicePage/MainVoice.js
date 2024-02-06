@@ -10,14 +10,11 @@ import { IoIosSettings } from "react-icons/io";
 import image3 from '../Assets/voicemain.svg'
 import image4 from '../Assets/Group 1000001797.svg'
 import { Footer } from '../Footer/Footer'
-import Rcs1 from "../Assets/IconRCS.svg";
-import Rcs2 from "../Assets/iconRCS2.svg";
-import Rcs3 from "../Assets/IconRCS3.svg";
 
 export function MainVoice() {
 
     const voicemain = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+23%403x-50fps.gif"
-    
+
     return (
         <Fragment>
             <div className="main_sol_page10">
@@ -33,7 +30,7 @@ export function MainVoice() {
                     seamless customer interactions through voice and touch-
                     tone inputs.</p>
                 <div className="btn2">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -51,7 +48,7 @@ export function MainVoice() {
                     <img src={voicemain} alt="" />
                 </div>
                 <div className="btn_voice">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
