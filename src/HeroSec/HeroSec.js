@@ -41,14 +41,15 @@ export function HeroSec() {
                                 type="number"
                                 placeholder="Enter mobile number"
                                 value={mobileNumber}
-                                onChange={(value) => setMobileNumber(value)}                               
-                                 className="custom-phone-input"
+                                onChange={(value) => setMobileNumber(value)}
+                                className="custom-phone-input"
                                 inputProps={{
                                     placeholder: 'Search for a country',
                                     autoFocus: true,
                                     padding: "12px"
                                 }}
                                 enableSearch
+                                style={{ width: '100%' }}
                             />
 
                         </div>
@@ -69,7 +70,28 @@ export function HeroSec() {
                     <div className="border1"></div>
                     <img src={homepage} alt="" />
                     <p>The world's most innovative companies build communication solutions using Celetel applications and APIs. Get started today and talk to your customers over any channel.</p>
-                    <button>Test delivery speed</button>
+                    <div className="hero_butn_mobile">
+                        <div className="phone_inputs_country" style={{ width: '300px', margin: 'auto' }}>
+                            <PhoneInput
+                                country={'in'}
+                                name="phone"
+                                id="phone"
+                                type="number"
+                                placeholder="Enter mobile number"
+                                value={mobileNumber}
+                                onChange={(value) => setMobileNumber(value)}
+                                className="custom-phone-input"
+                                inputProps={{
+                                    placeholder: 'Search for a country',
+                                    autoFocus: true,
+                                    padding: "12px"
+                                }}
+                                enableSearch
+                            />
+
+                        </div>
+                        <button onClick={handleGetStarted}>Test delivery speed</button>
+                    </div>
                 </div>
             </div>
         </Fragment>

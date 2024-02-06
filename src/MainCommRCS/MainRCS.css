@@ -30,6 +30,7 @@
     width: 90%;
     margin-top: 45px;
     background-color: #E7F3BC;
+    background-image: url("/src/Assets/Fame phone.svg");
     border-radius: 15px;
 }
 
@@ -100,6 +101,10 @@
 
 .unlock_features {
     background-color: #D2F1FF;
+    background-image: url('../Assets/CTA section.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 90%;
     margin: auto;
     padding: 85px 44px;
