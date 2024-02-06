@@ -10,7 +10,9 @@ import { IoIosSettings } from "react-icons/io";
 import image3 from '../Assets/voicemain.svg'
 import image4 from '../Assets/Group 1000001797.svg'
 import { Footer } from '../Footer/Footer'
-
+import Rcs1 from "../Assets/IconRCS.svg";
+import Rcs2 from "../Assets/iconRCS2.svg";
+import Rcs3 from "../Assets/IconRCS3.svg";
 
 export function MainVoice() {
 

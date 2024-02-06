@@ -15,6 +15,7 @@ export function Footer() {
                         <p>123 Main Street</p>
                         <p>London, UK</p>
                         <p>SW1A 1AA</p>
+                        <br/>
                         <span>+91- 9708110811</span>
                         <p>hey@celetel.com</p>
                     </div>

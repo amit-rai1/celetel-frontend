@@ -76,7 +76,7 @@ export function MainRCS() {
 
           
           <div className="new_1_goal_fea">
-            <div className="goal_new_fea">
+            <div className="goal_new_fea1">
               <img src={Rcs1} alt="" />
               <div>
                 <h4>Redefining Messaging</h4>
@@ -85,7 +85,7 @@ export function MainRCS() {
                 </p>
               </div>
             </div>
-            <div className="goal_new_fea">
+            <div className="goal_new_fea1">
               <img src={Rcs2} alt="" />
               <div>
                 <h4>Engagement Beyond Words</h4>
@@ -94,7 +94,7 @@ export function MainRCS() {
                 </p>
               </div>
             </div>
-            <div className="goal_new_fea">
+            <div className="goal_new_fea1">
               <img src={Rcs3} alt="" />
               <div>
                 <h4>Universal Accessibility</h4>
@@ -151,14 +151,8 @@ export function MainRCS() {
           <img src={image4} alt="" />
         </div>
       </div>
-
-      <div className="faq_s">
-        <h1>Frequently Asked Questions</h1>
-        <p>Everything you need to know about the product and billing </p>
-      </div>
-
-      <div className='according_sms'>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+      <div className="according_sms">
+        <Accordion sx={{ marginBottom: "15px" }}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel1-content"
@@ -178,8 +172,8 @@ export function MainRCS() {
             Can I change my plan later?
           </AccordionSummary>
           <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Yes, you can easily upgrade or downgrade your plan at any time to
+            better suit your needs
           </AccordionDetails>
         </Accordion>
         <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
@@ -190,8 +184,9 @@ export function MainRCS() {
             What is your cancellation policy?
           </AccordionSummary>
           <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Our cancellation policy allows for free cancellations up to 24 hours
+            before your scheduled appointment, ensuring flexibility and
+            convenience for our valued customers.
           </AccordionDetails>
         </Accordion>
         <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
@@ -202,35 +197,40 @@ export function MainRCS() {
             Can other info be added to an invoice?
           </AccordionSummary>
           <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Billing is based on your chosen plan and usage, with transparent
+            monthly invoices reflecting your service consumption.
           </AccordionDetails>
         </Accordion>
         <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel5-content"
-            id="panel5-header">
-            How does billing work?
+            id="panel5-header"
+          >
+            How do I change my email account?
           </AccordionSummary>
           <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            To change your account email, simply navigate to the settings
+            section of your profile, locate the 'Email' option, and follow the
+            prompts to update it accordingly
           </AccordionDetails>
         </Accordion>
         <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel6-content"
-            id="panel6-header">
-            How do I change my account email?
+            id="panel6-header"
+          >
+            Can other info be added to an invoice?
           </AccordionSummary>
           <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Yes, additional information such as payment terms, Tax details, and
+            special instructions can be included on an invoice to meet your
+            specific needs.
           </AccordionDetails>
         </Accordion>
       </div>
+  
       <Footer />
     </Fragment>
   );
