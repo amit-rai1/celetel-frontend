@@ -195,7 +195,7 @@
     color: white;
 }
 
-.btn3  a:hover{
+.btn3 a:hover {
     color: rgb(0, 0, 0);
 }
 
@@ -289,9 +289,10 @@
 
 .cards_row_tes {
     display: flex;
-    overflow: auto;
     width: 90%;
+    overflow: auto;
     margin: auto;
+    padding: 10px;
     gap: 25px;
     margin-top: 80px;
 }

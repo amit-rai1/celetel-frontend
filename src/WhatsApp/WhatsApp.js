@@ -7,6 +7,7 @@ import logo16 from '../Assets/mainpglast.svg'
 import logo17 from '../Assets/Ellipse 7.png'
 import logo18 from '../Assets/Content.svg'
 
+
 export function WhatsApp() {
 
     const [openState, setOpenState] = useState(true)
@@ -20,6 +21,8 @@ export function WhatsApp() {
 
     const whatsappOne = ' https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+12%403x-50fps.gif';
     const whatsappTwo = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+13%403x-50fps.gif"
+
+
 
 
     return (
