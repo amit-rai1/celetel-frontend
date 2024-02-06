@@ -216,6 +216,10 @@
     /* border: 1px solid red; */
 }
 
+.security_sms_sms img {
+    width: 100%;
+}
+
 .para_seq {
     padding-right: 300px;
 }

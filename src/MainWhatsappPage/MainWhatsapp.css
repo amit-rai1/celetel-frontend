@@ -141,11 +141,12 @@
 
 .cus_conv {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 145px;
     margin-top: 188px;
     background-color: #ECF9FF;
-    padding-right: 30px;
-    padding-top: 30px;
-    padding-left: 50px;
+    padding: 50px;
 }
 
 .text_pic_done {
@@ -163,6 +164,10 @@
     margin-top: 45px;
 }
 
+.text_parag h1 {
+    font-size: 28px;
+}
+
 .drop_pic {
     display: flex;
     align-items: center;
@@ -170,7 +175,7 @@
 }
 
 .drop_pic p {
-    font-size: 25px;
+    font-size: 18px;
     color: #437EF7;
     display: flex;
     align-items: center;
@@ -180,18 +185,18 @@
 }
 
 .drop_pic h6 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .text_img {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 .text_img img {
-    width: 65%;
+    width: 45%;
 }
 
 .new_text_drop {
@@ -200,6 +205,8 @@
 
 .main_img {
     display: flex;
+    width: 95%;
+    margin: auto;
     margin-top: 200px;
 }
 
@@ -247,7 +254,7 @@
     /* border: 1px solid red; */
     width: 95%;
     margin: auto;
-    margin-top: 230px;
+    margin-top: 219px;
 }
 
 .sol_s {
@@ -263,6 +270,15 @@
 .solutions_ment10 {
     display: flex;
     align-items: center;
+}
+
+.solutions_ment10 p {
+    display: flex;
+    font-size: 400;
+    align-items: center;
+    background-color: #FFF0E9;
+    padding: 20px;
+    border-radius: 50px;
 }
 
 .solutions_ment11 {
@@ -307,7 +323,6 @@
 .solutions_ment12 {
     display: flex;
     align-items: center;
-    /* margin-top: 50px; */
 }
 
 .solutions_ment13 {
@@ -363,6 +378,7 @@
 
 .text_ment1 h4 {
     padding: 15px 0px;
+    text-align: justify;
     font-size: 20px;
 }
 
