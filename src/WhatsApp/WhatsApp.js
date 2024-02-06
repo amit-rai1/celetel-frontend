@@ -1,14 +1,22 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import './WhatsApp.css'
 import { Link } from 'react-router-dom'
 import logo14 from '../Assets/Group 1000001764.svg'
 import celetelapp from '../Assets/celetelapp.svg'
 import logo16 from '../Assets/mainpglast.svg'
-import logo17 from '../Assets/smiling-confident-businesswoman-posing-with-arms-folded.jpg'
+import logo17 from '../Assets/Ellipse 7.png'
 import logo18 from '../Assets/Content.svg'
 
 export function WhatsApp() {
 
+    const [openState, setOpenState] = useState(true)
+
+    const handleOpenApi = () => {
+        setOpenState(false)
+    }
+    const handleOpen2Api = () => {
+        setOpenState(true)
+    }
 
     const whatsappOne = ' https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+12%403x-50fps.gif';
     const whatsappTwo = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+13%403x-50fps.gif"
@@ -115,27 +123,50 @@ export function WhatsApp() {
                 <div className="api_sdk_im">
                     <div className="api_1">
                         <ul style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                            <li style={{ backgroundColor: '#E2DDFF', padding: '8px 15px' }}>Java</li>
-                            <li>Node</li>
-                            <li>PHP</li>
+                            <li onClick={handleOpen2Api} style={{ backgroundColor: '#E2DDFF', padding: '8px 15px', cursor: "pointer" }}>Java</li>
+                            <li onClick={handleOpenApi} style={{ cursor: "pointer" }}>JSON</li>
                         </ul>
                         <p style={{ backgroundColor: '#E2DDFF', padding: '8px 15px' }}>Copy</p>
                     </div>
-                    <p style={{ marginTop: '20px' }}>package example;
-                        <br /> <br />
-                        <p>import com.Celetel.xms.  <span style={{ color: 'blue' }} > ApiConnection;</span> </p>
-                        <p> import com.Celetel.xms. <span style={{ color: 'blue' }} > CeletelSMSApi;;</span></p>
-                        <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }}> GroupResult;</span></p>
-                        <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }} > MtBatchTextSmsResult;</span></p>
-                    </p>
+                    {
+                        openState ? (
+                            <Fragment>
+                                <p style={{ marginTop: '20px' }}>package example;
+                                    <br /> <br />
+                                    <p>import com.Celetel.xms.  <span style={{ color: 'blue' }} > ApiConnection;</span> </p>
+                                    <p> import com.Celetel.xms. <span style={{ color: 'blue' }} > CeletelSMSApi;;</span></p>
+                                    <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }}> GroupResult;</span></p>
+                                    <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }} > MtBatchTextSmsResult;</span></p>
+                                </p>
 
-                    <p style={{ marginTop: '20px' }}>public class Example</p>
-                    <p style={{ marginTop: '20px' }}><span style={{ color: 'blue' }} > private static</span> final String SERVICE_PLAN_ID =
-                        "SERVICE_PLAN_ID";</p>
-                    <p><span style={{ color: 'blue' }} > private static</span> ffinal String TOKEN="SERVICE_TOKEN";</p>
-                    <p><span style={{ color: 'blue' }} > private static</span> private static final String[] RECIPIENTS =
-                        "1232323131", "3213123";</p>
-                    <p><span style={{ color: 'blue' }} > private static</span> final String SENDER = "SENDER";</p>
+                                <p style={{ marginTop: '20px' }}>public class Example</p>
+                                <p style={{ marginTop: '20px' }}><span style={{ color: 'blue' }} > private static</span> final String SERVICE_PLAN_ID =
+                                    "SERVICE_PLAN_ID";</p>
+                                <p><span style={{ color: 'blue' }} > private static</span> ffinal String TOKEN="SERVICE_TOKEN";</p>
+                                <p><span style={{ color: 'blue' }} > private static</span> private static final String[] RECIPIENTS =
+                                    "1232323131", "3213123";</p>
+                                <p><span style={{ color: 'blue' }} > private static</span> final String SENDER = "SENDER";</p>
+                            </Fragment>
+
+                        ) : (
+
+                            <Fragment>
+                                <div style={{ marginTop: "20px" }}>
+                                    "type": "text",
+                                    <br />
+                                    "auth": <span style={{ color: 'blue' }}>""username": "testuser", "password": "testpassword"</span>,
+                                    <br />
+                                    "sender":<span style={{ color: 'blue' }}>"BulkTest"</span> ,<br />
+                                    "receiver": <span style={{ color: 'blue' }}>"4179123456",</span>  <br />
+                                    "dcs": <span style={{ color: "blue" }}>"GSM"</span><br />
+                                    "text": <span style={{ color: "blue" }}>This is test message</span><br />
+                                    "dlrMask": <span style={{ color: "blue" }}>19</span><br />
+                                    "dlrUrl": <span style={{ color: "blue" }}>"http://my-server.com/dlrjson.php"</span> <br />
+                                </div>
+                            </Fragment>
+                        )
+                    }
+
                 </div>
             </div>
 
@@ -172,7 +203,6 @@ export function WhatsApp() {
                 </div>
             </div>
 
-
             <div className="testimony_review">
                 <h1> Trusted by Thousands of Happy Customer</h1>
                 <p>These are the stories of our customers who have joined us with great
@@ -180,27 +210,21 @@ export function WhatsApp() {
 
                 <div className="cards_row_tes">
                     <div className="cards_para">
-                        <p>"In purus at morbi magna in in
-                            maecenas. Nunc nulla magna elit,
-                            varius phasellus blandit convallis."</p>
+                        <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
                         <div className="cards_det">
                             <img src={logo17} alt="" />
                             <p>Maria Alberquequ</p>
                         </div>
                     </div>
                     <div className="cards_para">
-                        <p>"In purus at morbi magna in in
-                            maecenas. Nunc nulla magna elit,
-                            varius phasellus blandit convallis."</p>
+                        <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
                         <div className="cards_det">
                             <img src={logo17} alt="" />
                             <p>Maria Alberquequ</p>
                         </div>
                     </div>
                     <div className="cards_para">
-                        <p>"In purus at morbi magna in in
-                            maecenas. Nunc nulla magna elit,
-                            varius phasellus blandit convallis."</p>
+                        <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
                         <div className="cards_det">
                             <img src={logo17} alt="" />
                             <p>Maria Alberquequ</p>
@@ -214,6 +238,6 @@ export function WhatsApp() {
                 <p>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
                 <img src={logo18} alt="" />
             </div>
-        </Fragment>
+        </Fragment >
     )
 }
