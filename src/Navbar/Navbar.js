@@ -18,6 +18,7 @@ import navrcs from '../Assets/mainrcs.svg'
 import navwhatsapp from '../Assets/mainwhatsapp.svg'
 import navvoice from '../Assets/mainvoice.svg'
 import navverify from '../Assets/mainverify.svg'
+import svgimage from '../Assets/unsplash_DItYlc26zVI.svg'
 
 
 export function Navbar() {
@@ -78,24 +79,7 @@ export function Navbar() {
     };
     const defaultContent = (
         <>
-            <ul>
-                <li>
-                    <span>Telecommunication Expertise:</span>Providing innovative
-                    telecommunication solutions.
-                </li>
-                <li>
-                    <span>Diverse Services:</span> SMS, RCS, WhatsApp, Verification, and
-                    Voice.
-                </li>
-                <li>
-                    <span> Global Reach:</span> Extensive network coverage for seamless
-                    communication worldwide.
-                </li>
-                <li>
-                    <span>Customer-Centric Approach:</span> Tailored solutions for maximum
-                    efficiency and satisfaction.
-                </li>
-            </ul>
+           <img className='default' src={svgimage} alt="" />
         </>
     );
 
