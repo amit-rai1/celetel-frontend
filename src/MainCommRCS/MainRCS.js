@@ -87,7 +87,7 @@ export function MainRCS() {
               <img src={Rcs2} alt="" />
               <div>
                 <h4>Engagement Beyond Words</h4>
-                <p style={{ marginTop: "10px"}}>
+                <p style={{ marginTop: "10px" }}>
                   Interactive features like suggested responses
                 </p>
               </div>
@@ -150,8 +150,13 @@ export function MainRCS() {
         </div>
       </div>
 
-      <div className="according_sms">
-        <Accordion sx={{ marginBottom: "15px" }}>
+      <div className="faq_s">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about the product and billing </p>
+      </div>
+
+      <div className='according_sms'>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel1-content"
@@ -160,17 +165,14 @@ export function MainRCS() {
             Is there a free trial available?
           </AccordionSummary>
           <AccordionDetails>
-            Yes, you can try us for free for 30 days. If you want, we’ll provide
-            you with a free, personalized 30-minute onboarding call to get you
-            up and running as soon as possible.
+            Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel2-content"
-            id="panel2-header"
-          >
+            id="panel2-header">
             Can I change my plan later?
           </AccordionSummary>
           <AccordionDetails>
@@ -178,12 +180,11 @@ export function MainRCS() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel3-content"
-            id="panel3-header"
-          >
+            id="panel3-header">
             What is your cancellation policy?
           </AccordionSummary>
           <AccordionDetails>
@@ -191,12 +192,11 @@ export function MainRCS() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel4-content"
-            id="panel4-header"
-          >
+            id="panel4-header">
             Can other info be added to an invoice?
           </AccordionSummary>
           <AccordionDetails>
@@ -204,12 +204,11 @@ export function MainRCS() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel5-content"
-            id="panel5-header"
-          >
+            id="panel5-header">
             How does billing work?
           </AccordionSummary>
           <AccordionDetails>
@@ -217,12 +216,11 @@ export function MainRCS() {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel6-content"
-            id="panel6-header"
-          >
+            id="panel6-header">
             How do I change my account email?
           </AccordionSummary>
           <AccordionDetails>
