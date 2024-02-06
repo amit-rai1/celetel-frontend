@@ -41,7 +41,7 @@ export function MainRCS() {
           game-changer in the realm of mobile messaging.
         </p>
         <div className="btn2">
-          <button>Request a demo</button>
+          <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
           <button>Explore</button>
         </div>
       </div>
@@ -61,7 +61,7 @@ export function MainRCS() {
           <img src={image1} alt="" />
         </div>
         <div className="btn2_1">
-          <button>Request a demo</button>
+          <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
           <button>Explore</button>
         </div>
       </div>

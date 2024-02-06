@@ -13,44 +13,45 @@
     font-size: 20px;
     position: relative;
     bottom: 65px;
-    align-items:start;
+    align-items: start;
 
 }
 
 .main_sol_page11 {
     display: none;
 }
-.new_1_goal_fea{
+
+.new_1_goal_fea {
     display: flex;
-    align-items:start;
+    align-items: flex-start;
     align-self: flex-start;
-    
-  }
-  .goal_new_fea1{
+
+}
+
+.goal_new_fea1 {
     justify-items: start;
     /* margin-left: -20px; */
     align-self: flex-start;
 
     display: flex;
     flex-direction: row;
-    
-  }
-  .goal_new_fea1 img{
+
+}
+
+.goal_new_fea1 img {
     display: flex;
     align-content: flex-start;
     width: 100px;
     flex-direction: row;
     overflow: auto;
-  
-  }
-  .goal_new_fea1 div{
-    display: flex;
-    align-items:start;
 
+}
+
+.goal_new_fea1 div {
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
-  
-  
-  }
+}
 
 .new_svg_impo {
     display: flex;
@@ -164,7 +165,7 @@
     margin-top: 22px;
     padding: 0px 100px;
     margin-top: 20px;
-    background-color: var(--button-bg);
+    background-color: var(--previous-bg);
     border: none;
     font-weight: 500;
     color: white;
@@ -172,6 +173,14 @@
     padding: 12px 25px;
     font-size: 15px;
     cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.btn4 button:last-child:hover {
+    transition: .4s ease-in-out;
+    background-color: var(--button-bg);
+    color: black;
+
 }
 
 .img_new {
@@ -203,13 +212,21 @@
 }
 
 .btn2_3 button:first-child {
-    background-color: var(--button-bg);
+    background-color: var(--previous-bg);
     border: none;
     font-weight: 500;
     border-radius: 5px;
+    color: white;
+    transition: .4s ease-in-out;
     padding: 10px 25px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.btn2_3 button:first-child:hover {
+    background-color: var(--button-bg);
+    color: black;
+    transition: .4s ease-in-out;
 }
 
 .btn2_3 button:last-child {

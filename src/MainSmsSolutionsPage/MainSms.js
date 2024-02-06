@@ -36,7 +36,7 @@ export function MainSms() {
                     SMS services, we provide the foundation for engaging, effective,
                     and efficient messaging strategies.</p>
                 <div className="btn2">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -68,7 +68,7 @@ export function MainSms() {
                     businesses with their audience like never before.</p>
                 <img src={smssolutions} alt="" />
                 <div className="btn2_1">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -139,7 +139,7 @@ export function MainSms() {
                         Java, PHP, Node, .NET Core, and REST API. Boost your business
                         confidently with us.</p>
 
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                 </div>
             </div>
 

@@ -49,7 +49,7 @@ export function Mainverify() {
                     unified API!.
                 </p>
                 <div className="btn2">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -69,7 +69,7 @@ export function Mainverify() {
                 </p>
                 <img src={mobileverifyimage} alt="" />
                 <div className="btn_verify">
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                     <button>Explore</button>
                 </div>
             </div>
@@ -165,7 +165,7 @@ export function Mainverify() {
                         using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber,
                         and more – our Conversation API covers it all.
                     </p>
-                    <button>Request a demo</button>
+                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
                 </div>
             </div>
 

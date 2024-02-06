@@ -160,7 +160,7 @@
 
 .sub_ver1 h1,
 .sub_ver2 h1 {
-font-size: 24px;
+  font-size: 24px;
 }
 
 .security_sms13 {
@@ -185,11 +185,25 @@ font-size: 24px;
 }
 
 .para_seq13 button {
+  margin-top: 30px;
+  color: white;
+  border: none;
+  background-color: var(--previous-bg);
+  border-radius: 3px;
+}
+
+.para_seq13 button a {
   margin-top: 20px;
   padding: 10px 35px;
+  color: white;
   border: none;
-  background-color: #fac213;
+  background-color: var(--previous-bg);
   border-radius: 3px;
+}
+
+.para_seq13 button a:hover {
+  color: rgb(0, 0, 0);
+  background-color: var(--button-bg);
 }
 
 .main_sec_verify {
@@ -260,6 +274,7 @@ font-size: 24px;
 .new_comm3 img {
   width: 110px;
 }
+
 .new_comm2 h3,
 .new_comm1 h3,
 .new_comm3 h3 {
@@ -309,14 +324,20 @@ font-size: 24px;
     margin-top: 29px;
   }
 
-  .btn_verify button:first-child {
-    background-color: var(--button-bg);
+  .btn_verify button a:first-child {
+    background-color: var(--previous-bg);
     border: none;
     font-weight: 500;
+    color: white;
     border-radius: 3px;
     padding: 10px 30px;
     font-size: 15px;
     cursor: pointer;
+  }
+
+  .btn_verify button a:first-child:hover {
+    background-color: var(--button-bg);
+    color: black;
   }
 
   .btn_verify button:last-child {
@@ -446,11 +467,25 @@ font-size: 24px;
   }
 
   .para_seq13 button {
-    margin-top: 50px;
-    padding: 10px 35px;
+    margin-top: 30px;
+    color: white;
     border: none;
-    background-color: #ddce63;
+    background-color: var(--previous-bg);
     border-radius: 3px;
+  }
+
+  .para_seq13 button a {
+    margin-top: 20px;
+    padding: 10px 35px;
+    color: white;
+    border: none;
+    background-color: var(--previous-bg);
+    border-radius: 3px;
+  }
+
+  .para_seq13 button a:hover {
+    color: rgb(0, 0, 0);
+    background-color: var(--button-bg);
   }
 
   .sub_ver p {
@@ -498,7 +533,7 @@ font-size: 24px;
     margin-top: 20px;
   }
 
-  .main_new_comm > div {
+  .main_new_comm>div {
     display: flex;
     flex-direction: column;
     width: 100%;
