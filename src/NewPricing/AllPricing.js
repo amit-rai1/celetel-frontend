@@ -51,7 +51,7 @@ export function AllPricing() {
                         </div>
 
                         <div className="cards_new_pricing_list">
-                            <Card sx={{ width: "300px", borderRadius: "8px", borderTop: "15px solid #B7D6B6" }}>
+                            <Card sx={{ borderRadius: "8px", borderTop: "15px solid #B7D6B6" }}>
                                 <CardContent sx={{
                                     textAlign: "center"
                                 }}>

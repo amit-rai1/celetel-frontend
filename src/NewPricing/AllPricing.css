@@ -122,3 +122,29 @@ input:checked+.slider:before {
     border-radius: 18px;
     background: #F4FBDB;
 }
+
+
+@media screen and (max-width:1080px) {
+    .heading_all_pricing h1 {
+        font-size: 20px;
+    }
+
+    .heading_all_pricing p {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .new_pricing_cards_all{
+        padding: 10px;
+    }
+
+
+    .cards_new_pricing_list {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        align-items: center;
+        padding: 5px;
+        flex-direction: column;
+    }
+}
