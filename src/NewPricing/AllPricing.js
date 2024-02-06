@@ -59,13 +59,29 @@ export function AllPricing() {
                                         FREE
                                     </h3>
                                     <p style={{ fontSize: "32px", marginTop: "15px" }} >
-                                        $0/
-                                        <span>month</span>
+                                        ₹ 0.165/
+                                        <span style={{ textDecoration: "line-through" }}>0.25 /</span>
                                     </p>
 
-                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>It is a long established fact that a reader will be distracted.</p>
+                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>Pay for OTP "delivered" within 15 Sec
+                                    </p>
 
-                                    <p style={{ display: "flex", alignItems: "center", marginTop: "45px" }}><CheckIcon />PNG Templates</p>
+                                    {/* <p style={{ display: "flex", alignItems: "center", marginTop: "45px" }}><CheckIcon />PNG Templates</p> */}
+
+                                    <p style={{ marginTop: "12px" }} className='id'>Price: ₹ 0.165 - 0.25 volume based
+                                    </p>
+                                    <div className="features_sms">
+                                        <h4>FEATURES</h4>
+                                        <p>Global Coverage</p>
+                                        <p>2-6 Seconds Avg Delivery</p>
+                                        <p>Life Time Validity</p>
+                                        <p>Simple HTTP API</p>
+                                        <p>Pay Per Delivered OTP</p>
+                                        <p>FREE Fallback SMS</p>
+                                        <p>Delivered to DND Numbers
+                                        </p>
+                                        <p>Check International OTP Pricing</p>
+                                    </div>
 
                                     <Button onClick={handleNavigatetoPrices} sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
                                 </CardContent>
@@ -78,16 +94,24 @@ export function AllPricing() {
                                         PREMIUM
                                     </h3>
                                     <p style={{ fontSize: "32px", marginTop: "15px" }} >
-                                        $99/
+                                        ₹ 0.34/<span style={{ textDecoration: "line-through" }}>0.55/</span>
                                         <span>month</span>
                                     </p>
 
-                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>It is a long established fact that a reader will be distracted.</p>
+                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>Useful For Sending One Time Password Over SMS, For Phone Verification</p>
 
-                                    <p style={{ display: "flex", marginTop: "45px" }}><CheckIcon />PNG Templates</p>
-
-                                    <p style={{ display: "flex", marginTop: "15px" }}><CheckIcon />Figma responsive components</p>
-
+                                    <div className="features_sms">
+                                        <h4>FEATURES</h4>
+                                        <p>PAN India Coverage</p>
+                                        <p>Delivered To Landline Too</p>
+                                        <p>Greater Reach Than SMS</p>
+                                        <p>2-6 Seconds Avg Delivery</p>
+                                        <p>Life Time Validity</p>
+                                        <p>Simple HTTP API</p>
+                                        <p>Pay Per Delivered OTP</p>
+                                        <p>FREE Fallback SMS</p>
+                                        <p>Delivered to DND Numbers</p>
+                                    </div>
 
                                     <Button onClick={handleNavigatetoPrices} variant="contained" sx={{
                                         textTransform: "unset",
@@ -114,13 +138,23 @@ export function AllPricing() {
                                         PRO
                                     </h3>
                                     <p style={{ fontSize: "32px", marginTop: "15px" }} >
-                                        $199/
+                                        ₹ 0.16 <span style={{ textDecoration: "line-through" }}>0.25 /</span>
                                         <span>month</span>
                                     </p>
 
-                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>It is a long established fact that a reader will be distracted.</p>
+                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>Best Suitable For Sending Alerts, Reminders, Updates, Notifications To Registered Customers</p>
 
-                                    <p style={{ display: "flex", alignItems: "center", marginTop: "45px" }}><CheckIcon />PNG Templates</p>
+                                    <div className="features_sms">
+                                        <h4>FEATURES</h4>
+                                        <p>PAN India Coverage</p>
+                                        <p>2-15 Seconds Delivery</p>
+                                        <p>Life Time Validity</p>
+                                        <p>Simple HTTP API</p>
+                                        <p>Dynamic Template SMS</p>
+                                        <p>Unlimited Sender Id</p>
+                                        <p>Real Time Delivery Report</p>
+                                        <p>Delivered To DND Numbers</p>
+                                    </div>
 
                                     <Button onClick={handleNavigatetoPrices} sx={{ textTransform: "unset", color: "black", border: "1px solid #FFD26F", margin: "auto", marginTop: "30px", width: "90%", }}>Try now</Button>
                                 </CardContent>
