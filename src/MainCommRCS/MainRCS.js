@@ -74,7 +74,7 @@ export function MainRCS() {
             congue magna at pretium
           </p>
 
-          
+
           <div className="new_1_goal_fea">
             <div className="goal_new_fea1">
               <img src={Rcs1} alt="" />
@@ -151,8 +151,13 @@ export function MainRCS() {
           <img src={image4} alt="" />
         </div>
       </div>
+      <div className="faq_s">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about the product and billing </p>
+      </div>
+
       <div className="according_sms">
-        <Accordion sx={{ marginBottom: "15px" }}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel1-content"
@@ -161,14 +166,17 @@ export function MainRCS() {
             Is there a free trial available?
           </AccordionSummary>
           <AccordionDetails>
-            Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel2-content"
-            id="panel2-header">
+            id="panel2-header"
+          >
             Can I change my plan later?
           </AccordionSummary>
           <AccordionDetails>
@@ -176,11 +184,12 @@ export function MainRCS() {
             better suit your needs
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel3-content"
-            id="panel3-header">
+            id="panel3-header"
+          >
             What is your cancellation policy?
           </AccordionSummary>
           <AccordionDetails>
@@ -189,19 +198,20 @@ export function MainRCS() {
             convenience for our valued customers.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel4-content"
-            id="panel4-header">
-            Can other info be added to an invoice?
+            id="panel4-header"
+          >
+            How does billing work?
           </AccordionSummary>
           <AccordionDetails>
             Billing is based on your chosen plan and usage, with transparent
             monthly invoices reflecting your service consumption.
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel5-content"
@@ -215,7 +225,7 @@ export function MainRCS() {
             prompts to update it accordingly
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
+        <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls="panel6-content"
@@ -230,7 +240,7 @@ export function MainRCS() {
           </AccordionDetails>
         </Accordion>
       </div>
-  
+
       <Footer />
     </Fragment>
   );
