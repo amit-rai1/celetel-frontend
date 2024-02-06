@@ -10,6 +10,9 @@ import { IoIosSettings } from "react-icons/io";
 import image3 from '../Assets/voicemain.svg'
 import image4 from '../Assets/Group 1000001797.svg'
 import { Footer } from '../Footer/Footer'
+import Rcs1 from "../Assets/IconRCS.svg";
+import Rcs2 from "../Assets/iconRCS2.svg";
+import Rcs3 from "../Assets/IconRCS3.svg";
 
 export function MainVoice() {
 
@@ -53,23 +56,60 @@ export function MainVoice() {
                 </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div className="our_goal">
                 <div className="goal_para">
                     <h1>We Are Focus On Your Ultimate Goal</h1>
                     <p>An enim nullam tempor sapien gravida donec enim ipsum
                         porta justo congue magna at pretium</p>
+
                     <div className="new_1_goal_fea">
-                        <div className="goal_new_fea">
-                            <h4>Automatic Time Tracking</h4>
-                            <p style={{ marginTop: '10px' }}>Time Tracking is never been easier</p>
+                        <div className="goal_new_fea1">
+                            <img src={Rcs1} alt="" />
+                            <div>
+                                <h4>Automatic time tracking</h4>
+                                <p style={{ marginTop: "10px" }}>
+                                    Time Tracking is never been easier.{" "}
+                                </p>
+                            </div>
                         </div>
-                        <div className="goal_new_fea">
-                            <h4>Customizable Dashboard</h4>
-                            <p style={{ marginTop: '10px' }}>Time Tracking is never been easier</p>
+                        <div className="goal_new_fea1">
+                            <img src={Rcs2} alt="" />
+                            <div>
+                                <h4>Customizable dashboard</h4>
+                                <p style={{ marginTop: "10px" }}>
+                                    Time Tracking is never been easier.
+                                </p>
+                            </div>
                         </div>
-                        <div className="goal_new_fea">
-                            <h4>Statistics Retroactively</h4>
-                            <p style={{ marginTop: '10px' }}>Time Tracking is never been easier</p>
+                        <div className="goal_new_fea1">
+                            <img src={Rcs3} alt="" />
+                            <div>
+                                <h4>Statistics retroactively</h4>
+                                <p style={{ marginTop: "10px" }}>
+                                    Time Tracking is never been easier.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
