@@ -140,10 +140,10 @@ export function Mainverify() {
                 <img src={work2} alt="" />
                 <div className="para_seq13">
                     <img src={verifycircle} alt="" />
-                    <h1>Looking for more? Our Conversation 
+                    <h1>Looking for more? Our Conversation
                         API extends engagement to the next level!</h1>
                     <p style={{ marginTop: "20px", color: "#8A8A8A", fontWeight: "500" }}>
-                    Connect with customers on the most widely used messaging channels using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber, and more – our Conversation API covers it all.
+                        Connect with customers on the most widely used messaging channels using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber, and more – our Conversation API covers it all.
                     </p>
                     <button>Request a demo</button>
                 </div>
@@ -192,37 +192,37 @@ export function Mainverify() {
                                 <h3>Effortless Compliance</h3>
                                 <span>Verify any number inclusively</span>
                             </div> */}
-                             <p>
-                <img src={ac1} alt="" />
-              </p>
-              <div>
-                <h3>Global Reach On Any Device</h3>
-                <span>
-                  Accessible on all devices, call verification delivers OTPS
-                </span>
-              </div>
-            </div>
-            <div className="new_comm2">
-              <p>
-                <img src={ac2} alt="" />
-              </p>
-              <div>
-              <h3>Powerful Communication</h3>
-              <span>
-                Boost security with an extra layer for user identification
-              </span>
-              </div>
-              
-             
-            </div>
-            <div className="new_comm3">
-              <p>
-              <img src={ac3} alt="" />
-              </p>
-              <div>
-              <h3>Effortless Compliance</h3>
-              <span>Verify any number inclusively</span>
-              </div>
+                            <p>
+                                <img src={ac1} alt="" />
+                            </p>
+                            <div>
+                                <h3>Global Reach On Any Device</h3>
+                                <span>
+                                    Accessible on all devices, call verification delivers OTPS
+                                </span>
+                            </div>
+                        </div>
+                        <div className="new_comm2">
+                            <p>
+                                <img src={ac2} alt="" />
+                            </p>
+                            <div>
+                                <h3>Powerful Communication</h3>
+                                <span>
+                                    Boost security with an extra layer for user identification
+                                </span>
+                            </div>
+
+
+                        </div>
+                        <div className="new_comm3">
+                            <p>
+                                <img src={ac3} alt="" />
+                            </p>
+                            <div>
+                                <h3>Effortless Compliance</h3>
+                                <span>Verify any number inclusively</span>
+                            </div>
 
                         </div>
                     </div>
@@ -231,13 +231,14 @@ export function Mainverify() {
                 <img src={mobile2ndVerify} alt="" />
             </div>
 
+    
             <div className="faq_s">
                 <h1>Frequently Asked Questions</h1>
                 <p>Everything you need to know about the product and billing </p>
             </div>
 
             <div className='according_sms'>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel1-content"
@@ -249,12 +250,11 @@ export function Mainverify() {
                         Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
+                        id="panel2-header">
                         Can I change my plan later?
                     </AccordionSummary>
                     <AccordionDetails>
@@ -262,7 +262,7 @@ export function Mainverify() {
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel3-content"
@@ -274,7 +274,7 @@ export function Mainverify() {
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel4-content"
@@ -286,7 +286,7 @@ export function Mainverify() {
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel5-content"
@@ -298,7 +298,7 @@ export function Mainverify() {
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
+                <Accordion sx={{ marginBottom: '15px' }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel6-content"

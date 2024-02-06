@@ -147,13 +147,11 @@
     .sub_sms_sol_mobile {
         display: flex;
         flex-direction: column-reverse;
-        background: url('../Assets/curved-arrow-ULkKOmYgj4.svg'), lightgray 50%;
-        background-position: left top;
-        position: relative;
+        background: url('../Assets/1stone.svg');
         background-repeat: no-repeat;
-        background-size: contain;
+        /* background-position: center; */
+        background-size: cover;
         gap: 45px;
-        background-color: #ffd17a;
         height: auto;
     }
 
