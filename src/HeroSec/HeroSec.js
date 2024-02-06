@@ -1,11 +1,27 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import './HeroSec.css'
 import homepage from '../Assets/Group 1000001747.svg'
 import homepage1 from '../Assets/Frame.png'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { sendOtp } from '../Service/auth.service'
 
 export function HeroSec() {
+
+    const [mobileNumber, setMobileNumber] = useState('');
+
+    const handleGetStarted = async () => {
+        try {
+            const response = await sendOtp(mobileNumber);
+            console.log('API Response:', response);
+
+            alert("otp sent successfully ")
+            // Handle the response as needed
+        } catch (error) {
+            console.error('Error:', error.message);
+            // Handle errors
+        }
+    };
     return (
         <Fragment>
             <div className="main_herosec">
@@ -22,7 +38,11 @@ export function HeroSec() {
                                 // containerStyle={{
                                 //     padding: "12px"
                                 // }}
-                                className="custom-phone-input"
+                                type="number"
+                                placeholder="Enter mobile number"
+                                value={mobileNumber}
+                                onChange={(value) => setMobileNumber(value)}                               
+                                 className="custom-phone-input"
                                 inputProps={{
                                     placeholder: 'Search for a country',
                                     autoFocus: true,
@@ -32,7 +52,7 @@ export function HeroSec() {
                             />
 
                         </div>
-                        <button>Test delivery speed</button>
+                        <button onClick={handleGetStarted}>Test delivery speed</button>
                     </div>
                 </div>
                 <div className="sub_image">

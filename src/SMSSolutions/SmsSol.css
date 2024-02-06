@@ -10,24 +10,20 @@
 
 .sub_sms_sol {
     display: flex;
-    /* background: url('../Assets/smssol1.gif'), lightgray 50%; */
-    background-position: left top;
-    position: relative;
+    background: url('../Assets/1stone.svg');
     background-repeat: no-repeat;
-    background-size: 120px;
+    background-position: center;
+    background-size: cover;
     padding-left: 75px;
     padding-top: 35px;
     gap: 45px;
     height: auto;
-    background-color: #ffd17a;
 }
 
 
 .sub_sms_sol img {
     width: 35%;
 }
-
-
 
 .para_sol {
     margin-top: 95px;
@@ -64,8 +60,10 @@
 .sub_sms_sol1 {
     margin-top: 60px;
     display: flex;
-    background-color: #E7F3BC;
+    background: url('../Assets/giveittry.svg');
     height: auto;
+    background-size: cover;
+    background-position: center;
 }
 
 .para_sol1 {

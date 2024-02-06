@@ -10,7 +10,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import whatsappgraph from '../Assets/whatsappgraph.svg'
 import { FaRegCheckCircle } from "react-icons/fa";
 import logo4552 from '../Assets/Group 1000001785.svg'
-import { PiUsersThreeBold } from "react-icons/pi";
+import { PiUsersThree } from "react-icons/pi";
 import { CiGlobe } from "react-icons/ci";
 import { AiOutlineMessage } from "react-icons/ai";
 import { BsGraphUp } from "react-icons/bs";
@@ -85,9 +85,9 @@ export function MainWhatsapp() {
             <div className="cus_conv">
                 <div className="text_parag">
                     <h1>Easily create and manage customer conversations on WhatsApp</h1>
-                    <p style={{ marginTop: '25px', fontSize: '18px' }}>Modernize your customer interactions with personalized conversations, new behavioral insights, and rich messaging capabilities.</p>
+                    <p style={{ marginTop: '25px', fontSize: '16px' }}>Modernize your customer interactions with personalized conversations, new behavioral insights, and rich messaging capabilities.</p>
 
-                    <h3 style={{ marginTop: '100px', fontSize: '30px' }}>Tap into WhatsApp's 2 billion global users and start quality conversations</h3>
+                    <h3 style={{ marginTop: '50px', fontSize: '25px' }}>Tap into WhatsApp's 2 billion global users and start quality conversations</h3>
                     <div className="new_text_drop">
                         <div className="text_pic_done">
                             <div className="drop_pic">
@@ -148,7 +148,7 @@ export function MainWhatsapp() {
 
                 <div className="solutions_ment">
                     <div className="solutions_ment10">
-                        <p><PiUsersThreeBold /></p>
+                        <p><PiUsersThree /></p>
                         <div className="text_ment1">
                             <h4>Higher user engagement</h4>
                             <span>Do you know what's great about WhatsApp? People love spending time on it! That means if you're a business, you have a fantastic chance to connect with your customers and create a stronger bond with them.</span>
@@ -162,22 +162,24 @@ export function MainWhatsapp() {
                             </span>
                         </div>
                     </div>
-                </div>-
+                </div>
 
 
-                <div className="solutions_ment12">
-                    <div className="solutions_ment13">
+                <div className="solutions_ment">
+                    <div className="solutions_ment10">
                         <p><AiOutlineMessage /></p>
                         <div className="text_ment1">
                             <h4>More Conversation</h4>
-                            <span>Do you know what's great about WhatsApp? People love spending time on it! That means if you're a business, you have a fantastic chance to connect with your customers and create a stronger bond with them.</span>
+                            <span> That’s right, messages sent through WhatsApp have a 98% open rate and an average response time of just 90 seconds.
+                                So, if you’re looking to branch out and explore new markets, WhatsApp is the perfect platform for you.
+                            </span>
                         </div>
                     </div>
-                    <div className="solutions_ment14">
+                    <div className="solutions_ment11">
                         <p><BsGraphUp /></p>
                         <div className="text_ment1">
                             <h4>Increased Customer satisfaction</h4>
-                            <span>It's been proven to make your customers happy! When you communicate with them in a more personal and direct way, they're more likely to stick around and keep coming back.
+                            <span>With over 2 billion users worldwide, WhatsApp is one big party! And for businesses, that means you have the chance to reach people from all corners of the earth. It's like having a global megaphone at your fingertips.
                             </span>
                         </div>
                     </div>

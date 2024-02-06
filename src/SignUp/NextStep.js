@@ -55,7 +55,7 @@ export function NextStep() {
     const handleClickNextStepExplore = async () => {
         console.log('Clicked Sign Up button');
 
-        const requiredFieldsFromInput = ['fullName', 'email', 'phone'];
+        const requiredFieldsFromInput = ['fullName', 'email', ];
 
         const newErrors = {};
         requiredFieldsFromInput.forEach((field) => {
@@ -121,30 +121,46 @@ export function NextStep() {
     };
 
 
+    // const handleInputChange = (e) => {
+    //     const { name, value } = e.target || {};
+
+    //     if (name === "phone") {
+    //         const [newValue, newCountry] = value.split('-');
+    //         setSignupData(prevData => ({ ...prevData, value: newValue, country: newCountry }));
+    //     } else if (name === 'email') {
+    //         setEmail(value);
+    //         setSignupData(prevData => ({ ...prevData, email: value }));
+    //     } else if (name === 'fullName') {
+    //         setSignupData(prevData => ({ ...prevData, fullName: value }));
+    //     } else {
+    //         setSignupData(prevData => ({ ...prevData, [name]: value }));
+    //     }
+
+    //     setSignUpErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         [name]: ''
+    //     }));
+    // };
+
+
+    // verify otp steps ............................... 
+
     const handleInputChange = (e) => {
         const { name, value } = e.target || {};
-
+    
         if (name === "phone") {
             const [newValue, newCountry] = value.split('-');
-            setSignupData(prevData => ({ ...prevData, value: newValue, country: newCountry }));
-        } else if (name === 'email') {
-            setEmail(value);
-            setSignupData(prevData => ({ ...prevData, email: value }));
-        } else if (name === 'fullName') {
-            setSignupData(prevData => ({ ...prevData, fullName: value }));
+            setSignupData(prevData => ({ ...prevData, phone: newValue, country: newCountry }));
         } else {
             setSignupData(prevData => ({ ...prevData, [name]: value }));
         }
-
+    
         setSignUpErrors((prevErrors) => ({
             ...prevErrors,
             [name]: ''
         }));
     };
-
-
-    // verify otp steps ............................... 
-
+    
     useEffect(() => {
         const countdown = setInterval(() => {
             setTimer(prevTimer => {
@@ -265,7 +281,7 @@ export function NextStep() {
 
 
     const handleOpen = () => {
-        const requiredFields = ['fullName', 'email', 'phone'];
+        const requiredFields = ['fullName', 'email', ];
 
         const isAllFieldsFilled = requiredFields.every(field => signupData[field]);
 
@@ -326,7 +342,7 @@ export function NextStep() {
                                         enableSearch
                                     />
                                 </div>
-                                <div className="signup_error_message">{signupError.phone}</div>
+                                {/* <div className="signup_error_message">{signupError.phone}</div> */}
 
                             </div>
                         </div>
@@ -393,7 +409,7 @@ export function NextStep() {
                                                 }
                                             }}
                                             placeholder='Enter email otp' required />
-                                        <button onClick={handleVerifyClick}>Submit</button>
+                                        <button onClick={handleVerifyOtp}>Submit</button>
                                     </div>
                                     <div className="verify_butn12">
                                         <p>{formatTime(timer)}</p>
