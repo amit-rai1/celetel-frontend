@@ -73,6 +73,8 @@ export function MainRCS() {
             An enim nullam tempor sapien gravida donec enim ipsum porta justo
             congue magna at pretium
           </p>
+
+          
           <div className="new_1_goal_fea">
             <div className="goal_new_fea">
               <img src={Rcs1} alt="" />
