@@ -8,15 +8,16 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import image43 from '../Assets/Group 1000001721.svg'
 import work1 from '../Assets/Traditional Indian Diwali Folded Card in Cream Blue and Green Elegant Style-2 1.svg'
 import work2 from '../Assets/Traditional Indian Diwali Folded Card in Cream Blue and Green Elegant Style (1) 1.svg'
+import gif from '../Assets/Phone Indian.gif'
 import mobile2ndVerify from '../Assets/mobileverify2nd.svg'
-import { BsGlobeAmericas } from "react-icons/bs";
-import { AiOutlineMessage } from "react-icons/ai";
-import { IoPieChartOutline } from "react-icons/io5";
 import { Footer } from '../Footer/Footer'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import ac1 from "../Assets/earth.svg";
+import ac2 from "../Assets/Vector2.svg";
+import ac3 from "../Assets/Icon01.svg";
 
 //add coments
 
@@ -75,7 +76,7 @@ export function Mainverify() {
             </div>
 
             <div className="security_sms12">
-                <img src={work1} alt="" />
+                <img src={gif} alt="" />
                 <div className="new_para_seq_12">
                     <div className="main_sec_verify">
                         <div className="para_seq12">
@@ -139,12 +140,10 @@ export function Mainverify() {
                 <img src={work2} alt="" />
                 <div className="para_seq13">
                     <img src={verifycircle} alt="" />
-                    <h1>Looking for more? Our Conversation</h1>
+                    <h1>Looking for more? Our Conversation 
+                        API extends engagement to the next level!</h1>
                     <p style={{ marginTop: "20px", color: "#8A8A8A", fontWeight: "500" }}>
-                        API extends engagement to the next level! Connect with customers on
-                        the most widely used messaging channels using a unified interface!
-                        SMS, WhatsApp, Facebook Messenger, Viber, and more - our
-                        Conversation API covers it all.
+                    Connect with customers on the most widely used messaging channels using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber, and more – our Conversation API covers it all.
                     </p>
                     <button>Request a demo</button>
                 </div>
@@ -162,7 +161,7 @@ export function Mainverify() {
                     </p>
                     <div className="main_new_comm">
                         <div className="new_comm1">
-                            <p>
+                            {/* <p>
                                 <BsGlobeAmericas />
                             </p>
                             <div>
@@ -192,7 +191,38 @@ export function Mainverify() {
                             <div>
                                 <h3>Effortless Compliance</h3>
                                 <span>Verify any number inclusively</span>
-                            </div>
+                            </div> */}
+                             <p>
+                <img src={ac1} alt="" />
+              </p>
+              <div>
+                <h3>Global Reach On Any Device</h3>
+                <span>
+                  Accessible on all devices, call verification delivers OTPS
+                </span>
+              </div>
+            </div>
+            <div className="new_comm2">
+              <p>
+                <img src={ac2} alt="" />
+              </p>
+              <div>
+              <h3>Powerful Communication</h3>
+              <span>
+                Boost security with an extra layer for user identification
+              </span>
+              </div>
+              
+             
+            </div>
+            <div className="new_comm3">
+              <p>
+              <img src={ac3} alt="" />
+              </p>
+              <div>
+              <h3>Effortless Compliance</h3>
+              <span>Verify any number inclusively</span>
+              </div>
 
                         </div>
                     </div>
