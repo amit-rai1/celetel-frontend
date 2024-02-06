@@ -4,8 +4,8 @@
 }
 
 .main_sol_page_verify h1 {
-  font-size: 50px;
-  padding-right: 400px;
+  font-size: 49px;
+  /* padding-right: 400px; */
 }
 
 .main_sol_page_verify p {
@@ -13,31 +13,6 @@
   font-size: 20px;
   position: relative;
   bottom: 25px;
-}
-.new_1_goal_fea{
-  display: flex;
-  margin: auto;
-  
-}
-.goal_new_fea{
-  
-  display: flex;
-  margin: auto;
-  flex-direction: row;
-  
-}
-.goal_new_fea img{
-  display: flex;
-  width: 100px;
-  flex-direction: row;
-  
-
-}
-.goal_new_fea div{
-  display: flex;
-  flex-direction: column;
-
-
 }
 
 .btn2_5 {
@@ -181,6 +156,11 @@
 .sub_ver1 p,
 .sub_ver2 p {
   width: 100px;
+}
+
+.sub_ver1 h1,
+.sub_ver2 h1 {
+font-size: 24px;
 }
 
 .security_sms13 {
