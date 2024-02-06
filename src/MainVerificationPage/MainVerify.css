@@ -14,6 +14,31 @@
   position: relative;
   bottom: 25px;
 }
+.new_1_goal_fea{
+  display: flex;
+  margin: auto;
+  
+}
+.goal_new_fea{
+  
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  
+}
+.goal_new_fea img{
+  display: flex;
+  width: 100px;
+  flex-direction: row;
+  
+
+}
+.goal_new_fea div{
+  display: flex;
+  flex-direction: column;
+
+
+}
 
 .btn2_5 {
   display: flex;
@@ -222,11 +247,11 @@
 }
 
 .main_achieve h1 {
-  text-align: center;
+  text-align: start;
 }
 
 .main_achieve p {
-  text-align: center;
+  text-align: start;
   margin-top: 20px;
 }
 
