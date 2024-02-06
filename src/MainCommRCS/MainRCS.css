@@ -13,11 +13,44 @@
     font-size: 20px;
     position: relative;
     bottom: 65px;
+    align-items:start;
+
 }
 
 .main_sol_page11 {
     display: none;
 }
+.new_1_goal_fea{
+    display: flex;
+    align-items:start;
+    align-self: flex-start;
+    
+  }
+  .goal_new_fea1{
+    justify-items: start;
+    /* margin-left: -20px; */
+    align-self: flex-start;
+
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .goal_new_fea1 img{
+    display: flex;
+    align-content: flex-start;
+    width: 100px;
+    flex-direction: row;
+    overflow: auto;
+  
+  }
+  .goal_new_fea1 div{
+    display: flex;
+    align-items:start;
+
+    flex-direction: column;
+  
+  
+  }
 
 .new_svg_impo {
     display: flex;
@@ -157,6 +190,8 @@
 
 .img_new {
     width: 100%;
+    margin: auto;
+
 }
 
 .img_new img {

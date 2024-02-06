@@ -15,6 +15,7 @@ export function Footer() {
                         <p>123 Main Street</p>
                         <p>London , UK</p>
                         <p>SW1A 1AA</p>
+                        <br/>
                         <span>+91- 9708110811</span>
                         <p>hey@celetel.com</p>
                     </div>
@@ -36,7 +37,6 @@ export function Footer() {
                         <div className='sub_2_foot'>
                             <a href="#12">Company</a>
                             <a href="#12">About us</a>
-                            <a href="#12">Product</a>
                             <a href="/prices">Pricing</a>
                             <a href="/contact">Contact us</a>
                         </div>

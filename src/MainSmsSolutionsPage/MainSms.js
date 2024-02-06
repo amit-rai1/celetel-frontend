@@ -149,82 +149,90 @@ export function MainSms() {
                 <p>Everything you need to know about the product and billing </p>
             </div>
 
-            <div className='according_sms'>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                    >
-                        Is there a free trial available?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                    >
-                        Can I change my plan later?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel3-content"
-                        id="panel3-header">
-                        What is your cancellation policy?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel4-content"
-                        id="panel4-header">
-                        Can other info be added to an invoice?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel5-content"
-                        id="panel5-header">
-                        How does billing work?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion sx={{ marginBottom: '15px' }}>
-                    <AccordionSummary
-                        expandIcon={<AddIcon />}
-                        aria-controls="panel6-content"
-                        id="panel6-header">
-                        How do I change my account email?
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </AccordionDetails>
-                </Accordion>
-            </div>
-
+            <div className="according_sms">
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            Is there a free trial available?
+          </AccordionSummary>
+          <AccordionDetails>
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            Can I change my plan later?
+          </AccordionSummary>
+          <AccordionDetails>
+            Yes, you can easily upgrade or downgrade your plan at any time to
+            better suit your needs
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel3-content"
+            id="panel3-header"
+          >
+            What is your cancellation policy?
+          </AccordionSummary>
+          <AccordionDetails>
+            Our cancellation policy allows for free cancellations up to 24 hours
+            before your scheduled appointment, ensuring flexibility and
+            convenience for our valued customers.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel4-content"
+            id="panel4-header"
+          >
+            How does billing work?
+          </AccordionSummary>
+          <AccordionDetails>
+            Billing is based on your chosen plan and usage, with transparent
+            monthly invoices reflecting your service consumption.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel5-content"
+            id="panel5-header"
+          >
+            How do I change my email account?
+          </AccordionSummary>
+          <AccordionDetails>
+            To change your account email, simply navigate to the settings
+            section of your profile, locate the 'Email' option, and follow the
+            prompts to update it accordingly
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ marginBottom: "15px" }}>
+          <AccordionSummary
+            expandIcon={<AddIcon />}
+            aria-controls="panel6-content"
+            id="panel6-header"
+          >
+            Can other info be added to an invoice?
+          </AccordionSummary>
+          <AccordionDetails>
+            Yes, additional information such as payment terms, Tax details, and
+            special instructions can be included on an invoice to meet your
+            specific needs.
+          </AccordionDetails>
+        </Accordion>
+      </div>
 
 
             {/* <div className="faq_mob_head">

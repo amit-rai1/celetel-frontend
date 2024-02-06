@@ -196,7 +196,7 @@ export function Navbar() {
                                             <img src={imagelogo1} alt="" />
                                             <div>
                                                 <Link to={'/smssolutions'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>SMS</li></Link>
-                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                                <span>Instantly connect worldwide with prompt delivery and global coverage</span>
                                             </div>
                                         </div>
                                         <div className="new_comm2_products"
@@ -204,7 +204,7 @@ export function Navbar() {
                                             <img src={imagelogo3} alt="" />
                                             <div>
                                                 <Link to={'/connectrcs'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>RCS</li></Link>
-                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                                <span>Elevate messaging with interactive features and rich media engagement.</span>
                                             </div>
                                         </div>
                                         <div className="new_comm3_products"
@@ -212,7 +212,7 @@ export function Navbar() {
                                             <img src={imagelogo5} alt="" />
                                             <div>
                                                 <Link to={'/connectwhatsapp'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>WhatsApp</li></Link>
-                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                                <span>Engage customers directly and securely on their preferred platform.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -223,7 +223,7 @@ export function Navbar() {
                                             <img src={imagelogo2} alt="" />
                                             <div>
                                                 <Link to={'/voicesolutions'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>Voice</li></Link>
-                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                                <span>Deliver crystal-clear quality and scalable infrastructure for seamless communication</span>
                                             </div>
                                         </div>
                                         <div className="new_comm2_products"
@@ -232,7 +232,7 @@ export function Navbar() {
                                             <img src={imagelogo4} alt="" />
                                             <div>
                                                 <Link to={'/verifications'} style={{ textDecoration: "none" }} onClick={handleClickLinkInsideAnimatePresence}><li>Verifications</li></Link>
-                                                <span>Sagittis pulvinar non convallis in amet libero mattis nulla duis molestie ut nibh viverra lorem.</span>
+                                                <span>Ensure compliance and security with secure identity verification and two-factor authentication.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +250,7 @@ export function Navbar() {
                                                         <div className="products_desc">
                                                             <ul>
                                                                 <li>
-                                                                    <span>Instant Communication:</span>Reach your audience instantly, ensuring prompt delivery.
+                                                                    <span>Instant Communication:</span> Providing innovative telecommunication solutions.
                                                                 </li>
                                                                 <li>
                                                                     <span>Global Reach:</span> Connect worldwide for seamless communication across borders.
