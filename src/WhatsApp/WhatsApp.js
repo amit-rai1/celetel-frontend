@@ -107,8 +107,8 @@ export function WhatsApp() {
                         possible. Get started in no time with our extensive
                         developer documentation and intuitive tutorials!</p>
                     <div className="btn3">
-                        <button>Learn More</button>
-                        <button>Explore</button>
+                        <button><a href="https://docs.celetel.com/">Explore</a></button>
+                        {/* <button>Explore</button> */}
                     </div>
                 </div>
 

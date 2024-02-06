@@ -156,26 +156,20 @@
     gap: 15px;
 }
 
-.btn3 button:first-child {
+.btn3 button {
     margin-top: 20px;
     background-color: var(--button-bg);
     border: none;
     font-weight: 500;
     border-radius: 5px;
+    color: black;
     padding: 15px 55px;
     font-size: 15px;
     cursor: pointer;
 }
 
-.btn3 button:last-child {
-    margin-top: 20px;
-    background-color: #fff;
-    border: 1px solid var(--button-bg);
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 15px 55px;
-    font-size: 15px;
-    cursor: pointer;
+.btn3 a {
+    color: black;
 }
 
 .api_sdk_im {
