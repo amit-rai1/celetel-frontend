@@ -29,8 +29,10 @@
     margin: auto;
     width: 90%;
     margin-top: 45px;
-    background-color: #E7F3BC;
     background-image: url("/src/Assets/Fame phone.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 15px;
 }
 
