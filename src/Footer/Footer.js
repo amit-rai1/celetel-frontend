@@ -23,15 +23,15 @@ export function Footer() {
                         <div className='sub_2_foot'>
                             <a href="#12">Product</a>
                             <a href="#12">Messaging</a>
-                            <a href="#12">Voice</a>
+                            <a href="/voicesolutions">Voice</a>
                             <a href="https://docs.celetel.com/">API Docs</a>
                         </div>
                         <div className='sub_20_foot'>
                             <a href="#12">Product</a>
                             <a href="#12">Message</a>
-                            <a href="#12">RCS</a>
-                            <a href="#12">Whatsapp</a>
-                            <a href="#12">SMS</a>
+                            <a href="/connectrcs">RCS</a>
+                            <a href="/connectwhatsapp">Whatsapp</a>
+                            <a href="/smssolutions">SMS</a>
                         </div>
                         <div className='sub_2_foot'>
                             <a href="#12">Company</a>
@@ -44,7 +44,7 @@ export function Footer() {
                             <a href="#12">Company</a>
                             <a href="#12">Product</a>
                             <a href="/prices">Pricing</a>
-                            <a href="#12">Contact us</a>
+                            <a href="/contact">Contact us</a>
                         </div>
                         <div className='sub_2_foot'>
                             <a href="#12">Social</a>
@@ -64,14 +64,14 @@ export function Footer() {
 
                         <div className='sub_20_foot'>
                             <a href="#12">Legal</a>
-                            <a href="#12">Terms&Conditions</a>
+                            <a href="https://www.termsandconditionsgenerator.com/live.php?token=vH9ZUTYbGZ12HUCBkAlz14mJNIHxztKE">Terms & Conditions</a>
                             <a href="#12">Privacy </a>
                             <a href="#12">Cookies</a>
                         </div>
                         <div className='sub_2_foot1'>
                             <span>GET IN TOUCH</span>
                             <p><FaTwitter /></p>
-                            <p><FaLinkedin /></p>
+                            <p><FaLinkedin href="https://www.linkedin.com/company/celetelasia/" target='blank' /></p>
                             <p><FaFacebook /></p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export function Footer() {
                     &copy;2023 Celetel, All right reserved.
                     <div className="icons_ref">
                         <p><FaTwitter /></p>
-                        <p><FaLinkedin /></p>
+                        <p><FaLinkedin href='https://www.linkedin.com/company/celetelasia/' /></p>
                         <p><FaFacebook /></p>
                     </div>
                 </div>
