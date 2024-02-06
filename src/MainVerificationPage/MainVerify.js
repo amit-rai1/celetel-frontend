@@ -255,7 +255,7 @@ export function Mainverify() {
             </div>
 
             <div className="according_sms">
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel1-content"
@@ -269,7 +269,7 @@ export function Mainverify() {
                         up and running as soon as possible.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel2-content"
@@ -282,7 +282,7 @@ export function Mainverify() {
                         better suit your needs
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel3-content"
@@ -296,7 +296,7 @@ export function Mainverify() {
                         convenience for our valued customers.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel4-content"
@@ -309,7 +309,7 @@ export function Mainverify() {
                         monthly invoices reflecting your service consumption.
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel5-content"
@@ -323,7 +323,7 @@ export function Mainverify() {
                         prompts to update it accordingly
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ marginBottom: "15px" }}>
+                <Accordion sx={{ marginBottom: "15px" }} elevation={0}>
                     <AccordionSummary
                         expandIcon={<AddIcon />}
                         aria-controls="panel6-content"
@@ -338,34 +338,6 @@ export function Mainverify() {
                     </AccordionDetails>
                 </Accordion>
             </div>
-
-            {/* <div className="faq_mob_head">
-                <h1>Frequently Asked Questions</h1>
-                <p>Everything you need to know about the product and billing </p>
-            </div>
-
-
-            <div className="faq_mob_resp">
-                <div className="faq_queries">
-                    <div className="faq_quer_s">
-                        <p>Is there a free trial available?</p>
-                        <p><IoIosArrowDown /></p>
-                    </div>
-                    <div className="faq_quer_s">
-                        <p>In tempor pretium lectus consectetur</p>
-                        <p><IoIosArrowDown /></p>
-                    </div>
-                    <div className="faq_quer_s">
-                        <p>How does billing work?</p>
-                        <p><IoIosArrowDown /></p>
-                    </div>
-                    <div className="faq_quer_s">
-                        <p>How do I change my account email?</p>
-                        <p><IoIosArrowDown /></p>
-                    </div>
-                </div>
-            </div> */}
-
             <Footer />
         </Fragment>
     );
