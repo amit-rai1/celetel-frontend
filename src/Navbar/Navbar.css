@@ -12,6 +12,11 @@
     box-shadow: rgba(0, 0, 0, 0.151) 0px 3px 8px;
 }
 
+.default {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 
 
 .btn-link {
