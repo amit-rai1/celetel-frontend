@@ -23,8 +23,6 @@ export function WhatsApp() {
     const whatsappTwo = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+13%403x-50fps.gif"
 
 
-
-
     return (
         <Fragment>
             <div className="main_whatsapp">
@@ -210,37 +208,42 @@ export function WhatsApp() {
                 <h1> Trusted by Thousands of Happy Customer</h1>
                 <p>These are the stories of our customers who have joined us with great
                     pleasure when using this crazy feature.</p>
+            </div>
 
-                <div className="cards_row_tes">
-                    <div className="cards_para">
-                        <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
-                        <div className="cards_det">
-                            <img src={logo17} alt="" />
-                            <p>Maria Alberquequ</p>
+
+            <div className="cards_row_tes">
+                <div className="new_one_cards">
+                        <div className="cards_para">
+                            <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
+                            <div className="cards_det">
+                                <img src={logo17} alt="" />
+                                <p>Stage</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="cards_para">
-                        <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
-                        <div className="cards_det">
-                            <img src={logo17} alt="" />
-                            <p>Maria Alberquequ</p>
+                        <div className="cards_para">
+                            <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
+                            <div className="cards_det">
+                                <img src={logo17} alt="" />
+                                <p>Vapp</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="cards_para">
-                        <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
-                        <div className="cards_det">
-                            <img src={logo17} alt="" />
-                            <p>Maria Alberquequ</p>
+                        <div className="cards_para">
+                            <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
+                            <div className="cards_det">
+                                <img src={logo17} alt="" />
+                                <p>Ibizo</p>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
+
 
             <div className="used_by">
                 <h1>Proud to Be Used By</h1>
                 <p>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
                 <img src={logo18} alt="" />
             </div>
-        </Fragment >
+
+        </Fragment>
     )
 }

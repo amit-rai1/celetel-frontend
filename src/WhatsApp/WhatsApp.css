@@ -289,12 +289,18 @@
 
 .cards_row_tes {
     display: flex;
-    width: 90%;
-    overflow: auto;
+    width: 80%;
     margin: auto;
     padding: 10px;
     gap: 25px;
     margin-top: 80px;
+
+}
+
+.new_one_cards {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
 }
 
 .cards_para {
