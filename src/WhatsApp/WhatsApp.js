@@ -232,7 +232,11 @@ export function WhatsApp() {
 
 
             <div className="cards_test_monials_main">
-                <Card sx={{ maxWidth: 345, boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", borderRadius: "22px" }}>
+                <Card sx={{
+                    maxWidth: 345, boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", borderRadius: "22px", '@media (max-width: 1080px)': {
+                        display: 'none',
+                    },
+                }}>
                     <CardMedia
                     // sx={{ height: 140 }}
                     />
@@ -247,7 +251,11 @@ export function WhatsApp() {
                     </CardContent>
 
                 </Card>
-                <Card sx={{ maxWidth: 345, borderRadius: "22px", boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", }}>
+                <Card sx={{
+                    maxWidth: 345,
+                    borderRadius: "22px",
+                    boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                }}>
                     <CardMedia
                     // sx={{ height: 140 }}
                     />
@@ -262,7 +270,11 @@ export function WhatsApp() {
                     </CardContent>
 
                 </Card>
-                <Card sx={{ maxWidth: 345, borderRadius: "22px", height: "220px", boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", }}>
+                <Card sx={{
+                    maxWidth: 345, borderRadius: "22px", height: "220px", boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", '@media (max-width: 1080px)': {
+                        display: 'none',
+                    },
+                }}>
                     <CardMedia
                     // sx={{ height: "198px" }}
                     />
