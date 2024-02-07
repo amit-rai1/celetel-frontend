@@ -5,6 +5,7 @@ import homepage1 from '../Assets/Frame.png'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { sendOtp } from '../Service/auth.service'
+import { toast } from 'react-toastify'
 
 export function HeroSec() {
 
@@ -15,7 +16,7 @@ export function HeroSec() {
             const response = await sendOtp(mobileNumber);
             console.log('API Response:', response);
 
-            alert("otp sent successfully ")
+            toast("otp sent successfully ")
             // Handle the response as needed
         } catch (error) {
             console.error('Error:', error.message);
