@@ -10,9 +10,36 @@ import { toast } from 'react-toastify'
 import one from '../Assets/1.svg'
 import two from '../Assets/2.svg'
 import three from '../Assets/3.svg'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 
 export function WhatsApp() {
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
 
     const [openState, setOpenState] = useState(true)
     const codeToCopyRef = useRef(null);
@@ -228,30 +255,52 @@ export function WhatsApp() {
             </div>
 
 
-            <div className="cards_row_tes">
-                <div className="new_one_cards">
-                    <div className="cards_para">
-                        <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
-                        <div className="cards_det">
+            <div className="cards_test_monials_main">
+                <Card sx={{ maxWidth: 345, boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", borderRadius: "22px" }}>
+                    <CardMedia
+                    // sx={{ height: 140 }}
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                            The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy.
+                        </Typography>
+                        <div className='card_content'>
                             <img src={one} alt="" />
-                            <p>Stage</p>
+                            <h3>Stage</h3>
                         </div>
-                    </div>
-                    <div className="cards_para">
-                        <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
-                        <div className="cards_det">
+                    </CardContent>
+
+                </Card>
+                <Card sx={{ maxWidth: 345, borderRadius: "22px" }}>
+                    <CardMedia
+                    // sx={{ height: 140 }}
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                            Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns.
+                        </Typography>
+                        <div className='card_content'>
                             <img src={two} alt="" />
-                            <p>Vapp</p>
+                            <h3>Vapp</h3>
                         </div>
-                    </div>
-                    <div className="cards_para">
-                        <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
-                        <div className="cards_det">
+                    </CardContent>
+
+                </Card>
+                <Card sx={{ maxWidth: 345, borderRadius: "22px", height: "220px" }}>
+                    <CardMedia
+                    // sx={{ height: "198px" }}
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                            RCS from Celetel has taken our messaging to the next level. The interactive features and rich media engagement have enhanced our brand's visibility and customer interactions.Highly recommended for business
+                        </Typography>
+                        <div className='card_content'>
                             <img src={three} alt="" />
-                            <p>Ibizo</p>
+                            <h3>Ibizo</h3>
                         </div>
-                    </div>
-                </div>
+                    </CardContent>
+
+                </Card>
             </div>
 
 
@@ -260,7 +309,6 @@ export function WhatsApp() {
                 <p>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
                 <img src={logo18} alt="" />
             </div>
-
-        </Fragment>
+        </Fragment >
     )
 }
