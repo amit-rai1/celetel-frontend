@@ -344,5 +344,18 @@ h3 {
         display: none;
     }
 
+    .btn_mobile_nav {
+        padding: 12px;
+    }
+
+    .btn_mobile_nav button {
+        color: #FFFF;
+        background-color: #000000;
+        text-align: justify;
+        border: none;
+        padding: 4px 15px;
+        border-radius: 4px;
+    }
+
 
 }

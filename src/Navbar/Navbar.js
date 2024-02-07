@@ -167,6 +167,16 @@ export function Navbar() {
                             <Link to={'/nextstep'} onClick={closeDrawer}>
                                 <p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
                         </ListItem> */}
+                        <div className="btn_mobile_nav">
+                            <button>
+                                <PopupButton
+                                    url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                                    rootElement={document.getElementById("root")}
+                                    text="Request a demo"
+                                    style={{ color: 'white' }}
+                                />
+                            </button>
+                        </div>
                     </List>
                 </Drawer>
             </div>
