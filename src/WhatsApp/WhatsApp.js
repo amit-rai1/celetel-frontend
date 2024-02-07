@@ -7,6 +7,9 @@ import logo16 from '../Assets/mainpglast.svg'
 import logo17 from '../Assets/Ellipse 7.png'
 import logo18 from '../Assets/Content.svg'
 import { toast } from 'react-toastify'
+import one from '../Assets/1.svg'
+import two from '../Assets/2.svg'
+import three from '../Assets/3.svg'
 
 
 export function WhatsApp() {
@@ -230,21 +233,21 @@ export function WhatsApp() {
                     <div className="cards_para">
                         <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
                         <div className="cards_det">
-                            <img src={logo17} alt="" />
+                            <img src={one} alt="" />
                             <p>Stage</p>
                         </div>
                     </div>
                     <div className="cards_para">
                         <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
                         <div className="cards_det">
-                            <img src={logo17} alt="" />
+                            <img src={two} alt="" />
                             <p>Vapp</p>
                         </div>
                     </div>
                     <div className="cards_para">
                         <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
                         <div className="cards_det">
-                            <img src={logo17} alt="" />
+                            <img src={three} alt="" />
                             <p>Ibizo</p>
                         </div>
                     </div>
