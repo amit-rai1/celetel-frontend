@@ -197,8 +197,17 @@
         height: auto;
     }
 
+    .contact_head {
+        display: none;
+    }
+
     .para_new_c {
         width: 100%;
+    }
+
+    .form_content {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .form_con button {
@@ -209,6 +218,7 @@
     .next_step_steps {
         width: 80%;
         display: flex;
+        margin-top: 20px;
         display: -webkit-box;
         display: -ms-flexbox;
         flex-direction: column;
