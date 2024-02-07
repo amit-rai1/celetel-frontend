@@ -16,6 +16,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import { PopupButton } from 'react-calendly'
 
 
 export function MainSms() {
@@ -36,7 +37,12 @@ export function MainSms() {
                     SMS services, we provide the foundation for engaging, effective,
                     and efficient messaging strategies.</p>
                 <div className="btn2">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>

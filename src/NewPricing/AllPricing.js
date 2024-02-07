@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import { Footer } from '../Footer/Footer'
-import CheckIcon from '@mui/icons-material/Check';
 import { useNavigate } from 'react-router-dom';
 
 export function AllPricing() {
@@ -52,9 +51,7 @@ export function AllPricing() {
 
                         <div className="cards_new_pricing_list">
                             <Card sx={{ borderRadius: "8px", borderTop: "15px solid #B7D6B6" }}>
-                                <CardContent sx={{
-                                    textAlign: "center"
-                                }}>
+                                <CardContent>
                                     <h3 gutterBottom variant="h5" component="div">
                                         FREE
                                     </h3>
@@ -162,7 +159,7 @@ export function AllPricing() {
                         </div>
                     </div>
                 </div>
-                <div className="new_pricing_list">
+                {/* <div className="new_pricing_list">
                     <div className="new_pricing_cards_all">
                         <div className="name_of_price">
                             <div className="prices_new">
@@ -353,7 +350,7 @@ export function AllPricing() {
                             </Card>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <Footer />
             </div>
         </Fragment>
