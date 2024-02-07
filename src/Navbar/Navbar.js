@@ -155,7 +155,9 @@ export function Navbar() {
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>
+                            <Link to={'/contact'} onClick={closeDrawer}>
+                                <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>
+                            </Link>
                         </ListItem>
                         {/* <ListItem>
                             <Link to={'/login'} onClick={closeDrawer}>
