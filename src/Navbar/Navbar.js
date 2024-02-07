@@ -19,6 +19,7 @@ import navwhatsapp from '../Assets/mainwhatsapp.svg'
 import navvoice from '../Assets/mainvoice.svg'
 import navverify from '../Assets/mainverify.svg'
 import svgimage from '../Assets/unsplash_DItYlc26zVI.svg'
+import { PopupButton } from "react-calendly";
 
 
 export function Navbar() {
@@ -79,7 +80,7 @@ export function Navbar() {
     };
     const defaultContent = (
         <>
-           <img className='default' src={svgimage} alt="" />
+            <img className='default' src={svgimage} alt="" />
         </>
     );
 
@@ -112,9 +113,13 @@ export function Navbar() {
                 <div className="btn1">
                     {/* <button onClick={handleClickLogin}>Log in</button>
                     <Link to={'/nextstep'}><button>Sign up</button></Link> */}
-                    <button> <a href="https://calendly.com/celetel/exploring-possibilities-with-celetel">Request a demo</a></button>
-
-
+                    {/* <button> <Link to="">Request a demo</Link></button> */}
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                 </div>
 
                 <div className="responsive_m">

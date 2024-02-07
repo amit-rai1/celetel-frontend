@@ -134,8 +134,6 @@
     width: 80%;
     margin: auto;
     margin-top: 100px;
-    /* border: 1px solid red; */
-    /* padding: 10px 30px; */
 }
 
 .next_step_1 p {
@@ -207,6 +205,11 @@
 
     .form_content {
         display: flex;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        border: 1px solid red;
         flex-direction: column-reverse;
     }
 
@@ -224,8 +227,17 @@
         flex-direction: column;
     }
 
+
     .next_step_1 {
-        width: 80%;
+        width: 100%;
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    .next_step_1 h1 {
+        border: 1px solid red;
+        width: 100%;
+        padding: 5px;
         margin-top: 0px;
     }
 
