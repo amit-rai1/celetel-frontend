@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useRef } from 'react'
 import './WhatsApp.css'
 import { Link } from 'react-router-dom'
 import logo14 from '../Assets/Group 1000001764.svg'
@@ -6,11 +6,13 @@ import celetelapp from '../Assets/celetelapp.svg'
 import logo16 from '../Assets/mainpglast.svg'
 import logo17 from '../Assets/Ellipse 7.png'
 import logo18 from '../Assets/Content.svg'
+import { toast } from 'react-toastify'
 
 
 export function WhatsApp() {
 
     const [openState, setOpenState] = useState(true)
+    const codeToCopyRef = useRef(null);
 
     const handleOpenApi = () => {
         setOpenState(false)
@@ -22,6 +24,16 @@ export function WhatsApp() {
     const whatsappOne = ' https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+12%403x-50fps.gif';
     const whatsappTwo = "https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+13%403x-50fps.gif"
 
+
+    const handleCopy = async () => {
+        try {
+            const codeToCopy = codeToCopyRef.current.innerText;
+            await navigator.clipboard.writeText(codeToCopy);
+            toast.success('Code copied to clipboard!');
+        } catch (err) {
+            toast.error('Unable to copy', err);
+        }
+    };
 
     return (
         <Fragment>
@@ -116,7 +128,7 @@ export function WhatsApp() {
                         possible. Get started in no time with our extensive
                         developer documentation and intuitive tutorials!</p>
                     <div className="btn3">
-                        <button><a href="https://docs.celetel.com/">Explore</a></button>
+                        <button><Link to="https://docs.celetel.com/">Explore</Link></button>
                         {/* <button>Explore</button> */}
                     </div>
                 </div>
@@ -124,35 +136,37 @@ export function WhatsApp() {
                 <div className="api_sdk_im">
                     <div className="api_1">
                         <ul style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                            <li onClick={handleOpen2Api} style={{ backgroundColor: '#E2DDFF', padding: '8px 15px', cursor: "pointer" }}>Java</li>
-                            <li onClick={handleOpenApi} style={{ cursor: "pointer" }}>JSON</li>
+                            <li onClick={handleOpenApi} style={{ backgroundColor: openState ? '' : '#E2DDFF', padding: '8px 15px', cursor: "pointer" }}>Java</li>
+                            <li onClick={handleOpen2Api} style={{ backgroundColor: openState ? '#E2DDFF' : '', cursor: "pointer", padding: '8px 15px' }}>JSON</li>
                         </ul>
-                        <p style={{ backgroundColor: '#E2DDFF', padding: '8px 15px' }}>Copy</p>
+                        <button onClick={handleCopy} style={{ backgroundColor: '#E2DDFF', padding: '8px 15px', border: "none", cursor: "pointer" }}>Copy</button>
                     </div>
                     {
-                        openState ? (
+                        !openState ? (
                             <Fragment>
-                                <p style={{ marginTop: '20px' }}>package example;
-                                    <br /> <br />
-                                    <p>import com.Celetel.xms.  <span style={{ color: 'blue' }} > ApiConnection;</span> </p>
-                                    <p> import com.Celetel.xms. <span style={{ color: 'blue' }} > CeletelSMSApi;;</span></p>
-                                    <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }}> GroupResult;</span></p>
-                                    <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }} > MtBatchTextSmsResult;</span></p>
-                                </p>
+                                <div ref={codeToCopyRef}>
+                                    <p style={{ marginTop: '20px' }}>package example;
+                                        <br /> <br />
+                                        <p>import com.Celetel.xms.  <span style={{ color: 'blue' }} > ApiConnection;</span> </p>
+                                        <p> import com.Celetel.xms. <span style={{ color: 'blue' }} > CeletelSMSApi;;</span></p>
+                                        <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }}> GroupResult;</span></p>
+                                        <p>import com.Celetel.xms.api. <span style={{ color: 'blue' }} > MtBatchTextSmsResult;</span></p>
+                                    </p>
 
-                                <p style={{ marginTop: '20px' }}>public class Example</p>
-                                <p style={{ marginTop: '20px' }}><span style={{ color: 'blue' }} > private static</span> final String SERVICE_PLAN_ID =
-                                    "SERVICE_PLAN_ID";</p>
-                                <p><span style={{ color: 'blue' }} > private static</span> ffinal String TOKEN="SERVICE_TOKEN";</p>
-                                <p><span style={{ color: 'blue' }} > private static</span> private static final String[] RECIPIENTS =
-                                    "1232323131", "3213123";</p>
-                                <p><span style={{ color: 'blue' }} > private static</span> final String SENDER = "SENDER";</p>
+                                    <p style={{ marginTop: '20px' }}>public class Example</p>
+                                    <p style={{ marginTop: '20px' }}><span style={{ color: 'blue' }} > private static</span> final String SERVICE_PLAN_ID =
+                                        "SERVICE_PLAN_ID";</p>
+                                    <p><span style={{ color: 'blue' }} > private static</span> ffinal String TOKEN="SERVICE_TOKEN";</p>
+                                    <p><span style={{ color: 'blue' }} > private static</span> private static final String[] RECIPIENTS =
+                                        "1232323131", "3213123";</p>
+                                    <p><span style={{ color: 'blue' }} > private static</span> final String SENDER = "SENDER";</p>
+                                </div>
                             </Fragment>
 
                         ) : (
 
                             <Fragment>
-                                <div style={{ marginTop: "20px" }}>
+                                <div style={{ marginTop: "20px" }} ref={codeToCopyRef}>
                                     "type": "text",
                                     <br />
                                     "auth": <span style={{ color: 'blue' }}>""username": "testuser", "password": "testpassword"</span>,
@@ -213,27 +227,27 @@ export function WhatsApp() {
 
             <div className="cards_row_tes">
                 <div className="new_one_cards">
-                        <div className="cards_para">
-                            <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
-                            <div className="cards_det">
-                                <img src={logo17} alt="" />
-                                <p>Stage</p>
-                            </div>
+                    <div className="cards_para">
+                        <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
+                        <div className="cards_det">
+                            <img src={logo17} alt="" />
+                            <p>Stage</p>
                         </div>
-                        <div className="cards_para">
-                            <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
-                            <div className="cards_det">
-                                <img src={logo17} alt="" />
-                                <p>Vapp</p>
-                            </div>
+                    </div>
+                    <div className="cards_para">
+                        <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
+                        <div className="cards_det">
+                            <img src={logo17} alt="" />
+                            <p>Vapp</p>
                         </div>
-                        <div className="cards_para">
-                            <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
-                            <div className="cards_det">
-                                <img src={logo17} alt="" />
-                                <p>Ibizo</p>
-                            </div>
+                    </div>
+                    <div className="cards_para">
+                        <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
+                        <div className="cards_det">
+                            <img src={logo17} alt="" />
+                            <p>Ibizo</p>
                         </div>
+                    </div>
                 </div>
             </div>
 
