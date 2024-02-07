@@ -26,3 +26,7 @@ code {
   list-style-type: none;
   text-decoration: none;
 }
+
+img {
+  -webkit-image-rendering: optimizeQuality;
+}
