@@ -157,14 +157,14 @@ export function Navbar() {
                         <ListItem>
                             <p style={{ color: 'black', fontWeight: '500' }}>Contact</p>
                         </ListItem>
-                        <ListItem>
+                        {/* <ListItem>
                             <Link to={'/login'} onClick={closeDrawer}>
                                 <p style={{ color: 'black', fontWeight: '500' }}>Login</p></Link>
                         </ListItem>
                         <ListItem>
                             <Link to={'/nextstep'} onClick={closeDrawer}>
                                 <p style={{ color: 'black', fontWeight: '500' }}>Sign up</p></Link>
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                 </Drawer>
             </div>

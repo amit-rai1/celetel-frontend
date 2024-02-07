@@ -14,7 +14,7 @@ export function Contact() {
         name: "",
         email: "",
         service: "",
-        budget: "",
+        phone: "",
         message: "",
     });
 
@@ -141,6 +141,15 @@ export function Contact() {
                                     onChange={handleContactChange}
                                 />
 
+
+                                <label htmlFor="">Phone number</label>
+                                <input
+                                    type="number"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleContactChange}
+                                />
+
                                 <label htmlFor="">What service are you interested in</label>
                                 <select
                                     name="service"
@@ -155,7 +164,7 @@ export function Contact() {
                                     <option value="verification">verification</option>
                                 </select>
 
-                                <label htmlFor="">Budget</label>
+                                {/* <label htmlFor="">Budget</label>
                                 <select
                                     name="budget"
                                     value={formData.budget}
@@ -168,7 +177,7 @@ export function Contact() {
                                     <option value="Testing 4k">Testing 4k</option>
                                     <option value="Testing 7k">Testing 7k</option>
                                     <option value="Testing 10k">Testing 10k</option>
-                                </select>
+                                </select> */}
 
                                 <label htmlFor="">Message</label>
                                 <textarea
