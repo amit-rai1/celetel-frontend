@@ -4,43 +4,19 @@ import { Link } from 'react-router-dom'
 import logo14 from '../Assets/Group 1000001764.svg'
 import celetelapp from '../Assets/celetelapp.svg'
 import logo16 from '../Assets/mainpglast.svg'
-import logo17 from '../Assets/Ellipse 7.png'
 import logo18 from '../Assets/Content.svg'
 import { toast } from 'react-toastify'
 import one from '../Assets/1.svg'
 import two from '../Assets/2.svg'
 import three from '../Assets/3.svg'
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
 export function WhatsApp() {
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
-
     const [openState, setOpenState] = useState(true)
     const codeToCopyRef = useRef(null);
 
@@ -271,7 +247,7 @@ export function WhatsApp() {
                     </CardContent>
 
                 </Card>
-                <Card sx={{ maxWidth: 345, borderRadius: "22px" }}>
+                <Card sx={{ maxWidth: 345, borderRadius: "22px", boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", }}>
                     <CardMedia
                     // sx={{ height: 140 }}
                     />
@@ -286,7 +262,7 @@ export function WhatsApp() {
                     </CardContent>
 
                 </Card>
-                <Card sx={{ maxWidth: 345, borderRadius: "22px", height: "220px" }}>
+                <Card sx={{ maxWidth: 345, borderRadius: "22px", height: "220px", boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px", }}>
                     <CardMedia
                     // sx={{ height: "198px" }}
                     />
@@ -299,7 +275,6 @@ export function WhatsApp() {
                             <h3>Ibizo</h3>
                         </div>
                     </CardContent>
-
                 </Card>
             </div>
 
@@ -309,6 +284,6 @@ export function WhatsApp() {
                 <p>Professional cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-levelling customer service for state of the art customer service </p>
                 <img src={logo18} alt="" />
             </div>
-        </Fragment >
+        </Fragment>
     )
 }
