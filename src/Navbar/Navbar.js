@@ -18,7 +18,7 @@ import navrcs from '../Assets/mainrcs.svg'
 import navwhatsapp from '../Assets/mainwhatsapp.svg'
 import navvoice from '../Assets/mainvoice.svg'
 import navverify from '../Assets/mainverify.svg'
-import svgimage from '../Assets/unsplash_DItYlc26zVI.svg'
+import svgimage from '../Assets/Frame 1686551916.svg'
 import { PopupButton } from "react-calendly";
 
 
