@@ -17,6 +17,7 @@ import AddIcon from "@mui/icons-material/Add";
 import ac1 from "../Assets/earth.svg";
 import ac2 from "../Assets/Vector2.svg";
 import ac3 from "../Assets/Icon01.svg";
+import { PopupButton } from "react-calendly";
 
 //add coments
 
@@ -69,7 +70,12 @@ export function Mainverify() {
                 </p>
                 <img src={mobileverifyimage} alt="" />
                 <div className="btn_verify">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>

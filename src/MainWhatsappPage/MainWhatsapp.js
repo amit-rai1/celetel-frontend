@@ -16,6 +16,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { BsGraphUp } from "react-icons/bs";
 import image3 from '../Assets/Frame 1686551832.svg'
 import { Footer } from '../Footer/Footer'
+import { PopupButton } from 'react-calendly';
 
 export function MainWhatsapp() {
 
@@ -50,7 +51,12 @@ export function MainWhatsapp() {
                     get ready to start a conversation with your customers around the world!</p>
                 <img src={image3} alt="" />
                 <div className="btn2_1">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>
