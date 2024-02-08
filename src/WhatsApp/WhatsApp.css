@@ -303,18 +303,12 @@
 }
 
 .cards_para {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 15px 15px;
     border-radius: 30px;
     width: 80%;
     overflow: hidden;
     justify-content: center;
     margin: auto;
-}
-
-.cards_para p {
-    padding: 2px 5px;
-    text-align: justify;
 }
 
 .cards_content {
@@ -661,7 +655,7 @@
         margin-top: 20px;
     }
 
-    .cards_row_tes {
+    .container-fluid {
         width: 100%;
         padding: 0px 58px;
     }

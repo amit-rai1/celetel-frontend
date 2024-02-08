@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import logo14 from "../Assets/Group 1000001764.svg";
 import celetelapp from "../Assets/celetelapp.svg";
 import logo16 from "../Assets/mainpglast.svg";
-import logo17 from "../Assets/Ellipse 7.png";
 import logo18 from "../Assets/Content.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -318,65 +317,20 @@ export function WhatsApp() {
           pleasure when using this crazy feature.
         </p>
       </div>
-      {/* <Slider {...settings}>
-      <div className="cards_row_tes">
-        <div className="new_one_cards">
-          <div className="cards_para">
-            <p>
-              "The team at this company was extremely knowledgeable and
-              experienced. They were able to provide me with valuable insights
-              and suggestions on how to improve my current marketing strategy."
-            </p>
-            <div className="cards_det">
-              <img src={logo17} alt="" />
-              <p>Stage</p>
-            </div>
-          </div>
-          <div className="cards_para">
-            <p>
-              "Communication with the team was always prompt and professional.
-              They were always available to answer any questions I had and
-              provided regular updates on the progress of my marketing
-              campaigns"
-            </p>
-            <div className="cards_det">
-              <img src={logo17} alt="" />
-              <p>Vapp</p>
-            </div>
-          </div>
-          <div className="cards_para">
-            <p>
-              "The service provided by this company was top-notch and exceeded
-              all of my expectations."
-            </p>
-            <div className="cards_det">
-              <img src={logo17} alt="" />
-              <p>Ibizo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-</Slider>
- */}
 
       <div className="container-fluid">
         <Slider {...settings}>
           <div>
             <div className="cards_para">
-              {/* <p>"The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy."</p>
-          <div className="cards_det">
-            <img src={logo17} alt="" />
-            <p>Stage</p>
-          </div> */}
               <Card
                 sx={{
                   maxWidth: 345,
                   boxShadow:
                     "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                   borderRadius: "22px",
-                  "@media (max-width: 1080px)": {
-                    display: "none",
-                  },
+                  // "@media (max-width: 1080px)": {
+                  //   display: "none",
+                  // },
                 }}
               >
                 <CardMedia
@@ -399,17 +353,15 @@ export function WhatsApp() {
           </div>
           <div>
             <div className="cards_para">
-              {/* <p>"Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns"</p>
-          <div className="cards_det">
-            <img src={logo17} alt="" />
-            <p>Vapp</p>
-          </div> */}
               <Card
                 sx={{
                   maxWidth: 345,
                   borderRadius: "22px",
                   boxShadow:
                     "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                  // "@media (max-width: 1080px)": {
+                  //   width: "500px"
+                  // },
                 }}
               >
                 <CardMedia
@@ -432,21 +384,16 @@ export function WhatsApp() {
           </div>
           <div>
             <div className="cards_para">
-              {/* <p>"The service provided by this company was top-notch and exceeded all of my expectations."</p>
-          <div className="cards_det">
-            <img src={logo17} alt="" />
-            <p>Ibizo</p>
-          </div> */}
               <Card
                 sx={{
                   maxWidth: 345,
                   borderRadius: "22px",
-                  height: "220px",
+                  height: "250px",
                   boxShadow:
                     "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
-                  "@media (max-width: 1080px)": {
-                    display: "none",
-                  },
+                  // "@media (max-width: 1080px)": {
+                  //   display: "none",
+                  // },
                 }}
               >
                 <CardMedia
