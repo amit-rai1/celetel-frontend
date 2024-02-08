@@ -95,7 +95,7 @@ export function AllPricing() {
                                         <span>month</span>
                                     </p>
 
-                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "center", marginTop: "15px" }}>Useful For Sending One Time Password Over SMS, For Phone Verification</p>
+                                    <p style={{ color: "#ABABAB", fontSize: "15px", textAlign: "left", marginTop: "15px" }}>Useful For Sending One Time Password Over SMS, For Phone Verification</p>
 
                                     <div className="features_sms">
                                         <h4>FEATURES</h4>

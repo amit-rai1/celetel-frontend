@@ -18,7 +18,6 @@
     /* border: 1px solid red; */
 }
 
-
 .para_sol2 {
     width: 50%;
 }
@@ -34,7 +33,6 @@
     padding-right: 285px;
 }
 
-
 .para_sol2 button {
     margin-top: 25px;
     background-color: var(--previous-bg);
@@ -44,13 +42,13 @@
     border-radius: 5px;
     padding: 15px 55px;
     font-size: 15px;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
 .para_sol2 button:hover {
     background-color: var(--button-bg);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     color: black;
 }
 
@@ -72,16 +70,15 @@
     border-radius: 5px;
     padding: 15px 55px;
     font-size: 15px;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
 .para_sol3 button:hover {
     background-color: var(--button-bg);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     color: black;
 }
-
 
 .main_whatsapp1 {
     margin: auto;
@@ -99,7 +96,6 @@
 .sub_whatsapp1 img {
     width: 80%;
 }
-
 
 .potential_tech {
     width: 90%;
@@ -132,13 +128,14 @@
 }
 
 .tech_1 {
-    box-shadow: rgba(67, 71, 85, 0.205) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow: rgba(67, 71, 85, 0.205) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     padding: 15px;
     border-radius: 20px;
 }
 
 .tech_1 h1 {
-    color: #93AEF5;
+    color: #93aef5;
     font-size: 17px;
     padding: 8px 0px;
 }
@@ -148,14 +145,14 @@
 }
 
 .tech_1 p {
-    color: #6D6D6D;
+    color: #6d6d6d;
     font-size: 15px;
     padding-top: 10px;
 }
 
 .api_sdk {
     /* border: 1px solid red; */
-    background: url('../Assets/apiframe.svg');
+    background: url("../Assets/apiframe.svg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -187,7 +184,7 @@
     border-radius: 5px;
     padding: 15px 55px;
     font-size: 15px;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
@@ -201,10 +198,9 @@
 
 .btn3 button:hover {
     background-color: var(--button-bg);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     color: black;
 }
-
 
 .btn3 a {
     color: black;
@@ -225,7 +221,6 @@
     justify-content: space-between;
 }
 
-
 .new_status_conf {
     width: 90%;
     display: flex;
@@ -233,7 +228,7 @@
     gap: 28px;
     justify-content: space-between;
     margin: auto;
-    background: url('../Assets/mainpageback.svg');
+    background: url("../Assets/mainpageback.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -261,7 +256,7 @@
     margin-top: 200px;
     display: flex;
     align-items: center;
-    background-color: #F9FFE4;
+    background-color: #f9ffe4;
 }
 
 .care_1 {
@@ -287,9 +282,19 @@
     text-align: center;
 }
 
-.cards_test_monials_main {
-    padding: 15px;
+.cards_row_tes {
     display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    gap: 25px;
+    margin-top: 80px;
+}
+
+.container-fluid {
+    /* overflow: hidden; */
+    padding: 15px;
+    /* display: flex; */
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -297,18 +302,26 @@
     width: 80%;
 }
 
-.card_content {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-    gap: 15px;
-    /* justify-content: center; */
+.cards_para {
+    padding: 15px 15px;
+    border-radius: 30px;
+    width: 80%;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto;
 }
 
-.cards_test_monials_main img {
+.cards_content {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    gap: 15px;
+}
+
+.cards_para img {
     width: 70px;
     height: 70px;
-    border: 3px solid #6D6D6D;
+    border: 3px solid #6d6d6d;
     border-radius: 50%;
 }
 
@@ -323,7 +336,7 @@
 
 .used_by p {
     padding: 15px 380px;
-    color: #5F6D7E;
+    color: #5f6d7e;
 }
 
 .used_by img {
@@ -335,7 +348,7 @@
     display: none;
 }
 
-@media screen and (max-width:1240px) {
+@media screen and (max-width: 1240px) {
     .testimony_review h1 {
         padding: 0;
     }
@@ -352,13 +365,12 @@
     }
 
     .sub_whatsapp {
-        background-color: #DDFCF3;
+        background-color: #ddfcf3;
         width: 100%;
     }
-
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width: 1080px) {
     .main_whatsapp {
         display: flex;
         padding: 0;
@@ -483,7 +495,7 @@
     }
 
     .tech_1 h1 {
-        color: #93AEF5;
+        color: #93aef5;
         font-size: 20px;
     }
 
@@ -493,7 +505,7 @@
     }
 
     .tech_1 p {
-        color: #6D6D6D;
+        color: #6d6d6d;
         font-size: 15px;
         margin-top: 10px;
     }
@@ -520,7 +532,7 @@
     .api_sdk_para p {
         /* border: 1px solid red; */
         font-size: 15px;
-        color: #6D6D6D;
+        color: #6d6d6d;
         font-weight: 500;
     }
 
@@ -573,7 +585,6 @@
         right: 10px;
     }
 
-
     .new_para_conf {
         width: 100%;
         padding: 0;
@@ -588,7 +599,7 @@
     .new_para_conf p {
         width: 100%;
         font-size: 13px;
-        color: #6D6D6D;
+        color: #6d6d6d;
         font-weight: 500;
         padding: 0;
     }
@@ -604,7 +615,7 @@
         margin-top: 120px;
         display: flex;
         align-items: center;
-        background-color: #F9FFE4;
+        background-color: #f9ffe4;
     }
 
     .new_care2 {
@@ -624,7 +635,7 @@
     .new_care2 p {
         text-align: center;
         font-size: 13px;
-        color: #6D6D6D;
+        color: #6d6d6d;
     }
 
     .testimony_review {
@@ -644,22 +655,22 @@
         margin-top: 20px;
     }
 
-    .cards_row_tes {
+    .container-fluid {
         width: 100%;
         padding: 0px 58px;
     }
 
-    .cards_para:nth-child(1) {
-        display: none;
+    /* .cards_para:nth-child(1) {
+        border: 1px solid red;
     }
 
     .cards_para:nth-child(2) {
-        display: block;
+        border: 1px solid red;
     }
 
     .cards_para:nth-child(3) {
-        display: none;
-    }
+        border: 1px solid red;
+    } */
 
     .used_by {
         padding: 5px 5px;
@@ -684,8 +695,6 @@
         justify-content: center;
         overflow: hidden;
     }
-
-
-    
-
 }
+
+/* new slide */
