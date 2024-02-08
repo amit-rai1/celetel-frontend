@@ -378,6 +378,10 @@
         flex-direction: column-reverse;
     }
 
+    .sub_whatsapp {
+        margin-top: 45px;
+    }
+
     .para_sol2 {
         margin-top: 40px;
         padding: 10px 10px;
