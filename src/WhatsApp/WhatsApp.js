@@ -5,45 +5,11 @@ import logo14 from "../Assets/Group 1000001764.svg";
 import celetelapp from "../Assets/celetelapp.svg";
 import logo16 from "../Assets/mainpglast.svg";
 import logo18 from "../Assets/Content.svg";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1 + 2,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000, // Auto slide every 3 seconds
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-      },
-    },
-  ],
-};
+
 
 export function WhatsApp() {
   const [openState, setOpenState] = useState(true);
@@ -330,104 +296,39 @@ export function WhatsApp() {
         </p>
       </div>
 
-      <div className="container-fluid">
-        <Slider {...settings}>
-          <div>
-            <div className="cards_para">
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  boxShadow:
-                    "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
-                  borderRadius: "22px",
-                  // "@media (max-width: 1080px)": {
-                  //   display: "none",
-                  // },
-                }}
-              >
-                <CardMedia
-                // sx={{ height: 140 }}
-                />
-                <CardContent>
-                  <Typography variant="body2" color="text.secondary">
-                    The team at this company was extremely knowledgeable and
-                    experienced. They were able to provide me with valuable
-                    insights and suggestions on how to improve my current
-                    marketing strategy.
-                  </Typography>
-                  <div className="card_content">
-                    <img src={one} alt="" />
-                    <h3>Stage</h3>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+
+      <div className="testimonials_new_cards">
+        <div className="cards_testimonials">
+          <span>The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy.
+          </span>
+          <div className="cards_test_content">
+            <img src={one} alt="" />
+            <p>Stage</p>
           </div>
-          <div>
-            <div className="cards_para">
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  borderRadius: "22px",
-                  boxShadow:
-                    "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
-                  // "@media (max-width: 1080px)": {
-                  //   width: "500px"
-                  // },
-                }}
-              >
-                <CardMedia
-                // sx={{ height: 140 }}
-                />
-                <CardContent>
-                  <Typography variant="body2" color="text.secondary">
-                    Communication with the team was always prompt and
-                    professional. They were always available to answer any
-                    questions I had and provided regular updates on the progress
-                    of my marketing campaigns.
-                  </Typography>
-                  <div className="card_content">
-                    <img src={two} alt="" />
-                    <h3>Vapp</h3>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        </div>
+
+        <div className="cards_testimonials">
+          <span>Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns.
+          </span>
+          <div className="cards_test_content">
+            <img src={two} alt="" />
+            <p>Vapp</p>
           </div>
-          <div>
-            <div className="cards_para">
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  borderRadius: "22px",
-                  height: "250px",
-                  boxShadow:
-                    "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
-                  // "@media (max-width: 1080px)": {
-                  //   display: "none",
-                  // },
-                }}
-              >
-                <CardMedia
-                // sx={{ height: "198px" }}
-                />
-                <CardContent>
-                  <Typography variant="body2" color="text.secondary">
-                    RCS from Celetel has taken our messaging to the next level.
-                    The interactive features and rich media engagement have
-                    enhanced our brand's visibility and customer
-                    interactions.Highly recommended for business
-                  </Typography>
-                  <div className="card_content">
-                    <img src={three} alt="" />
-                    <h3>Ibizo</h3>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        </div>
+
+        <div className="cards_testimonials">
+          <span> RCS from Celetel has taken our messaging to the next level.
+            The interactive features and rich media engagement have
+            enhanced our brand's visibility and customer
+            interactions.
+          </span>
+          <div className="cards_test_content">
+            <img src={three} alt="" />
+            <p>Ibizo</p>
           </div>
-        </Slider>
+        </div>
       </div>
+
       <div className="used_by">
         <h1>Proud to Be Used By</h1>
         <p>

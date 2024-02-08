@@ -282,48 +282,44 @@
     text-align: center;
 }
 
-.cards_row_tes {
+.testimonials_new_cards {
+    /* border: 1px solid red; */
+    margin: auto;
+    padding: 8px;
+    overflow-x: hidden;
     display: flex;
-    width: 90%;
-    margin: auto;
-    padding: 10px;
-    gap: 25px;
-    margin-top: 80px;
-}
-
-.container-fluid {
-    /* overflow: hidden; */
-    padding: 15px;
-    /* display: flex; */
-    align-items: center;
-    justify-content: space-around;
-    margin: auto;
-    margin-top: 50px;
+    gap: 45px;
+    margin-top: 65px;
     width: 80%;
 }
 
-.cards_para {
-    padding: 15px 15px;
-    border-radius: 30px;
-    width: 80%;
-    overflow: hidden;
-    justify-content: center;
-    margin: auto;
+.cards_testimonials {
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 18px 15px;
 }
 
-.cards_content {
+.cards_testimonials span {
+    font-size: 13px;
+}
+
+.cards_test_content {
     display: flex;
-    margin-top: 12px;
-    align-items: center;
+    margin-top: 15px;
     gap: 15px;
+    align-items: center;
 }
 
-.cards_para img {
+.cards_test_content img {
     width: 70px;
     height: 70px;
-    border: 3px solid #6d6d6d;
+    padding: 2px;
+    border: 3px solid #5f6d7e;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
+
 
 .used_by {
     margin-top: 100px;
@@ -332,7 +328,6 @@
 
 .used_by h1 {
     font-size: 42px;
-    /* xcvbgjk */
 }
 
 .used_by p {
