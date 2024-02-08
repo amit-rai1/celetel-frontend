@@ -15,7 +15,6 @@ import Typography from "@mui/material/Typography";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
-import { toast } from "react-toastify";
 
 const settings = {
   dots: true,
@@ -57,15 +56,25 @@ export function WhatsApp() {
     setOpenState(true);
   };
 
+  const [copyText, setCopyText] = useState('Copy');
+
+  const [backgroundColor, setBackgroundColor] = useState("#E2DDFF");
+
   const handleCopy = async () => {
     try {
       const codeToCopy = codeToCopyRef.current.innerText;
       await navigator.clipboard.writeText(codeToCopy);
-      toast('Code copied to clipboard!');
+      setCopyText('Copied');
+      setBackgroundColor("#FFB000"); // Change the background color 
+      setTimeout(() => {
+        setCopyText('Copy');
+        setBackgroundColor("#E2DDFF");
+      }, 3000);
     } catch (err) {
       console.error('Unable to copy', err);
     }
   };
+
 
   const whatsappOne =
     " https://celetelassets.s3.ap-south-1.amazonaws.com/gif/Flow+12%403x-50fps.gif";
@@ -191,8 +200,8 @@ export function WhatsApp() {
               <li onClick={handleOpenApi} style={{ backgroundColor: openState ? '' : '#E2DDFF', padding: '8px 15px', cursor: "pointer" }}>Java</li>
               <li onClick={handleOpen2Api} style={{ backgroundColor: openState ? '#E2DDFF' : '', cursor: "pointer", padding: '8px 15px' }}>JSON</li>
             </ul>
-            <p onClick={handleCopy} style={{ backgroundColor: "#E2DDFF", padding: "8px 15px", cursor: "pointer" }}>
-              Copy
+            <p onClick={handleCopy} style={{ backgroundColor, padding: "8px 15px", cursor: "pointer" }}>
+              {copyText}
             </p>
           </div>
           {!openState ? (
