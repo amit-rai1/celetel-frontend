@@ -13,6 +13,7 @@ import { Footer } from '../Footer/Footer'
 import Rcs1 from "../Assets/IconRCS.svg";
 import Rcs2 from "../Assets/iconRCS2.svg";
 import Rcs3 from "../Assets/IconRCS3.svg";
+import { PopupButton } from 'react-calendly';
 
 export function MainVoice() {
 
@@ -51,31 +52,15 @@ export function MainVoice() {
                     <img src={voicemain} alt="" />
                 </div>
                 <div className="btn_voice">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div className="our_goal">
                 <div className="goal_para">
