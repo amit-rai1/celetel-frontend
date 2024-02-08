@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import "./WhatsApp.css";
 import { Link } from "react-router-dom";
 import logo14 from "../Assets/Group 1000001764.svg";
@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
+import { toast } from "react-toastify";
 
 const settings = {
   dots: true,
@@ -47,12 +48,23 @@ const settings = {
 
 export function WhatsApp() {
   const [openState, setOpenState] = useState(true);
+  const codeToCopyRef = useRef(null);
 
   const handleOpenApi = () => {
     setOpenState(false);
   };
   const handleOpen2Api = () => {
     setOpenState(true);
+  };
+
+  const handleCopy = async () => {
+    try {
+      const codeToCopy = codeToCopyRef.current.innerText;
+      await navigator.clipboard.writeText(codeToCopy);
+      toast('Code copied to clipboard!');
+    } catch (err) {
+      console.error('Unable to copy', err);
+    }
   };
 
   const whatsappOne =
@@ -175,70 +187,61 @@ export function WhatsApp() {
 
         <div className="api_sdk_im">
           <div className="api_1">
-            <ul style={{ display: "flex", gap: "15px", alignItems: "center" }}>
-              <li
-                onClick={handleOpen2Api}
-                style={{
-                  backgroundColor: "#E2DDFF",
-                  padding: "8px 15px",
-                  cursor: "pointer",
-                }}
-              >
-                Java
-              </li>
-              <li onClick={handleOpenApi} style={{ cursor: "pointer" }}>
-                JSON
-              </li>
+            <ul style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+              <li onClick={handleOpenApi} style={{ backgroundColor: openState ? '' : '#E2DDFF', padding: '8px 15px', cursor: "pointer" }}>Java</li>
+              <li onClick={handleOpen2Api} style={{ backgroundColor: openState ? '#E2DDFF' : '', cursor: "pointer", padding: '8px 15px' }}>JSON</li>
             </ul>
-            <p style={{ backgroundColor: "#E2DDFF", padding: "8px 15px" }}>
+            <p onClick={handleCopy} style={{ backgroundColor: "#E2DDFF", padding: "8px 15px", cursor: "pointer" }}>
               Copy
             </p>
           </div>
-          {openState ? (
+          {!openState ? (
             <Fragment>
-              <p style={{ marginTop: "20px" }}>
-                package example;
-                <br /> <br />
-                <p>
-                  import com.Celetel.xms.{" "}
-                  <span style={{ color: "blue" }}> ApiConnection;</span>{" "}
+              <div className="" ref={codeToCopyRef}>
+                <p style={{ marginTop: "20px" }}>
+                  package example;
+                  <br /> <br />
+                  <p>
+                    import com.Celetel.xms.{" "}
+                    <span style={{ color: "blue" }}> ApiConnection;</span>{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    import com.Celetel.xms.{" "}
+                    <span style={{ color: "blue" }}> CeletelSMSApi;;</span>
+                  </p>
+                  <p>
+                    import com.Celetel.xms.api.{" "}
+                    <span style={{ color: "blue" }}> GroupResult;</span>
+                  </p>
+                  <p>
+                    import com.Celetel.xms.api.{" "}
+                    <span style={{ color: "blue" }}> MtBatchTextSmsResult;</span>
+                  </p>
                 </p>
-                <p>
-                  {" "}
-                  import com.Celetel.xms.{" "}
-                  <span style={{ color: "blue" }}> CeletelSMSApi;;</span>
-                </p>
-                <p>
-                  import com.Celetel.xms.api.{" "}
-                  <span style={{ color: "blue" }}> GroupResult;</span>
-                </p>
-                <p>
-                  import com.Celetel.xms.api.{" "}
-                  <span style={{ color: "blue" }}> MtBatchTextSmsResult;</span>
-                </p>
-              </p>
 
-              <p style={{ marginTop: "20px" }}>public class Example</p>
-              <p style={{ marginTop: "20px" }}>
-                <span style={{ color: "blue" }}> private static</span> final
-                String SERVICE_PLAN_ID = "SERVICE_PLAN_ID";
-              </p>
-              <p>
-                <span style={{ color: "blue" }}> private static</span> ffinal
-                String TOKEN="SERVICE_TOKEN";
-              </p>
-              <p>
-                <span style={{ color: "blue" }}> private static</span> private
-                static final String[] RECIPIENTS = "1232323131", "3213123";
-              </p>
-              <p>
-                <span style={{ color: "blue" }}> private static</span> final
-                String SENDER = "SENDER";
-              </p>
+                <p style={{ marginTop: "20px" }}>public class Example</p>
+                <p style={{ marginTop: "20px" }}>
+                  <span style={{ color: "blue" }}> private static</span> final
+                  String SERVICE_PLAN_ID = "SERVICE_PLAN_ID";
+                </p>
+                <p>
+                  <span style={{ color: "blue" }}> private static</span> ffinal
+                  String TOKEN="SERVICE_TOKEN";
+                </p>
+                <p>
+                  <span style={{ color: "blue" }}> private static</span> private
+                  static final String[] RECIPIENTS = "1232323131", "3213123";
+                </p>
+                <p>
+                  <span style={{ color: "blue" }}> private static</span> final
+                  String SENDER = "SENDER";
+                </p>
+              </div>
             </Fragment>
           ) : (
             <Fragment>
-              <div style={{ marginTop: "20px" }}>
+              <div style={{ marginTop: "20px" }} ref={codeToCopyRef}>
                 "type": "text",
                 <br />
                 "auth":{" "}
