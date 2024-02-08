@@ -655,22 +655,18 @@
         margin-top: 20px;
     }
 
-    .container-fluid {
-        width: 100%;
-        padding: 0px 58px;
+    .testimonials_new_cards {
+        overflow: auto;
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
     }
 
-    /* .cards_para:nth-child(1) {
-        border: 1px solid red;
+    .cards_testimonials:first-child,
+    .cards_testimonials:last-child {
+        display: none;
     }
 
-    .cards_para:nth-child(2) {
-        border: 1px solid red;
-    }
-
-    .cards_para:nth-child(3) {
-        border: 1px solid red;
-    } */
 
     .used_by {
         padding: 5px 5px;
