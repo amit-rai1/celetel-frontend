@@ -6,23 +6,40 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { sendOtp } from '../Service/auth.service'
 import { toast } from 'react-toastify'
+import { PulseLoader } from 'react-spinners'
 
 export function HeroSec() {
 
     const [mobileNumber, setMobileNumber] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleGetStarted = async () => {
         try {
+            setLoading(true);
+
             const response = await sendOtp(mobileNumber);
             console.log('API Response:', response);
 
-            toast("otp sent successfully ")
-            // Handle the response as needed
+            toast.success(response.message, {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeButton: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "colored",
+            });
+
         } catch (error) {
             console.error('Error:', error.message);
-            // Handle errors
+        } finally {
+            setLoading(false);
         }
     };
+
+
     return (
         <Fragment>
             <div className="main_herosec">
@@ -54,7 +71,9 @@ export function HeroSec() {
                             />
 
                         </div>
-                        <button onClick={handleGetStarted}>Test delivery speed</button>
+                        <button onClick={handleGetStarted} disabled={loading}>
+                            {loading ? <PulseLoader color="#fff" size={6} /> : 'Test delivery speed'}
+                        </button>
                     </div>
                 </div>
                 <div className="sub_image">
