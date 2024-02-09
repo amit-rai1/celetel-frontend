@@ -20,7 +20,7 @@ export function AllPricing() {
                 <div className="heading_all_pricing">
                     <h1>Ready to Choose Plan for Your Business?</h1>
                     <p>Choose the package that best suit you. Our services has friendly packages</p>
-                    <div className="sub_all_pricing">
+                    {/* <div className="sub_all_pricing">
                         <p> Monthly</p>
                         <label htmlFor=""></label>
                         <label className="switch">
@@ -28,7 +28,7 @@ export function AllPricing() {
                             <span className="slider"></span>
                         </label>
                         <p> Yearly</p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="new_pricing_list">
@@ -38,7 +38,7 @@ export function AllPricing() {
                                 <h3>Pricing</h3>
                                 <h4>SMS</h4>
                             </div>
-                            <div className="sub_all_pricing">
+                            {/* <div className="sub_all_pricing">
                                 <p> Monthly</p>
                                 <label htmlFor=""></label>
                                 <label className="switch">
@@ -46,7 +46,7 @@ export function AllPricing() {
                                     <span className="slider"></span>
                                 </label>
                                 <p> Yearly</p>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="cards_new_pricing_list">
