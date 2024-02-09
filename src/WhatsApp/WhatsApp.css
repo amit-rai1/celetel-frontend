@@ -286,7 +286,7 @@
     /* border: 1px solid red; */
     margin: auto;
     padding: 8px;
-    overflow-x: hidden;
+    overflow: auto;
     display: flex;
     gap: 45px;
     margin-top: 65px;

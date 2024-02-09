@@ -8,10 +8,52 @@ import logo18 from "../Assets/Content.svg";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
+import { motion, AnimatePresence } from 'framer-motion';
 
+const variants = {
+  hidden: {
+    opacity: 0,
+    x: -50 // Slide from left to right
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 0.75
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: 50, // Slide from left to right while exiting
+    transition: {
+      type: 'spring',
+      duration: 0.75
+    }
+  }
+};
 
 
 export function WhatsApp() {
+
+  const testimonials = [
+    {
+      text: "The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy.",
+      image: one,
+      alt: "Stage",
+    },
+    {
+      text: "Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns.",
+      image: two,
+      alt: "Vapp",
+    },
+    {
+      text: "RCS from Celetel has taken our messaging to the next level. The interactive features and rich media engagement have enhanced our brand's visibility and customer interactions.",
+      image: three,
+      alt: "Ibizo",
+    },
+  ];
+
   const [openState, setOpenState] = useState(true);
   const codeToCopyRef = useRef(null);
 
@@ -297,36 +339,31 @@ export function WhatsApp() {
       </div>
 
 
-      <div className="testimonials_new_cards">
-        <div className="cards_testimonials">
-          <span>The team at this company was extremely knowledgeable and experienced. They were able to provide me with valuable insights and suggestions on how to improve my current marketing strategy.
-          </span>
-          <div className="cards_test_content">
-            <img src={one} alt="" />
-            <p>Stage</p>
-          </div>
-        </div>
-
-        <div className="cards_testimonials">
-          <span>Communication with the team was always prompt and professional. They were always available to answer any questions I had and provided regular updates on the progress of my marketing campaigns.
-          </span>
-          <div className="cards_test_content">
-            <img src={two} alt="" />
-            <p>Vapp</p>
-          </div>
-        </div>
-
-        <div className="cards_testimonials">
-          <span> RCS from Celetel has taken our messaging to the next level.
-            The interactive features and rich media engagement have
-            enhanced our brand's visibility and customer
-            interactions.
-          </span>
-          <div className="cards_test_content">
-            <img src={three} alt="" />
-            <p>Ibizo</p>
-          </div>
-        </div>
+      <div className="testimonials_new_cards" style={{ overflowY: "auto" }} >
+        <AnimatePresence>
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={variants}
+              className="cards_testimonials"
+            >
+              <span>{testimonial.text}</span>
+              <div className="cards_test_content">
+                <motion.img
+                  src={testimonial.image}
+                  alt={testimonial.alt}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+                />
+                <p>{testimonial.alt}</p>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
 
