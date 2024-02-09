@@ -8,6 +8,13 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { TextField } from '@mui/material'
+import Button from '@mui/material/Button'
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import { PulseLoader } from "react-spinners";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -17,13 +24,26 @@ export function Contact() {
         phone: "",
         message: "",
     });
+    const [loading, setLoading] = useState(false);
 
     const handleContactUs = async (e) => {
         e.preventDefault();
+        setLoading(true);
         try {
             const response = await contactUs(formData);
             if (response.success === true) {
-                toast.success(response.msg);
+                toast.success(response.msg, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                setLoading(false)
                 console.log(response.data);
             } else {
                 toast.error("Please try again");
@@ -123,78 +143,80 @@ export function Contact() {
                             </span>
                         </div>
 
-                        <div className="form_con">
-                            <form onSubmit={handleContactUs}>
-                                <label htmlFor="">Name</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleContactChange}
-                                />
-
-                                <label htmlFor="">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleContactChange}
-                                />
-
-
-                                <label htmlFor="">Phone number</label>
-                                <input
-                                    type="number"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleContactChange}
-                                />
-
-                                <label htmlFor="">What service are you interested in</label>
-                                <select
+                        <div className="form_pricing_new">
+                            <TextField id="standard-basic" label="Full name" variant="standard"
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleContactChange}
+                            />
+                            <TextField id="standard-basic" label="Email address" variant="standard"
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleContactChange}
+                            />
+                            <TextField id="standard-basic" label="Phone Number" variant="standard"
+                                type="number"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleContactChange}
+                            />
+                            <FormControl variant="standard" sx={{ width: "100%" }}>
+                                <InputLabel id="demo-simple-select-standard-label">Select Project Type</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-standard-label"
+                                    id="demo-simple-select-standard"
                                     name="service"
                                     value={formData.service}
                                     onChange={handleContactChange}
+                                    label="Select Project Type"
                                 >
-                                    <option value="">Select project type</option>
-                                    <option value="Sms">Sms</option>
-                                    <option value="Rcs">Rcs</option>
-                                    <option value="voice">voice</option>
-                                    <option value="Whatsapp">Whatsapp</option>
-                                    <option value="verification">verification</option>
-                                </select>
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
 
-                                {/* <label htmlFor="">Budget</label>
-                                <select
-                                    name="budget"
-                                    value={formData.budget}
-                                    onChange={handleContactChange}
-                                >
-                                    <option value="">Select project budget</option>
-                                    <option value="Testing 5k">Testing 5k</option>
-                                    <option value="Testing 8k">Testing 8k</option>
-                                    <option value="Testing 6k">Testing 6k</option>
-                                    <option value="Testing 4k">Testing 4k</option>
-                                    <option value="Testing 7k">Testing 7k</option>
-                                    <option value="Testing 10k">Testing 10k</option>
-                                </select> */}
+                                    <MenuItem value="RCS">RCS</MenuItem>
+                                    <MenuItem value="SMS">SMS</MenuItem>
+                                    <MenuItem value="Voice">Voice</MenuItem>
+                                    <MenuItem value="WhatsApp">WhatsApp</MenuItem>
+                                    <MenuItem value="Verifications">Verifications</MenuItem>
+                                </Select>
+                            </FormControl>
 
-                                <label htmlFor="">Message</label>
-                                <textarea
-                                    name="message"
-                                    id=""
-                                    cols="30"
-                                    rows="10"
-                                    value={formData.message}
-                                    onChange={handleContactChange}
-                                ></textarea>
+                            <textarea
+                                style={{ padding: "15px" }}
+                                placeholder="Enter the message"
 
-                                <button>Submit</button>
-                            </form>
+                                name="message"
+                                id=""
+                                cols="30"
+                                rows="10"
+                                value={formData.message}
+                                onChange={handleContactChange}
+                            />
+                            <Button onClick={handleContactUs} sx={{
+                                textTransform: "unset",
+                                marginTop: "15px",
+                                color: "#101010",
+                                background: "#FFD26F",
+                                textAlign: "center",
+                                fontSize: "19px",
+                                fontWeight: 550,
+                                letterSpacing: "1.52px",
+                                marginBottom: "45px",
+                                "&:hover": {
+                                    color: "#101010",
+                                    background: "#FFD26F",
+                                }
+                            }}
+                                disabled={loading}>
+                                {loading ? <PulseLoader style={{ padding: "4px" }} color="#000" size={6} /> : 'Submit'}
+
+                            </Button>
                         </div>
                     </div>
                 </div>
-
                 <Footer />
             </div>
         </Fragment>
