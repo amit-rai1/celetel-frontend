@@ -329,6 +329,8 @@ export function WhatsApp() {
         </div>
       </div>
 
+
+
       <div className="used_by">
         <h1>Proud to Be Used By</h1>
         <p>

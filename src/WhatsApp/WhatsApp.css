@@ -295,7 +295,9 @@
 
 .cards_testimonials {
     border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #F6F6F6;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.03);
     padding: 18px 15px;
 }
 
