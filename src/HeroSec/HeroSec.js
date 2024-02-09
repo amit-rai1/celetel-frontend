@@ -72,7 +72,7 @@ export function HeroSec() {
 
                         </div>
                         <button onClick={handleGetStarted} disabled={loading}>
-                            {loading ? <PulseLoader color="#fff" size={6} /> : 'Test delivery speed'}
+                            {loading ? <PulseLoader style={{ padding: "3px 55px" }} color="#fff" size={6} /> : 'Test delivery speed'}
                         </button>
                     </div>
                 </div>
