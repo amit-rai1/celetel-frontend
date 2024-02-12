@@ -312,6 +312,10 @@
 }
 
 
+.testimonials_new_cards:hover .testimonials_container {
+    animation-play-state: paused;
+}
+
 .cards_testimonials {
     border-radius: 20px;
     overflow: hidden;
