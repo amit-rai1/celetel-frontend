@@ -46,20 +46,20 @@ export function HeroSec() {
                     theme: "colored",
                 });
             }
-            // else {
-            //     console.log(response.message)
-            //     toast.error(response.message, {
-            //         position: "top-center",
-            //         autoClose: 2000,
-            //         hideProgressBar: false,
-            //         closeButton: false,
-            //         closeOnClick: false,
-            //         pauseOnHover: false,
-            //         draggable: false,
-            //         progress: undefined,
-            //         theme: "colored",
-            //     });
-            // }
+            else {
+                console.log(response.message)
+                toast.error(response.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            }
 
         }
         catch (error) {
