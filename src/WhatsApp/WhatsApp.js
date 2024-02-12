@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./WhatsApp.css";
 import { Link } from "react-router-dom";
 import logo14 from "../Assets/Group 1000001764.svg";
@@ -35,6 +35,12 @@ const variants = {
 
 
 export function WhatsApp() {
+
+  const innerRefTestimonial = useRef(null);
+
+  useEffect(() => {
+    innerRefTestimonial.current.classList.add("testimonial-animation");
+  }, []);
 
   const testimonials = [
     {
@@ -370,30 +376,26 @@ export function WhatsApp() {
 
 
       <div className="testimonials_new_cards">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            initial="hidden"
-            // animate="visible"
-            // exit="exit"
-            // variants={variants}
-            className="cards_testimonials"
-          >
-            <span>{testimonial.text}</span>
-            <div className="cards_test_content">
-              <img
-                src={testimonial.image}
-                alt={testimonial.alt}
-              // initial={{ scale: 0 }}
-              // animate={{ scale: 1 }}
-              // transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-              />
-              <p>{testimonial.alt}</p>
+        <div className="testimonials_container">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              ref={innerRefTestimonial}
+              initial="hidden"
+              className="cards_testimonials"
+            >
+              <span>{testimonial.text}</span>
+              <div className="cards_test_content">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.alt}
+                />
+                <p>{testimonial.alt}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
 
 
       <div className="used_by">
