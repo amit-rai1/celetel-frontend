@@ -67,7 +67,7 @@ export function Login() {
     // login with google
 
     const loginWithGoogle = () => {
-       const res = window.open("http://localhost:8600/auth/google/callback", "_self")
+       const res = window.open("https://celetel-testing.onrender.com/auth/google/callback", "_self")
 
        console.log("res",res)
     }
