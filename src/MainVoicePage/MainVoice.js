@@ -34,7 +34,12 @@ export function MainVoice() {
                     seamless customer interactions through voice and touch-
                     tone inputs.</p>
                 <div className="btn2">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>
