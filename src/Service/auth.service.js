@@ -149,9 +149,10 @@ export const contactUs = async (formData) => {
 
 export const sendOtp = async (recipient) => {
     try {
-      const response = await axios.post(`${API_BASEURL}/sendotpTesting`, { recipient });
-      return response.data;
-    } catch (error) {
-      throw error;
+        const response = await axios.post(`${API_BASEURL}/sendotpTesting`, { recipient });
+        return response.data;
     }
-  };
+    catch (error) {
+        throw error;
+    }
+};

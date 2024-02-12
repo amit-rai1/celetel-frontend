@@ -15,26 +15,57 @@ export function HeroSec() {
 
     const handleGetStarted = async () => {
         try {
+            if (!mobileNumber) {
+                toast.error("Mobile number cannot be empty", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                return;
+            }
             setLoading(true);
 
             const response = await sendOtp(mobileNumber);
             console.log('API Response:', response);
+            if (response.success === true) {
+                toast.success(response.message, {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeButton: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            }
+            // else {
+            //     console.log(response.message)
+            //     toast.error(response.message, {
+            //         position: "top-center",
+            //         autoClose: 2000,
+            //         hideProgressBar: false,
+            //         closeButton: false,
+            //         closeOnClick: false,
+            //         pauseOnHover: false,
+            //         draggable: false,
+            //         progress: undefined,
+            //         theme: "colored",
+            //     });
+            // }
 
-            toast.success(response.message, {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeButton: false,
-                closeOnClick: false,
-                pauseOnHover: false,
-                draggable: false,
-                progress: undefined,
-                theme: "colored",
-            });
-
-        } catch (error) {
+        }
+        catch (error) {
             console.error('Error:', error.message);
-        } finally {
+        }
+        finally {
             setLoading(false);
         }
     };
@@ -59,6 +90,7 @@ export function HeroSec() {
                                 type="number"
                                 placeholder="Enter mobile number"
                                 value={mobileNumber}
+                                required
                                 onChange={(value) => setMobileNumber(value)}
                                 className="custom-phone-input"
                                 inputProps={{
