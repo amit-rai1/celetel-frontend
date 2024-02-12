@@ -36,7 +36,7 @@ export function Contact() {
             !formData.service ||
             !formData.message
         ) {
-            toast.error("Please fill in all the fields");
+            toast.error("Please fill all required fields");
             return;
         }
         setLoading(true);
