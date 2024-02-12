@@ -12,6 +12,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Rcs1 from "../Assets/IconRCS.svg";
 import Rcs2 from "../Assets/iconRCS2.svg";
 import Rcs3 from "../Assets/IconRCS3.svg";
+import { PopupButton } from "react-calendly";
 
 
 export function MainRCS() {
@@ -41,7 +42,12 @@ export function MainRCS() {
           game-changer in the realm of mobile messaging.
         </p>
         <div className="btn2">
-          <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+          <PopupButton
+            url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+            rootElement={document.getElementById("root")}
+            text="Request a demo"
+            style={{ color: 'white' }}
+          />
           <button>Explore</button>
         </div>
       </div>

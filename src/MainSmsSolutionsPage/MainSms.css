@@ -125,13 +125,13 @@
     transition: .4s ease-in-out;
 }
 
-.btn2 button a:first-child {
+.btn2 button:first-child {
     color: white;
     transition: .4s ease-in-out;
 
 }
 
-.btn2 button a:first-child:hover {
+.btn2 button:first-child:hover {
     color: rgb(0, 0, 0);
     transition: .4s ease-in-out;
 

@@ -36,7 +36,12 @@ export function MainWhatsapp() {
                 <p>Bring conversations into your entire customer journey by scaling with WhatsApp Business -
                     get ready to start a conversation with your customers around the world!</p>
                 <div className="btn2">
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <PopupButton
+                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        rootElement={document.getElementById("root")}
+                        text="Request a demo"
+                        style={{ color: 'white' }}
+                    />
                     <button>Explore</button>
                 </div>
             </div>
