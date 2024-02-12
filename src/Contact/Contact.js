@@ -28,6 +28,17 @@ export function Contact() {
 
     const handleContactUs = async (e) => {
         e.preventDefault();
+
+        if (
+            !formData.name ||
+            !formData.email ||
+            !formData.phone ||
+            !formData.service ||
+            !formData.message
+        ) {
+            toast.error("Please fill in all the fields");
+            return;
+        }
         setLoading(true);
         try {
             const response = await contactUs(formData);
