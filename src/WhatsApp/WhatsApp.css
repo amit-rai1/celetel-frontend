@@ -371,19 +371,27 @@
     display: none;
 }
 
-@media screen and (max-width: 1240px) {
-    .testimony_review h1 {
-        padding: 0;
+@media screen and (max-width: 1310px) {
+    /* .para_sol2 {} */
+
+    .para_sol2 h1 {
+        margin-top: 30px;
+        padding-right: 15px;
+        font-size: 45px;
     }
 
-    .testimony_review p {
-        padding: 0;
-        margin-top: 12px;
+    .para_sol2 p {
+        margin-top: 20px;
+        padding-right: 115px;
     }
 
-    .sub_whatsapp {
-        background-color: #ddfcf3;
+    .sub_whatsapp1 img {
         width: 100%;
+        object-fit: cover;
+    }
+
+    .para_sol3 {
+        margin-right: 20px;
     }
 }
 
@@ -396,6 +404,7 @@
 
     .sub_whatsapp {
         margin-top: 45px;
+        width: 100%;
     }
 
     .para_sol2 {
@@ -421,6 +430,10 @@
         justify-content: flex-start;
         margin-top: 15px;
         padding: 10px 35px;
+    }
+
+    .sub_whatsapp img {
+        width: 100%;
     }
 
     .para_sol3 {
