@@ -8,30 +8,30 @@ import logo18 from "../Assets/Content.svg";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 
-const variants = {
-  hidden: {
-    opacity: 0,
-    x: -50 // Slide from left to right
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      duration: 0.75
-    }
-  },
-  exit: {
-    opacity: 0,
-    x: 50, // Slide from left to right while exiting
-    transition: {
-      type: 'spring',
-      duration: 0.75
-    }
-  }
-};
+// const variants = {
+//   hidden: {
+//     opacity: 0,
+//     x: -50 // Slide from left to right
+//   },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 0.75
+//     }
+//   },
+//   exit: {
+//     opacity: 0,
+//     x: 50, // Slide from left to right while exiting
+//     transition: {
+//       type: 'spring',
+//       duration: 0.75
+//     }
+//   }
+// };
 
 
 export function WhatsApp() {
@@ -81,7 +81,7 @@ export function WhatsApp() {
       const codeToCopy = codeToCopyRef.current.innerText;
       await navigator.clipboard.writeText(codeToCopy);
       setCopyText('Copied');
-      setBackgroundColor("#FFB000"); // Change the background color 
+      setBackgroundColor("#FFB000");
       setTimeout(() => {
         setCopyText('Copy');
         setBackgroundColor("#E2DDFF");
