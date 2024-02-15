@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
@@ -23,6 +23,24 @@ import { PopupButton } from "react-calendly";
 
 
 export function Navbar() {
+
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            console.log("Clicked", event.target);
+            console.log("Dropdown Ref", dropdownRef.current);
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                console.log("Closing Dropdown");
+                setProductDropdownOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [dropdownRef]);
 
     const navigateHome = useNavigate();
     const [isSidebar, setSidebar] = useState(false);
@@ -189,7 +207,9 @@ export function Navbar() {
                         exit={{ opacity: 0, y: 15 }}
                         style={{ translateX: "-50%" }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="absolute_centered">
+                        className="absolute_centered"
+                        ref={dropdownRef}
+                    >
                         <div className="custom_container">
                             <div className="inside_container">
                                 <h1>OUR PRODUCTS</h1>

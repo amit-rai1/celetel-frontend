@@ -15,7 +15,7 @@ export function Footer() {
                         <p>123 Main Street</p>
                         <p>London, UK</p>
                         <p>SW1A 1AA</p>
-                        <br/>
+                        <br />
                         <span>+91- 9708110811</span>
                         <p>hey@celetel.com</p>
                     </div>
@@ -51,7 +51,7 @@ export function Footer() {
                             <a href="#12">Social</a>
                             <a href="https://www.instagram.com/celetel_technologies/">Instagram</a>
                             <a href="https://www.linkedin.com/company/celetelasia/" target='blank'>LinkedIn</a>
-                            <a href="#12">Facebook</a>
+                            <a href="https://www.facebook.com/profile.php?id=61555329824822&mibextid=2JQ9oc">Facebook</a>
                         </div>
                     </div>
                     <div className="new_foot">
@@ -73,7 +73,7 @@ export function Footer() {
                             <span>GET IN TOUCH</span>
                             <p><FaTwitter /></p>
                             <p><FaLinkedin href="https://www.linkedin.com/company/celetelasia/" target='blank' /></p>
-                            <p><FaFacebook /></p>
+                            <p><FaFacebook href='https://www.facebook.com/profile.php?id=61555329824822&mibextid=2JQ9oc' /></p>
                         </div>
                     </div>
 
