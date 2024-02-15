@@ -151,14 +151,13 @@
 }
 
 .api_sdk {
-    /* border: 1px solid red; */
     background: url("../Assets/apiframe.svg");
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     gap: 45px;
-    padding: 15px 80px;
+    padding: 40px 80px;
     margin-top: 150px;
 }
 
@@ -207,7 +206,7 @@
 }
 
 .api_sdk_im {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     background-color: white;
     padding: 35px 25px;
     border-radius: 30px;
@@ -215,7 +214,6 @@
 }
 
 .api_1 {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-between;

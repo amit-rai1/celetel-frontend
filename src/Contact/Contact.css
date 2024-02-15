@@ -185,12 +185,12 @@
 }
 
 @media screen and (max-width: 1080px) {
+
   .sub_cont_form {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: #fff;
     position: relative;
-    /* top: 40%; */
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: 5px;
