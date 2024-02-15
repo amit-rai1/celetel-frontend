@@ -8,6 +8,10 @@ import logo18 from "../Assets/Content.svg";
 import one from "../Assets/1.svg";
 import two from "../Assets/2.svg";
 import three from "../Assets/3.svg";
+import four from "../Assets/5.jpg";
+import five from "../Assets/6.jpg";
+import six from "../Assets/7.jpg";
+
 // import { motion, AnimatePresence } from 'framer-motion';
 
 // const variants = {
@@ -56,9 +60,24 @@ export function WhatsApp() {
     },
 
     {
-      text: "RCS from Celetel has taken our messaging to the next level. The interactive features and rich media engagement have enhanced our brand's visibility and customer interactions.",
+      text: "RCS from Celetel has taken our messaging to the next level. The interactive features and rich media engagement have enhanced our brand's visibility and customer interactions.Also it has boosted our sales exponentially",
       image: three,
       alt: "Ibizo",
+    },
+    {
+      text: "I took SMS service from Celetel,  It helped me massively in growing my business. Also, the team is fabulous as they are always there to suggest me growth plans on my business, it feels like family to be with.",
+      image: four,
+      alt: "Nkosi",
+    },
+    {
+      text: "I have been in connection with Celetel from last 2 years, It is a great experience, no other organization have understood my needs as they have. Whenever I need any communication service Celetel is my first priority.",
+      image: five,
+      alt: "Musa",
+    },
+    {
+      text: "This organization is providing some different level of services every service is available at minimal pricings and quality is superfine. I would recommend every business to connect with this organization if you are a player of long run.",
+      image: six,
+      alt: "Tesfaye",
     },
   ];
 
