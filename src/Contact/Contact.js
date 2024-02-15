@@ -56,6 +56,13 @@ export function Contact() {
                 });
                 setLoading(false)
                 console.log(response.data);
+                setFormData({
+                    name: "",
+                    email: "",
+                    service: "",
+                    phone: "",
+                    message: "",
+                });
             } else {
                 toast.error("Please try again");
             }

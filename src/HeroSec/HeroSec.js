@@ -45,6 +45,7 @@ export function HeroSec() {
                     progress: undefined,
                     theme: "colored",
                 });
+                setMobileNumber('');
             }
             else {
                 console.log(response.message)
@@ -94,7 +95,7 @@ export function HeroSec() {
                                 onChange={(value) => setMobileNumber(value)}
                                 className="custom-phone-input"
                                 inputProps={{
-                                    placeholder: 'Search for a country',
+                                    placeholder: 'Enter mobile number',
                                     autoFocus: true,
                                     padding: "12px"
                                 }}
