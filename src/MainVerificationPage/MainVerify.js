@@ -15,8 +15,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AddIcon from "@mui/icons-material/Add";
 import ac1 from "../Assets/earth.svg";
-import ac2 from "../Assets/Vector2.svg";
-import ac3 from "../Assets/Icon01.svg";
+import ac2 from "../Assets/ChatCircleDots-r.svg";
+import ac3 from "../Assets/Chart.svg";
 import { PopupButton } from "react-calendly";
 
 //add coments
@@ -192,9 +192,7 @@ export function Mainverify() {
                     </p>
                     <div className="main_new_comm">
                         <div className="new_comm1">
-                            {/* <p>
-                                <BsGlobeAmericas />
-                            </p>
+                            <img src={ac1} alt="" />
                             <div>
                                 <h3>Global Reach On Any Device</h3>
                                 <span>
@@ -203,40 +201,7 @@ export function Mainverify() {
                             </div>
                         </div>
                         <div className="new_comm2">
-                            <p>
-                                <AiOutlineMessage />
-                            </p>
-                            <div>
-                                <h3>Powerful Communication</h3>
-                                <span>
-                                    Boost security with an extra layer for user identification
-                                </span>
-                            </div>
-
-
-                        </div>
-                        <div className="new_comm3">
-                            <p>
-                                <IoPieChartOutline />
-                            </p>
-                            <div>
-                                <h3>Effortless Compliance</h3>
-                                <span>Verify any number inclusively</span>
-                            </div> */}
-                            <p>
-                                <img src={ac1} alt="" />
-                            </p>
-                            <div>
-                                <h3>Global Reach On Any Device</h3>
-                                <span>
-                                    Accessible on all devices, call verification delivers OTPS
-                                </span>
-                            </div>
-                        </div>
-                        <div className="new_comm2">
-                            <p>
-                                <img src={ac2} alt="" />
-                            </p>
+                            <img src={ac2} alt="" />
                             <div>
                                 <h3>Powerful Communication</h3>
                                 <span>
@@ -245,9 +210,7 @@ export function Mainverify() {
                             </div>
                         </div>
                         <div className="new_comm3">
-                            <p>
-                                <img src={ac3} alt="" />
-                            </p>
+                            <img src={ac3} alt="" />
                             <div>
                                 <h3>Effortless Compliance</h3>
                                 <span>Verify any number inclusively</span>
