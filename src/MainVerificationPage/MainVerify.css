@@ -165,17 +165,22 @@
 
 .security_sms13 {
   display: flex;
+  /* padding: 25px; */
+  gap: 45px;
   background: rgba(166, 206, 206, 0.38);
   margin-top: 150px;
   padding: 45px;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.security_sms13 p {
+  padding-right: 150px;
 }
 
 .security_sms13 img {
   width: 35%;
-
+  margin-left: 45px;
 }
-
 
 .para_seq13 img {
   display: flex;
@@ -237,7 +242,6 @@
 
 .main_achieve img {
   width: 50%;
-  margin: auto;
 }
 
 .main_achieve h1 {
@@ -256,30 +260,41 @@
 .new_comm1,
 .new_comm2,
 .new_comm3 {
-  align-items: center;
   display: flex;
-  gap: 35px;
-  width: 90%;
-  margin-top: 30px;
+  align-items: center;
+  padding: 40px;
+  gap: 25px;
 }
 
-.new_comm1 img {
-  width: 110px;
-}
 
 .new_comm2 img {
-  width: 110px;
+  /* margin-top: 15px;
+  width: 150px; */
+  width: 8%;
 }
 
 .new_comm3 img {
-  width: 110px;
+  /* margin-top: 15px; */
+  /* width: 150px; */
+  width: 8%;
 }
 
-.new_comm2 h3,
-.new_comm1 h3,
-.new_comm3 h3 {
-  margin: auto;
+.new_comm1 h3 {
+  font-size: 25px;
 }
+
+.new_comm2 h3 {
+  font-size: 25px;
+}
+
+.new_comm3 h3 {
+  font-size: 25px;
+}
+
+.new_comm1 img {
+  width: 8%;
+}
+
 
 @media screen and (max-width: 1080px) {
   .main_sol_page_verify {
@@ -545,5 +560,11 @@
   .new_comm2 p,
   .new_comm3 p {
     width: 110px;
+  }
+
+  .new_comm1 img,
+  .new_comm2 img,
+  .new_comm3 img {
+    width: 20%;
   }
 }

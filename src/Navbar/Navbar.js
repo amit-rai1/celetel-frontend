@@ -24,23 +24,6 @@ import { PopupButton } from "react-calendly";
 
 export function Navbar() {
 
-    const dropdownRef = useRef(null);
-
-    useEffect(() => {
-        function handleClickOutside(event) {
-            console.log("Clicked", event.target);
-            console.log("Dropdown Ref", dropdownRef.current);
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                console.log("Closing Dropdown");
-                setProductDropdownOpen(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [dropdownRef]);
 
     const navigateHome = useNavigate();
     const [isSidebar, setSidebar] = useState(false);
@@ -208,7 +191,6 @@ export function Navbar() {
                         style={{ translateX: "-50%" }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="absolute_centered"
-                        ref={dropdownRef}
                     >
                         <div className="custom_container">
                             <div className="inside_container">
