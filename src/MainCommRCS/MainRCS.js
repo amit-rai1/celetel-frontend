@@ -43,7 +43,7 @@ export function MainRCS() {
         </p>
         <div className="btn2">
           <PopupButton
-            url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+            url="https://calendly.com/celetel/30min"
             rootElement={document.getElementById("root")}
             text="Request a demo"
             style={{ color: 'white' }}
