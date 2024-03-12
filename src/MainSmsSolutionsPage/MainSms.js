@@ -38,7 +38,7 @@ export function MainSms() {
                     and efficient messaging strategies.</p>
                 <div className="btn2">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -75,7 +75,7 @@ export function MainSms() {
                 <img src={smssolutions} alt="" />
                 <div className="btn2_1">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -150,7 +150,7 @@ export function MainSms() {
                         Java, PHP, Node, .NET Core, and REST API. Boost your business
                         confidently with us.</p>
 
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <button><a href="https://calendly.com/celetel/30min">Request a demo</a></button>
                 </div>
             </div>
 

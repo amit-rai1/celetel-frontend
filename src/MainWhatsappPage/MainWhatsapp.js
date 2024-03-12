@@ -37,7 +37,7 @@ export function MainWhatsapp() {
                     get ready to start a conversation with your customers around the world!</p>
                 <div className="btn2">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -57,7 +57,7 @@ export function MainWhatsapp() {
                 <img src={image3} alt="" />
                 <div className="btn2_1">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}

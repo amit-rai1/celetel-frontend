@@ -51,7 +51,7 @@ export function Mainverify() {
                 </p>
                 <div className="btn2">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -76,7 +76,7 @@ export function Mainverify() {
                 <img src={mobileverifyimage} alt="" />
                 <div className="btn_verify">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -176,7 +176,7 @@ export function Mainverify() {
                         using a unified interface! SMS, WhatsApp, Facebook Messenger, Viber,
                         and more – our Conversation API covers it all.
                     </p>
-                    <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+                    <button><a href="https://calendly.com/celetel/30min">Request a demo</a></button>
                 </div>
             </div>
 

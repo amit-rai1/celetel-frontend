@@ -35,7 +35,7 @@ export function MainVoice() {
                     tone inputs.</p>
                 <div className="btn2">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
@@ -58,7 +58,7 @@ export function MainVoice() {
                 </div>
                 <div className="btn_voice">
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
