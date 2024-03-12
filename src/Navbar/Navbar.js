@@ -116,7 +116,7 @@ export function Navbar() {
                     <Link to={'/nextstep'}><button>Sign up</button></Link> */}
                     {/* <button> <Link to="">Request a demo</Link></button> */}
                     <PopupButton
-                        url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                        url="https://calendly.com/celetel/30min"
                         rootElement={document.getElementById("root")}
                         text="Request a demo"
                         style={{ color: 'white' }}
