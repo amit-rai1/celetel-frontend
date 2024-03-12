@@ -67,7 +67,7 @@ export function MainRCS() {
           <img src={image1} alt="" />
         </div>
         <div className="btn2_1">
-          <button><a href="https://calendly.com/celetel/exploring-possibilities-with-celetel?month=2024-02">Request a demo</a></button>
+          <button><a href="https://calendly.com/celetel/30min">Request a demo</a></button>
           <button>Explore</button>
         </div>
       </div>
