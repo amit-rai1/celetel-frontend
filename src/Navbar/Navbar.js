@@ -171,7 +171,7 @@ export function Navbar() {
                         <div className="btn_mobile_nav">
                             <button>
                                 <PopupButton
-                                    url="https://calendly.com/celetel/exploring-possibilities-with-celetel"
+                                    url="https://calendly.com/celetel/30min"
                                     rootElement={document.getElementById("root")}
                                     text="Request a demo"
                                     style={{ color: 'white' }}
