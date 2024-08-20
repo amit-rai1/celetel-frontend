@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
@@ -84,6 +84,7 @@ export function Navbar() {
             <img className='default' src={svgimage} alt="" />
         </>
     );
+
 
     return (
         <Fragment>

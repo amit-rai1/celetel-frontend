@@ -12,9 +12,7 @@ export function Footer() {
                 <div className="sub_footer">
                     <div className="logo_clas_f">
                         <img src={logo1} alt="" />
-                        <p>123 Main Street</p>
-                        <p>London, UK</p>
-                        <p>SW1A 1AA</p>
+                        <p>A Block Gautam Buddha Nagar , Unity Building Noida, Office no 107, 1st floor, Uttar Pradesh 201301</p>
                         <br />
                         <span>+91- 9708110811</span>
                         <p>hey@celetel.com</p>
