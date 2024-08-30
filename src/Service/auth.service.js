@@ -134,7 +134,7 @@ export const paymentInitiate = async (name, email, phoneNumber, amount) => {
 
 export const contactUs = async (formData) => {
     try {
-        const responseContact = await axios.post(`${API_BASEURL}/api/contactUs`,
+        const responseContact = await axios.post(`https://celetelcontactbackend.onrender.com/api/user/contactUs`,
             formData
         );
         console.log(responseContact.data, "reponseContact");
