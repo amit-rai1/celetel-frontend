@@ -20,9 +20,9 @@ export function Contact() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        service: "",
         phone: "",
-        message: "",
+        projectType: "",
+        message: ""
     });
     const [loading, setLoading] = useState(false);
 
@@ -33,7 +33,7 @@ export function Contact() {
             !formData.name ||
             !formData.email ||
             !formData.phone ||
-            !formData.service ||
+            !formData.projectType ||
             !formData.message
         ) {
             toast.error("Please fill all required fields");
@@ -59,9 +59,9 @@ export function Contact() {
                 setFormData({
                     name: "",
                     email: "",
-                    service: "",
                     phone: "",
-                    message: "",
+                    projectType: "",
+                    message: ""
                 });
             } else {
                 toast.error("Please try again");
@@ -185,8 +185,8 @@ export function Contact() {
                                 <Select
                                     labelId="demo-simple-select-standard-label"
                                     id="demo-simple-select-standard"
-                                    name="service"
-                                    value={formData.service}
+                                    name="projectType"
+                                    value={formData.projectType}
                                     onChange={handleContactChange}
                                     label="Select Project Type"
                                 >
