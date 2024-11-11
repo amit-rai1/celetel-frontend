@@ -11,7 +11,8 @@ export function Footer() {
             <div className="main_footer">
                 <div className="sub_footer">
                     <div className="logo_clas_f">
-                        <img src={logo1} alt="" />
+                        <img src={logo1} alt="" />                    
+                        <p>Celetel Technologies Private Limited</p>
                         <p>Berger Tower, Sector 16B, Noida, Uttar Pradesh 201301</p>
                         <br />
                         <span>+91- 9708110811</span>
