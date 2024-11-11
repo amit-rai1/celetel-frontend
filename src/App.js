@@ -18,6 +18,7 @@ import ScrollToTop from './ScrollToTop';
 import { PaymentSetup } from './Pricing/PaymentSetup';
 import { NewPricing } from './NewPricing/NewPricing';
 import { AllPricing } from './NewPricing/AllPricing';
+import Refund from './Footer/Refund';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path='/prices' element={<AllPricing />} />
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
           <Route path='/newprices' element={<NewPricing />} />
+          <Route path='/refunds' element={<Refund />} />
         </Routes>
       </BrowserRouter>
     </div>

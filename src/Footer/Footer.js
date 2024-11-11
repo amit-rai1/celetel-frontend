@@ -4,6 +4,7 @@ import logo1 from '../Assets/main_logo.svg';
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export function Footer() {
     return (
@@ -59,7 +60,7 @@ export function Footer() {
                             <a href="https://www.termsandconditionsgenerator.com/live.php?token=vH9ZUTYbGZ12HUCBkAlz14mJNIHxztKE">Terms</a>
                             <a href="https://www.freeprivacypolicy.com/live/2c741ce9-ec32-4e34-a9fc-23ea7b3568c6">Privacy </a>
                             <a href="https://www.freeprivacypolicy.com/live/4430f184-9ac4-4eb1-8462-fef97791c522">Cookies</a>
-                            {/* <a href="#12">Licenses</a> */}
+                            <Link to="/refunds">Refunds</Link>
                         </div>
 
                         <div className='sub_20_foot'>
