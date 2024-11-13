@@ -57,10 +57,9 @@ export function Footer() {
                     <div className="new_foot">
                         <div className='sub_3_foot'>
                             <a href="#12">Legal</a>
-                            <a href="https://www.termsandconditionsgenerator.com/live.php?token=vH9ZUTYbGZ12HUCBkAlz14mJNIHxztKE">Terms</a>
-                            <a href="https://www.freeprivacypolicy.com/live/2c741ce9-ec32-4e34-a9fc-23ea7b3568c6">Privacy </a>
-                            <a href="https://www.freeprivacypolicy.com/live/4430f184-9ac4-4eb1-8462-fef97791c522">Cookies</a>
-                            <Link to="/refunds">Refunds</Link>
+                            <Link to={'/termsandconditions'}>Terms</Link>
+                            <Link to={"/privacy"}>Privacy </Link>
+                            <Link to={"/cookies"}>Cookies</Link>
                         </div>
 
                         <div className='sub_20_foot'>

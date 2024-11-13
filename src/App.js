@@ -19,6 +19,9 @@ import { PaymentSetup } from './Pricing/PaymentSetup';
 import { NewPricing } from './NewPricing/NewPricing';
 import { AllPricing } from './NewPricing/AllPricing';
 import Refund from './Footer/Refund';
+import TermsConditions from './Footer/TermsConditions';
+import Privacy from './Footer/Privacy';
+import Cookies from './Footer/Cookies';
 
 
 function App() {
@@ -45,6 +48,9 @@ function App() {
           <Route path='/paymentsetupdetails' element={<PaymentSetup />} />
           <Route path='/newprices' element={<NewPricing />} />
           <Route path='/refunds' element={<Refund />} />
+          <Route path='/termsandconditions' element={<TermsConditions />} />
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/cookies' element={<Cookies />} />
         </Routes>
       </BrowserRouter>
     </div>
