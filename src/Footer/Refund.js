@@ -63,27 +63,17 @@ export default function Refund() {
           We understand that sometimes plans change. If you need to cancel your order, we are happy to assist. Please review our cancellation policy below:
           <br />
           <br />
-          <strong>1. Cancellation Before Shipment</strong>
-          <br />
-          If you wish to cancel your order before it has been shipped, please contact us as soon as possible. We will cancel the order and issue a full refund. To cancel, please email us at <a href="mailto:support@celetel.com">support@celetel.com</a> with your order details.
-          <br />
-          <br />
-          <strong>2. Cancellation After Shipment</strong>
-          <br />
-          Once your order has been shipped, we are unable to cancel it. However, you may return the item after receiving it according to our return policy.
-          <br />
-          <br />
-          <strong>3. Subscription Cancellation</strong>
+          <strong>1. Subscription Cancellation</strong>
           <br />
           For subscription-based services, you can cancel your subscription at any time before your next billing cycle. If you cancel before the next billing date, you will not be charged for the next cycle. To cancel, please visit your account settings or contact us at <a href="mailto:support@celetel.com">support@celetel.com</a>.
           <br />
           <br />
-          <strong>4. Non-refundable Items</strong>
+          <strong>2. Non-refundable Items</strong>
           <br />
           Certain items are non-refundable once processed or delivered. This includes but is not limited to digital downloads, personalized products, and perishable goods.
           <br />
           <br />
-          <strong>5. How to Cancel</strong>
+          <strong>3. How to Cancel</strong>
           <br />
           To cancel your order or subscription, please contact us via email at <a href="mailto:support@celetel.com">support@celetel.com</a> with your order number and cancellation request. We will process the cancellation and inform you of any further actions required.
           <br />
@@ -91,7 +81,7 @@ export default function Refund() {
           We aim to make cancellations as easy as possible, but please note that the sooner you contact us, the more likely we will be able to accommodate your request.
           <br />
           <br />
-          <strong>6. Refund Processing</strong>
+          <strong>4. Refund Processing</strong>
           <br />
           If your cancellation request is approved, we will initiate a refund to your original payment method. Please note that it may take several business days for the refund to appear in your account, depending on your payment provider.
           <br />
