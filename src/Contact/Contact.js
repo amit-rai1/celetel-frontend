@@ -232,21 +232,46 @@ export function Contact() {
                 onChange={handleContactChange}
               />
 
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  name="agreement"
-                  required
-                  checked={agreementChecked}
-                  onChange={handleCheckboxChange}
-                  className="h-4 w-4 text-accent focus:ring-2 focus:ring-accent"
-                />
-                <span className="text-white text-sm">
-                  I agree and authorise to call/send
-                  SMS/Promotional/Informational messages/notifications. This
-                  will override the registry with DNC/NDNC.
-                </span>
-              </label>
+<label
+  style={{
+    display: "flex",
+    alignItems: "flex-start",
+    gap: "10px",
+    padding: "12px",
+    borderRadius: "8px",
+    border: "1px solid #444",
+    backgroundColor: "#222",
+    cursor: "pointer",
+    transition: "background 0.3s ease",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#333")}
+  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#222")}
+>
+  <input
+    type="checkbox"
+    name="agreement"
+    required
+    checked={agreementChecked}
+    onChange={handleCheckboxChange}
+    style={{
+      width: "18px",
+      height: "18px",
+      cursor: "pointer",
+      accentColor: "#00aaff",
+    }}
+  />
+  <span
+    style={{
+      color: "#ddd",
+      fontSize: "14px",
+      lineHeight: "1.5",
+    }}
+  >
+    I agree and authorize to receive calls, SMS, promotional, and informational
+    messages/notifications. This will override the registry with DNC/NDNC.
+  </span>
+</label>
+
 
               <Button
                 onClick={handleContactUs}
